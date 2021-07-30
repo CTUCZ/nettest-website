@@ -869,3 +869,96 @@ tr.median {
 
 
 @import 'netztest-icons.scss';
+
+@font-face {
+    font-family: 'icons';
+    src: url('../fonts/icons/fonts/icomoon.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/icons/fonts/icomoon.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/icons/fonts/icomoon.woff') format('woff'), /* Pretty Modern Browsers */
+    url('../fonts/icons/fonts/icomoon.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/icons/fonts/icomoon.svg#svgFontName') format('svg'); /* Legacy iOS */
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.rozcestnik {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+    .rozcestnik-item {
+        width: 25%;
+        border-right: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        padding: 20px;
+        min-height: 150px;
+        &:nth-child(4n) {
+            border-right: 0;
+        }
+
+        &:nth-last-child(1) {
+            border-bottom: 0;
+        }
+
+        &:nth-last-child(2) {
+            border-bottom: 0;
+        }
+
+        &:nth-last-child(3) {
+            border-bottom: 0;
+        }
+
+        &:nth-last-child(4) {
+            border-bottom: 0;
+        }
+
+        a {
+            padding: 0;
+            text-decoration: none;
+        }
+    }
+}
+
+.rozcestink-title {
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: 400;
+    color: $blue !important;
+    padding-right: 30px;
+    position: relative;
+
+    &:before {
+        content: "\e92f";
+        font-family: icons;
+        position: absolute;
+        right: 0;
+        top: 6px;
+        font-size: 15px;
+        line-height: 15px;
+        color: $blue;
+    }
+
+    a {
+        color: $blue !important;
+    }
+}
+
+.rozcestink-content {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #686868;
+    margin-top: 15px;
+
+    a {
+        color: $blue !important;
+    }
+}

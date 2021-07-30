@@ -3,26 +3,25 @@
 
 
 {% block headerscriptingExtended %}
-    
 
-    <script src="../{{ fingerprint['lib/olv3/ol.js'] }}" type="text/javascript"></script>
-    <script src="../{{ fingerprint['lib/handlebars.min.js'] }}" type="text/javascript"></script>
-    <script src="../{{ fingerprint['lib/moment.min.js'] }}" type="text/javascript"></script>
-    <script src="../{{ fingerprint['lib/screenfull.min.js'] }}" type="text/javascript"></script>
-    
-    <script type="text/javascript" src="../{{ fingerprint['js/Index.js'] }}"></script>
 
-    <link rel="stylesheet" type="text/css" href="../{{ fingerprint['lib/olv3/ol.css'] }}" media="screen" />
+<script src="../{{ fingerprint['lib/olv3/ol.js'] }}" type="text/javascript"></script>
+<script src="../{{ fingerprint['lib/handlebars.min.js'] }}" type="text/javascript"></script>
+<script src="../{{ fingerprint['lib/moment.min.js'] }}" type="text/javascript"></script>
+<script src="../{{ fingerprint['lib/screenfull.min.js'] }}" type="text/javascript"></script>
 
-    <script src="../{{ fingerprint['lib/date-de-AT.js'] }}" type="text/javascript"></script>
-    
-    <style>
+<script type="text/javascript" src="../{{ fingerprint['js/Index.js'] }}"></script>
 
-    </style>
+<link rel="stylesheet" type="text/css" href="../{{ fingerprint['lib/olv3/ol.css'] }}" media="screen"/>
+
+<script src="../{{ fingerprint['lib/date-de-AT.js'] }}" type="text/javascript"></script>
+
+<style>
+
+</style>
 {% endblock %}
 
 
-                                
 {% block content %}
 <div class="uk-container" id="netztest_homepage">
     <div class="uk-grid-margin uk-container-rtr uk-grid uk-grid-stack" uk-grid="">
@@ -43,68 +42,70 @@
                 <div class="uk-grid-margin-large  uk-grid uk-grid-stack uk-container" uk-grid="">
                     <div class="uk-flex-auto uk-width-1-1@m uk-first-column">
                         <div class="uk-margin-large">
-                            <div class="uk-child-width-1-1@s uk-child-width-1-3@m uk-grid-small uk-grid-match uk-grid" uk-grid="">
-                                <div class="uk-width-2-3@m">
-                                    <a id="teaserlink" href="Test" class="uk-card uk-card-primary uk-card-hover uk-card-body ">
-                                        <div class="uk-card-media-top">
-                                            <span class="uk-icon-button uk-icon"
-                                                  uk-icon="icon: play; ratio: 1.5"></span>
+                            <div class="rozcestnik">
+                                <div class="rozcestnik-item">
+                                    <a href="Test">
+                                        <div class="rozcestink-title">
+                                            {{ Lang.index_content.test_section.heading }}
                                         </div>
-                                            <p>{{ Lang.start_test }}</p>
-                                            <h3 class="uk-card-title uk-margin-top">{{ Lang.index_content.test_section.heading }}</h3>
+                                        <div class="rozcestink-content">{{ Lang.start_test }}</div>
                                     </a>
                                 </div>
-                                <div class="uk-width-1-3@m">
-                                    <a href="Loop" class="uk-card uk-card-secondary uk-card-body">
-                                        <div class="uk-card-media-top">
-                                            <span class="uk-icon-button uk-icon"
-                                                  uk-icon="icon: loop; ratio: 1.5"></span>
+                                <div class="rozcestnik-item">
+                                    <a href="Loop">
+                                        <div class="rozcestink-title">
+                                            {{ Lang.loop_mode }}
                                         </div>
-                                        <p>{{ Lang.index_content.loop_mode_content }}</p>
-                                        <h3 class="uk-card-title uk-margin-top uk-margin-remove-bottom">
-                                            {{ Lang.loop_mode }}</h3>
+                                        <div class="rozcestink-content">{{ Lang.index_content.loop_mode_content }}</div>
+
                                     </a>
                                 </div>
-                                <div class="uk-width-1-3@m">
-                                    <a href="/{{ Lang.lang }}/ZertMessung"
-                                       class="uk-card uk-card-secondary uk-card-body ">
-                                        <p>{{ Lang.index_content.certified_content }}</p>
-                                        <h3 class="uk-card-title uk-margin-top uk-margin-remove-bottom">
-                                            {{ Lang.certified_measurement }}</h3>
+                                <div class="rozcestnik-item">
+                                    <a href="/{{ Lang.lang }}/ZertMessung">
+                                        <div class="rozcestink-title">
+                                            {{ Lang.certified_measurement }}
+                                        </div>
+                                        <div class="rozcestink-content">{{ Lang.index_content.certified_content }}</div>
+
                                     </a>
                                 </div>
-                                <div class="uk-width-1-3@m">
-                                    <a href="/{{ Lang.lang }}/Karte" class="uk-card uk-card-secondary uk-card-body ">
-                                        <p>{{ Lang.index_content.map_content }}</p>
-                                        <h3 class="uk-card-title uk-margin-top uk-margin-remove-bottom">
-                                            {{ Lang.map }}</h3>
+                                <div class="rozcestnik-item">
+                                    <a href="/{{ Lang.lang }}/Karte">
+                                        <div class="rozcestink-title">
+                                            {{ Lang.map }}
+                                        </div>
+                                        <div class="rozcestink-content">{{ Lang.index_content.map_content }}</div>
+
                                     </a>
                                 </div>
-                                <div class="uk-width-1-3@m">
-                                    <a href="/{{ Lang.lang }}/Statistik"
-                                       class="uk-card uk-card-secondary uk-card-body ">
-                                        <p>{{ Lang.index_content.statistics_content }}</p>
-                                        <h3 class="uk-card-title uk-margin-top uk-margin-remove-bottom">
-                                            {{ Lang.statistics }}</h3>
+                                <div class="rozcestnik-item">
+                                    <a href="/{{ Lang.lang }}/Statistik">
+                                        <div class="rozcestink-title">
+                                            {{ Lang.statistics }}
+                                        </div>
+                                        <div class="rozcestink-content">{{ Lang.index_content.statistics_content }}
+                                        </div>
+
                                     </a>
                                 </div>
 
-                                <div class="uk-width-1-3@m">
-                                    <div class="uk-card uk-card-secondary uk-card-body ">
+                                <div class="rozcestnik-item">
 
-                                        <p>{{ Lang.index_content.apps_content }}</p>
-                                        <h3 class="uk-card-title  uk-margin-remove-bottom">
-                                            <a href="{{ Lang.index_content.apps_url }}">
-                                                {{ Lang.index_content.apps }}
-                                            </a></h3>
-                                    </div>
+
+                                    <div class="rozcestink-title">
+                                        <a href="{{ Lang.index_content.apps_url }}">
+                                            {{ Lang.index_content.apps }}
+                                        </a></div>
+                                    <div class="rozcestink-content">{{ Lang.index_content.apps_content }}</div>
+
                                 </div>
-                                <div class="uk-width-1-3@m">
-                                    <a href="/{{ Lang.lang }}/Opentests"
-                                       class="uk-card uk-card-secondary uk-card-body ">
-                                        <p>{{ Lang.index_content.opendata_content }}</p>
-                                        <h3 class="uk-card-title uk-margin-top uk-margin-remove-bottom">
-                                            {{ Lang.opendata }}</h3>
+                                <div class="rozcestnik-item">
+                                    <a href="/{{ Lang.lang }}/Opentests">
+                                        <div class="rozcestink-title">
+                                            {{ Lang.opendata }}
+                                        </div>
+                                        <div class="rozcestink-content">{{ Lang.index_content.opendata_content }}</div>
+
                                     </a>
                                 </div>
                             </div>
@@ -117,69 +118,73 @@
     </div>
 </div>
 
-</div><div class="uk-section-muted uk-section uk-section-default uk-padding-large uk-padding-remove-left uk-padding-remove-right uk-margin-large-top">
-<div id="new-tests-map-container" class="uk-container uk-container-expand uk-margin-bottom uk-margin-large-top uk-padding-remove-left uk-padding-remove-right">
+</div>
+<div class="uk-section-muted uk-section uk-section-default uk-padding-large uk-padding-remove-left uk-padding-remove-right uk-margin-large-top">
+    <div id="new-tests-map-container"
+         class="uk-container uk-container-expand uk-margin-bottom uk-margin-large-top uk-padding-remove-left uk-padding-remove-right">
 
-    <div class="uk-container uk-margin-bottom">
-        <h3>{{ Lang.recent_tests }}</h3>
-    </div>
-    <div id="newtestsmap" class="olMap"></div>
-    <div class="uk-container">
-        <a href="Opentests">{{ Lang.further_tests }}</a> &middot;
-        <!--<a href="Opentests?max_results=5&loc_accuracy=<2000#map-accordion">{{ Lang.index_content.enlarge_map }}</a> &middot; -->
-        <a href="#" onclick="switchToFullscreenMap();">{{ Lang.index_content.fullscreen }}</a>
-    </div>
+        <div class="uk-container uk-margin-bottom">
+            <h3>{{ Lang.recent_tests }}</h3>
+        </div>
+        <div id="newtestsmap" class="olMap"></div>
+        <div class="uk-container">
+            <a href="Opentests">{{ Lang.further_tests }}</a> &middot;
+            <!--<a href="Opentests?max_results=5&loc_accuracy=<2000#map-accordion">{{ Lang.index_content.enlarge_map }}</a> &middot; -->
+            <a href="#" onclick="switchToFullscreenMap();">{{ Lang.index_content.fullscreen }}</a>
+        </div>
 
-    <div style="display:none" id="fullscreenTestStatistics">
-        {% raw %}
-        <div class="current-time">{{ formatDate currentTime }}</div>
-        <div class="tests-30-min">{{ formatNumber 0 tests30min }} {{ Lang30min }}</div>
-        <div class="tests-24h">{{ formatNumber 0 tests24h }} {{ Lang24h }}</div>
-        {% endraw %}
-    </div>
-    <div id="markerTemplate" style="display:none">
-        <div class="olPopup">
-            <div class="infoWrap">
-                <hr/>
-                {% raw %}
-                {{#each data}}
+        <div style="display:none" id="fullscreenTestStatistics">
+            {% raw %}
+            <div class="current-time">{{ formatDate currentTime }}</div>
+            <div class="tests-30-min">{{ formatNumber 0 tests30min }} {{ Lang30min }}</div>
+            <div class="tests-24h">{{ formatNumber 0 tests24h }} {{ Lang24h }}</div>
+            {% endraw %}
+        </div>
+        <div id="markerTemplate" style="display:none">
+            <div class="olPopup">
+                <div class="infoWrap">
+                    <hr/>
+                    {% raw %}
+                    {{#each data}}
 
-                <h2 class="
+                    <h2 class="
                         {{#if highlight}}
                     highlight
                         {{/if}}
                         ">{{ formatDate time }}
-                    <input type='button' style='float:right;' class='submit'
-                           onClick="window.open('/{% endraw %}{{ Lang.lang }}{% raw %}/Opentest?{{open_test_uuid}}')" value='{% endraw %}{{ Lang.moreInfo }}{% raw %}'/>
-                </h2>
+                        <input type='button' style='float:right;' class='submit'
+                               onClick="window.open('/{% endraw %}{{ Lang.lang }}{% raw %}/Opentest?{{open_test_uuid}}')"
+                               value='{% endraw %}{{ Lang.moreInfo }}{% raw %}'/>
+                    </h2>
 
-                <h3>{% endraw %}{{ Lang.measurement }}{% raw %}</h3>
+                    <h3>{% endraw %}{{ Lang.measurement }}{% raw %}</h3>
 
-                {{#each measurement}}
-                <div class="row">
-                    <div class="rowlabel">{{ title }}</div>
-                    <a href='https://www.rtr.at/{% endraw %}{{ Lang.lang }}{% raw %}/rtr/netztestfaq_testergebnis#c25826'
-                       target='_blank'>
-                        <div class='rowclassification'><i class="svg-icon svg16 svg-traffic-light-{{classification}}"></i></div>
-                    </a>
+                    {{#each measurement}}
+                    <div class="row">
+                        <div class="rowlabel">{{ title }}</div>
+                        <a href='https://www.rtr.at/{% endraw %}{{ Lang.lang }}{% raw %}/rtr/netztestfaq_testergebnis#c25826'
+                           target='_blank'>
+                            <div class='rowclassification'><i
+                                    class="svg-icon svg16 svg-traffic-light-{{classification}}"></i></div>
+                        </a>
 
-                    <div class="rowitem">{{ value }}</div>
+                        <div class="rowitem">{{ value }}</div>
+                    </div>
+                    {{/each}}
+                    <h3>{% endraw %}{{ Lang.net }}{% raw %}</h3>
+                    {{#each net}}
+                    <div class="row">
+                        <div class="rowlabel">{{ title }}</div>
+                        <div class="rowitem">{{ value }}</div>
+                    </div>
+                    {{/each}}
+                    <hr/>
+                    {{/each}}
+                    {% endraw %}
                 </div>
-                {{/each}}
-                <h3>{% endraw %}{{ Lang.net }}{% raw %}</h3>
-                {{#each net}}
-                <div class="row">
-                    <div class="rowlabel">{{ title }}</div>
-                    <div class="rowitem">{{ value }}</div>
-                </div>
-                {{/each}}
-                <hr/>
-                {{/each}}
-                {% endraw %}
             </div>
         </div>
     </div>
-</div>
 
 
-{% endblock %}
+    {% endblock %}
