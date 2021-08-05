@@ -900,6 +900,7 @@ tr.median {
         border-bottom: 1px solid #ddd;
         padding: 20px;
         min-height: 150px;
+
         &:nth-child(4n) {
             border-right: 0;
         }
@@ -961,4 +962,35 @@ tr.median {
     a {
         color: $blue !important;
     }
+}
+
+.logos {
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+
+    a {
+        color: #fff;
+        text-decoration: none;
+
+    }
+}
+
+.logo {
+    height: 50px;
+    margin-right: 15px;
+}
+
+.ctu-home {
+    a {
+        text-decoration: none;
+        font-weight: 500;
+        color: #fff;
+        line-height: 38px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
 }

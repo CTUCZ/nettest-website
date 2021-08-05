@@ -14,14 +14,15 @@
     <!-- CSS includes -->
     <link rel="stylesheet" href="../{{ fingerprint['scss/app.css'] }}">
     <!-- <link rel="stylesheet" href="/scss/netztest.css"> -->
-    <!-- Meta information --><meta name="description" content="{{ Lang.index_content.service_description }}" />
+    <!-- Meta information -->
+    <meta name="description" content="{{ Lang.index_content.service_description }}"/>
     <meta name="robots" content="index, follow">
     <!-- Social media (frontend only) -->
-    <meta property="og:site_name" content="RTR" />
+    <meta property="og:site_name" content="RTR"/>
 
-    <meta property="og:title" content="{{ title }} - {{ Lang.headline }}" />
+    <meta property="og:title" content="{{ title }} - {{ Lang.headline }}"/>
 
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content="website"/>
 
     {% block headerscriptingBasic %}
     <script type="text/javascript" src="../{{ fingerprint['js/jquery-1.8.2.min.js'] }}"></script>
@@ -51,21 +52,9 @@
             <div class="w100">
                 <div class="uk-container uk-container-large">
                     <div id="icontoggle" class="uk-grid">
-                        <div class="uk-inline">
-                            <button class="uk-button uk-button-top" type="button">
-                                RTR
-                                <span class="uk-margin-small-right chevdown" uk-icon="chevron-down"></span><span
-                                    class="uk-margin-small-right chevup" uk-icon="chevron-up"></span></button>
-                            <div class="uk-navbar-dropdown"
-                                 uk-drop="mode:click;offset:0;duration:100;delay-show:0;boundary: !.uk-container; boundary-align: true; pos: bottom-justify;">
-                                <div class="uk-container uk-container-large">
-                                    <ul class="uk-subnav uk-list-divider">
-                                        <li><a href="{{ Lang.template.tk_postal_url }}" class="area-switch">{{ Lang.template.tk_postal }}</a></li>
-                                        <li><a href="{{ Lang.template.media_url }}" class="area-switch">{{ Lang.template.media }}</a></li>
-                                        <li><a href="{{ Lang.template.rtr_url }}" class="area-switch">{{ Lang.template.RTR }}</a></li>
-                                    </ul>
-                                </div>
-                            </div>
+                        <div class="uk-inline ctu-home">
+                            <a href="https://www.ctu.cz/">ČTÚ</a>
+
                         </div>
                         <div class="uk-inline">
                             <button class="uk-button uk-button-top" type="button">{{Lang.LANG}}<span
@@ -103,7 +92,8 @@
                             <div class="uk-first-column">
                                 <a href="/{{ Lang.lang }}">
                                     <picture>
-                                        <img src='/images/netztest_logo.svg' alt="Logo {{ Lang.title }}" title="RTR" style="height:50px;">
+                                        <img src='/images/netztest_logo.svg' alt="Logo {{ Lang.title }}" title="RTR"
+                                             style="height:50px;">
                                     </picture>
                                 </a>
                             </div>
@@ -163,21 +153,26 @@
                                                                                               stroke="#000"
                                                                                               stroke-width="1.03"
                                                                                               points="16 7 10 13 4 7"></polyline></svg></span></a>
-                                                    <div class="uk-navbar-dropdown uk-navbar-dropdown-bottom-left" style="left: 861.844px; top: 80px;">
-                                                        <div class="uk-navbar-dropdown-grid uk-child-width-1-1 uk-grid uk-grid-stack" uk-grid="">
+                                                    <div class="uk-navbar-dropdown uk-navbar-dropdown-bottom-left"
+                                                         style="left: 861.844px; top: 80px;">
+                                                        <div class="uk-navbar-dropdown-grid uk-child-width-1-1 uk-grid uk-grid-stack"
+                                                             uk-grid="">
                                                             <div class="uk-first-column">
                                                                 <ul class="uk-nav uk-navbar-dropdown-nav">
                                                                     <li><a href="Loop">{{ Lang.loop_mode }}</a></li>
 
-                                                                    <li><a href="ZertMessung">{{ Lang.certified_measurement }}</a></li>
+                                                                    <li><a href="ZertMessung">{{
+                                                                        Lang.certified_measurement }}</a></li>
 
-                                                                    <li><a href="{{ Lang.index_content.apps_url }}">{{ Lang.index_content.apps }}</a></li>
+                                                                    <li><a href="{{ Lang.index_content.apps_url }}">{{
+                                                                        Lang.index_content.apps }}</a></li>
 
                                                                     <li><a href="Opentests">{{ Lang.opendata }}</a></li>
 
                                                                     <li><a href="Optionen">{{ Lang.options }}</a></li>
 
-                                                                    <li><a href="{{ Lang.help_url }}">{{ Lang.help }}</a></li>
+                                                                    <li><a href="{{ Lang.help_url }}">{{ Lang.help
+                                                                        }}</a></li>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -202,7 +197,8 @@
                             </a>
                         </div>
                         <div>
-                            <a class="el-link uk-icon-button uk-icon" rel="noreferrer" href="https://twitter.com/rtrgmbh"
+                            <a class="el-link uk-icon-button uk-icon" rel="noreferrer"
+                               href="https://twitter.com/rtrgmbh"
                                uk-icon="icon: twitter;">
                                 <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
                                      data-svg="twitter">
@@ -218,18 +214,21 @@
     <!-- Desktop -->
     <!-- Desktop -->
     <div class="tm-header uk-visible@l" uk-header="">
-        <div uk-sticky="" media="@l" cls-active="uk-navbar-sticky" sel-target=".uk-navbar-container" class="uk-sticky" style="">
+        <div uk-sticky="" media="@l" cls-active="uk-navbar-sticky" sel-target=".uk-navbar-container" class="uk-sticky"
+             style="">
             <div class="uk-navbar-container">
                 <div class="uk-container uk-container-large">
-                    <nav uk-navbar="mode: click;boundary-align:true;dropbar:true;dropbar-anchor:!.uk-navbar-container;dropbar-mode:slide" class="uk-navbar">
+                    <nav uk-navbar="mode: click;boundary-align:true;dropbar:true;dropbar-anchor:!.uk-navbar-container;dropbar-mode:slide"
+                         class="uk-navbar">
                         <div class="uk-navbar-left">
                             <div class="uk-child-width-expand@s uk-text-center logos uk-grid-small uk-grid" uk-grid="">
                                 <div class="uk-first-column">
                                     <a href="/{{ Lang.lang }}">
                                         <picture>
 
-                                            <img src='/images/logo.png' alt="Logo ČTÚ abc" title="RTR" style="height:50px;">
+                                            <img src='/images/logo.png' alt="Logo ČTÚ" class="logo">
                                         </picture>
+                                        NetTest
                                     </a>
                                 </div>
 
@@ -237,7 +236,7 @@
                         </div>
                         <div class="uk-navbar-right">
                             <ul class="uk-navbar-nav">
-
+<!--
                                 <li class="">
                                     <a href="Verlauf">{{ Lang.history }}</a>
                                 </li>
@@ -252,8 +251,10 @@
                                     <a href="#" aria-expanded="false">{{ Lang.further }}
                                         <span uk-icon="chevron-down"></span>
                                     </a>
-                                    <div class="uk-navbar-dropdown uk-navbar-dropdown-bottom-left" style="left: 861.844px; top: 80px;">
-                                        <div class="uk-navbar-dropdown-grid uk-child-width-1-1 uk-grid uk-grid-stack" uk-grid="">
+                                    <div class="uk-navbar-dropdown uk-navbar-dropdown-bottom-left"
+                                         style="left: 861.844px; top: 80px;">
+                                        <div class="uk-navbar-dropdown-grid uk-child-width-1-1 uk-grid uk-grid-stack"
+                                             uk-grid="">
                                             <div class="uk-first-column">
                                                 <ul class="uk-nav uk-navbar-dropdown-nav">
 
@@ -261,7 +262,8 @@
 
                                                     <li><a href="ZertMessung">{{ Lang.certified_measurement }}</a></li>
 
-                                                    <li><a href="{{ Lang.index_content.apps_url }}">{{ Lang.index_content.apps }}</a></li>
+                                                    <li><a href="{{ Lang.index_content.apps_url }}">{{
+                                                        Lang.index_content.apps }}</a></li>
 
                                                     <li><a href="Opentests">{{ Lang.opendata }}</a></li>
 
@@ -276,8 +278,9 @@
                                     </div>
 
                                 </li>
-
-                                <li class="nav-button"><a href="Test" class="uk-button uk-button-default">{{ Lang.start_test }}</a></li>
+-->
+                                <li class="nav-button"><a href="Test" class="uk-button uk-button-default">{{
+                                    Lang.start_test }}</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -308,23 +311,26 @@
 </div>
 
 
-
-
 <!-- Footer -->
 <div id="footer" class="uk-section-default uk-section uk-section-small">
     <div class="uk-container uk-container-large">
         <div class="uk-grid-margin uk-grid" uk-grid="" uk-height-match="target: .uk-card; row: false">
             <div class="uk-flex-auto uk-width-1-2@s uk-first-column m1">
-                <div class="uk-margin"><p><b>RUNDFUNK UND TELEKOM<br/>REGULIERUNGS-GMBH</b><br/><br/>A-1060 Wien, Mariahilfer Straße 77-79<br/>Tel.: +<a target='_self' href="tel:+431580580">43 1 58058-0</a></p></div>
+                <div class="uk-margin"><p><b>RUNDFUNK UND TELEKOM<br/>REGULIERUNGS-GMBH</b><br/><br/>A-1060 Wien,
+                    Mariahilfer Straße 77-79<br/>Tel.: +<a target='_self' href="tel:+431580580">43 1 58058-0</a></p>
+                </div>
                 <div class="uk-margin">
                     <div class="uk-child-width-auto uk-grid-small uk-grid" uk-grid="">
 
                         <div class="uk-first-column">
-                            <a class="el-link uk-icon-button uk-icon" rel="noreferrer" href="mailto:{{ Lang.email_address }}?subject={{ Lang.email_subject }}" uk-icon="icon: mail;">
+                            <a class="el-link uk-icon-button uk-icon" rel="noreferrer"
+                               href="mailto:{{ Lang.email_address }}?subject={{ Lang.email_subject }}"
+                               uk-icon="icon: mail;">
                             </a>
                         </div>
                         <div>
-                            <a class="el-link uk-icon-button uk-icon" rel="noreferrer" target="_blank" href="https://www.github.com/rtr-nettest/" uk-icon="icon: github;">
+                            <a class="el-link uk-icon-button uk-icon" rel="noreferrer" target="_blank"
+                               href="https://www.github.com/rtr-nettest/" uk-icon="icon: github;">
                             </a>
                         </div>
                     </div>
@@ -339,7 +345,8 @@
                         <a href="{{ Lang.index_content.tos.url }}">{{ Lang.privacy }}</a>
                     </li>
                     <li>
-                        <a href="https://www.rtr.at/rtr/footer/Barrierefreiheit.{{ Lang.lang }}.html">{{ Lang.accessibility }}</a>
+                        <a href="https://www.rtr.at/rtr/footer/Barrierefreiheit.{{ Lang.lang }}.html">{{
+                            Lang.accessibility }}</a>
                     </li>
                 </ul>
             </div>
@@ -348,26 +355,29 @@
 </div>
 </div>
 
-{%  raw %}
+{% raw %}
 <script id="modalTemplate" type="text/x-handlebars-template">
-<div id="{{ container-id }}" class="{{ container-modifier }}" uk-modal >
-    <div class="uk-modal-dialog">
-        <button class="uk-modal-close-default" type="button" uk-close></button>
-        {{#if title}}
-        <div class="uk-modal-header">
-            <h2 class="uk-modal-title">{{ title }}</h2>
-        </div>
-        {{/if}}
-        <div class="uk-modal-body" uk-overflow-auto>
-            {{{ content }}}</div>
-        <div class="uk-modal-footer uk-text-right">
-            {{#if cancel}}
-            <button id="modal-cancel" class="uk-button uk-button-default uk-modal-close" type="button">{{ cancel }}</button>
+    <div id="{{ container-id }}" class="{{ container-modifier }}" uk-modal>
+        <div class="uk-modal-dialog">
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+            {{#if title}}
+            <div class="uk-modal-header">
+                <h2 class="uk-modal-title">{{ title }}</h2>
+            </div>
             {{/if}}
-            <button id="modal-confirm" class="uk-button uk-button-primary" type="button">{{ confirm }}</button>
+            <div class="uk-modal-body" uk-overflow-auto>
+                {{{ content }}}
+            </div>
+            <div class="uk-modal-footer uk-text-right">
+                {{#if cancel}}
+                <button id="modal-cancel" class="uk-button uk-button-default uk-modal-close" type="button">{{ cancel
+                    }}
+                </button>
+                {{/if}}
+                <button id="modal-confirm" class="uk-button uk-button-primary" type="button">{{ confirm }}</button>
+            </div>
         </div>
     </div>
-</div>
 </script>
 {% endraw %}
 
