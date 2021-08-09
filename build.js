@@ -32,7 +32,8 @@ debug.enable();
 
 var langs = [];
 langs.push(require("./lang/en.js"));
-langs.push(require("./lang/de.js"));
+langs.push(require("./lang/de.js"))
+langs.push(require("./lang/cs.js"));
 
 var remoteFiles = require("./conf/remoteFiles.json");
 
@@ -246,7 +247,8 @@ function transformRTRUrls(fileList) {
         "/ZertMessung": "ZertMessung",
         "/tk/netztest" : "",
         "/de": "",
-        "/en": ""
+        "/en": "",
+        "/cs": ""
     };
 
     return function(files, metalsmith, done) {

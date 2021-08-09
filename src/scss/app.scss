@@ -97,12 +97,12 @@ h6,
 
 .uk-section-default {
     a {
-        color: $global-color;
-        padding: 0 2px;
+        color: $blue !important;
+        text-decoration: underline;
 
         &:hover {
-            background: $blue;
-            color: $white;
+            background: none !important;
+            color: $blue !important;
             text-decoration: none;
         }
     }

@@ -45,4 +45,5 @@ function linkLanguageSwitcherToCurrentPage() {
     cPage = cPage.substr(4);
     $(".language-select a[data-lang-name='en']").attr("href","/en/" + cPage);
     $(".language-select a[data-lang-name='de']").attr("href","/de/" + cPage);
+    $(".language-select a[data-lang-name='cs']").attr("href","/cs/" + cPage);
 }

@@ -18,7 +18,7 @@
     <meta name="description" content="{{ Lang.index_content.service_description }}"/>
     <meta name="robots" content="index, follow">
     <!-- Social media (frontend only) -->
-    <meta property="og:site_name" content="RTR"/>
+    <meta property="og:site_name" content="ČTÚ – NetTest"/>
 
     <meta property="og:title" content="{{ title }} - {{ Lang.headline }}"/>
 
@@ -52,10 +52,24 @@
             <div class="w100">
                 <div class="uk-container uk-container-large">
                     <div id="icontoggle" class="uk-grid">
-                        <div class="uk-inline ctu-home">
-                            <a href="https://www.ctu.cz/">ČTÚ</a>
-
+                        <div class="uk-inline">
+                            <button class="uk-button uk-button-top" type="button">
+                                ČTÚ
+                                <span class="uk-margin-small-right chevdown" uk-icon="chevron-down"></span><span
+                                    class="uk-margin-small-right chevup" uk-icon="chevron-up"></span></button>
+                            <div class="uk-navbar-dropdown"
+                                 uk-drop="mode:click;offset:0;duration:100;delay-show:0;boundary: !.uk-container; boundary-align: true; pos: bottom-justify;">
+                                <div class="uk-container uk-container-large">
+                                    <ul class="uk-subnav uk-list-divider">
+                                        <li><a href="{{ Lang.template.tk_postal_url }}" class="area-switch">{{ Lang.template.tk_postal }}</a></li>
+                                        <li><a href="{{ Lang.template.media_url }}" class="area-switch">{{ Lang.template.media }}</a></li>
+                                        <li><a href="{{ Lang.template.rtr_url }}" class="area-switch">{{ Lang.template.RTR }}</a></li>
+                                        <li><a href="{{ Lang.template.srovnavaci_nastroj_url }}" class="area-switch">{{ Lang.template.srovnavaci_nastroj }}</a></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
+      <!--
                         <div class="uk-inline">
                             <button class="uk-button uk-button-top" type="button">{{Lang.LANG}}<span
                                     class="uk-margin-small-right chevdown" uk-icon="chevron-down"></span><span
@@ -64,6 +78,11 @@
                                  uk-drop="mode:click;offset:0;duration:100;delay-show:0;boundary: !.uk-container; boundary-align: true; pos: bottom-justify;">
                                 <div class="uk-container uk-container-large">
                                     <ul class="uk-subnav uk-list-divider language-select">
+                                        <li>
+                                            <a href="/cs" data-lang-name="cs">
+                                                Czech
+                                            </a>
+                                        </li>
                                         <li>
                                             <a href="/en" data-lang-name="en">
                                                 English
@@ -76,7 +95,7 @@
                                     </ul>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -236,10 +255,13 @@
                         </div>
                         <div class="uk-navbar-right">
                             <ul class="uk-navbar-nav">
-<!--
+
                                 <li class="">
                                     <a href="Verlauf">{{ Lang.history }}</a>
                                 </li>
+
+                            <!--
+
                                 <li class="">
                                     <a href="Karte">{{ Lang.map }}</a>
                                 </li>
@@ -342,7 +364,7 @@
                         <a href="https://www.rtr.at/rtr/footer/impressum.{{ Lang.lang }}.html">{{ Lang.imprint }}</a>
                     </li>
                     <li>
-                        <a href="{{ Lang.index_content.tos.url }}">{{ Lang.privacy }}</a>
+                            <a href="{{ Lang.index_content.tos.url }}">{{ Lang.index_content.tos.text }}</a>
                     </li>
                     <li>
                         <a href="https://www.rtr.at/rtr/footer/Barrierefreiheit.{{ Lang.lang }}.html">{{

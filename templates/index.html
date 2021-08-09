@@ -29,9 +29,6 @@
             <h2>{{ Lang.title }}</h2>
             <!-- Page Content -->
             <p>{{ Lang.index_content.service_description }}</p>
-            <p>
-                <a href="{{ Lang.index_content.tos.url }}">{{ Lang.index_content.tos.text }}</a>
-            </p>
             <!-- Our Services -->
             <div class="uk-flex-auto uk-first-column">
                 <div class="uk-grid-margin uk-grid uk-grid-stack" uk-grid="">
@@ -48,7 +45,7 @@
                                         <div class="rozcestink-title">
                                             {{ Lang.index_content.test_section.heading }}
                                         </div>
-                                        <div class="rozcestink-content">{{ Lang.start_test }}</div>
+                                        <div class="rozcestink-content">{{ Lang.index_content.test_section.desc }}</div>
                                     </a>
                                 </div>
                                 <div class="rozcestnik-item">
@@ -70,15 +67,6 @@
                                     </a>
                                 </div>
                                 <div class="rozcestnik-item">
-                                    <a href="/{{ Lang.lang }}/Karte">
-                                        <div class="rozcestink-title">
-                                            {{ Lang.map }}
-                                        </div>
-                                        <div class="rozcestink-content">{{ Lang.index_content.map_content }}</div>
-
-                                    </a>
-                                </div>
-                                <div class="rozcestnik-item">
                                     <a href="/{{ Lang.lang }}/Statistik">
                                         <div class="rozcestink-title">
                                             {{ Lang.statistics }}
@@ -89,25 +77,6 @@
                                     </a>
                                 </div>
 
-                                <div class="rozcestnik-item">
-
-
-                                    <div class="rozcestink-title">
-                                        <a href="{{ Lang.index_content.apps_url }}">
-                                            {{ Lang.index_content.apps }}
-                                        </a></div>
-                                    <div class="rozcestink-content">{{ Lang.index_content.apps_content }}</div>
-
-                                </div>
-                                <div class="rozcestnik-item">
-                                    <a href="/{{ Lang.lang }}/Opentests">
-                                        <div class="rozcestink-title">
-                                            {{ Lang.opendata }}
-                                        </div>
-                                        <div class="rozcestink-content">{{ Lang.index_content.opendata_content }}</div>
-
-                                    </a>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -118,7 +87,7 @@
     </div>
 </div>
 
-</div>
+<!--
 <div class="uk-section-muted uk-section uk-section-default uk-padding-large uk-padding-remove-left uk-padding-remove-right uk-margin-large-top">
     <div id="new-tests-map-container"
          class="uk-container uk-container-expand uk-margin-bottom uk-margin-large-top uk-padding-remove-left uk-padding-remove-right">
@@ -129,7 +98,7 @@
         <div id="newtestsmap" class="olMap"></div>
         <div class="uk-container">
             <a href="Opentests">{{ Lang.further_tests }}</a> &middot;
-            <!--<a href="Opentests?max_results=5&loc_accuracy=<2000#map-accordion">{{ Lang.index_content.enlarge_map }}</a> &middot; -->
+            <a href="Opentests?max_results=5&loc_accuracy=<2000#map-accordion">{{ Lang.index_content.enlarge_map }}</a> &middot;
             <a href="#" onclick="switchToFullscreenMap();">{{ Lang.index_content.fullscreen }}</a>
         </div>
 
@@ -186,5 +155,7 @@
         </div>
     </div>
 
+</div>
 
+-->
     {% endblock %}
