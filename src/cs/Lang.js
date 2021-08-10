@@ -5,7 +5,7 @@
 
 Lang.setStrings({
    'RTR-NetTest': 'ČTÚ – NetTest',
-   'Mbps' : 'Mbps',
+   'Mbps' : 'Mb/s',
    'ms' : 'ms',
    'dBm' : 'dBm',
    'dB' : 'dB',
@@ -37,7 +37,7 @@ Lang.setStrings({
    'Cancel' : 'Cancel',
    'Continue' : 'Continue',
    'clickToEdit' : 'click to edit',
-   'MeasurementResultFrom' : 'Measurement result from',
+   'MeasurementResultFrom' : 'Výsledky měření z',
    'TestResult' : 'Test result',
    'YourSyncCode' : 'Your synchronisation code is',
    'History' : 'Verlauf',
@@ -218,7 +218,7 @@ Lang.setStrings({
     'NoUUID' : 'You do not have an UUID',
     'SafariBroken' : 'Please use <a href="https://www.mozilla.org/de/firefox/new/">Mozilla Firefox</a> or <a href="https://www.google.de/chrome/browser/desktop/">Google Chrome</a> for performing the test. More infos are given <a href="https://www.rtr.at/de/tk/netztestfaq_web_100">in the FAQ</a>.',
     'FirefoxBroken' : 'Currently, the RTR-NetTest cannot be used with Firefox 82.0. Please use a different browser for the time being.',
-    'LoopMode' : 'Loop Mode',
+    'LoopMode' : 'Opakované měření',
     'LoopModeTestsFinished' : 'All tests are completed',
     'LoopModeFinished' : 'Measurements complete',
     'WaitingForStart' : 'Waiting',

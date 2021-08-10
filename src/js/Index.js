@@ -24,8 +24,12 @@ $(window).bind("load", function() {
 });
 
 $(document).ready(function() {
+
+    var vyska = $(window).height() - $('#footer').outerHeight(true);
+    $('.tm-page').css('min-height', vyska);
+
     var mobile_client = navigator.userAgent;
-    
+ /*
     //is it windows phone?
     if (mobile_client.match(/Windows Phone/)) {
         //do nothing (yet)
@@ -42,7 +46,7 @@ $(document).ready(function() {
         var url = 'https://itunes.apple.com/at/app/rtr-netztest/id724321403';
         $("a#teaserlink").attr("href",url);
     } 
-
+*/
     if (userServerSelection > 0) {
         getLastOpenDataResults();
     }

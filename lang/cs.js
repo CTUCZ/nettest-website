@@ -3,11 +3,11 @@ exports.strings = {
     "lang": "cs",
     "LANG": "CS",
     "title": {
-        "netztest": "ČTÚ – NetTest",
+        "netztest": "ČTÚ NetTest",
         "qostest": "QosTest"
     },
     "headline" : {
-        "netztest" : "RTR-NetTest",
+        "netztest" : "ČTÚ – NetTest",
         "qostest" : "www.qostest.eu"
     },
     "template": {
@@ -32,10 +32,10 @@ exports.strings = {
                 "qostest": "https://www.netztest.at/redirect/en/terms"
             }
         },
-        "apps_content": 'Download <a href="https://itunes.apple.com/at/app/rtr-netztest/id724321403">iOS</a> or <a href="https://play.google.com/store/apps/details?id=at.alladin.rmbt.android">Android </a> App or conduct the <a href="https://www.rtr.at/en/tk/rtrnetztest_tests">browser test</a>.',
+        "apps_content": 'Stáhněte si měřicí aplikaci pro <a href="https://play.google.com/store/apps/details?id=at.alladin.rmbt.android">Android</a> nebo <a href="https://itunes.apple.com/at/app/rtr-netztest/id724321403">iOS</a> nebo proveďte test pomocí <a href="https://www.rtr.at/en/tk/rtrnetztest_tests">webového prohlížeče</a>.',
         "apps_url" : "https://www.rtr.at/en/tk/rtrnetztest_tests",
         "apps" : {
-            "netztest" : "App and Browser Test",
+            "netztest" : "Aplikace a webový test",
             "qostest" : "NetTest Apps"
         },
         "apps_alt" : "RTR-NetTest app",
@@ -54,15 +54,15 @@ exports.strings = {
             "start" : "Start"
         },
         "statistics_alt" : "Statistics teaser",
-        "map": "Map view",
-        "map_content" : "Map with test results",
+        "map": "Mapa",
+        "map_content" : "Mapy s výsledky testů",
         "help_content" : "Detailled background information",
-        "statistics_content" : "Statistics on the test results",
+        "statistics_content" : "Dříve provedená měření",
         "enlarge_map" : "Enlarge map",
         "fullscreen" : "Full screen",
-        "loop_mode_content": "Conduct repeated measurements",
-        "opendata_content": "Explore open data test results",
-        "certified_content": "Conduct certified measurements"
+        "loop_mode_content": "Provede opakované měření dle vlastního nastavení",
+        "opendata_content": "Výsledky měření jsou dostupné jako otevřená data",
+        "certified_content": "Provede proces certifikovaného měření"
     },
 
     "map_content" : {
@@ -108,7 +108,7 @@ exports.strings = {
     },
 
     "opentest_content" : {
-        "measurement_result_from" : "Measurement result from",
+        "measurement_result_from" : "Výsledky měření z",
         "coverage_hint": "Please note that these data rates are not measurement results of the RTR-NetTest, but data rates published by the respective operators. The information refers to an area of 100m x 100m. For questions - such as the tariff with which bandwidths can be achieved or whether installation is possible at your specific location - please contact the respective network operator. <a href='https://www.rtr.at/TKP/service/rtr-nettest/help/test_result/netztestfaq_coverage.en.html' target='_blank'>Further information</a>",
         "coverage_unavailable": "For this location, no operator open data is available.",
         "coverage_intro": "For this location the following information has been published by operators:",
@@ -236,21 +236,21 @@ exports.strings = {
         "generate_new": "Try again"
     },
     //Page titles and link descriptions
-    "index": "Home",
-    "statistics": "Statistics",
+    "index": "Úvod",
+    "statistics": "Historie měření",
     "history": "Moje měření",
-    "map": "Map view",
+    "map": "Mapa",
     "options": "Options",
     "opentest": "Open data measurement result",
     "opentests": "Open data measurement results",
-    "opendata": "Open data",
-    "help": "Help",
+    "opendata": "Otevřená data",
+    "help": "Nápověda",
     "help_url": "https://www.rtr.at/en/tk/netztesthilfe",
-    "imprint" : "Publishing information",
+    "imprint" : "Informace",
     "imprint_url" : "https://www.rtr.at/en/rtr/impressum",
     "menu" : "Menu",
-    "loop_mode" : "Loop mode",
-    "certified_measurement": "Certified measurement",
+    "loop_mode" : "Opakované měření",
+    "certified_measurement": "Certifikované měření",
     "further": "Further",
     "start_test": "Spustit test",
     "test": "Test",
@@ -335,7 +335,7 @@ exports.strings = {
 
     "quality_of_service" : "Quality of Service",
     "details" : "Details",
-    "detailed_results" : "Detailed results",
+    "detailed_results" : "Podrobné výsledky",
     "position" : "Position",
     "speed_curve" : "Speed curve",
     "download" : "Download",
