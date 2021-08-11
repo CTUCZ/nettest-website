@@ -3,7 +3,7 @@ exports.strings = {
     "lang": "cs",
     "LANG": "CS",
     "title": {
-        "netztest": "ČTÚ NetTest",
+        "netztest": "ČTÚ – NetTest",
         "qostest": "QosTest"
     },
     "headline" : {
@@ -22,14 +22,14 @@ exports.strings = {
     },
     "index_content": {
         "service_description": {
-            "netztest": "ČTÚ – NetTest informuje uživatele o aktuální kvalitě jejich služby přístupu k internetu v podobě skutečně dosahované rychlosti stahování (download), odesílání (upload) a doby odezvy (ping). ČTÚ – NetTest nabízí možnost certifikovaného měření, které plně automaticky provede celý proces měření s výsledkem v podobě PDF dokumentu, který může uživatel použít pro případnou reklamaci služby přístupu k internetu.",
+            "netztest": "ČTÚ – NetTest informuje uživatele o aktuální kvalitě jejich služby přístupu k internetu v podobě skutečně dosahované rychlosti stahování (download), odesílání (upload) a doby odezvy (ping). Nástroj NetTest nabízí možnost certifikovaného měření, které plně automaticky provede celý proces měření s výsledkem v podobě PDF dokumentu, který může uživatel použít pro případnou reklamaci služby přístupu k internetu.",
             "qostest": "qostest.eu informs users about the current service quality (including upload, download, ping, signal strength) of their Internet connection. In addition, a map view and statistics of previous tests can be accessed."
         },
         "tos": {
             "text": "Prohlášení o ochraně osobních údajů a podmínky užití",
             "url": {
-                "netztest": "https://www.netztest.at/redirect/en/terms",
-                "qostest": "https://www.netztest.at/redirect/en/terms"
+                "netztest": "https://www.ctu.cz/sites/default/files/obsah/zpracovani_ou-2018.pdf",
+                "qostest": "https://www.ctu.cz/sites/default/files/obsah/zpracovani_ou-2018.pdf"
             }
         },
         "apps_content": 'Stáhněte si měřicí aplikaci pro <a href="https://play.google.com/store/apps/details?id=at.alladin.rmbt.android">Android</a> nebo <a href="https://itunes.apple.com/at/app/rtr-netztest/id724321403">iOS</a> nebo proveďte test pomocí <a href="https://www.rtr.at/en/tk/rtrnetztest_tests">webového prohlížeče</a>.',
