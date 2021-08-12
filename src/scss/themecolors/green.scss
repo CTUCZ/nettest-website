@@ -5,15 +5,15 @@
 
       &:hover {
         background: transparent !important;
-        color: $green !important;
+        color: $blue !important;
       }
     }
   }
   .uk-tab > .uk-active > a {
-    border-color: $green;
+    border-color: $blue;
   }
   .uk-text-meta {
-    color: $green;
+    color: $blue;
   }
   .download .uk-card-secondary {
     a {
@@ -21,18 +21,18 @@
 
       &:hover {
         background: transparent !important;
-        color: $green !important;
+        color: $blue !important;
       }
     }
 
     ul {
       svg {
-        color: $green;
+        color: $blue;
       }
     }
   }
   .uk-section-default a {
-    color: $green;
+    color: $blue;
   }
 
   .social-share {
@@ -45,14 +45,14 @@
 
       &:hover {
         background: none !important;
-        color: $green !important;
+        color: $blue !important;
       }
     }
   }
   .uk-section-default .uk-button-default {
-    background-color: $green;
+    background-color: $blue;
     color: #fff;
-    border: 2px solid $green;
+    border: 2px solid $blue;
   }
   .uk-card-blue {
     background: $blue !important;
@@ -78,7 +78,7 @@
   .left-down ul svg {
     stroke-width: 2.5;
     margin-top: 1px;
-    color: $green;
+    color: $blue;
     height: 15px;
   }
 
@@ -98,41 +98,41 @@
   }
 
   .uk-section-default a:hover {
-    background: $green;
+    background: $blue;
     color: #fff;
     text-decoration: none;
   }
 
   .download .uk-card-secondary {
-    border: 1px solid $green;
+    border: 1px solid $blue;
 
     h3 {
-      color: $green !important;
+      color: $blue !important;
     }
   }
 
   .contact-card {
-    border-bottom: 1px solid $green;
+    border-bottom: 1px solid $blue;
   }
 
   .uk-button-primary {
-    background-color: $green;
+    background-color: $blue;
     color: $white !important;
-    border: 2px solid $green;
+    border: 2px solid $blue;
 
     &:hover {
       background-color: transparent !important;
-      color: $green !important;
-      border: 2px solid $green !important;
+      color: $blue !important;
+      border: 2px solid $blue !important;
     }
   }
 
   .uk-article-meta {
-    color: $green;
+    color: $blue;
   }
 
   .v-adress:not(.uk-icon) {
-    color: $green;
+    color: $blue;
   }
 
   .uk-list-bullet > li::before {
@@ -140,7 +140,7 @@
   }
 
   .uk-card-primary {
-    background: $green;
+    background: $blue;
   }
 
   .uk-list-striped > li:nth-of-type(odd) {
@@ -148,24 +148,24 @@
   }
 
   .uk-card-secondary h3 {
-    color: $green;
+    color: $blue;
   }
   .uk-breadcrumb {
     a {
       color: $black;
       &:hover {
         background: transparent !important;
-        color: $green !important;
+        color: $blue !important;
       }
     }
   }
   .switcher li.uk-active a {
     transition: all 0.3s ease-out;
-    color: $green;
+    color: $blue;
   }
   .anmelden .uk-button {
-    border: solid 2px $green;
-    color: $green;
+    border: solid 2px $blue;
+    color: $blue;
     &:hover {
       background-color: transparent;
       border: solid 2px $white;
@@ -174,7 +174,7 @@
   }
   .uk-accordion.ac-content {
     a {
-      border: solid 0.5px $green;
+      border: solid 0.5px $blue;
 
       &:hover {
         background: transparent;
@@ -183,19 +183,19 @@
 
     li.uk-open {
       .uk-accordion-content {
-        border-left: solid 0.5px $green;
-        border-right: solid 0.5px $green;
-        border-bottom: solid 0.5px $green;
+        border-left: solid 0.5px $blue;
+        border-right: solid 0.5px $blue;
+        border-bottom: solid 0.5px $blue;
 
         .uk-button {
-          border: 2px solid $green;
+          border: 2px solid $blue;
           color: $white;
         }
 
         a:not(.uk-button) {
-          color: $green;
+          color: $blue;
           &:hover {
-            background: $green;
+            background: $blue;
             color: $white;
           }
         }
@@ -203,13 +203,13 @@
     }
 
     .uk-open > .uk-accordion-title::before {
-      background-color: $green-medium;
+      background-color: $blue-medium;
       border: transparent;
       background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' style='fill:rgb(67,135,0)' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg' data-svg='minus'%3E%3Crect height='2' width='16' y='9' x='1'%3E%3C/rect%3E%3C/svg%3E");
     }
 
     .uk-accordion-title::before {
-      background-color: $green-medium;
+      background-color: $blue-medium;
       border: transparent;
       background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' style='fill:rgb(67,135,0)' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg' data-svg='plus'%3E%3Crect x='9' y='1' width='1' height='17'%3E%3C/rect%3E%3Crect x='1' y='9' width='17' height='1'%3E%3C/rect%3E%3C/svg%3E");
     }
@@ -220,7 +220,7 @@
   }
   .uk-accordion.ac-content li.uk-open a:not(.uk-button) {
     text-decoration: none;
-    border: solid 0.5px $green;
+    border: solid 0.5px $blue;
     border-top-left-radius: 9px;
     border-top-right-radius: 9px;
     border-bottom-left-radius: 0;

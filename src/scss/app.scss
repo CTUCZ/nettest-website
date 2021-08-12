@@ -729,14 +729,11 @@ tr.head {
 }
 
 th {
-    background: $white;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 0 12px 16px;
+    font-size: 15px;
+    font-weight: 500;
+    color: $blue;
+    padding: 8px 10px;
     vertical-align: top;
-    border-bottom: 1px solid $blue;
-    border-right: 1px solid $blue;
-    border-right: 1px solid $blue;
 }
 
 .uk-accordion-content {
@@ -757,12 +754,11 @@ th {
 }
 
 .uk-table th {
-    font-size: 18px;
+    font-size: 15px;
 }
 
 .uk-table td {
-    font-size: 14px;
-    border-right: 1px solid $blue;
+    font-size: 15px;
 }
 
 .uk-table-striped > tr:nth-of-type(even),

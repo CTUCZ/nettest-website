@@ -100,7 +100,7 @@ $subnav-item-disabled-color:                     $global-muted-color !default;
 /* Hover + Focus */
 .uk-subnav > * > a:hover,
 .uk-subnav > * > a:focus {
-    color: $subnav-item-hover-color;
+    color: $blue;
     text-decoration: $subnav-item-hover-text-decoration;
     outline: none;
     @if(mixin-exists(hook-subnav-item-hover)) {@include hook-subnav-item-hover();}

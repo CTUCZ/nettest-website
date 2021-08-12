@@ -22,7 +22,7 @@ exports.strings = {
     },
     "index_content": {
         "service_description": {
-            "netztest": "ČTÚ – NetTest informuje uživatele o aktuální kvalitě jejich služby přístupu k internetu v podobě skutečně dosahované rychlosti stahování (download), odesílání (upload) a doby odezvy (ping). Nástroj NetTest nabízí možnost certifikovaného měření, které plně automaticky provede celý proces měření s výsledkem v podobě PDF dokumentu, který může uživatel použít pro případnou reklamaci služby přístupu k internetu.",
+            "netztest": "ČTÚ – NetTest informuje uživatele o aktuální kvalitě jejich služby přístupu k internetu v podobě skutečně dosahované rychlosti stahování (download), nahrávání (upload) a doby odezvy (ping). Nástroj NetTest nabízí možnost certifikovaného měření, které plně automaticky provede celý proces měření s výsledkem v podobě PDF dokumentu, který může uživatel použít pro případnou reklamaci služby přístupu k internetu.",
             "qostest": "qostest.eu informs users about the current service quality (including upload, download, ping, signal strength) of their Internet connection. In addition, a map view and statistics of previous tests can be accessed."
         },
         "tos": {
@@ -258,7 +258,7 @@ exports.strings = {
     //common words
     "top" : "Top",
     "print" : "Print",
-    "time": "Time",
+    "time": "Čas",
     "operator": "Operator",
     "device": "Zařízení",
     "up": "Upload",
@@ -337,11 +337,11 @@ exports.strings = {
     "details" : "Details",
     "detailed_results" : "Podrobné výsledky",
     "position" : "Position",
-    "speed_curve" : "Speed curve",
+    "speed_curve" : "Grafy",
     "download" : "Download",
     "upload" : "Upload",
-    "speed" : "Speed",
-    "data_volume" : "Data volume",
+    "speed" : "Rychlost",
+    "data_volume" : "Objem dat",
     "signal_strength" : "Signal strength",
     "connection_technology" : "Technology",
     "share" : "Share",
@@ -373,7 +373,7 @@ exports.strings = {
     "reset" : "Reset",
     "histogram" : "Histogram",
     "filter_map": "Filter map",
-    "show_details": "Show details",
+    "show_details": "Ukázat detaily",
 
     "coordinates": "Coordinates",
     "location": "Location",

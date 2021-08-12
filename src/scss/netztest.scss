@@ -1051,3 +1051,15 @@ b, strong {
 .uk-navbar-toggle {
     color: #fff;
 }
+
+#verlauf-detail,
+#testresult-detail {
+    margin-bottom: 50px;
+    tr {
+        td {
+            &:nth-child(2) {
+                font-weight: 500;
+            }
+        }
+    }
+}
