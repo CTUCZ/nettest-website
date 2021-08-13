@@ -41,7 +41,7 @@ function form_checkRegexp(o, regexp, n) {
 
 /**
  * Opens the AGB-Form IF the user has not accepted them yet
- * if the user has accepted the agb, 
+ * if the user has accepted the agb,
  *  -> IF run_Test is true, the test specified in callback is run
  *  -> IF run_Test if false, the requestBrowserData is called (which ultimately calls
  *      the function specified in callback with the given options
@@ -78,9 +78,20 @@ function show_agbform(run_Test, callback, options) {
 
     };
 
+    var popuptitle = "";
+
+    if (selectedLanguage === 'cs') {
+        popuptitle = "Prohlášení o ochraně osobních údajů a podmínky užití";
+    } else if (selectedLanguage === 'de') {
+        popuptitle = "Datenschutzerklärung und Nutzungsbedingungen";
+    } else {
+        popuptitle = "Privacy Policy and Terms of Use";
+    }
+
+
     show_agb_popup(successFunc, closeFunc, {
         cookieIdentifier: "RMBTTermsV6",
-        title: (selectedLanguage === 'de') ? 'Datenschutzerklärung und Nutzungsbedingungen' : 'Privacy Policy and Terms of Use',
+        title: popuptitle,
         tocFile: "tc.html",
         // toc: (selectedLanguage === 'de') ? tc_short_de : tc_short_en,
         bottomText: (selectedLanguage == 'de') ? tc_agree_de : tc_agree_en
@@ -261,15 +272,15 @@ function show_ndtform(run_Test, callback, options, terms_accepted) {
 	document.getElementById("popupform").innerHTML = "";
 	$(".iwill").detach();
 	var longtext;
-	
+
 	var tmp = (selectedLanguage=='de')?ndt_short_de:ndt_short_en;
 	$("#popupform").append(
 		'<div id="terms_check" style="margin-top:20px;">' +
 			'<div class="longtext">' +
 			'<p>'+tmp+'</p>'
 			);
-	
-	
+
+
 	var tmp = (selectedLanguage=='de')?'Ich möchte zusätzlich den optionalen, vertiefenden NDT-Test ausführen.':'I wish to run the optional NDT-Test.';
 	$("#popupform").append(
 	                '</div>'
@@ -279,26 +290,26 @@ function show_ndtform(run_Test, callback, options, terms_accepted) {
 			 + '</div>'
 			 + '</form>'
 			 );
-		
+
 	var bValid = false;
 	var tmp_title = (selectedLanguage=='de')?'NDT-Test':'NDT-Test';
 	var tmp_decline = (selectedLanguage=='de')?'Zurück':'Back';
 	var tmp_agree = (selectedLanguage=='de')?'Weiter':'Continue';
 	var zipcookie = '';
-	
+
 	closeFunc = function() {
 		if (!bValid) {
 			var tmp = (selectedLanguage=='de')?'/de':'/en';
         	window.location.href= tmp;
        }
 	}
-	
-	var dialog_buttons = {}; 
+
+	var dialog_buttons = {};
 	dialog_buttons[tmp_decline] = function() {
 		bValid = true;
 	    $(this).dialog("close");
         show_agbform(run_Test, callback, options);
-            
+
 	};
 	dialog_buttons[tmp_agree] = function() {
 	        bValid = true;
@@ -307,14 +318,14 @@ function show_ndtform(run_Test, callback, options, terms_accepted) {
                         setCookie("RMBTTermsV6", true, 365 * 20 * 24 * 3600);
                         //console.log("cookie set!");
                 }
-                        
+
                         if ($('#form_ndt').attr('checked')) {
                                 setCookie("RMBTndt", '1', 365 * 20 * 24 * 3600);
                         }
                         else {
                                 setCookie("RMBTndt", '0', 365 * 20 * 24 * 3600);
                         }
-                        $(this).dialog("close"); 
+                        $(this).dialog("close");
                         if (run_Test){
 	                        zipcookie = getCookie('RMBTzip');
 	                        //console.log(zipcookie+' '+zipcookie.length);
@@ -329,7 +340,7 @@ function show_ndtform(run_Test, callback, options, terms_accepted) {
 					else if (callback == 'ndttest')
 					{
 						var testID = window.location.hash.substr(1);
-						
+
 						var attributes = {
 							id : 'rmbtApplet',
 							codebase : '../applet/',
@@ -340,20 +351,20 @@ function show_ndtform(run_Test, callback, options, terms_accepted) {
 						};
 						var parameters = {};
 						deployJava.runApplet(attributes, parameters, '1.5');
-						
+
 						rmbtApplet.startNdt(cookie_uuid,testID);
 						ndt(testID);
 					}
-					else 
+					else
 						getLocation(geo_HighAccuracy, geo_timeout, geo_maximumAge, start_test);
 	                        }
                         }
                         else if (callback != '') {
-                                requestBrowserData(callback, options);         
+                                requestBrowserData(callback, options);
                         }
 	};
-	
-	
+
+
 	$("#popupform").dialog({
 		autoOpen : false,
 		title : tmp_title,
@@ -376,7 +387,7 @@ function show_ndtform(run_Test, callback, options, terms_accepted) {
 function show_zipform(run_Test, callback, options) {
 	document.getElementById("popupform").innerHTML = "";
 	$(".iwill").detach();
-	
+
 	if (selectedLanguage == "de") {
 	$("#popupform").append(
 		'<form action="javascript:void(0);">' +
@@ -386,7 +397,7 @@ function show_zipform(run_Test, callback, options) {
 			'<input type="checkbox" name="form_zip_ausland" id="form_zip_ausland" class="checkbox ui-widget-content ui-corner-all" onchange="$(\'#toggle_zip\').toggle();" /></p>' +
 			'<p id="toggle_zip"><label for="form_zip">Österr. Postleitzahl:&nbsp;</label>' +
 			'<input type="text" name="form_zip" id="form_zip" class="text ui-widget-content ui-corner-all" /></p>' +
-			
+
 		'</div>'
 		+ '<div class="validateTips"></div><div class="clear">'
 		+ '</form>');
@@ -400,10 +411,10 @@ function show_zipform(run_Test, callback, options) {
 			'<input type="checkbox" name="form_zip_ausland" id="form_zip_ausland" class="checkbox ui-widget-content ui-corner-all" onchange="$(\'#toggle_zip\').toggle();" /></p>' +
 			'<p id="toggle_zip"><label for="form_zip">Austrian postcode:&nbsp;</label>' +
 			'<input type="text" name="form_zip" id="form_zip" class="text ui-widget-content ui-corner-all" /></p>' +
-			
+
 		'</div>'
 		+ '<div class="validateTips"></div><div class="clear">'
-		+ '</form>');		
+		+ '</form>');
 	}
 
 	var zip = $("#form_zip");
@@ -413,10 +424,10 @@ function show_zipform(run_Test, callback, options) {
 	var terms_accepted = getCookie("RMBTTermsV6");
 	var popup_title = (selectedLanguage=='de')?'Postleitzahl':'Post code';
 	allFields.add(zip);
-	
+
 	var tmp_decline = (selectedLanguage=='de')?'Abbrechen':'Cancel';
 	var tmp_agree = (selectedLanguage=='de')?'Weiter':'Continue';
-	
+
 	var dialog_buttons = {};
 	dialog_buttons[tmp_decline] = function() {
 		$(this).dialog("close");
@@ -429,7 +440,7 @@ function show_zipform(run_Test, callback, options) {
 		if(terms_accepted != null && terms_accepted == "true" && run_Test) {
 			if (zip.val().length == 0) {
 				setCookie('RMBTzip', '0000', 3600);
-				$(this).dialog("close");  
+				$(this).dialog("close");
 				bValid = false;
 			}
 			else if (zip.val().length) {
@@ -466,7 +477,7 @@ function show_zipform(run_Test, callback, options) {
 						getLocation(geo_HighAccuracy, geo_timeout, geo_maximumAge, start_jstest);
 					else if (callback == 'jstest_easy')
 						getLocation(geo_HighAccuracy, geo_timeout, geo_maximumAge, start_jstest_easy);
-					else 
+					else
 						getLocation(geo_HighAccuracy, geo_timeout, geo_maximumAge, start_test);
 				}
 				else {
@@ -484,7 +495,7 @@ function show_zipform(run_Test, callback, options) {
 	else {
 		$("#popupform").dialog("open");
 		//setTimeout(function(){$("#form_zip").focus()},1000);
-		
+
 	}
 	$('#popupform').live('keyup', function(e){
           if (e.keyCode == 13) {
