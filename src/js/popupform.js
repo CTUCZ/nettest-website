@@ -167,10 +167,34 @@ function show_agb_popup(onAccept, onDecline, options) {
 
 		var template = Handlebars.compile($("#modalTemplate").html());
 		var containerId = "modal-container-" + Math.round(Math.random() * 1024e4)
+
+		var confirm = "";
+
+		if (selectedLanguage === 'cs') {
+			confirm = "Přijmout";
+		} else if (selectedLanguage === 'de') {
+			confirm = "Zustimmung";
+		} else {
+			confirm = "Agree";
+		}
+
+		var cancel = "";
+
+		if (selectedLanguage === 'cs') {
+			cancel = "Ukončit";
+		} else if (selectedLanguage === 'de') {
+			cancel = "Abbruch";
+		} else {
+			cancel = "Decline";
+		}
+
+
 		var html = template({
 			"content": popupText.html(),
-			"confirm": (selectedLanguage === 'de') ? 'Zustimmung' : 'Agree',
-			"cancel": (selectedLanguage === 'de') ? 'Abbruch' : 'Decline',
+//			"confirm": (selectedLanguage === 'de') ? 'Zustimmung' : 'Agree',
+			"confirm": confirm,
+//			"cancel": (selectedLanguage === 'de') ? 'Abbruch' : 'Decline',
+			"cancel": cancel,
 			"title": title,
 			"container-modifier": "uk-modal-container",
 			"container-id": containerId

@@ -172,13 +172,13 @@ exports.strings = {
 
     "loop_mode_content" : {
         "tests" : "Number of tests",
-        "tests_sum" : "Number of tests in loop mode",
+        "tests_sum" : "Počet testů",
         "waiting_time" : "Waiting time",
-        "waiting_time_desc" : "Waiting time (in minutes) between two tests in loop mode",
-        "start": "Start loop mode",
-        "measurements" : "Last measurements",
+        "waiting_time_desc" : "Čas (v minutách) mezi dvěma testy",
+        "start": "Spustit opakované měření",
+        "measurements" : "Poslední měření",
         "error_during_test" : "An error occurred during the measurement.",
-        "current_test": "Current measurement",
+        "current_test": "Aktuální měření",
         "save_results": "Save results",
         "download_results": "Download results:",
         "available_history": "Test results are available under menu item <em>History</em>."
@@ -250,6 +250,7 @@ exports.strings = {
     "imprint_url" : "https://www.rtr.at/en/rtr/impressum",
     "menu" : "Menu",
     "loop_mode" : "Opakované měření",
+    "loop_mode_loading" : "Opakované měření se načítá...",
     "certified_measurement": "Certifikované měření",
     "further": "Further",
     "start_test": "Spustit test",
@@ -259,7 +260,7 @@ exports.strings = {
     "top" : "Top",
     "print" : "Print",
     "time": "Čas",
-    "operator": "Operator",
+    "operator": "Poskytovatel",
     "device": "Zařízení",
     "up": "Upload",
     "down": "Download",
@@ -324,7 +325,7 @@ exports.strings = {
     "pinned" : "Pinned",
     "test_server" : "Testserver",
     "ip": "IP",
-    "state": "Status",
+    "state": "Stav",
     "api": "API",
 
     "access" : "Připojení",
@@ -375,7 +376,7 @@ exports.strings = {
     "filter_map": "Filter map",
     "show_details": "Ukázat detaily",
 
-    "coordinates": "Coordinates",
+    "coordinates": "Souřadnice",
     "location": "Location",
     "provider" : "Provider",
     "surrounding_tests": "Show surrounding measurements as open data",
