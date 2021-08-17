@@ -43,11 +43,11 @@ if (preferredTest !== TestTypes.Java) {
 }
 else if (!navigator.cookieEnabled) {
 	loadRMBTApplet = false;
-	cookieEnabled = false;	
+	cookieEnabled = false;
 }
 else if (javaTurnOff==1 && !Modernizr.canvas) {
 	loadRMBTApplet = false;
-        noJava = true;	
+        noJava = true;
 }
 else if (!navigator.javaEnabled() || javaTurnOff==1) {
         loadRMBTApplet = false;
@@ -64,7 +64,7 @@ else {
         else{
         	loadRMBTApplet = false;
         	var anz_versions = versions.length;
-        	var highest_version = anz_versions-1; 
+        	var highest_version = anz_versions-1;
         	var javaplugin = splitjavaversion(versions[highest_version]);
         	var javanow = splitjavaversion("1.7.0_17");
         	if (javaplugin[0] == javanow[0]) {
@@ -73,8 +73,8 @@ else {
         				if (javaplugin[3] >= javanow[3]) {
         					loadRMBTApplet = true;
         					oldjava = false;
-        				}	
-        			}	
+        				}
+        			}
         		}
         	}
         	var javaplugin = splitjavaversion(versions[highest_version]);
@@ -85,13 +85,13 @@ else {
         				if (javaplugin[3] >= javanow[3]) {
         					loadRMBTApplet = true;
         					oldjava = false;
-        				}	
-        			}	
+        				}
+        			}
         		}
         	}
         	if (javaplugin[0] == javanow[0]) {
         		if (javaplugin[1] == 8) {
-        			loadRMBTApplet = true;	
+        			loadRMBTApplet = true;
         			oldjava = false;
         		}
         	}
@@ -132,7 +132,7 @@ function start_test() {
         var zipcookie = '';
         zipcookie = getCookie('RMBTzip');
         if (zipcookie && (zipcookie.length == 4 || zipcookie.length == 0)) {
-                zipVal = zipcookie;                                                                                           
+                zipVal = zipcookie;
         }
         else if (zipInput.val() && zipInput.val().length > 0) {
                 zipVal = zipInput.val();
@@ -157,12 +157,12 @@ function start_test() {
                             //try again
                             window.setTimeout(fct,5000);
                         }
-                        
+
 			if (result) {
 				var status = result.status.toString();
 				if (!status || status.length == 0) {
 					$("#popuperror").empty();
-					$("#popuperror").append('<p>'+Lang.getString('ErrorOnInitializingApplet') +'</p>');   
+					$("#popuperror").append('<p>'+Lang.getString('ErrorOnInitializingApplet') +'</p>');
 					show_errorPopup();
 				}
 			}
@@ -172,13 +172,13 @@ function start_test() {
 	}
 	catch(err) {
 		//console.log(err);
-		TestEnvironment.getTestVisualization().setStatus("JAVAERROR");	
+		TestEnvironment.getTestVisualization().setStatus("JAVAERROR");
 	}
         //} else set_status("JAVAERROR");
 }
 
 $(document).ready(function() {
-    
+
         TestEnvironment.init(new SvgTestVisualization(function(result) {
             //success callback
             //redirect to result
@@ -197,10 +197,10 @@ $(document).ready(function() {
         }));
 
         var isWithinApp = (navigator.userAgent && navigator.userAgent.indexOf("RTR-NetTest") !== -1);
-    
-               
+
+
         if (cookieEnabled && !((preferredTest === TestTypes.Java) && (!loadRMBTApplet || !rmbtApplet)) && !isWithinApp) {
-            
+
                 var argument;
                 switch(preferredTest) {
                     case TestTypes.Java:
@@ -213,24 +213,24 @@ $(document).ready(function() {
                         argument = 'websocket';
                         break;
                 }
-                
+
 
                 setTimeout(function() {
                     show_agbform(true, argument);
                 }, 900);
 
-		//$("#form_zip").focus();	
-                
-        } 
+		//$("#form_zip").focus();
+
+        }
         else {
-        	
-        	
+
+
         	// Error-Messages bei Fehlern
                 $("#popuperror").empty();
                 if (!cookieEnabled) {
                 	var errormessage = (selectedLanguage=='de')?'<p>Die Cookie-Funktion in Ihrem Browser ist deaktiviert. Sie können den RTR-Netztest nicht ausführen.</p>':'<p>Your browser\'s cookie functionality is turned off. You can not run the RTR-NetTest.<p>';
                 	$("#popuperror").append(errormessage);
-                	show_errorPopup();	
+                	show_errorPopup();
                 }
                 else if (isWithinApp){
                     //no tests possible from within the app
@@ -253,7 +253,7 @@ $(document).ready(function() {
                 	//console.log("nojava");
                 	//setTimeout(function(){show_agbform(true, 'jstest');},2000);
                     $("#popuperror").append(errormessage);
-                	show_errorPopup();	
+                	show_errorPopup();
                 }
                 else if (oldjava){
                 	var errormessage = (selectedLanguage=='de')?'<p>Ihr Java-Plugin (Version '+versions[0]+') ist veraltet!</p><p>Bitte aktualisieren Sie das Plugin per Download unter <a href="http://java.com/inc/BrowserRedirect1.jsp">http://java.com/inc/BrowserRedirect1.jsp</a></p>':'<p>Your java plugin (version '+versions[0]+') is outdated!</p><p>Please update your java plugin using the following download:<br /><a href="http://java.com/inc/BrowserRedirect1.jsp">http://java.com/inc/BrowserRedirect1.jsp</a><p>';
@@ -262,10 +262,10 @@ $(document).ready(function() {
                 	$("#dashboard_easy").detach();
                 	//console.log("oldjava");
                     $("#popuperror").append(errormessage);
-                	show_errorPopup();	
+                	show_errorPopup();
                 	//setTimeout(function(){show_agbform(true, 'jstest');},2000);
 		}
-                
+
                 else if (rmbtApplet == null) {
                 	var errormessage = (selectedLanguage=='de')?'<p>Fehler beim Laden des Testmoduls.</p>':'<p>Error on loading the test module<p>';
                 	$("#error_placeholder").hide();
@@ -273,7 +273,7 @@ $(document).ready(function() {
                 	$("#dashboard_easy").detach();
                 	//console.log("noApplet");
                     $("#popuperror").append(errormessage);
-                	show_errorPopup();	
+                	show_errorPopup();
                 	//setTimeout(function(){show_agbform(true, 'jstest');},2000);
                 }
                 else {
@@ -281,8 +281,186 @@ $(document).ready(function() {
 			$("#popuperror").append(errormessage);
 			show_errorPopup();
                 }
-                
-                
+
+
         }
 
 });
+
+
+//
+//
+//
+// document.onload(_ => {
+//   console.log('onload');
+//   this.testGauge = new GaugeUIComponent();
+//   this.testGauge = this.getGauge();
+//   this.testGauge.draw();
+// });
+//
+// console.log('AAAA');
+//
+// function requestStart() {
+//   if (this.status === 'WAITING' && (this.config === undefined || this.config === null)) {
+//     // this.$onStatusNotWaiting.next('REQUESTS_CONFIG');
+//     this.status = 'REQUESTS_CONFIG';
+//     // this.statusChange.emit('REQUESTS_CONFIG');
+//   } else if (this.status === 'WAITING' && this.config !== undefined && this.config !== null) {
+//     if (this.status !== 'WORKING' && this.config !== undefined && this.config !== null) {
+//       this.status = 'WORKING';
+//       this.statusChange.emit('WORKING');
+//       this.manualStartShouldBeDisabled = true;
+//       this.$onStatusNotWaiting.next('WORKING');
+//       this.testImplementation.register(this.config, this.$state);
+//     }
+//   }
+// }
+//
+// class GaugeUIComponent {
+//
+//   active//: boolean;
+//
+//   testGauge//: BaseMeasurementGauge;
+//   renderingConfig//: WebsiteSettings;
+//
+//   constructor(
+//     // configService: ConfigService,
+//     // protected translateService: TranslateService,
+//     // @Inject(WINDOW) private window: Window
+//   ) {
+//     // super(testImplementation);
+//     // this.state.subscribe(this.handleState);
+//     // this.renderingConfig = configService.getConfig();
+//   }
+//
+//   setActive = (active) => {
+//     this.active = active;
+//     if (this.active && this.testGauge) {
+//       setTimeout(() => {
+//         this.testGauge.resizeEvent();
+//       }, 0);
+//     }
+//   };
+//
+//   ngAfterViewInit() {
+//     this.testGauge = this.getGauge();
+//     this.testGauge.draw();
+//   }
+//
+//   handleState = (state) => {
+//     if (this.testGauge) {
+//       this.testGauge.onStateChange(state);
+//     }
+//   };
+//
+//   getGauge(){
+//     const hasQos =
+//       this.renderingConfig.nettest && this.renderingConfig.nettest.tests && this.renderingConfig.nettest.tests.qos;
+//
+//     const translations = {
+//       SPEED_MBPS: 'Mbps',
+//       DURATION_MS: 'ms',
+//       INNER_TEXTS: ['0MBPS', '1MBPS', '10MBPS', '100MBPS', '1GBPS'],
+//       OUTER_TEXTS: ['INIT', 'PING', 'DOWN', 'UP']
+//     };
+//     if (hasQos) {
+//       translations.OUTER_TEXTS.push('QOS');
+//     }
+//     let gaugeColors = {
+//       baseColor: '#EEEEEE',
+//       valueColor: '#878787',
+//       progressColor: '#911232',
+//       fontColor: '#FFFFFF'
+//     };
+//     let font = null;
+//     if (this.renderingConfig.colors.gauge) {
+//       const gc = this.renderingConfig.colors.gauge;
+//       gaugeColors = {
+//         baseColor: gc.arc_background,
+//         valueColor: gc.arc_inner,
+//         progressColor: gc.arc_outer,
+//         fontColor: gc.font
+//       };
+//
+//       if (gc.fontName) {
+//         font = gc.fontName;
+//       }
+//     }
+//     const gauge = new MeasurementGauge(
+//       this.logger,
+//       document.getElementById('nettest-gauge'),
+//       document.getElementById('nettest-gauge-2'),
+//       document.getElementById('nettest-state'),
+//       document.getElementById('nettest-ping'),
+//       document.getElementById('nettest-up'),
+//       document.getElementById('nettest-down'),
+//       document.getElementById('nettest-position'),
+//       document.getElementById('nettest-provider'),
+//       document.getElementById('nettest-device'),
+//       document.getElementById('nettest-technology'),
+//       document.getElementById('nettest-server'),
+//       this.window,
+//       translations,
+//       gaugeColors,
+//       font,
+//       hasQos
+//     );
+//
+//     let firstRun = true;
+//     const translate = () => {
+//       const obs= [];
+//       for (const key in translations) {
+//         if (key === 'INNER_TEXTS' || key === 'OUTER_TEXTS') {
+//           for (const gaugeKey of translations[key]) {
+//             obs.push('NETTEST.GAUGE.' + gaugeKey);
+//           }
+//         } else {
+//           obs.push('WEBSITE.UNITS.' + key);
+//         }
+//       }
+//
+//       forkJoin(obs)
+//         .pipe(first())
+//         .subscribe((data) => {
+//           let i = 0;
+//           const res = {};
+//
+//           for (const key in translations) {
+//             if (!translations.hasOwnProperty(key)) {
+//               continue;
+//             }
+//             if (i >= data.length) {
+//               break;
+//             }
+//             if (key === 'INNER_TEXTS' || key === 'OUTER_TEXTS') {
+//               res[key] = [];
+//               for (const gaugeKey of translations[key]) {
+//                 res[key].push(data[i]);
+//                 i++;
+//               }
+//             } else {
+//               res[key] = data[i];
+//               i++;
+//             }
+//           }
+//
+//           if (res) {
+//             gauge.translations = res;
+//             gauge.draw();
+//           }
+//         });
+//       if (firstRun) {
+//         // this.translateService.onLangChange.subscribe(translate);
+//         firstRun = false;
+//       }
+//     };
+//     translate();
+//
+//     console.log('gauge');
+//     console.log(gauge);
+//
+//     return gauge;
+//   }
+//
+//
+// }

@@ -391,5 +391,14 @@ exports.strings = {
     "down_avg": "DL (normal)",
     "up_avg": "UL (normal)",
     "last_updated": "Last updated",
-    "coverage": "Coverage"
+    "coverage": "Coverage",
+
+    // Help
+    "help_download_title": "Co znamená Download?",
+    "help_upload_title": "Co znamená Upload?",
+    "help_ping_title": "Co znamená Ping?",
+    "help_result_good_or_bad": "Jak poznám, zda můj výsledek je dobrý nebo špatný?",
+    "help_icon_meaning": "Jakým prahovým hodnotám odpovídají jednotlivé barevné interpretace?",
+    "Links": "Odkazy na jednotlivé vysvětlivky",
+
 }

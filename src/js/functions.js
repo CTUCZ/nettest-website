@@ -59,20 +59,20 @@ for (i=0;i<ARRcookies.length;i++)
 function setCookie(cookie_name, cookie_value, cookie_exseconds) {
         //var exdate = new Date();
         //exdate.setDate(exdate.getDate() + cookie_exdays);
-        
+
         var futdate = new Date();
         var expdate = futdate.getTime();
         expdate += cookie_exseconds*1000;
         futdate.setTime(expdate);
 
-        
+
         //var c_value=escape(cookie_value) + ((cookie_exdays==null) ? ";" : "; expires="+exdate.toUTCString() +";");
         var c_value=escape(cookie_value) + ((cookie_exseconds==null) ? ";" : "; expires="+futdate.toUTCString() +";");
         document.cookie = cookie_name+"="+c_value+" path=/;";
 }
 
-function nl2br (str, is_xhtml) {   
-        var breakTag = (is_xhtml || typeof is_xhtml === 'undefined') ? '<br />' : '<br>';    
+function nl2br (str, is_xhtml) {
+        var breakTag = (is_xhtml || typeof is_xhtml === 'undefined') ? '<br />' : '<br>';
         return (str + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1'+ breakTag +'$2');
 }
 
@@ -80,7 +80,7 @@ var selectedLanguage;
 function getLanguageFromURL() {
         var pathname = window.location.pathname;
         var tmp = pathname.split("/");
-        //console.log(tmp[1]);     
+        //console.log(tmp[1]);
         selectedLanguage = tmp[1];
         return selectedLanguage;
 }
@@ -114,7 +114,7 @@ function requestBrowserData(callback, options) {
                         browser_product = data.product;
                         browser_url = data.url;
                         browser_header = data.headers;
-                        browser_agent = data.agent;  
+                        browser_agent = data.agent;
                         browser_country_geoip = data.country_geoip;
                         //if it is a mobile browser -> dont bother to inform user about
                         //missing javascript (regex from https://gist.github.com/dalethedeveloper/1503252 )
@@ -159,7 +159,7 @@ function requestBrowserData(callback, options) {
                                 show_errorPopup();
                                 return;
                             }
-                                
+
                             RMBTsettings(options);
                         }
                         else if (callback == 'RMBTsync')
@@ -176,7 +176,7 @@ function requestBrowserData(callback, options) {
                                 RMBTstatistics();
                         else if (callback == 'RMBTmapfilter')
                                 RMBTmapfilter(options);
-                        
+
                 },
                 error: function(xhr, ajaxOptions, thrownError) {
                     if (typeof TestEnvironment !== 'undefined') {
@@ -190,7 +190,7 @@ function requestBrowserData(callback, options) {
 function RMBTmapfilter(options) {
         cookie_uuid = getCookie("RMBTuuid");
         var terms_accepted = getCookie("RMBTTermsV6");
-        
+
         var json_data = {
                 version_name: test_version_name,
                 language: selectedLanguage,
@@ -201,12 +201,12 @@ function RMBTmapfilter(options) {
                 terms_and_conditions_accepted: terms_accepted,
                 open_test_uuid: options.open_test_uuid
         };
-        
+
         /*if (window.console && console.log) {
     		console.log(options); //for firebug
   		}*/
 
-        
+
         $.ajax({
                 url: mapProxy + "/tiles/info",
                 type: "post",
@@ -236,27 +236,27 @@ function RMBTmapfilter(options) {
                                              if (row1.hasOwnProperty('default') && row1['default'] === true) {
                                                     form_filter += ' selected="selected"';
                                              }
-                                                     
+
                                              form_filter += '>'+row1.title+'</option>';
-                                                     
+
                                      });
                                      form_filter += '</select>';
                                      form_filter += '</div>';
                                 });
                                 form_filter += '</div>';
-                                
+
                         });
                         $('#filter_selector').append(form_filter);
-                        
-                        
-                        
+
+
+
                         var form_auswahl = '';
                         form_auswahl += '<div uk-grid>';
                         form_auswahl += '<div class="uk-width-1-1"><select name="map_options" id="map_options" onchange="redrawOverlay();" class="uk-select "></div>';
                         var default_cardtyp;
                         $.each(data.mapfilter.mapTypes, function(key,row){
                              var auswahlname = '';
-                             
+
                              $.each(row.options[0],function(key1,row1){
                                      if (key1 != 'summary' && key1 != 'title' && key1 != 'default')
                                              auswahlname = key1;
@@ -265,22 +265,22 @@ function RMBTmapfilter(options) {
                              $.each(row.options,function(key1,row1){
                                      //form_auswahl += '<option value="'+eval('row1.'+auswahlname)+'"';
                                      form_auswahl += '<option value="'+row1.map_options+'"';
-                                     
+
                                      //if the user opens the map coming from /Opentest, select 'all' by default
                                      if (options.open_test_uuid !== null) {
                                          if (key===3 && key1==0)  {
                                              form_auswahl += 'selected="selected"';
                                              default_cardtyp = row1.map_options;
                                          }
-                                         
+
                                      }
-                                     //by default, select first option 
+                                     //by default, select first option
                                      else if (key==0 && key1==0) {
                                              form_auswahl += 'selected="selected"';
                                              default_cardtyp = row1.map_options;
                                      }
                                      form_auswahl += '>'+row.title+' - '+row1.title+'</option>';
-                                     
+
                                      legends[row1.map_options]={
                                                                 heatmap_caption_unit:row1.unit,
                                                                 heatmap_caption_high:row1.heatmap_captions[1],
@@ -290,21 +290,21 @@ function RMBTmapfilter(options) {
                                                                 colors: row1.heatmap_colors,
                                                                 heatmap_captions: row1.heatmap_captions
                                                                 };
-                                             
+
                              });
-                             
+
                         });
                         form_auswahl += '</select>';
                         form_auswahl += '</div>';
                         $('#auswahl_selector').prepend(form_auswahl);
                         redrawLegend(default_cardtyp);
                         defaultMapFilterV3();
-                        
+
                 },
                 error: function() {
                         alert("Error beim mapfilters-Abruf");
                 }
-        });      
+        });
 }
 
 
@@ -317,7 +317,7 @@ function RMBTsettings(options) {
         cookie_uuid = getCookie("RMBTuuid");
         var terms_accepted = getCookie("RMBTTermsV6");
         var terms_and_conditions_accepted_version = (terms_accepted)?terms_version:null;
-        
+
         var json_data = {
                 version_name: test_version_name,
                 language: selectedLanguage,
@@ -333,7 +333,7 @@ function RMBTsettings(options) {
     		console.log(options); //for firebug
   		}
 	*/
-        
+
         $.ajax({
                 url: controlProxy+"/"+wspath+"/settings",
                 type: "post",
@@ -355,7 +355,7 @@ function RMBTsettings(options) {
                                 alert("Keine UUID!");
                                 return;
                         }
-                        
+
                                 //UUID should now be set
                         if (options === 'jstest' || options === 'jstest_easy') {
                                 RMBTjstest(options);
@@ -425,16 +425,16 @@ function RMBTsettings(options) {
                                 }
                             };
                             testStartFunction();
-                                
-                                
-                               
+
+
+
                         }
                         else {
                                 //Verlauf
                                 requestBrowserData('RMBThistory');
                         }
-                        
-                        
+
+
                 },
                 error: function() {
                         //alert("Error beim settings-Abruf");
@@ -446,27 +446,27 @@ function RMBTsettings(options) {
                         setCookie("RMBTOptions", JSON.stringify(UserConf), 365 * 20 * 24 * 3600);
                     }
                 }
-        });      
+        });
 }
 
 /**
- * 
+ *
  * Called from Verlauf.js:document.ready()
  * @param {int} testUUID the test uuid
  * @returns {undefined}
  */
 function RMBTtestresult(testUUID) {
-	
+
      var json_data = {
                 test_uuid: testUUID,
                 language: selectedLanguage,
                 timezone: test_timezone
         };
         var stateObj = {page: testUUID};
-        
+
         //Push history state if User visits from Verlauf (from Verlauf or Verlauf?asdfasdfasdf or Verlauf#asdfasdfsdf)
         //to enable navigating between old test results
-        if (History) 
+        if (History)
                 //if the user navigates from Verlauf, push a new state to the history (was "Verlauf")
                 if (fromTest === false)
                         History.pushState(stateObj,'Detail','/' + selectedLanguage + '/Verlauf?'+testUUID);
@@ -482,30 +482,30 @@ function RMBTtestresult(testUUID) {
                 dataType: "json",
                 contentType: "application/json",
                 data: JSON.stringify(addCapabilities(json_data)),
-                success: function(data) {                    
+                success: function(data) {
                         //error received from control server
                         if (data.error.length > 0) {
                                 $('#code-eingabe').show();
                                 $('#code-eingabe').html('<div class="message">'+data.error[0]+'</div>');
                         }
                          else if (data.testresult[0].measurement.length > 0) {
-                             
+
                                 //if the user has already entered a zip code or declined to enter one,
                                 //show the entered ZIP code or '0'
                                 var requestZIPCode = false;
                          	if (data.testresult[0].zip_code || getCookie("RMBTzip") === "0000") {
                                         if (data.testresult[0].zip_code)
-                                            setCookie('RMBTzip', data.testresult[0].zip_code, 3600);	
+                                            setCookie('RMBTzip', data.testresult[0].zip_code, 3600);
                          		var tmp = Lang.getString('YourPostalCode') + ' <span id="editzip" onclick="show_zippopup(\''+testUUID+'\')" title="' + Lang.getString('clickToEdit') + '">'+data.testresult[0].zip_code+'</span>';
-                         		
+
                                         if (data.testresult[0].zip_code !== undefined)
                                                 $('#yourzip').html(tmp);
                          	}
                          	else if (fromTest === true){
                                         //otherwise, prompt the user with a popup, if a test just finished
-                         		requestZIPCode = true;		
+                         		requestZIPCode = true;
                          	}
-                                
+
                                 //load data for open-test-uuid and request zip code there (so additional checks with geopositioning can be processed)
                                 if (requestZIPCode) {
                                     loadOpenTestData(data.testresult[0].open_test_uuid, testUUID);
@@ -523,8 +523,7 @@ function RMBTtestresult(testUUID) {
                                 var tmp = Lang.getString('MeasurementResultFrom');
                                 $("#verlauf-result-from").html(
                                     tmp + ' ' + data.testresult[0].time_string +
-                                    '<span class="align-right"><a href="https://www.netztest.at/redirect/' +
-                                    selectedLanguage + '/help_result" target="_blank">&nbsp;?&nbsp;</a></span>');
+                                    ' <span class="align-right"><a href="Help" target="_blank">' + Lang.getString('help') + '</a></span>');
 
 
                                 $.each(data.testresult[0].measurement, function(key,row){
@@ -543,7 +542,7 @@ function RMBTtestresult(testUUID) {
                                                 '</tr>'
                                         );
                                 });
-                                
+
                                 $.ajax({
                                         url: controlProxy+"/"+wspath+"/testresultdetail",
                                         type: "post",
@@ -561,32 +560,32 @@ function RMBTtestresult(testUUID) {
                                                                 '</tr>'
                                                         );
                                                 });
-                                                
+
                                         },
                                         error: function() {
                                                 alert("Error beim testresultdetail-Abruf");
                                         }
-                                }); 
-                                
+                                });
+
                                 $('#verlaufcontainer').css('display','none');
                                 $('#verlauf-detailcontainer').css('display','block');
                                 $('#h2').html(Lang.getString('TestResult'));
                         }
-                        
+
                 },
                 error: function() {
                         alert("Error beim testresult-Abruf");
                 }
-        }); 
-     
+        });
+
 }
 
 function RMBTsync(options) {
-        
+
         cookie_uuid = getCookie("RMBTuuid");
         var options_value;
         if (options) {
-                options_value = $('#'+options).val();  
+                options_value = $('#'+options).val();
         }
         var json_data = {
                 uuid: cookie_uuid,
@@ -608,21 +607,21 @@ function RMBTsync(options) {
                                 $('#code-eingabe').html('<div class="message">'+data.sync[0].msg_text+'</div>');
                                 RMBThistory();
                         }
-                         else {       
+                         else {
                                 $('#code-eingabe').html('<p>'+Lang.getString('YourSyncCode')+': <span class="sync-code">'+data.sync[0].sync_code+'</span></p>');
                         }
-                        
+
                 },
                 error: function() {
                         alert("Error beim sync-Abruf");
                 }
-        });  
+        });
 }
 
 function sendZIP(tid, zip) {
-        
+
         cookie_uuid = getCookie("RMBTuuid");
-        
+
         var json_data = {
                 uuid: cookie_uuid,
                 test_uuid: tid,
@@ -640,7 +639,7 @@ function sendZIP(tid, zip) {
                 error: function() {
                         alert("Error beim resultUpdate-Abruf");
                 }
-        });  
+        });
 }
 
 function RMBThistory() {
@@ -661,7 +660,7 @@ function RMBThistory() {
                 data: JSON.stringify(json_data),
                 success: function(data) {
                         var network_type, time_string, speed_upload, ping, speed_download;
-                    
+
                         //console.log(data);
                         if (data.error.length > 0 || data.history.length == 0) {
                                  //var tmp = (selectedLanguage=='de')?'Keine Tests gefunden':'No tests found';
@@ -685,44 +684,44 @@ function RMBThistory() {
 								else {
 									model = row.model
 								}
-								
+
 								if ( row.network_type == null) {
 									network_type = "-";
 								}
 								else {
 									network_type = row.network_type
 								}
-								
+
 								if ( row.time_string == null) {
 									time_string = "-";
 								}
 								else {
 									time_string = row.time_string
 								}
-								
+
 								if ( row.speed_upload == null) {
 									speed_upload = "-";
 								}
 								else {
 									speed_upload = row.speed_upload
 								}
-								
+
 								if ( row.speed_download == null) {
 									speed_download = "-";
 								}
 								else {
 									speed_download = row.speed_download
 								}
-								
+
 								if ( row.ping_shortest == null) {
 									ping = "-";
 								}
 								else {
 									ping = row.ping;
 								}
-   								
-								//History.pushState({uid:'+row.uid+'}, \'RTR - Messergebnis '+time_string+'\', \'?test='+row.uid+'\'); 
-                                
+
+								//History.pushState({uid:'+row.uid+'}, \'RTR - Messergebnis '+time_string+'\', \'?test='+row.uid+'\');
+
                                 $('#verlauf_tbody').append(
                                         '<tr class="'+klasse+'">' +
                                         '<td onclick="requestBrowserData(\'RMBTtestresult\',\''+row.test_uuid+'\');">'+model+'</td>' +
@@ -785,7 +784,7 @@ function RMBThistory() {
                 	$('#spinner').spin('modal');
                         alert("Error beim history-Abruf");
                 }
-        });       
+        });
 }
 
 /**
@@ -845,7 +844,7 @@ function RMBTstatistics() {
         }
         //Austrian values
         else if (country !== previousStatisticsCountry && (country === 'null' || country === 'AT')) {
-            previousStatisticsCountry = country;    
+            previousStatisticsCountry = country;
             $('#statistik_duration').val($("#statistik_duration_default_at").val());
             $('#statistik_quantile').val(0.5);
             $('#statistik_location_accuracy').val(2000);
@@ -865,7 +864,7 @@ function RMBTstatistics() {
         else {
             end_date = null;
         }
-        
+
         var json_data = {
                 language: selectedLanguage,
                 timezone: test_timezone,
@@ -882,7 +881,7 @@ function RMBTstatistics() {
         if (userServerSelection>0) {
             json_data['user_server_selection'] = userServerSelection;
         }
-        
+
         $('#statistics_container').spin();
         $.ajax({
                 url: statisticProxy+"/"+statisticpath+"/statistics",
@@ -920,10 +919,10 @@ function RMBTstatistics() {
                         if ($('#statistik_network_type_group').val() === "2G" || $('#statistik_network_type_group').val() === "3G" ||
                             $('#statistik_network_type_group').val() === "4G" || $('#statistik_network_type_group').val() === "5G")
                             opendataParams["cat_technology"] =$('#statistik_network_type_group').val();
-                        
+
                         if ($('#statistik_type').val() === "wifi")
                             opendataParams["cat_technology"] = "WLAN";
-                        
+
                         if ($('#statistik_type').val() === "browser")
                             opendataParams["cat_technology"]="LAN";
 
@@ -943,12 +942,12 @@ function RMBTstatistics() {
                         if (province !== null) {
                             opendataParams["gkz"] = [">" + province*10000, "<"  + (((province+1)*10000)-1)];
                         }
-                        
+
                         if (end_date === null) {
                             var now = moment();
                             var then =  moment(now).subtract($('#statistik_duration').val(),"days").add(1,"milliseconds");
                             opendataParams["time"] = [">" + then.utc().format("YYYY-MM-DD HH:mm:ss"), "<" + now.utc().format("YYYY-MM-DD HH:mm:ss")];
-                        } 
+                        }
                         else {
                             //adjust begin date to match
                             var begin_date =  moment(end_date.toDate()).subtract($('#statistik_duration').val(),"days").add(1,"milliseconds").utc();
@@ -959,7 +958,7 @@ function RMBTstatistics() {
 
                         //set for provider sums
                         data.providers_sums.query_opendata = jQuery.param(opendataParams).replace(/\+/g,"%20"); //still needed in jQuery 1.8.2opendataParams;
-                    
+
                         //console.log(data);
                         var down_green, down_yellow, down_red, up_green, up_yellow, up_red, ping_green, ping_yellow, ping_red, signal_green, signal_yellow, signal_red, sum_count, sum_down, sum_up, sum_ping, signalDetailDiv, model;
                         $('#statistik_provider_body').empty();
@@ -1010,11 +1009,11 @@ function RMBTstatistics() {
                         $("#statistik_provider_captions_container").html(generatedHtml);
 
                         adjustTablesToWindowSize();
-                        
+
                         //---------------Devices Start
                         var break_devices_after = 10;
                         var current_device_count = 0;
-                        
+
                         $('#statistik_devices_body').empty();
                         $('#statistik_devices_foot').empty();
                         //$('#statistik').append('<tbody>');
@@ -1034,9 +1033,9 @@ function RMBTstatistics() {
                                         opentestsProviderParams["cat_technology"]="!WLAN"; //good 80/20 solution
                                     }
                                 }
-                            
+
                                 current_device_count++;
-                            
+
                                 down_green = row.down_green*100;
                                 if (down_green < 100)
                                         down_green = down_green.toPrecision(2);
@@ -1066,17 +1065,17 @@ function RMBTstatistics() {
                                         ping_red = ping_red.toPrecision(2);
                                 quantile_down = (row.quantile_down/1000);
                                 quantile_down = quantile_down.formatNumber(getSignificantDigits(quantile_down));
-                                
+
                                 quantile_up = row.quantile_up/1000;
                                 quantile_up = quantile_up.formatNumber(getSignificantDigits(quantile_up));
-                                
+
                                 quantile_ping = Math.round(row.quantile_ping/1000000);
                                 if (typeof row.model == 'undefined')
                                 	model = '-';
                                 else model = row.model;
 
                                 opentestsProviderParams["model"] = model;
-                                
+
                                 $('#statistik_devices_body').append(
                                         '<tr' + ((current_device_count > break_devices_after)?' style="display:none;"' : '') + '>'+
                                         '<td>'+model+'</td>'+ //link to open-data
@@ -1089,16 +1088,16 @@ function RMBTstatistics() {
                                         '<td class="uk-text-right uk-table-link"><a href="Opentests?' + jQuery.param(opentestsProviderParams).replace(/\+/g,"%20") + '">'+row.count.formatNumber()+'</a></td>'+
                                         '</tr>'
                                     );
-                                        
+
                                 //link for showing more devices if they are hidden
                                 if (current_device_count === break_devices_after) {
                                     $('#statistik_devices_foot').append('<tr id="showMoreDevices"><td colspan="5">' +
                                             '<a href="#" onclick="$(\'#statistik_devices_body tr\').show();$(\'#showMoreDevices\').hide();return false;">' + Lang.getString('showMoreDevices') + '</a>' +
                                             '</td></tr>');
                                 }
-                                                                                                                                                                       
+
                         });
-                        
+
                         if (data.devices.length === 0) {
                             //no providers found for the current selection
                             $('#statistik_devices_foot').append(
@@ -1108,9 +1107,9 @@ function RMBTstatistics() {
                         }
 
                         //--------------Devices End
-                        
-                        
-                        
+
+
+
                         //$('#statistik').append('</tbody>');
 
                         $("#statistik_provider").tablesorter({
@@ -1136,37 +1135,37 @@ function RMBTstatistics() {
                                 }
                         });
 
-                        $("table").trigger("update"); 
+                        $("table").trigger("update");
                         $(".quantile").hover(
                                 function(){
                                         $(this).css("background-color","#CCC");
-                                        $(".quantile_details", this).css("display","block");          
+                                        $(".quantile_details", this).css("display","block");
                                 },
                                 function(){
                                         $(this).css("background-color",""); //only remove, dont reset (sum rows have default bg other than #fff)
-                                        $(".quantile_details", this).css("display","none");    
+                                        $(".quantile_details", this).css("display","none");
                                 }
                         );
-                
 
-                        
+
+
                         $('.headerSortUp').removeClass('headerSortUp');
                         $('.headerSortDown').removeClass('headerSortDown');
-                        
+
                 },
                 error: function() {
                         $('#statistics_container').spin();
                         $("#statistics_container").hide();
                         $("#statistics_failure").slideDown();
                 }
-        });       
+        });
 }
 
 function start_jstest() {
 	$("#noJavaWarning").html('<p>' + Lang.getString('NoJavaAvailable') + '</p>');
-        
 
-        
+
+
 	setCookie("RMBTndt", '0', 365 * 20 * 24 * 3600);
 	requestBrowserData('RMBTsettings','jstest');
 }
@@ -1244,8 +1243,8 @@ function RMBTWebsocketTest(uuid) {
 
 function RMBTjstest(options) {
 	cookie_uuid = getCookie("RMBTuuid");
-        var now = new Date().getTime(); 
-        
+        var now = new Date().getTime();
+
         var json_data = {
                 version: test_version_name,
                 language: selectedLanguage,
@@ -1256,12 +1255,12 @@ function RMBTjstest(options) {
                 timezone: test_timezone,
                 time: now
         };
-        
+
         /*if (window.console && console.log) {
     		console.log(options); //for firebug
   		}*/
 
-        
+
         $.ajax({
                 url: controlProxy+"/"+wspath+"/testRequest",
                 type: "post",
@@ -1269,12 +1268,12 @@ function RMBTjstest(options) {
                 contentType: "application/json",
                 data: JSON.stringify(json_data),
                 success: function(data) {
-                	//console.log(data);	
+                	//console.log(data);
 			var jstest = "../js/test/jstest.js";
-			$.getScript(jstest, 
+			$.getScript(jstest,
 				function() {
 					//if (options=="jstest_easy") {
-					//	$("#infogeo br").detach();	
+					//	$("#infogeo br").detach();
 					//}
 					//console.log("options in RMBTjstest: "+options);
 					//infostatus = document.getElementById("infostatus");
@@ -1287,12 +1286,12 @@ function RMBTjstest(options) {
 //					var show_infoserver = data.test_server_name;
 //					if (!show_infoserver || show_infoserver == 'undefined') show_infoserver = '-';
 					//$('#infoserver').html(show_infoserver);
-                                        
+
 					start_all = new Date().getTime();
 					start_download = new Date().getTime();
 					test_token = data.test_token;
 					testUUID = data.test_uuid;
-                                        
+
                                         var adapter = new JSTestadapter();
                                         TestEnvironment.getTestVisualization().setRMBTTest(adapter);
                                         TestEnvironment.getTestVisualization().updateInfo(
@@ -1302,19 +1301,19 @@ function RMBTjstest(options) {
                                                 testUUID
                                         )
                                         TestEnvironment.getTestVisualization().startTest();
-                                        
-                                        
+
+
 					//start the test
 					TestPing(1);
-					
+
 				}
 			);
-			
+
 		},
                 error: function() {
                         //alert("Error beim testrequest-Abruf");
                 }
-        });    
+        });
 }
 
 
@@ -1322,7 +1321,7 @@ function RMBTjstest(options) {
 function RMBTjstest_result(token,options,callback) {
 	cookie_uuid = getCookie("RMBTuuid");
 	cookie_zip = getCookie("RMBTzip");
-        var now = new Date().getTime() 
+        var now = new Date().getTime()
         var ping_shorttest = minping * 1000000000;
         var nsec_dl = diff_dl_messung *1000000000;
         var nsec_ul = diff_ul_messung *1000000000;
@@ -1352,11 +1351,11 @@ function RMBTjstest_result(token,options,callback) {
 				speed:tmpcoords['speed'],
 				tstamp: tmpcoords['tstamp']
 			};
-		}		
+		}
         }*/
         var locs = TestEnvironment.getGeoTracker().getResults();
         var geolocations = (locs.length>0)?locs:null;
-        
+
         var json_data = {
         	client_version: test_version_name,
         	client_language: selectedLanguage,
@@ -1374,7 +1373,7 @@ function RMBTjstest_result(token,options,callback) {
                 test_num_threads: 1,
                 test_speed_download: speed_dl,
                 test_speed_upload: speed_ul,
-                test_ping_shortest: ping_shorttest, 
+                test_ping_shortest: ping_shorttest,
                 zip_code: cookie_zip,
                 platform: "JS",
                 model: browser_product,
@@ -1387,7 +1386,7 @@ function RMBTjstest_result(token,options,callback) {
     		console.log(options); //for firebug
   		}*/
 
-        
+
         $.ajax({
                 url: controlProxy+"/"+wspath+"/result",
                 type: "post",
@@ -1401,23 +1400,23 @@ function RMBTjstest_result(token,options,callback) {
                     //setTimeout(function() {window.location.href = forwardUrl}, 2000);
                     if (callback !== undefined) {
                         callback()
-                    }   
+                    }
                 },
                 error: function() {
                         //alert("Error beim testrequest-Abruf");
                 }
-        });			
+        });
 }
 
 
 function log10(val) {
   return Math.log(val) / Math.LN10;
 }
-function getParam(variable){ 
-     var query = window.location.search.substring(1);  
-     var vars = query.split("&"); 
-      for (var i=0;i<vars.length;i++) {   
-            var pair = vars[i].split("=");  
+function getParam(variable){
+     var query = window.location.search.substring(1);
+     var vars = query.split("&");
+      for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
             if(pair[0] == variable){return pair[1];}
        }       return(false);
 }
@@ -1454,7 +1453,7 @@ function formatOpenDataDateToLocalTime(time) {
     d.setUTCDate(parseInt(val.substr(8,2)));
     //Date.setUTCHours(hour,min,sec,millisec)
     d.setUTCHours(val.substr(11,2), val.substr(14,2), val.substr(17,2));
-    
+
     return d.getFullYear() + "-" + pad(d.getMonth()+1,2) + "-" + pad(d.getDate(),2) + " " +  pad(d.getHours(),2) + ":" + pad(d.getMinutes(),2) +":" + pad(d.getSeconds(),2);
 
 }
@@ -1471,12 +1470,12 @@ function pad(number, length) {
     while (str.length < length) {
         str = '0' + str;
     }
-   
+
     return str;
 }
 
 $(document).ready(function() {
-        selectedLanguage = getLanguageFromURL();                   
+        selectedLanguage = getLanguageFromURL();
 });
 
 
@@ -1487,7 +1486,7 @@ $(document).ready(function() {
  * @param {boolean} showUnits true, if the units for the results should be shown
  * @return {String} The table row including the wrapping tr-elements
  */
-function getOpenDataRow(testdata, showUnits) {      
+function getOpenDataRow(testdata, showUnits) {
     var getSignificantDigits = function(number) {
         if (number > 100) {
             return -1;
@@ -1505,12 +1504,12 @@ function getOpenDataRow(testdata, showUnits) {
             return 3;
         }
     };
-    
+
     var link = "<a href=\"Opentest?" + testdata.open_test_uuid + "\">";
     if (showUnits === undefined) {
         showUnits = false;
     }
-    
+
     //generate table row in javascript for more speed :-(
     var row = "<tr>";
 
@@ -1556,9 +1555,9 @@ function getOpenDataRow(testdata, showUnits) {
     var val = testdata.time; //1234-67-90 23:56
     var d = new Date(val.substr(0,10));
     d.setUTCHours(val.substr(11,2), val.substr(14,2));
-    
+
     row += "<td class='time'>" +  link + img[0].outerHTML + formatOpenDataDateToLocalTime(testdata.time) + "</a></td>";
-        
+
     //environment info
     //position marker
     var position_marker = "";
@@ -1567,13 +1566,13 @@ function getOpenDataRow(testdata, showUnits) {
         position_marker = "<i class='svg-icon svg14 " + image + "'></i>";
     }
     row += "<td class='test-platform'>" + link +  position_marker + infoFormatter(testdata.model, testdata.platform, testdata.provider_name) + "</a></td>";
-    
+
     //down
     row += "<td class='test-download uk-text-right'>" + link + (testdata.download_kbit / 1000).formatNumber(getSignificantDigits(testdata.download_kbit / 1000)) + (showUnits ? '&nbsp;' + Lang.getString('Mbps') : '') + "</a></td>";
-    
+
     //up
     row += "<td class='test-upload uk-text-right'>" + link + (testdata.upload_kbit / 1000).formatNumber(getSignificantDigits(testdata.upload_kbit / 1000))+ (showUnits ? '&nbsp;' + Lang.getString('Mbps') : '') + "</a></td>";
-    
+
     //ping
     if (testdata.ping_ms >= 0 && testdata.ping_ms !== null) {
         row += "<td class='test-ping uk-text-right'>" + link + (testdata.ping_ms).formatNumber(getSignificantDigits(testdata.ping_ms))+ (showUnits ? '&nbsp;' + Lang.getString('ms') : '') + "</a></td>";
@@ -1581,7 +1580,7 @@ function getOpenDataRow(testdata, showUnits) {
     else {
         row += "<td class='test-ping uk-text-right'>" + link + "-</a></td>";
     }
-    
+
     //signal
     var val_dbm = testdata.signal_strength;
     var val_lte = testdata.lte_rsrp;
@@ -1593,13 +1592,13 @@ function getOpenDataRow(testdata, showUnits) {
     }
     else {
         row += "<td class='test-network-signal uk-text-right'>" + link + "-</a></td>";
-    }        
-    
-    
+    }
+
+
     row += "</tr>\n";
     var rowObj = $(row);
     rowObj.data(testdata);
-    
+
     return rowObj;
 }
 
@@ -1665,7 +1664,7 @@ function getCapabilitiesAsQueryParam() {
     return "capabilities=" + encodeURIComponent(JSON.stringify(getCapabilities()));
 }
 
-/** 
+/**
  * additional API parameters
  */
 function getCapabilities() {
@@ -1721,16 +1720,16 @@ Number.prototype.formatNumber = function(decimals,thouSeperator,decSeperator) {
     if (decSeperator === undefined) {
         decSeperator = Lang.getString('decimalSeperator');
     }
-    
+
     var n = this;
-            
+
     if (decimals < 0) {
         var nDecimals = Math.abs(decimals);
         nDecimals = Math.pow(10,nDecimals);
         n = Math.round(n/nDecimals)*nDecimals;
         decimals = 0;
     }
-    
+
     sign = n < 0 ? "-" : "",
     i = parseInt(n = Math.abs(+n || 0).toFixed(decimals)) + "",
     j = (j = i.length) > 3 ? j % 3 : 0;

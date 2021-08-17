@@ -136,7 +136,7 @@ Lang.setStrings({
    'bearing': 'Bearing',
    'altitude': 'Altitude',
    'timing_advance': 'Timing Advance',
-   
+
    //values not in the controlserver resource file
    'cat_technology': 'Connection Technology',
    'country_sim': 'SIM home country',
@@ -148,7 +148,7 @@ Lang.setStrings({
    'lte_rsrp' : 'Signal strength (RSRP)',
    'lte_rsrq' : 'Signal quality (RSRQ)',
    'referenced_signal_received_quality': 'Reference signal received quality',
-           
+
     //new attributes by DZ and attributes previously not displayed
     'model_native': 'Model (native)',
     'ndt_download_kbit': 'NDT-data rate download',
@@ -169,15 +169,15 @@ Lang.setStrings({
     'KB' : 'KB',
     'MB' : 'MB',
     'public_ip_as_name': 'IP network name',
-    
+
     'roaming_international' : 'international roaming',
     'roaming_national' : 'national roaming',
     'roaming_none' : 'not roaming',
-        
+
     'pleaseSelect' : 'Please select',
     'addressNotFound' : 'Address could not be found',
-    
-        
+
+
     //Test
     'Locating': 'Locating',
     'Initializing' : 'Initializing',
@@ -310,5 +310,6 @@ Lang.setStrings({
     'enter_first_name': 'Please enter your first name.',
     'enter_last_name': 'Please enter your last name.',
     'download_results_as_pdf': 'Download results as PDF',
-    'alert_close_tab': 'Do you want to cancel the measurement?'
+    'alert_close_tab': 'Do you want to cancel the measurement?',
+    'help': 'Nápověda'
 });

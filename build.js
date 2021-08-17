@@ -237,6 +237,12 @@ function transformRTRUrls(fileList) {
     //transformation for RTR Nettest 301 URLs
     var specialNetTestUrls = {
         "/Test": "Test",
+        "/Help": "Help",
+        "/Download": "Download",
+        "/Upload": "Upload",
+        "/Result": "Result",
+        "/Ping": "Ping",
+        "/Icon": "Icon",
         "/Karte": "Karte",
         "/Statistik": "Statistik",
         "/Opentests": "Opentests",
@@ -270,7 +276,7 @@ function transformRTRUrls(fileList) {
                     //only replace relative URLs (no mailtos, tel, http, etc.)
                     if (href.indexOf(":") === -1 || href.indexOf(":") > 6 || href.indexOf('netztest') !== -1) {
                         $(this).attr("href", RTR_LINKS_BASEURL + href);
-                        
+
                         //maybe it's even a special nettest url that needs to be relative?
                         if (href.indexOf('netztest') !== -1) {
                             for(var key in specialNetTestUrls) {

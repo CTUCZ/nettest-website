@@ -1,0 +1,43 @@
+{% extends basetemplate %}
+{% set title = Lang.help_download_title %}
+{% set containerclass = "full-width" %}
+
+{% block headerscriptingExtended %}
+<link rel="stylesheet" type="text/css" href="../{{ fingerprint['lib/olv3/ol.css'] }}" media="screen"/>
+<script src="../{{ fingerprint['lib/olv3/ol.js'] }}" type="text/javascript"></script>
+<script type="text/javascript" src="../{{ fingerprint['js/jquery.flot.min.js'] }}"></script>
+<script src="../{{ fingerprint['lib/handlebars.min.js'] }}" type="text/javascript"></script>
+<script src="../{{ fingerprint['lib/moment.min.js'] }}" type="text/javascript"></script>
+<script src="../{{ fingerprint['lib/date-de-AT.js'] }}" type="text/javascript"></script>
+
+<script type="text/javascript" src="../{{ fingerprint['lib/selectize/selectize.min.js'] }}"></script>
+{% endblock %}
+
+{% block content %}
+<div class="uk-section-default uk-section content">
+    <div class="uk-container">
+        <h2>{{ Lang.help_download_title }}</h2>
+        <div class="uk-grid-margin uk-container-rtr uk-grid uk-grid-stack" uk-grid="">
+            <div class="uk-flex-auto uk-first-column"><p>Download označuje směr přenosu dat z internetu k Vám. Ve
+                spojitosti s datovou rychlostí tohoto přenosu se doplňuje parametr download základní jednotkou v b/s,
+                přičemž nejčastěji se setkáte s Mb/s (Megabity za sekundu). Můžete se také setkat s pojmem rychlost
+                stahování. Výsledná hodnota rychlosti stahování, download, která je součástí výsledku Vámi provedeného
+                testu nástrojem ČTÚ-NetTest, se obecně označuje jako skutečně dosahovaná rychlost za daný interval
+                měření, v případě provádění jednoho testu nástrojem ČTÚ-NetTest je to 10 sekund, přičemž skutečně
+                dosahovaná rychlost charakterizuje
+                skutečný výkon služby přístupu k internetu.</p>
+
+                <p>Je důležité také uvést, že tato rychlost stahování, download, odpovídá transportní vrstvě Vaší služby
+                    přístupu k internetu (připojení k internetu), a to při použití protokolu TCP, tedy nejčastěji
+                    využívaného protokolu transportní vrstvy z pohledu koncového uživatele. Hodnota rychlosti stahování,
+                    download, by se měla po většinu dne pohybovat v rozmezí hodnot maximální rychlosti a běžně dostupné
+                    rychlosti, které jsou povinnou součástí Vašeho smluvního vztahu s poskytovatelem Vaší služby
+                    přístupu k internetu. Rychlost stahování, download, může na krátký okamžik klesnout pod hodnotu
+                    běžně dostupné rychlosti, ovšem nikoliv takovým způsobem, aby tento pokles zapříčinil vznik velkých
+                    odchylek nebo dokonce výpadku služby, kdy rychlost stahování, download, klesne pod minimální
+                    rychlost. V těchto případech jsou aktivována Vaše práva na reklamaci Vámi využívané služby přístupu
+                    k internetu.</p></div>
+        </div>
+    </div>
+</div>
+{% endblock %}
