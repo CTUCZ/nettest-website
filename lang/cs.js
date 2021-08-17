@@ -172,9 +172,9 @@ exports.strings = {
 
     "loop_mode_content" : {
         "tests" : "Number of tests",
-        "tests_sum" : "Počet testů",
+        "tests_sum" : "Počet provedených testů",
         "waiting_time" : "Waiting time",
-        "waiting_time_desc" : "Čas (v minutách) mezi dvěma testy",
+        "waiting_time_desc" : "Časová prodleva mezi dvěma testy (minuty)",
         "start": "Spustit opakované měření",
         "measurements" : "Poslední měření",
         "error_during_test" : "An error occurred during the measurement.",
