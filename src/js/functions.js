@@ -538,7 +538,7 @@ function RMBTtestresult(testUUID) {
                                         $('#verlauf-detail').append(
                                                 '<tr>' +
                                                 '<td class="uk-width-medium@s">'+row.title+'</td>' +
-                                                '<td><a href="https://www.netztest.at/redirect/' + selectedLanguage + '/help_result" target="_blank"><i class="svg-icon svg16 ' + sprite + '"></i></a> ' +row.value+'</td>' +
+                                                '<td><i class="svg-icon svg16 ' + sprite + '"></i></a> ' +row.value+'</td>' +
                                                 '</tr>'
                                         );
                                 });
