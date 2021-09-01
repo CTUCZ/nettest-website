@@ -4,7 +4,7 @@ var controlProxy = "https://nettest.cz";
 var statisticProxy = "https://nettest.cz";
 if (window.location.href.indexOf("github") !== -1) {
     //default for github pages
-} else if (window.location.href.indexOf("http://localhost") !== -1) {
+} else if (window.location.href.indexOf("http://localhost") !== -1 || window.location.href.indexOf("http://127.0.0.1") !== -1) {
     //default for localhost -> change to your server!
     statisticProxy = "";
     controlProxy = "";

@@ -1024,16 +1024,20 @@ b, strong {
     padding-bottom: 30px;
     font-size: 13px;
     line-height: 23px;
+
     p {
         margin-bottom: 10px;
+
         &:last-child {
             margin-bottom: 0;
         }
     }
+
     a {
         color: #fff !important;
         font-weight: 500;
         line-height: inherit;
+
         &:hover {
             color: #fff !important;
             text-decoration: underline;
@@ -1055,6 +1059,7 @@ b, strong {
 #verlauf-detail,
 #testresult-detail {
     margin-bottom: 50px;
+
     tr {
         td {
             &:nth-child(2) {
@@ -1062,4 +1067,12 @@ b, strong {
             }
         }
     }
+}
+
+#map-accordion {
+    display: none;
+}
+
+#verlauf .test-network-signal {
+    display: none !important;
 }
