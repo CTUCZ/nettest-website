@@ -28,8 +28,8 @@ exports.strings = {
         "tos": {
             "text": "Prohlášení o ochraně osobních údajů a podmínky užití",
             "url": {
-                "netztest": "https://www.ctu.cz/sites/default/files/obsah/zpracovani_ou-2018.pdf",
-                "qostest": "https://www.ctu.cz/sites/default/files/obsah/zpracovani_ou-2018.pdf"
+                "netztest": "/Privacy",
+                "qostest": "/Privacy"
             }
         },
         "apps_content": 'Stáhněte si měřicí aplikaci pro <a href="https://play.google.com/store/apps/details?id=at.alladin.rmbt.android">Android</a> nebo <a href="https://itunes.apple.com/at/app/rtr-netztest/id724321403">iOS</a> nebo proveďte test pomocí <a href="https://www.rtr.at/en/tk/rtrnetztest_tests">webového prohlížeče</a>.',
