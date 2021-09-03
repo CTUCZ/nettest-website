@@ -22,14 +22,14 @@ exports.strings = {
     },
     "index_content": {
         "service_description": {
-            "netztest": "ČTÚ – NetTest informuje uživatele o aktuální kvalitě jejich služby přístupu k internetu v podobě skutečně dosahované rychlosti stahování (download), nahrávání (upload) a doby odezvy (ping). Nástroj NetTest nabízí možnost certifikovaného měření, které plně automaticky provede celý proces měření s výsledkem v podobě PDF dokumentu, který může uživatel použít pro případnou reklamaci služby přístupu k internetu.",
+            "netztest": "ČTÚ – NetTest informuje uživatele o aktuální kvalitě jejich služby přístupu k internetu v podobě skutečně dosahované rychlosti stahování (download), vkládání (upload) a doby odezvy (ping). Nástroj NetTest nabízí možnost certifikovaného měření, které plně automaticky provede celý proces měření s výsledkem v podobě PDF dokumentu, který může uživatel použít pro případnou reklamaci služby přístupu k internetu.",
             "qostest": "qostest.eu informs users about the current service quality (including upload, download, ping, signal strength) of their Internet connection. In addition, a map view and statistics of previous tests can be accessed."
         },
         "tos": {
             "text": "Prohlášení o ochraně osobních údajů a podmínky užití",
             "url": {
-                "netztest": "/Privacy",
-                "qostest": "/Privacy"
+                "netztest": "/cs/Privacy",
+                "qostest": "/cs/Privacy"
             }
         },
         "apps_content": 'Stáhněte si měřicí aplikaci pro <a href="https://play.google.com/store/apps/details?id=at.alladin.rmbt.android">Android</a> nebo <a href="https://itunes.apple.com/at/app/rtr-netztest/id724321403">iOS</a> nebo proveďte test pomocí <a href="https://www.rtr.at/en/tk/rtrnetztest_tests">webového prohlížeče</a>.',
@@ -396,11 +396,10 @@ exports.strings = {
     "coverage": "Coverage",
 
     // Help
-    "help_download_title": "Co znamená Download?",
-    "help_upload_title": "Co znamená Upload?",
-    "help_ping_title": "Co znamená Ping?",
-    "help_result_good_or_bad": "Jak poznám, zda můj výsledek je dobrý nebo špatný?",
+    "help_download_title": "Co znamená rychlost stahování (Download)?",
+    "help_upload_title": "Co znamená rychlost vkládání (Upload)?",
+    "help_ping_title": "Co znamená doba odezvy (Ping)?",
+    "help_result_good_or_bad": "Jak poznám, zda je můj naměřený výsledek špatný?",
     "help_icon_meaning": "Jakým prahovým hodnotám odpovídají jednotlivé barevné interpretace?",
-    "Links": "Odkazy na jednotlivé vysvětlivky",
-
+    "Links": "Odkazy na vysvětlivky jednotlivých parametrů testu",
 }

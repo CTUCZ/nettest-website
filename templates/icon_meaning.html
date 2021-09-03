@@ -18,20 +18,111 @@
     <div class="uk-container">
         <h2>{{ Lang.help_icon_meaning }}</h2>
         <div class="uk-grid-margin uk-container-rtr uk-grid uk-grid-stack" uk-grid="">
-            <div class="uk-flex-auto uk-first-column"><p>Prahové hodnoty pro vyhodnocení naměřeních hodnot jednotlivých
-                sledovaných parametrů se zobrazují bez ohledu na Váši službu přístupu k internetu (internetové
-                připojení), jejich prezentace je tak plně transparentní. Barevné interpretace výsledků měření v podobě
-                barevné škály poskytují informativní údaj o tom, jaký výkon dosahuje služba přístupu k internetu v dané
-                oblasti. Světlé odstíny představují oblasti, kde služby přístupu k internetu vykazují nižší výkony
-                (upload, download a ping). Oproti tomu tmavší odstíny představují oblasti, kde služby přístupu k
-                internetu dosahují vysokých výkonů.</p>
+            <div class="uk-flex-auto uk-first-column"><p>Barevná škála interpretace výsledků měření poskytuje informaci
+                o tom, jaký výkon dosahuje služba přístupu k internetu v dané lokalitě. Vyhodnocení naměřených hodnot
+                jednotlivých sledovaných parametrů se zobrazí bez ohledu na vaši službu přístupu k internetu. Žlutá a
+                červená barva představují oblasti, kde služby přístupu k internetu vykazují nižší výkony (download,
+                upload, ping). Naproti tomu zelená a tmavě zelená barva představují oblasti, kde služby přístupu
+                k internetu dosahují vysokých výkonů.</p>
 
                 <p>Použité barevné škálování je nezávislé na přístupové technologii a vychází výhradně z naměřených
-                    hodnot sledovaných parametrů služby přístupu k internetu. Zvolené prahové hodnoty vycházejí z BEREC
-                    pokynů BoR (20) 42: BEREC Guidelines on Geographical surveys of network deployments, konkrétně z
-                    přílohy č. 2 pro naměřené hodnoty skutečně dosahované rychlosti, a dále z BEREC pokynů BoR (20) 165:
-                    BEREC Guidelines on Very High Capacity Networks a technické specifikace MEF 23.2 pro naměřené
-                    hodnoty obousměrného zpoždění (ping).</p>
+                    hodnot sledovaných parametrů služby přístupu k internetu na základě definovaných rozsahů hodnot pro
+                    jednotlivé parametry pro dané barevné označení.</p>
+                <table class="uk-table">
+                    <thead>
+                    <tr>
+                        <th>
+                            Parametr
+
+                        </th>
+                        <th>
+                            Tmavě zelená
+
+                        </th>
+                        <th>Zelená
+
+                        </th>
+                        <th>
+                            Žlutá
+
+                        </th>
+                        <th>
+                            Červená
+
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    <tr>
+                        <td>
+                            <p>Rychlost stahování (Download)
+                            </p>
+                        </td>
+                        <td>
+                            <p>≥100 Mb/s
+                            </p>
+                        </td>
+                        <td>
+                            <p>≥30&lt;100 Mb/s
+                            </p>
+                        </td>
+                        <td>
+                            <p>≥10&lt;30 Mb/s
+                            </p>
+                        </td>
+                        <td>
+                            <p>&lt;10 Mb/s
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Rychlost vkládání (Upload)
+                            </p>
+                        </td>
+                        <td>
+                            <p>≥100 Mb/s
+                            </p>
+                        </td>
+                        <td>
+                            <p>≥30&lt;100 Mb/s
+                            </p>
+                        </td>
+                        <td>
+                            <p>≥10&lt;30 Mb/s
+                            </p>
+                        </td>
+                        <td>
+                            <p>&lt;10 Mb/s
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Doba odezvy (Ping)
+                            </p>
+                        </td>
+                        <td>
+                            <p>≥0&lt;10 ms
+                            </p>
+                        </td>
+                        <td>
+                            <p>≥10&lt;25 ms
+                            </p>
+                        </td>
+                        <td>
+                            <p>&nbsp;≥25&lt;50 ms
+                            </p>
+                        </td>
+                        <td>
+                            <p>&gt;50 ms
+                            </p>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
 
             </div>
         </div>
