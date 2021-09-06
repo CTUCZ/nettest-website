@@ -307,8 +307,8 @@ Lang.setStrings({
     'settlement_type_2':'Habitable area',
     'settlement_type_3':'Settlement area',
     'dtm_level': 'DTM level',
-    'enter_first_name': 'Please enter your first name.',
-    'enter_last_name': 'Please enter your last name.',
+    'enter_first_name': 'Zadejte křestní jméno.',
+    'enter_last_name': 'Zadejte příjmení.',
     'download_results_as_pdf': 'Download results as PDF',
     'alert_close_tab': 'Do you want to cancel the measurement?',
     'help': 'Nápověda'
