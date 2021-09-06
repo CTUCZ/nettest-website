@@ -177,11 +177,11 @@ exports.strings = {
         "waiting_time_desc" : "Časová prodleva mezi dvěma testy (minuty)",
         "start": "Spustit opakované měření",
         "measurements" : "Poslední měření",
-        "error_during_test" : "An error occurred during the measurement.",
+        "error_during_test" : "Během meření se vyskytla chyba.",
         "current_test": "Aktuální měření",
-        "save_results": "Save results",
-        "download_results": "Download results:",
-        "available_history": "Test results are available under menu item <em>History</em>."
+        "save_results": "Uložit výsledky",
+        "download_results": "Stáhnout:",
+        "available_history": "Výsledky měření jsou k dispozici v záložce <em>MOJE MĚŘENÍ</em>."
     },
     "certified_measurement_content": {
         "info": "Info",

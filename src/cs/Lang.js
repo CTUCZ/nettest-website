@@ -64,8 +64,8 @@ Lang.setStrings({
    'basemap_geolandbasemap': 'Basemap.at - standard',
    'basemap_bmaphidpi': 'Basemap.at - high dpi',
    'basemap_bmaporthofoto30cm': 'Basemap.at - satellite',
-   'map_dateformat' : 'MMM Do YYYY, hh:mm:ss A', //http://momentjs.com/docs/#/displaying/
-   'map_index_dateformat' : 'hh:mm:ss A',
+   'map_dateformat' : 'D.M.YYYY, hh:mm:ss', //http://momentjs.com/docs/#/displaying/
+   'map_index_dateformat' : 'hh:mm:ss',
    'all' : 'All',
 
    //fields from controlserver-resource
@@ -183,7 +183,7 @@ Lang.setStrings({
     'Initializing' : 'Inicializace',
     'WaitForSlot' : 'Čekání na testovací slot',
     'Init_Upload' : 'Nahrávání',
-    'Ping' : 'Doba odezvy (ping)',
+    // 'Ping' : 'Doba odezvy (ping)',
     'Download' : 'Rychlost stahování (download)',
     'Upload' : 'Rychlost vkládání (upload)',
     'Down': 'Down',
