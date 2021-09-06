@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node ./build.js"
+    "start": "node ./build.js netztest && http-server build -p 8081"
   },
   "dependencies": {
     "debug": "~2.1.1",
