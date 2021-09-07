@@ -175,64 +175,18 @@
         <div id="additional-information">
             <h3>{{ Lang.certified_measurement_content.additional_information }}</h3>
             <div class="certified-form">
-                <p>
-                    {{ Lang.certified_measurement_content.additional_information_desc }}
-                </p>
                 <form id="additional-information-form" class="uk-form uk-padding-remove">
-                    <div class="form-group" id="location_form_group">
-                        <label class="uk-form-label">{{ Lang.certified_measurement_content.location_access }}*</label>
-                        <div>
-                            <div class="custom-controls-stacked">
-                                <div class="checkbox">
-                                    <label for="location_type_0">
-                                        <input name="location_type_0" id="location_type_0"
-                                               type="checkbox"
-                                               class="uk-checkbox"
-                                               value="s1">
-                                        {{ Lang.certified_measurement_content.location_access_residential }}</label>
-                                </div>
-                            </div>
-                            <div class="custom-controls-stacked">
-                                <div class="checkbox">
-                                    <label for="location_type_1">
-                                        <input name="location_type_1" id="location_type_1"
-                                               type="checkbox"
-                                               class="uk-checkbox"
-                                               value="s2">
-                                        {{ Lang.certified_measurement_content.location_access_single_family }}</label>
-                                </div>
-                            </div>
-                            <div class="custom-controls-stacked">
-                                <div class="checkbox">
-                                    <label for="location_type_2">
-                                        <input name="location_type_2" id="location_type_2"
-                                               type="checkbox"
-                                               class="uk-checkbox"
-                                               value="s3">
-                                        {{ Lang.certified_measurement_content.location_access_urban }}</label>
-                                </div>
-                            </div>
-                            <div class="custom-controls-stacked">
-                                <div class="checkbox">
-                                    <label for="location_type_3">
-                                        <input name="location_type_3" id="location_type_3"
-                                               type="checkbox"
-                                               class="uk-checkbox"
-                                               value="s4">
-                                        {{ Lang.certified_measurement_content.location_access_rural }}</label>
-                                </div>
-                                <div class="checkbox form-group-sm">
-                                    <label for="location_type_4" class="custom-control-label row">
-                                        <input name="location_type_4" id="location_type_4"
-                                               type="checkbox"
-                                               class="uk-checkbox"
-                                               value="s4"/>
-                                        {{ Lang.certified_measurement_content.location_access_other }}:
-                                        <input type="text" name="location_type_other" class="uk-input col-xs-10"
-                                               placeholder="{{ Lang.certified_measurement_content.location_access_other }}" disabled="disabled"/></label>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="uk-margin-top">
+                        <label for="provider_name"  class="uk-form-label">{{ Lang.certified_measurement_content.provider_name }} {{ Lang.certified_measurement_content.required_field }}</label>
+                        <input id="provider_name" name="provider_name" type="text" class="uk-input" required="required">
+                    </div>
+                    <div class="uk-margin-top">
+                        <label for="provider_service_name"  class="uk-form-label">{{ Lang.certified_measurement_content.provider_service_name }} {{ Lang.certified_measurement_content.required_field }}</label>
+                        <input id="provider_service_name" name="provider_service_name" type="text" class="uk-input" required="required">
+                    </div>
+                    <div class="uk-margin-top">
+                        <label for="provider_contract_number"  class="uk-form-label">{{ Lang.certified_measurement_content.provider_contract_number }} {{ Lang.certified_measurement_content.required_field }}</label>
+                        <input id="provider_contract_number" name="provider_contract_number" type="text" class="uk-input" required="required">
                     </div>
                     <div class="uk-margin-top">
                         <label for="type_text"  class="uk-form-label">{{ Lang.certified_measurement_content.access_type }}</label>

@@ -36,6 +36,9 @@ $(document).ready(function() {
         messages: {
             first_name: Lang.getString("enter_first_name"),
             last_name: Lang.getString("enter_last_name"),
+            provider_name: Lang.getString("enter_provider_name"),
+            provider_service_name: Lang.getString("enter_provider_service_name"),
+            provider_contract_number: Lang.getString("enter_provider_contract_number"),
             address: null
         },
         errorElement: "span",
