@@ -1076,3 +1076,8 @@ b, strong {
 #verlauf .test-network-signal {
     display: none !important;
 }
+
+#verlauf .time {
+    white-space: nowrap;
+    min-width: 215px;
+}
