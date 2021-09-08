@@ -235,11 +235,12 @@ exports.strings = {
         "measurements": "Měření",
         "result_when_finished": "Výsledek Vašeho měření bude dostupný ke stažení po ukončení všech časově diverzifikovaných testů.",
         "planned_end": "Plánované dokončení měření: cca. %X%.",
-        "generating_report": "Document is being created ...",
-        "finished": "The measuring cycle is now complete.",
-        "finished_desc": "Save the result of the measurement cycle immediately or print it out. The document will not be saved by RTR-GmbH.",
-        "error_generating": "Error generating the document.",
-        "generate_new": "Try again"
+        "generating_report": "Dokument se vytváří ...",
+        "finished": "Měřící cyklus je dokončen.",
+        "finished_desc": "Výsledek certifikovaného měření si uložte nebo vytiskněte. ČTÚ tento dokument neukládá.",
+        "error_generating": "Chyba při generování dokumentu.",
+        "generate_new": "Zkusit znovu",
+        "finished_note": "<p>Pokud v rámci certifikovaného měření libovolné 3 výsledky testů ze 6 celkových vykazují výkon služby v podobě výsledné rychlosti stahování (download) nebo vkládání (upload) menší než výkon, který Váš poskytovatel služby přístupu k internetu uvedl ve smluvních podmínkách v podobě běžně dostupné rychlosti pro daný směr (download/upload), vzniká velká opakující se odchylka od výkonu služby.</p><p>Pokud 5 po sobě jdoucích výsledků testů ze 6 celkových vykazují výslednou rychlost stahování (download) nebo vkládání (upload) menší než běžně dostupná rychlost pro daný směr (download/upload), vzniká velká trvající odchylka výkonu služby.</p><p>V obou dvou případech velkých odchylek můžete využít svého práva reklamovat vadné poskytnutí služby u svého poskytovatele služby přístupu k internetu.</p>"
     },
     //Page titles and link descriptions
     "index": "Úvod",
