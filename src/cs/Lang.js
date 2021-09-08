@@ -312,6 +312,7 @@ Lang.setStrings({
     'enter_provider_name': 'Zadejte název poskytovatele služby',
     'enter_provider_service_name': 'Zadejte název služby',
     'enter_provider_contract_number': 'Zadejte číslo smlouvy',
+    'enter_address': 'Zadejte adresu',
     'download_results_as_pdf': 'Stáhnout výsledky ve formátu PDF',
     'alert_close_tab': 'Do you want to cancel the measurement?',
     'help': 'Nápověda'

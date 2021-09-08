@@ -36,10 +36,10 @@ $(document).ready(function() {
         messages: {
             first_name: Lang.getString("enter_first_name"),
             last_name: Lang.getString("enter_last_name"),
-            provider_name: Lang.getString("enter_provider_name"),
-            provider_service_name: Lang.getString("enter_provider_service_name"),
-            provider_contract_number: Lang.getString("enter_provider_contract_number"),
-            address: null
+            isp_name: Lang.getString("enter_provider_name"),
+            isp_service_name: Lang.getString("enter_provider_service_name"),
+            isp_contract_number: Lang.getString("enter_provider_contract_number"),
+            address: Lang.getString("enter_address")
         },
         errorElement: "span",
         errorPlacement: function ( error, element ) {
