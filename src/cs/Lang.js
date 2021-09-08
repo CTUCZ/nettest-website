@@ -168,7 +168,7 @@ Lang.setStrings({
     'bytes' : 'bytes',
     'KB' : 'KB',
     'MB' : 'MB',
-    'public_ip_as_name': 'IP název sítě',
+    'public_ip_as_name': 'Název IP sítě',
 
     'roaming_international' : 'international roaming',
     'roaming_national' : 'national roaming',
