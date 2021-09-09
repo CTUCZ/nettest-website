@@ -181,7 +181,7 @@ exports.strings = {
         "current_test": "Aktuální měření",
         "save_results": "Uložit výsledky",
         "download_results": "Stáhnout:",
-        "available_history": "Výsledky měření jsou k dispozici v záložce <em>MOJE MĚŘENÍ</em>."
+        "available_history": "Výsledky měření jsou k dispozici v záložce <a href='/cs/Verlauf'><em>MOJE MĚŘENÍ</em></a>."
     },
     "certified_measurement_content": {
         "info": "Informace",
@@ -236,7 +236,7 @@ exports.strings = {
         "result_when_finished": "Výsledek Vašeho měření bude dostupný ke stažení po ukončení všech časově diverzifikovaných testů.",
         "planned_end": "Plánované dokončení měření: cca. %X%.",
         "generating_report": "Dokument se vytváří ...",
-        "finished": "Měřící cyklus je dokončen.",
+        "finished": "Měřicí cyklus je dokončen.",
         "finished_desc": "Výsledek certifikovaného měření si uložte nebo vytiskněte. ČTÚ tento dokument neukládá.",
         "error_generating": "Chyba při generování dokumentu.",
         "generate_new": "Zkusit znovu",
@@ -334,8 +334,8 @@ exports.strings = {
     "timespan_end" : "Konec časového rozpětí",
     "timespan_begin" : "Začátek časového rozpětí",
     "pinned" : "Pinned",
-    "test_server" : "Měřící server",
-    "ip": "IP",
+    "test_server" : "Měřicí server",
+    "ip": "IP adresa",
     "state": "Stav",
     "api": "API",
 
