@@ -181,7 +181,7 @@ exports.strings = {
         "current_test": "Aktuální měření",
         "save_results": "Uložit výsledky",
         "download_results": "Stáhnout:",
-        "available_history": "Výsledky měření jsou k dispozici v záložce <a href='/cs/Verlauf'><em>MOJE MĚŘENÍ</em></a>."
+        "available_history": "Výsledky měření jsou k dispozici v záložce <a href='/cs/Verlauf'><strong style='font-weight: bold'>MOJE MĚŘENÍ</strong></a>."
     },
     "certified_measurement_content": {
         "info": "Informace",
