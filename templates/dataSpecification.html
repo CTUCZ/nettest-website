@@ -1,0 +1,160 @@
+{% extends basetemplate %}
+{% set title = Lang.opendata_specification_title %}
+{% set containerclass = "full-width" %}
+
+{% block headerscriptingExtended %}
+<link rel="stylesheet" type="text/css" href="../{{ fingerprint['lib/olv3/ol.css'] }}" media="screen"/>
+<script src="../{{ fingerprint['lib/olv3/ol.js'] }}" type="text/javascript"></script>
+<script type="text/javascript" src="../{{ fingerprint['js/jquery.flot.min.js'] }}"></script>
+<script src="../{{ fingerprint['lib/handlebars.min.js'] }}" type="text/javascript"></script>
+<script src="../{{ fingerprint['lib/moment.min.js'] }}" type="text/javascript"></script>
+<script src="../{{ fingerprint['lib/date-de-AT.js'] }}" type="text/javascript"></script>
+
+<script type="text/javascript" src="../{{ fingerprint['lib/selectize/selectize.min.js'] }}"></script>
+{% endblock %}
+
+{% block content %}
+<div class="uk-section-default uk-section content">
+    <div class="uk-container">
+        <h2>{{ Lang.opendata_specification_title }}</h2>
+        <table id="data-spec-table" class="dont-stack uk-table">
+            <thead>
+            <tr>
+                <th scope="col">Název</th>
+                <th scope="col">Popis</th>
+                <th scope="col">Typ</th>
+                <th scope="col">Příklad</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>cat_technology</td>
+                    <td>Kategorie použité technologie např. “4G”, “5G”, “LAN”.</td>
+                    <td>String</td>
+                    <td>LAN</td>
+                </tr>
+                <tr>
+                    <td>client_version</td>
+                    <td>Použitá verze klientské aplikace.</td>
+                    <td>String</td>
+                    <td>0.9.0</td>
+                </tr>
+                <tr>
+                    <td>download_kbit</td>
+                    <td>Rychlost stahování, kilobity za sekundu.</td>
+                    <td>Numeric</td>
+                    <td>15500</td>
+                </tr>
+                <tr>
+                    <td>lat</td>
+                    <td>Zeměpisná šířka pozice klienta.</td>
+                    <td>Numeric</td>
+                    <td>50.2029024</td>
+                </tr>
+                <tr>
+                    <td>loc_accuracy</td>
+                    <td>Odhad přesnosti polohy (rádius v metrech).</td>
+                    <td>Numeric</td>
+                    <td>3766</td>
+                </tr>
+                <tr>
+                    <td>loc_src</td>
+                    <td>Zdroj informací o poloze. Hodnoty: “gps”, “network”.</td>
+                    <td>String</td>
+                    <td>network</td>
+                </tr>
+                <tr>
+                    <td>long</td>
+                    <td>Zeměpisná délka pozice klienta.</td>
+                    <td>Numeric</td>
+                    <td>17.3967841</td>
+                </tr>
+                <tr>
+                    <td>lte_rsrp</td>
+                    <td>Síla LTE signálu v dBm.</td>
+                    <td>Numeric</td>
+                    <td>-75</td>
+                </tr>
+                <tr>
+                    <td>lte_rsrq</td>
+                    <td>Kvalita LTE signálu v decibelech.</td>
+                    <td>Numeric</td>
+                    <td>-8</td>
+                </tr>
+                <tr>
+                    <td>model</td>
+                    <td>Název použitého zařízení.</td>
+                    <td>String</td>
+                    <td>Chrome</td>
+                </tr>
+                <tr>
+                    <td>network_type</td>
+                    <td>Typ sítě např. MOBILE, LTE, LAN.</td>
+                    <td>String</td>
+                    <td>LTE</td>
+                </tr>
+                <tr>
+                    <td>num_threads</td>
+                    <td>Počet vláken testu stahování.</td>
+                    <td>Numeric</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>open_test_uuid</td>
+                    <td>UUID konkrétního testu.</td>
+                    <td>String</td>
+                    <td>O10b9e85c-d47a-3428-b3fe-82ef24e8c6fe</td>
+                </tr>
+                <tr>
+                    <td>open_uuid</td>
+                    <td>Identifikace klienta, který spustil test.</td>
+                    <td>String</td>
+                    <td>Pa18046c3-cfce-357a-a3d0-062467c8a32c</td>
+                </tr>
+                <tr>
+                    <td>ping_ms</td>
+                    <td>Medián pingu (round-trip time) v milisekundách, měřeno na straně serveru.</td>
+                    <td>Numeric</td>
+                    <td>15.189354</td>
+                </tr>
+                <tr>
+                    <td>platform</td>
+                    <td>Platforma, na které byl test proveden. Např. “Android” (= Google Android App), “iOS” (= Apple iOs App)</td>
+                    <td>String</td>
+                    <td>Android</td>
+                </tr>
+                <tr>
+                    <td>server_name</td>
+                    <td>Název měřicího serveru.</td>
+                    <td>String</td>
+                    <td>ČTÚ</td>
+                </tr>
+                <tr>
+                    <td>test_duration</td>
+                    <td>Doba trvání testu v sekundách.</td>
+                    <td>Numeric</td>
+                    <td>15.189354</td>
+                </tr>
+                <tr>
+                    <td>time_utc</td>
+                    <td>Čas spuštění testu v časové zóně UTC.</td>
+                    <td>String</td>
+                    <td>2021-09-10 02:55</td>
+                </tr>
+                <tr>
+                    <td>upload_kbit</td>
+                    <td>Rychlost vkládání, kilobity za sekundu.</td>
+                    <td>Numeric</td>
+                    <td>5500</td>
+                </tr>
+                <tr>
+                    <td>zip_code</td>
+                    <td>PSČ klienta, pokud je známé.</td>
+                    <td>Numeric</td>
+                    <td>62800</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

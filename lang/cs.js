@@ -160,14 +160,14 @@ exports.strings = {
     },
 
     "opendata_content" : {
-        "open_data_specification" : "Open Data Interface Specification",
-        "content_block" : 'In compliance with the RTR-NetTest privacy policy the measurement results of the RTR-NetTest are available as Open Data. The <a href="/en/OpenDataSpecification.html">specification is available as HTML</a> and <a hreF="https://github.com/rtr-nettest/open-rmbt/blob/master/RMBTStatisticServer/doc/swagger.json">Swagger</a>. This specification describes the information which is available as Open Data. It is available as JSON and as CSV-file (see below).',
-        "csv_interface" : 'Download interface',
-        "recent_tests_hours" : 'The results of the last 48 hours are available as zip-archive under <a href="/RMBTStatisticServer/export/netztest-opendata_hours-048.zip" title="RTR-Netztest Open Data 48h" target="_blank" class="external-link-new-window">netztest-opendata_hours-048.zip</a> and as xlsx under <a href="/RMBTStatisticServer/export/netztest-opendata_hours-048.xlsx" title="RTR-Netztest Open Data 48h" target="_blank" class="external-link-new-window">netztest-opendata_hours-048.xlsx</a>.',
-        "recent_tests" : 'The results of the last 31 days are available as zip-archive under <a href="/RMBTStatisticServer/export/netztest-opendata.zip" title="RTR-Netztest Open Data" target="_blank" class="external-link-new-window">netztest-opendata.zip</a> and as xlsx under <a href="/RMBTStatisticServer/export/netztest-opendata.xlsx" title="RTR-Netztest Open Data" target="_blank" class="external-link-new-window">netztest-opendata.xlsx</a>.',
-        "further_results" : "Further results are available on a monthly basis:",
-        "note_timestamp" : "Please note that time stamps are in UTC (not in local time). To ensure the correctness of the results, implausible and/or obvious abusive measurements may be marked with the flag 'implausible' by RTR.",
-        "license_text" : 'The data is published under the <a href="https://creativecommons.org/licenses/by/4.0/deed.de" target="_blank" class="external-link-new-window">Creative Commons Attribution 4.0 (CC BY 4.0)</a> license. Please also refer the additional <a rel="license" href="https://www.rtr.at/TKP/service/rtr-nettest/help/legal_aspects/netztest_3rd_party_open_data.en.html">licensing terms</a>.'
+       "open_data_specification" : "Otevřená data",
+        "content_block" : 'V souladu se zásadami ochrany osobních údajů jsou výsledky měření nástrojem ČTÚ-NetTest zveřejněna jako otevřená data. Specifikace formátu dat je k dispozici <a href="/cs/DataSpecification">zde</a>. Tato specifikace popisuje informace, které jsou dostupné jako otevřená data ve formátu JSON a CSV (viz níže).',
+        "csv_interface" : 'Stažení dat',
+        "recent_tests_hours" : 'Výsledky měření za posledních 48 hodin:<br /><br /> <a href="/RMBTStatisticServer/export/nettest-opendata_hours-048.zip" title="ČTÚ-NetTest Open Data 48h" target="_blank" class="external-link-new-window">nettest-opendata_hours-048.zip</a><br /> <a href="/RMBTStatisticServer/export/nettest-opendata_hours-048.xlsx" title="ČTÚ-NetTest Open Data 48h" target="_blank" class="external-link-new-window">nettest-opendata_hours-048.xlsx</a>.',
+        "recent_tests" : 'Výsledky měření za posledních 31 dní:<br /><br /> <a href="/RMBTStatisticServer/export/nettest-opendata.zip" title="ČTÚ-NetTest Open Data" target="_blank" class="external-link-new-window">nettest-opendata.zip</a><br /> <a href="/RMBTStatisticServer/export/nettest-opendata.xlsx" title="ČTÚ-NetTest Open Data" target="_blank" class="external-link-new-window">nettest-opendata.xlsx</a>.',
+        "further_results" : "Další výsledky jsou k dispozici měsíčně:",
+        "note_timestamp" : "Upozorňujeme, že časová razítka jsou v UTC (ne v místním čase).",
+        "license_text" : 'Data jsou publikována v licenci <a href="https://creativecommons.org/licenses/by/4.0/deed.de" target="_blank" class="external-link-new-window">Creative Commons Attribution 4.0 (CC BY 4.0)</a>.'
     },
 
     "loop_mode_content" : {
@@ -411,4 +411,6 @@ exports.strings = {
     "help_result_good_or_bad": "Jak poznám, zda je můj naměřený výsledek špatný?",
     "help_icon_meaning": "Jakým prahovým hodnotám odpovídají jednotlivé barevné interpretace?",
     "Links": "Odkazy na vysvětlivky jednotlivých parametrů testu",
+
+    "opendata_specification_title": "Otevřená data - specifikace formátu"
 }
