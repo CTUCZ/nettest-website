@@ -1,0 +1,25 @@
+{% extends basetemplate %}
+{% set title = "Aktuální informace" %}
+{% set containerclass = "full-width" %}
+
+{% block headerscriptingExtended %}
+<style>
+    #news-list {
+        list-style-type: none;
+    }
+    #news-list li strong {
+        padding-right: 15px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="uk-section-default uk-section content">
+    <div class="uk-container">
+        <h3>Aktuální informace</h3>
+        <ul id="news-list">
+            <li><strong>15. 9. 2021</strong>Spuštění měřicího nástroje ČTÚ-NetTest pro širokou veřejnost. </li>
+        </ul>
+    </div>
+</div>
+{% endblock %}

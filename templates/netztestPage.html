@@ -32,6 +32,7 @@
 
     <script type="text/javascript" src="Lang.js"></script>
     <script type="text/javascript" src="../{{ fingerprint['js/popupform.js'] }}"></script>
+    <script type="text/javascript" src="../{{ fingerprint['js/global.js'] }}"></script>
 
     {% endblock %}
     {% block headerscriptingExtended %}
@@ -329,9 +330,9 @@
             </div>
             <div class="uk-flex-auto uk-width-1-2 uk-width-1-4@s footer-large">
                 <ul class="uk-list">
-                <!--    <li>
-                        <a href="https://www.rtr.at/rtr/footer/impressum.{{ Lang.lang }}.html">{{ Lang.imprint }}</a>
-                    </li> -->
+                    <li>
+                        <a href="/{{ Lang.lang}}/news">{{ Lang.imprint }}</a>
+                    </li>
                     <li>
                         <a href="{{ Lang.index_content.tos.url }}">{{ Lang.index_content.tos.text }}</a>
                     </li>

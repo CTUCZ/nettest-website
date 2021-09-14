@@ -25,9 +25,6 @@ $(window).bind("load", function() {
 
 $(document).ready(function() {
 
-    var vyska = $(window).height() - $('#footer').outerHeight(true);
-    $('.tm-page').css('min-height', vyska);
-
     var mobile_client = navigator.userAgent;
  /*
     //is it windows phone?
@@ -45,12 +42,12 @@ $(document).ready(function() {
         $("#iOSApp").show();
         var url = 'https://itunes.apple.com/at/app/rtr-netztest/id724321403';
         $("a#teaserlink").attr("href",url);
-    } 
+    }
 */
     if (userServerSelection > 0) {
         getLastOpenDataResults();
     }
-    
+
     if (!(userServerSelection > 0)) {
         //if fullscreen map parameter set - map is only page content!
         if (fullscreenMap) {
@@ -58,7 +55,7 @@ $(document).ready(function() {
             $("body").empty()
             $("body").append(mapContainer);
         }
-        
+
         loadLastOpenDataResultsMap();
     }
 });
@@ -83,8 +80,8 @@ function loadLastOpenDataResultsMap() {
             mapProxy = data.settings[0].urls.url_map_server;
         }
     });
-    
-    
+
+
     var bases = new Array();
     bases.push(
             new ol.layer.Tile({
@@ -99,12 +96,12 @@ function loadLastOpenDataResultsMap() {
                             // maxZoom: 19
                 })
             }));
-    
+
     var vectorSource = new ol.source.Vector({});
     var vectorSourcePan = new ol.source.Vector({});
     var currentFeatures = [];
     var currentFeaturesPan = [];
-    
+
     var colors = [
         'rgba(128, 128, 128, 0.9)', //undefined - 0
         'rgba(255, 0, 0, 0.9)', //red - 1
@@ -112,7 +109,7 @@ function loadLastOpenDataResultsMap() {
         'rgba(0, 255, 0, 0.9)', //green - 3
         'rgba(0, 153, 0, 0.9)' //dark green - 4
     ];
-        
+
     var stylingFct = function(feature, resolution) {
         return    [new ol.style.Style({
             image: new ol.style.Circle({
@@ -127,7 +124,7 @@ function loadLastOpenDataResultsMap() {
             })
         })];
     };
-    
+
     vectorLayer = new ol.layer.Vector({
         source: vectorSource,
         style: stylingFct
@@ -137,7 +134,7 @@ function loadLastOpenDataResultsMap() {
         source: vectorSourcePan,
         style: stylingFct
     });
-    
+
     map = new ol.Map({
         layers: bases,
         controls: ol.control.defaults({
@@ -155,7 +152,7 @@ function loadLastOpenDataResultsMap() {
 
     map.addLayer(vectorLayerPan);
     map.addLayer(vectorLayer);
-    
+
     markers = new ol.Overlay.Popup();
     map.addOverlay(markers);
 
@@ -167,10 +164,10 @@ function loadLastOpenDataResultsMap() {
         if (feature) {
             var geometry = feature.getGeometry();
             var coord = geometry.getCoordinates();
-            
+
             var test = feature.get("result");
             var uuid = test.open_test_uuid;
-            
+
             //Open Popup?
             //window.location = "Opentest?" + uuid;
             loadMarker(uuid);
@@ -185,21 +182,21 @@ function loadLastOpenDataResultsMap() {
             markers.hide();
         }
     });
-    
+
     // change mouse cursor when over marker
     map.on('pointermove', function (e) {
         var pixel = map.getEventPixel(e.originalEvent);
         var hit = map.hasFeatureAtPixel(pixel);
         map.getTarget().style.cursor = hit ? 'pointer' : '';
     });
-    
+
     //fit to Austrian border initially
     var textent = [1252344.27125, 5846515.498922221, 1907596.397450879, 6284446.2299491335];
     map.getView().fit(textent, map.getSize());
-    
+
     //load test results
     var currentFirstTestUUID = null;
-    
+
     var addTestToMap = function (result) {
         var coords = convertLongLatToOpenLayersPoint(result.long, result.lat);
         var feature = new ol.Feature({
@@ -209,7 +206,7 @@ function loadLastOpenDataResultsMap() {
         vectorSource.addFeature(feature);
         vectorSourcePan.addFeature(feature);
         currentFeatures.push(feature);
-        
+
         //remove first feature if more than N
         if (currentFeatures.length > pan_on_most_recent_tests) {
             var removed = currentFeatures[currentFeatures.length - pan_on_most_recent_tests - 1];
@@ -219,7 +216,7 @@ function loadLastOpenDataResultsMap() {
             var removed = currentFeatures.shift();
             vectorSource.removeFeature(removed);
         }
-        
+
         //if fullscreen - open popup
         if (fullscreenMap) {
             window.setTimeout(function() {
@@ -231,13 +228,13 @@ function loadLastOpenDataResultsMap() {
     var animateMapToShowTests = function () {
         window.setTimeout(function () {
             var extent = vectorLayerPan.getSource().getExtent();
-            
+
             var extentSize = ol.extent.getSize(extent);
             extent[0] -= extentSize[0]*.2
             extent[1] -= extentSize[1]*.2
             extent[2] += extentSize[0]*.2
             extent[3] += extentSize[1]*.2
-            
+
             var zoom = ol.animation.zoom({
                 resolution: map.getView().getResolution(),
                 duration: 2000
@@ -251,7 +248,7 @@ function loadLastOpenDataResultsMap() {
             map.getView().fit(extent, map.getSize());
         }, 10);
     }
-    
+
     var refreshOpenTests = function(initial) {
         $.ajax({
             url: statisticProxy + "/cache/recent",
@@ -316,8 +313,8 @@ function loadLastOpenDataResultsMap() {
         window.setInterval(function() {refreshOpenTests(false);}, 3000);
     }, 10000);
     refreshOpenTests(true);
-    
-    
+
+
     window.setTimeout(function() {
         map.updateSize();
     },1)
@@ -331,12 +328,12 @@ function loadLastOpenDataResultsMap() {
         },10);
         window.setTimeout(function() {
             map.updateSize();
-        },200); 
+        },200);
         window.setTimeout(function() {
             map.updateSize();
-        },500); 
+        },500);
     })
-    
+
     if (fullscreenMap) {
         //change map location, resize, delete the rest
         switchToFullscreenMap();
@@ -370,7 +367,7 @@ function switchToFullscreenMap() {
                 map.updateSize();
                 fullscreenMap = false;
                 $("#fullscreenTestStatistics").hide();
-                
+
                 document.removeEventListener("fullscreenchange", onFullScreenChange, false);
                 document.removeEventListener("webkitfullscreenchange", onFullScreenChange, false);
                 document.removeEventListener("mozfullscreenchange", onFullScreenChange, false);
@@ -396,11 +393,11 @@ function addCurrentTestStatistics() {
         return;
     }
     currentTestStatisticsAdded = true;
-    
+
     //add div to display
     $("#fullscreenTestStatistics").prependTo("#newtestsmap");
     $("#fullscreenTestStatistics").show();
-    
+
     var template = Handlebars.compile($("#fullscreenTestStatistics").html());
 
     var currentStatistics={};
@@ -423,13 +420,13 @@ function addCurrentTestStatistics() {
                 }
         );
     };
-    
+
     window.setInterval(refreshDisplay, 1000);
     window.setInterval(refreshStatistics, 3000);
     refreshDisplay();
     refreshStatistics();
-    
-        
+
+
 }
 
 
@@ -460,7 +457,7 @@ function loadMarker(openTestUUID) {
 
 
 function convertLongLatToOpenLayersPoint(long,lat) {
-    return ol.proj.transform([long, lat], 
+    return ol.proj.transform([long, lat],
                 'EPSG:4326', 'EPSG:3857');
 }
 
@@ -531,6 +528,6 @@ function addMarkerV3(lat, lon, data) {
         data: data
     });
 
-    
+
     markers.show(coordinate, html);
 }

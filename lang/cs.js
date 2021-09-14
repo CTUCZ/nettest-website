@@ -25,6 +25,7 @@ exports.strings = {
             "netztest": "ČTÚ – NetTest informuje uživatele o aktuální kvalitě jejich služby přístupu k internetu v podobě skutečně dosahované rychlosti stahování (download), vkládání (upload) a doby odezvy (ping). Nástroj NetTest nabízí možnost certifikovaného měření, které plně automaticky provede celý proces měření s výsledkem v podobě PDF dokumentu, který může uživatel použít pro případnou reklamaci služby přístupu k internetu.",
             "qostest": "qostest.eu informs users about the current service quality (including upload, download, ping, signal strength) of their Internet connection. In addition, a map view and statistics of previous tests can be accessed."
         },
+        "detailed_dsc": "<p>Provedení jednoho testu (Spustit test) slouží pro jednorázové testování rychlosti vaší služby přístupu k internetu a provedení opakovaného měření umožňuje testování rychlosti vaší služby přístupu k internetu v delším časovém horizontu. Z principu věci lze tyto typy měření použít i pro testování rychlosti připojení vašeho uživatelského zařízení (PC, notebook, tablet) k internetu prostřednictvím vaší domácí sítě (LAN), nicméně berte prosím na vědomí, že různé typy připojení k internetu prostřednictvím vaší domácí sítě (LAN) mohou výrazně ovlivnit výslednou skutečnou rychlost, zvláště pokud se jedné o bezdrátové sítě. Pokud chcete provést reklamaci služby přístupu k internetu (připojení k internetu), je nutné vždy využít režimu certifikovaného měření, přičemž jediným přípustným způsobem měření je kabelové připojení vašeho uživatelského zařízení (PC, notebook) přímo ke koncovému zařízení za definovaných podmínek.</p><p><strong>Mějte prosím na paměti, že nejen výkon vašeho uživatelského zařízení, ale i operační systém má zásadní vliv na naměřené hodnoty skutečné rychlosti.</strong></p><p><a href='/cs/ZertMessung'>Pro účely reklamace služby využijte certifikovaného měření.</a></p>",
         "tos": {
             "text": "Prohlášení o ochraně osobních údajů a podmínky užití",
             "url": {
@@ -62,7 +63,7 @@ exports.strings = {
         "fullscreen" : "Full screen",
         "loop_mode_content": "Provede opakované měření dle vlastního nastavení",
         "opendata_content": "Výsledky měření jsou dostupné jako otevřená data",
-        "certified_content": "Provede proces certifikovaného měření"
+        "certified_content": "Provede proces certifikovaného měření pro účely reklamace služby"
     },
 
     "map_content" : {
@@ -192,13 +193,14 @@ exports.strings = {
         "introduction_desc": "Certifikované měření umožňuje uplatnit výsledky tohoto měření jako průkazná zjištění o kvalitě Vaší služby přístupu k internetu (internetového připojení), pokud je nabízena na území České republiky. Tato zjištění můžete uplatnit v případě, pokud se rozhodnete využít prostředky nápravy, které máte k dispozici podle vnitrostátního práva, a to v případě vzniku jakékoliv velké trvající či velké pravidelně se opakující odchylky skutečného výkonu služby, pokud jde o rychlost stahování (download) nebo vkládání (upload), od výkonu, který Váš poskytovatel služby přístupu k internetu uvedl ve smluvních podmínkách. Důležitým parametrem pro posouzení výkonu služby je v případě služby přístupu k internetu v pevném místě smluvně udávaná hodnota běžně dostupné rychlosti. <p>Certifikované měření Vám poskytne pouze fakta o skutečném výkonu služby. Kvalifikované posouzení v případě sporu mezi Vámi a poskytovatelem služby, zda je služba poskytována v souladu se smlouvou či nikoli, je na příslušné instituci, kterou je Český telekomunikační úřad, jež v rámci řízení o námitce proti vyřízení reklamace může toto rozhodnout. Upozorňujeme, že z obecné povahy přesnosti měřicích nástrojů založených na principu webových prohlížečů lze měřicí nástroj ČTÚ-NetTest použít pro rychlost stahování do (včetně) 600 Mb/s a pro rychlost vkládání do (včetně) 300 Mb/s hodnoty inzerované rychlosti služby.</p>",
         "introduction_instruction": "Poznámky k měření",
         "introduction_instruction_desc": "Před provedením certifikovaného měření si pozorně přečtěte <a href='https://nettest.cz/Pruvodce_certifikovanym_merenim.pdf'>návod k jeho provedení</a>. Obsahuje také kontrolní seznam, který Vám pomůže certifikované měření provést. S dotazy ohledně certifikovaného měření se můžete obrátit na <a href='mailto:nettest@ctu.cz'>nettest@ctu.cz</a>.",
-        "please_note": "Prosíme, věnujte pozornost zejména následujícímu:",
+        "please_note": "<strong>Prosíme, věnujte pozornost zejména následujícímu:</strong>",
         "note_fixed": "The certified measurement can only be used to verify wired Internet access services.",
         "note_browser": "Certifikované měření lze provádět pomocí webového prohlížeče (Chrome, Edge, Firefox apod.) na Vašem uživatelském zařízení (tj. desktop PC, notebook) s aktualizovaným operačním systémem a webovým prohlížečem.",
         "note_no_wifi": "Vaše uživatelské zařízení (desktop PC, notebook), prostřednictvím kterého budete provádět certifikované měření, musí být vždy připojeno k uživatelskému ethernetovému rozhraní (porty RJ&#8209;45) koncového zařízení pevným způsobem, tedy metalickým nebo případně optickým kabelem. Výsledky měření prostřednictvím bezdrátového připojení (např. Wi-Fi) nebudou považovány za relevantní.",
         "note_speed_limits": "Z povahy měřicích nástrojů založených na bázi webových prohlížečů lze měřicí nástroj NetTest použít pro certifikované měření kvality služeb přístupu k internetu, tj. měření hodnoty rychlostí download a upload, do jejich inzerovaných hodnot menších nebo rovno limitním hodnotám 600 Mbit/s (download) a 300 Mb/s (upload). Pro měření inzerovaných rychlostí vyšších, než jsou uvedené limitní hodnoty je nutné se obrátit na Český telekomunikační úřad (<a href='https://www.ctu.cz/epodatelna'>www.ctu.cz/epodatelna</a>).",
         "note_no_other_usage": "Během měřicího cyklu nepoužívejte počítač pro jiné aplikace.",
         "note_no_other_users": "Před spuštěním měřicího cyklu se ujistěte, že po dobu měření nevyužívají službu přístupu k internetu jiní uživatelé (např. rodinní příslušníci v rámci chytrých koncových zařízení, např. prostřednictvím mobilních telefonů, tabletů, TV atd.). V ideálním případě je doporučeno bezdrátové rozhraní (Wi-Fi) koncového zařízení dočasně deaktivovat a ostatní metalické nebo optické kabely z koncového zařízení odpojit (ponechat jen připojení do WAN portu a připojení Vašeho uživatelského zařízení, na kterém bude prováděno certifikované měření).",
+        "note_os": "Mějte prosím na paměti, že nejen výkon vašeho uživatelského zařízení, ale i operační systém má zásadní vliv na naměřené hodnoty skutečné rychlosti. Pro měření rychlostí vyšších něž 100 Mb/s se doporučuje operační systém, který využívá algoritmus TCP CUBIC (Windows 10 a vyšší, MacOS X Yosemite a vyšší, Linux).",
         "process": "Proces certifikovaného měření",
         "process_desc": "Certifikované měření se skládá ze 6 časově diverzifikovaných testů během dne v rámci měřicího cyklu. Měřicí cyklus trvá 1 hodinu a 30 minut. V rámci testu jsou automaticky prováděna jednotlivá měření o celkové délce měření 10 sekund pro každý směr datové komunikace (download a upload). Časový rozestup mezi jednotlivými testy je 15 minut.",
         "questions_desc": "Dotazy ohledně certifikovaného měření směřujte, prosím, na adresu <a href='mailto:nettest@ctu.cz'> nettest@ctu.cz </a>.",
@@ -264,6 +266,7 @@ exports.strings = {
     "test": "Test",
     "framework_loading": "Testovací framework se načítá...",
     "home": "Domů",
+    "link_to_certified": "<a href='/cs/ZertMessung'>Pro účely reklamace služby využijte certifikovaného měření.</a>",
 
     //common words
     "top" : "Top",
@@ -412,5 +415,18 @@ exports.strings = {
     "help_icon_meaning": "Jakým prahovým hodnotám odpovídají jednotlivé barevné interpretace?",
     "Links": "Odkazy na vysvětlivky jednotlivých parametrů testu",
 
-    "opendata_specification_title": "Otevřená data - specifikace formátu"
+    "opendata_specification_title": "Otevřená data - specifikace formátu",
+
+    //404
+    "not_found_page": {
+        "title": "Stránka nenalezena",
+        "main": "Ou! Vypadá to jako <span style='font-size: 45px; font-weight: 600; padding: 0 10px; color: #2362a2'>CHYBA 404</span> ... je nám líto.",
+        "note": "Omlouváme se, ale stránka, kterou hledáte, nebyla nalezena.<br/>Zkuste zkontrolovat chyby v URL, a klikněte na tlačítko aktualizovat ve vašem prohlížeči."
+    },
+
+    // Info
+    "info_page": {
+        "title": "Testování nedostupné",
+        "note": "Omlouváme se, vzhledem k vysokému počtu probíhajících testů je kapacita měření plně vytížena, zkuste to prosím později."
+    }
 }

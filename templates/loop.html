@@ -7,7 +7,6 @@
 <script type="text/javascript" src="../{{ fingerprint['lib/moment.min.js'] }}"></script>
 <script type="text/javascript" src="../{{ fingerprint['lib/handlebars.min.js'] }}"></script>
 <script type="text/javascript" src="../{{ fingerprint['js/Loop.js'] }}"></script>
-<script type="text/javascript" src="../{{ fingerprint['js/global.js'] }}"></script>
 
 <style>
 
@@ -22,6 +21,10 @@
     <div id="loading-placeholder">
         <h2>{{ Lang.loop_mode_loading }}</h2>
     </div>
+
+    <p>
+        {{ Lang.link_to_certified }}
+    </p>
 
     <div id="loop-mode-form-container">
         <form id="loop-mode-form" class="uk-form">
