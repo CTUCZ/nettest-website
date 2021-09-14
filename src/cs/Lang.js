@@ -157,7 +157,7 @@ Lang.setStrings({
     'time_dl_ms': 'Rel. start download',
     'roaming_type': 'Roaming status',
     'wifi_link_speed': 'WLAN rychlost připojení',
-    'asn': 'AS číslo',
+    'asn': 'Číslo AS',
     'num_threads_requested': 'Požadovaná připojení',
     'sim_mcc_mnc': 'Home network MCC-MNC',
     'duration_download_ms': 'Doba trvání stahování',
@@ -168,7 +168,7 @@ Lang.setStrings({
     'bytes' : 'bytes',
     'KB' : 'KB',
     'MB' : 'MB',
-    'public_ip_as_name': 'Název IP sítě',
+    'public_ip_as_name': 'Název AS',
 
     'roaming_international' : 'international roaming',
     'roaming_national' : 'national roaming',
