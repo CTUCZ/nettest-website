@@ -182,7 +182,7 @@ exports.strings = {
         "current_test": "Aktuální měření",
         "save_results": "Uložit výsledky",
         "download_results": "Stáhnout:",
-        "available_history": "Výsledky měření jsou k dispozici v záložce <a href='/cs/Verlauf'><strong style='font-weight: bold'>MOJE MĚŘENÍ</strong></a>."
+        "available_history": "Výsledky měření jsou k dispozici v záložce <a href='/cs/Result'><strong style='font-weight: bold'>MOJE MĚŘENÍ</strong></a>."
     },
     "certified_measurement_content": {
         "info": "Informace",
@@ -266,7 +266,7 @@ exports.strings = {
     "test": "Test",
     "framework_loading": "Testovací framework se načítá...",
     "home": "Domů",
-    "link_to_certified": "<a href='/cs/ZertMessung'>Pro účely reklamace služby využijte certifikovaného měření.</a>",
+    "link_to_certified": "<a href='/cs/CertMeasurement'>Pro účely reklamace služby využijte certifikovaného měření.</a>",
 
     //common words
     "top" : "Top",

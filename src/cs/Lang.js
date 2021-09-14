@@ -197,7 +197,7 @@ Lang.setStrings({
     'PrematureEnd' : 'Test byl přerušen. Zkuste to prosím znovu!',
     'AppletCouldNotBeLoaded' : 'Java Applet could not be initialized.<br />Please check your Java installation: <a href="http://www.java.com/de/download/testjava.jsp">http://www.java.com/de/download/testjava.jsp</a>',
     'ErrorOnInitializingApplet' : 'Error on initializing the applet',
-    'VerlaufHash' : '/cs/Verlauf#',
+    'VerlaufHash' : '/cs/Result#',
     'Init_applet' : 'Init applet',
     'NoPermission'  : 'Nedostatečné oprávnění',
     'NotAvailable' : 'Nedostupné',

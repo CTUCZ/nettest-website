@@ -182,7 +182,7 @@ $(document).ready(function() {
         TestEnvironment.init(new SvgTestVisualization(function(result) {
             //success callback
             //redirect to result
-            var forwardUrl = "/" + selectedLanguage + "/Verlauf";
+            var forwardUrl = "/" + selectedLanguage + "/Result";
             forwardUrl += "#";
             forwardUrl += result["testUUID"];
             setTimeout(function() {

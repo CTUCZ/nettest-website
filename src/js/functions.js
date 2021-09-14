@@ -469,11 +469,11 @@ function RMBTtestresult(testUUID) {
         if (History)
                 //if the user navigates from Verlauf, push a new state to the history (was "Verlauf")
                 if (fromTest === false)
-                        History.pushState(stateObj,'Detail','/' + selectedLanguage + '/Verlauf?'+testUUID);
+                        History.pushState(stateObj,'Detail','/' + selectedLanguage + '/Result?'+testUUID);
                 //if the user just conducted a test, replace the current state ("Verlauf#testuuid") by the new state
                 //to prohibit from navigating backwards
                 else if (fromTest === true)
-                        History.replaceState(stateObj,'Detail','/' + selectedLanguage + '/Verlauf?'+testUUID);
+                        History.replaceState(stateObj,'Detail','/' + selectedLanguage + '/Result?'+testUUID);
         //alert('options: '+options);
         //History.pushState(stateObj,'Detail',options);
      $.ajax({

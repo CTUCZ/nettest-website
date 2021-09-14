@@ -78,7 +78,7 @@ $(document).ready(function() {
             }
             else if (state.data.session !== currentSession) {
                 //reset when from different session
-                document.location="ZertMessung";
+                document.location="CertMeasurement";
                 document.location.reload();
             }
             else if (state.data.step === "step1") {
@@ -104,7 +104,7 @@ $(document).ready(function() {
 
 function step1() {
     if (History) {
-        History.replaceState({step:"step1", session: currentSession},pageTitle,"ZertMessung?step1");
+        History.replaceState({step:"step1", session: currentSession},pageTitle,"CertMeasurement?step1");
     }
     setBreadCrumb("intro");
     $('#intro-container').show();
@@ -119,7 +119,7 @@ function step1() {
 
 function step2() {
     if (History) {
-        History.pushState({step:"step2", session: currentSession},pageTitle,"ZertMessung?step2");
+        History.pushState({step:"step2", session: currentSession},pageTitle,"CertMeasurement?step2");
     }
     setBreadCrumb("intermediate");
     $('#intro-container').hide();
@@ -152,7 +152,7 @@ function step2() {
 function step3() {
     compressedImages = null; //reset
     if (History) {
-        History.pushState({step:"step3", session: currentSession},pageTitle,"ZertMessung?step3");
+        History.pushState({step:"step3", session: currentSession},pageTitle,"CertMeasurement?step3");
     }
     setBreadCrumb("additional");
     $('#intro-container').hide();
@@ -220,7 +220,7 @@ function step3() {
 
 function step4() {
     if (History) {
-        History.pushState({step:"step4", session: currentSession},pageTitle,"ZertMessung?step4");
+        History.pushState({step:"step4", session: currentSession},pageTitle,"CertMeasurement?step4");
     }
     setBreadCrumb("measurement");
     $('#intro-container').hide();
