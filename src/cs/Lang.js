@@ -183,7 +183,7 @@ Lang.setStrings({
     'Initializing' : 'Inicializace',
     'WaitForSlot' : 'Čekání na testovací slot',
     'Init_Upload' : 'Nahrávání',
-    // 'Ping' : 'Doba odezvy (ping)',
+    'Ping' : 'Doba odezvy (ping)',
     'Download' : 'Rychlost stahování (download)',
     'Upload' : 'Rychlost vkládání (upload)',
     'Down': 'Down',

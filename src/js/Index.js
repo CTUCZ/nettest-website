@@ -56,7 +56,7 @@ $(document).ready(function() {
             $("body").append(mapContainer);
         }
 
-        loadLastOpenDataResultsMap();
+        // loadLastOpenDataResultsMap();
     }
 });
 

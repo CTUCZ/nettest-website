@@ -62,8 +62,8 @@ var map_baselayer_google;
  * also allow dragging the pointer
  */
 function makeMap() {
-    
-    
+
+
     map_baselayer_bing = new ol.layer.Tile({
         visible: false,
         preload: Infinity,
@@ -188,43 +188,43 @@ function makeMap() {
 
 
     map_geoposition.addLayer(vectorLayer);
-    
+
     var modify = new ol.interaction.Modify({
         features: new ol.Collection([map_geoposition_pointer])
     });
-    
+
     map_geoposition_pointer.on('change',function(){
         geocoder_provider = "manual";
         geocoder_accuracy = 10;
     },map_geoposition_pointer);
-    
+
     map_geoposition.addInteraction(modify);
 }
 
 function convertLongLatToOpenLayersPoint(long,lat) {
-    return ol.proj.transform([long, lat], 
+    return ol.proj.transform([long, lat],
                 'EPSG:4326', 'EPSG:3857');
 }
 
 var geocodingCache = {};
 /**
- * Geocode the address that the user entered, 
+ * Geocode the address that the user entered,
  * store the results in the local variables
  * and update the map
  * @param {Callback(successful: boolean)} callback called when positioning finished
  */
 function searchAndPositionOnAddress(callback) {
         var query, address, zip, city;
-    
+
         if (geocoder_google === null) {
             geocoder_google = new google.maps.Geocoder();
         }
-    
+
         var buildQuery = function() {
             address = $("input[name=input_address]").val();
             zip = $("input[name=input_zip]").val();
             city = $("input[name=input_city]").val();
-            
+
             if (city.length === 0 && zip.length === 0) {
                 return "";
             }
@@ -235,7 +235,7 @@ function searchAndPositionOnAddress(callback) {
         if (query === prevQuery || query === "") {
             if (callback !== undefined) {
                 callback(true);//@TODO different actions if prev. query was successful?
-            } 
+            }
             return;
         }
         prevQuery = query;
@@ -425,10 +425,10 @@ $(document).ready(function() {
 				$('#verlauf-detailcontainer').css('display','none');
 				$('#h1').html(Lang.getString('CourseOverview'));
 			}
-			
+
 		});
         }
-        
+
         //if a test just finished -> allow conducting a NDT test
         if (fromTest === true) {
             //take the test-uuid from the hash
@@ -444,10 +444,10 @@ $(document).ready(function() {
             }
         }
         else {
-        	
-        	
-                
-                
+
+
+
+
                 if (window.location.search.length > 0) {
                         //if the user visits /Verlauf?test-uuid -> show the test result
                         testID = window.location.search.substr(1);
@@ -460,7 +460,7 @@ $(document).ready(function() {
                         show_agbform(false, 'RMBTsettings', 'verlauf');
                 }
         }
-        
+
         $('#btn_abschicken').click(function(){requestBrowserData('RMBTsync','speedttest-code')});
         $('#speedttest-code').keypress(function (e) {
             if (e.which == 13) {
@@ -473,7 +473,7 @@ $(document).ready(function() {
 function show_addressPopup(testID) {
 	document.getElementById("popupform").innerHTML = "";
 	$(".iwill").detach();
-	
+
         var zipForm = '<div id="zip_check">' +
                 '<p>' + Lang.getString('PleaseEnterPostalCode') + '</p>' +
                 '<p><label for="form_zip_ausland">' + Lang.getString('OutsideAustria') + ':&nbsp;</label>' +
@@ -482,14 +482,14 @@ function show_addressPopup(testID) {
                 '<input type="text" name="form_zip" id="form_zip" class="text ui-widget-content ui-corner-all" /></p>' +
                 '</div>' +
                 '<div class="validateTips"></div>';
-        
+
         var addressForm = '<div id="address" style="float:left; width:50%; height:100%">        <p>            <label for="input_address">Straße/Nr.</label>            <input type="text" name="input_address" onblur="searchAndPositionOnAddress()"/>        </p>        <p>            <label for="input_zip">Postleitzahl</label>            <input type="text" name="input_zip"  onblur="searchAndPositionOnAddress()"/>        </p>        <p>            <label for="input_city">Ort</label>            <input type="text" name="input_city"  onblur="searchAndPositionOnAddress()"/>        </p>        <p>            <label for="outside-austria"><input type="checkbox" name="outside_austria"  value="outside-austria" id="outside-austria"  onchange="if ($(\'#outside-austria:checked\').length === 1){$(\'#address input[type=text]\').attr(\'disabled\',\'disabled\');}else {$(\'#address input[type=text]\').removeAttr(\'disabled\')}"/> Außerhalb Österreichs</label>        </p>    </div>    <div id="map1" style="float:left; width: 50%; height: 100%;">            </div> ';
         var countryHMTL = "";
         var possibleCountries = Lang.getString('countries');
         $.each(possibleCountries, function(key, value) {
             countryHMTL += "<option value='" + key + "'" + ((key.toUpperCase() === browser_country_geoip)?"selected='selected'":"") + ">" + value + "</option>";
         });
-    
+
         addressForm = '<style>label { display: block; margin-right: 10px; width: 250px; }' +
             '   label + input, label + select { display:block; width: 90%; }</style>' +
             '<div id="address" style="float:left; width:50%; height:100%">' +
@@ -508,7 +508,7 @@ function show_addressPopup(testID) {
             //'<p>' +
             //'    <label for="outside-austria"><input type="checkbox" name="outside_austria"  value="outside-austria" id="outside-austria"/> ' + Lang.getString('OutsideAustria') + '</label>' +
             //'</p>' +
-            '<p>' + 
+            '<p>' +
             '    <label for="country">' + Lang.getString('Country') + '</label>' +
             '    <select id="country" name="country" disabled="disabled">' + countryHMTL + '</select>' +
             '</p>' +
@@ -517,15 +517,15 @@ function show_addressPopup(testID) {
             '</p>' +
             '</div>' +
             '<div id="map1" style="float:left; width: 50%; height: 100%;"></div>';
-        
-        
+
+
         $("#popupform").append(
                 '<form action="javascript:void(0);return false;" style="height:280px;margin-bottom:0px">' +
                 ((useAddressPopup)?addressForm:zipForm) +
-                
-                '<div class="clear" />' + 
+
+                '<div class="clear" />' +
                 '</form>');
-	
+
 
 	var zip = $("#form_zip");
 	var allFields = $([]);
@@ -534,7 +534,7 @@ function show_addressPopup(testID) {
 	var terms_accepted = getCookie("RMBTTermsV6");
 	popup_title = Lang.getString('AddressInput');
 	allFields.add(zip);
-	
+
 	var tmp_decline;
     if (useAddressPopup) {
         tmp_decline = Lang.getString('Skip');
@@ -543,7 +543,7 @@ function show_addressPopup(testID) {
         tmp_decline = Lang.getString('Cancel');
     }
 	var tmp_agree =  Lang.getString('Continue');
-	
+
 	var dialog_buttons = {};
 	dialog_buttons[tmp_decline] = function() {
 		$(this).dialog("close");
@@ -551,7 +551,7 @@ function show_addressPopup(testID) {
 	dialog_buttons[tmp_agree] = function() {
 		bValid = true;
 		allFields.removeClass("ui-state-error");
-                
+
                 if (!useAddressPopup) {
                     console.log("ZIP input no longer supported")
                     /*if (zip.val().length === 0) {
@@ -619,21 +619,21 @@ function show_addressPopup(testID) {
 			$(this).dialog("close");
 		}
 	});
-	
+
 	$("#popupform").dialog("open");
 	zipcookie = getCookie('RMBTzip');
 	zip.val(zipcookie);
-		
+
 	$('#popupform').live('keyup', function(e){
           if (e.keyCode == 13) {
             $(':button:contains("' + Lang.getString('Continue') + '")').click();
           }
         });
-        
+
         if (useAddressPopup) {
             makeMap();
             $("#outside-austria").change(function() {
-                if ($('#outside-austria:checked').length === 1) { 
+                if ($('#outside-austria:checked').length === 1) {
                     $('#address input[type=text]').attr('disabled','disabled');
                 }
                 else {
@@ -677,7 +677,7 @@ function sendLatLong(testUID, lat, long, accuracy, provider, callback) {
             error: function() {
                 alert("Error beim resultUpdate-Abruf");
             }
-        });  
+        });
 }
 
 /**
@@ -692,7 +692,7 @@ function reloadShareText(testUUID) {
         language: selectedLanguage,
         timezone: test_timezone
     };
-        
+
     $.ajax({
         url: controlProxy + "/" + wspath + "/testresult",
         type: "post",
@@ -715,7 +715,7 @@ var qosPrototypeHTML = null;
  * Loads even more data from the open-test-database
  * Called by functions.js:RMBTtestresult()
  * @param {String} openTestUUID
- * @param {uuid} testUUIDForZipPopup optional: the test uuid, IF a zip code-popup should be requested. 
+ * @param {uuid} testUUIDForZipPopup optional: the test uuid, IF a zip code-popup should be requested.
  */
 function loadOpenTestData(openTestUUID, testUUIDForZipPopup) {
     $.ajax({
@@ -756,13 +756,13 @@ function loadOpenTestData(openTestUUID, testUUIDForZipPopup) {
                     //$('#yourzip').html(tmp);
                 }
             }
-            
+
             //warn user if fast internet connection and websocket test
             handleFastConnections(testdata);
-            
+
             $("#verlauf-detailcontainer a.shareBanner").unbind('click');
             $("#verlauf-detailcontainer a.shareBanner").click(function() { showShareBanner("#verlauf-detailcontainer", openTestUUID); });
-             
+
             //reset everything
             $("#verlauf-detailcontainer .speed-curve-graph-download").empty();
             $("#verlauf-detailcontainer .speed-curve-table-download").find("tr:gt(0)").remove();
@@ -784,14 +784,14 @@ function loadOpenTestData(openTestUUID, testUUIDForZipPopup) {
                     drawSingleSpeedCurve("#verlauf-detailcontainer",testdata.speed_curve.download,"download");
                     drawSingleSpeedCurve("#verlauf-detailcontainer",testdata.speed_curve.upload,"upload");
                     $("#verlauf-detailcontainer .speed-curve").show(); //both
-                } catch(e) { 
-                    /* IE without canvas */ 
+                } catch(e) {
+                    /* IE without canvas */
                     $("#verlauf-detailcontainer .speed-curve").hide();
                 }
             } else {
                 $("#verlauf-detailcontainer .speed-curve").hide();
             }
-            
+
             //if at least two entries
             if (testdata.speed_curve.signal.length > 1) {
                 try {
@@ -809,7 +809,7 @@ function loadOpenTestData(openTestUUID, testUUIDForZipPopup) {
                 //if no speed curve => hide graph
                 $("#verlauf-detailcontainer" + " .signal-curve").hide();
             }
-            
+
             //if there is no position => hide map
             if (testdata.lat === null && testdata.long === null) {
                 $("#verlauf-detailcontainer .test-map").hide();
@@ -824,24 +824,9 @@ function loadOpenTestData(openTestUUID, testUUIDForZipPopup) {
                     $("#verlauf-detailcontainer .test-map").hide();
                 }
             }
-            
-            //wire up share links
-            var url = "https://" + document.domain + "/" + selectedLanguage + "/Opentest?" + openTestUUID;
-            
-            $("#verlauf-detailcontainer .shareLink").attr("href",url);
-            var buttonsContainer = $('#verlauf-detailcontainer .social');
-            new Shariff(buttonsContainer, {
-                orientation: 'horizontal',
-                title: Lang.getString('RTR-NetTest'),
-                url: url,
-                buttonStyle: 'standard',
-                lang: selectedLanguage,
-                services: ['twitter','facebook','whatsapp','print'],
-                theme: 'white'
-            });
         }
     });
-    
+
     $.ajax({
         url: controlProxy + "/" + wspath + "/qos/" + openTestUUID + "/" + selectedLanguage,
         type: 'GET',
@@ -872,7 +857,7 @@ function loadOpenTestData(openTestUUID, testUUIDForZipPopup) {
  * connection that did a Websocekt-test
  * since the test results may be
  * imprecise due to browser limitations
- * 
+ *
  * @param {JSON} testdata Opendata-result
  */
 function handleFastConnections(testdata) {
