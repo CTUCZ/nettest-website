@@ -2,9 +2,17 @@
 {% set title = Lang.opendata %}
 
 {% block headerscriptingExtended %}
+<style>
+    #old, #xlsx {
+        color: #2362a2;
+        font-weight: 500;
+        background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2224%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%232362a2%22%20points%3D%2212%201%209%206%2015%206%22%20%2F%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%232362a2%22%20points%3D%2212%2013%209%208%2015%208%22%20%2F%3E%0A%3C%2Fsvg%3E%0A')
+    }
+</style>
 <script>
     $(document).ready(function() {
         var startY = 2021;
+        var startMonth = 8;
         var now = new Date();
         var options = [
             {
@@ -19,11 +27,13 @@
             }
         ];
         while (now.getFullYear() >= startY) {
-            $.each(options, function(i, option) {
-                var date =  now.getFullYear() + "-" + pad(now.getMonth()+1,2);
-                var value  = "netztest-opendata-" + date + "." + option.extension;
-                $(option.id).append('<option value="' + value + '">' + date + '</option>');
-            });
+            if (!(now.getFullYear() === startY && now.getMonth() + 1 <= startMonth)) {
+                $.each(options, function (i, option) {
+                    var date = now.getFullYear() + "-" + pad(now.getMonth() + 1, 2);
+                    var value = "netztest-opendata-" + date + "." + option.extension;
+                    $(option.id).append('<option value="' + value + '">' + date + '</option>');
+                });
+            }
             now.setMonth(now.getMonth() -1);
         }
 
@@ -54,17 +64,17 @@
             {{ Lang.opendata_content.further_results }}
         <form class="form-horizontal">
             <div class="form-group" uk-grid>
-                <label for="select-csv" class="uk-width-1-6@s">CSV</label>
+                <label for="old" class="uk-width-1-6@s">CSV</label>
 
-                <select id="old" class="uk-select uk-width-auto" id="select-csv">
+                <select id="old" class="uk-select uk-width-auto">
                     <option>-- {{ Lang.please_select }} --</option>
                 </select>
 
             </div>
             <div class="form-group" uk-grid>
-                <label for="select-xlsx" class="uk-width-1-6@s">XLSX</label>
+                <label for="xlsx" class="uk-width-1-6@s">XLSX</label>
 
-                <select id="xlsx" class="uk-select uk-width-auto" id="select-xlsx">
+                <select id="xlsx" class="uk-select uk-width-auto">
                     <option>-- {{ Lang.please_select }} --</option>
                 </select>
 

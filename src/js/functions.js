@@ -1439,6 +1439,21 @@ function loadUserConfiguration() {
 //load as soon as possible
 loadUserConfiguration();
 
+/**
+ * converts a time from open-data (utc) to local time
+ * @param {String} time
+ * @returns {Date}
+ */
+function getDateInLocalTimeFromOpenDataDate(time) {
+    let val = time; //1234-67-90 23:56:89 //0123-56-89 12:45:78
+    let d = new Date();
+    d.setUTCFullYear(val.substr(0,4));
+    d.setUTCMonth((parseInt(val.substr(5,2))-1));
+    d.setUTCDate(parseInt(val.substr(8,2)));
+    //Date.setUTCHours(hour,min,sec,millisec)
+    d.setUTCHours(val.substr(11,2), val.substr(14,2), val.substr(17,2));
+    return d;
+}
 
 /**
  * converts a time from open-data (utc) to local time
@@ -1446,15 +1461,19 @@ loadUserConfiguration();
  * @returns {String}
  */
 function formatOpenDataDateToLocalTime(time) {
-    var val = time; //1234-67-90 23:56:89 //0123-56-89 12:45:78
-    var d = new Date();
-    d.setUTCFullYear(val.substr(0,4));
-    d.setUTCMonth((parseInt(val.substr(5,2))-1));
-    d.setUTCDate(parseInt(val.substr(8,2)));
-    //Date.setUTCHours(hour,min,sec,millisec)
-    d.setUTCHours(val.substr(11,2), val.substr(14,2), val.substr(17,2));
-
+    let d = getDateInLocalTimeFromOpenDataDate(time);
     return d.getFullYear() + "-" + pad(d.getMonth()+1,2) + "-" + pad(d.getDate(),2) + " " +  pad(d.getHours(),2) + ":" + pad(d.getMinutes(),2) +":" + pad(d.getSeconds(),2);
+
+}
+
+/**
+ * converts a time from open-data (utc) to local time customized format
+ * @param {String} time
+ * @returns {String}
+ */
+function formatOpenDataDateToLocalTime_custom(time) {
+    let d = getDateInLocalTimeFromOpenDataDate(time);
+    return pad(d.getDate(),2)+ '.'+pad(d.getMonth()+1,2)+'.' + d.getFullYear() + " " +  pad(d.getHours(),2) + ":" + pad(d.getMinutes(),2) +":" + pad(d.getSeconds(),2);
 
 }
 
@@ -1556,7 +1575,7 @@ function getOpenDataRow(testdata, showUnits) {
     var d = new Date(val.substr(0,10));
     d.setUTCHours(val.substr(11,2), val.substr(14,2));
 
-    row += "<td class='time'>" +  link + img[0].outerHTML + formatOpenDataDateToLocalTime(testdata.time) + "</a></td>";
+    row += "<td class='time'>" +  link + img[0].outerHTML + formatOpenDataDateToLocalTime_custom(testdata.time) + "</a></td>";
 
     //environment info
     //position marker
