@@ -11,6 +11,12 @@
 <script src="../{{ fingerprint['lib/date-de-AT.js'] }}" type="text/javascript"></script>
 
 <script type="text/javascript" src="../{{ fingerprint['lib/selectize/selectize.min.js'] }}"></script>
+<style>
+    table td {
+        word-break: keep-all;
+        white-space: nowrap;
+    }
+</style>
 {% endblock %}
 
 {% block content %}
@@ -62,7 +68,7 @@
                     <td>Anonymizovaná IP adresa klienta.</td>
                     <td>String</td>
                     <td>185.68.212</td>
-                </tr>                    
+                </tr>
                 <tr>
                     <td>lat</td>
                     <td>Zeměpisná šířka pozice klienta.</td>

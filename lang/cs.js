@@ -22,10 +22,10 @@ exports.strings = {
     },
     "index_content": {
         "service_description": {
-            "netztest": "ČTÚ – NetTest informuje uživatele o aktuální kvalitě jejich služby přístupu k internetu v podobě skutečně dosahované rychlosti stahování (download), vkládání (upload) a doby odezvy (ping). Nástroj NetTest nabízí možnost certifikovaného měření, které plně automaticky provede celý proces měření s výsledkem v podobě PDF dokumentu, který může uživatel použít pro případnou reklamaci služby přístupu k internetu.",
+            "netztest": "ČTÚ – NetTest informuje uživatele o aktuální kvalitě jejich služby přístupu k internetu v podobě skutečně dosahované rychlosti stahování (download), vkládání (upload) a doby odezvy (ping). Nástroj NetTest nabízí možnost certifikovaného měření, které plně automaticky provede celý proces měření s výsledkem v podobě PDF dokumentu, který může uživatel použít pro případnou reklamaci služby přístupu k internetu. Pokud chcete provést reklamaci služby přístupu k internetu (připojení k internetu), je nutné vždy využít režimu certifikovaného měření, přičemž jediným přípustným způsobem měření je kabelové připojení vašeho uživatelského zařízení (PC, notebook) přímo ke koncovému zařízení za definovaných podmínek.",
             "qostest": "qostest.eu informs users about the current service quality (including upload, download, ping, signal strength) of their Internet connection. In addition, a map view and statistics of previous tests can be accessed."
         },
-        "detailed_dsc": "<p>Provedení jednoho testu (Spustit test) slouží pro jednorázové testování rychlosti vaší služby přístupu k internetu a provedení opakovaného měření umožňuje testování rychlosti vaší služby přístupu k internetu v delším časovém horizontu. Z principu věci lze tyto typy měření použít i pro testování rychlosti připojení vašeho uživatelského zařízení (PC, notebook, tablet) k internetu prostřednictvím vaší domácí sítě (LAN), nicméně berte prosím na vědomí, že různé typy připojení k internetu prostřednictvím vaší domácí sítě (LAN) mohou výrazně ovlivnit výslednou skutečnou rychlost, zvláště pokud se jedné o bezdrátové sítě. Pokud chcete provést reklamaci služby přístupu k internetu (připojení k internetu), je nutné vždy využít režimu certifikovaného měření, přičemž jediným přípustným způsobem měření je kabelové připojení vašeho uživatelského zařízení (PC, notebook) přímo ke koncovému zařízení za definovaných podmínek.</p><p><strong>Mějte prosím na paměti, že nejen výkon vašeho uživatelského zařízení, ale i operační systém má zásadní vliv na naměřené hodnoty skutečné rychlosti.</strong></p><p><a href='/cs/ZertMessung'>Pro účely reklamace služby využijte certifikovaného měření.</a></p>",
+        "detailed_dsc": "<p><strong>Mějte prosím na paměti, že nejen výkon vašeho uživatelského zařízení, ale i operační systém má zásadní vliv na naměřené hodnoty skutečné rychlosti.</strong></p>",
         "tos": {
             "text": "Prohlášení o ochraně osobních údajů a podmínky užití",
             "url": {
@@ -254,9 +254,9 @@ exports.strings = {
     "opentests": "Open data measurement results",
     "opendata": "Otevřená data",
     "help": "Nápověda",
-    "help_url": "https://www.rtr.at/en/tk/netztesthilfe",
-    "imprint" : "Informace",
-    "imprint_url" : "https://www.rtr.at/en/rtr/impressum",
+    "help_url": "https://www.nettest.cz/cs/Help",
+    "imprint" : "Aktuální informace",
+    "imprint_url" : "https://www.ctu.cz",
     "menu" : "Menu",
     "loop_mode" : "Opakované měření",
     "loop_mode_loading" : "Opakované měření se načítá...",
