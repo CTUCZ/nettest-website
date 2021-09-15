@@ -94,7 +94,8 @@ var metalsmith = Metalsmith(__dirname)
     .use((useWatch) ? (watch({
         paths: {
             "${source}/**/*": true,
-            "templates/**/*": "**/*.html"
+            "templates/**/*": "**/*.html",
+            "lang/**/*": true
         }
     })) : null)
     .build(function(err) {

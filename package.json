@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node ./build.js netztest && http-server build -p 8081"
+    "start": "node ./build.js netztest && http-server build -p 8081 -c-1",
+    "dev": "concurrently --kill-others \"node ./build.js netztest watch\" \"http-server build -p 8081 -c-1\"",
+    "build": "node ./build.js netztest"
   },
   "dependencies": {
     "debug": "~2.1.1",
@@ -21,5 +23,8 @@
     "request": "^2.57",
     "uikit": "3.5.8",
     "cheerio": "0.18.0"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.1"
   }
 }

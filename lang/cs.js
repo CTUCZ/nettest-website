@@ -406,7 +406,7 @@ exports.strings = {
     "up_avg": "UL (normal)",
     "last_updated": "Last updated",
     "coverage": "Coverage",
-    "service_overload": "Dočasné upozornění: Pokud se váš test nespustí do XX sekund, opakujte test později. V tuto chvíli je prováděno velké množství testů, které má za následek delší prodlevu před spuštěním samotného testu. Děkujeme za pochopení.",
+    "service_overload": "Dočasné upozornění: Pokud se váš test nespustí do 2 minut, opakujte test později. V tuto chvíli je prováděno velké množství testů, které má za následek delší prodlevu před spuštěním samotného testu. Děkujeme za pochopení.",
 
     // Help
     "help_download_title": "Co znamená rychlost stahování (Download)?",
