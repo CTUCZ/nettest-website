@@ -1506,23 +1506,6 @@ $(document).ready(function() {
  * @return {String} The table row including the wrapping tr-elements
  */
 function getOpenDataRow(testdata, showUnits) {
-    var getSignificantDigits = function(number) {
-        if (number > 100) {
-            return -1;
-        }
-        else if (number >= 10) {
-            return 0;
-        }
-        else if (number >= 1) {
-            return 1;
-        }
-        else if (number >= 0.1) {
-            return 2;
-        }
-        else  {
-            return 3;
-        }
-    };
 
     var link = "<a href=\"Opentest?" + testdata.open_test_uuid + "\">";
     if (showUnits === undefined) {
@@ -1594,7 +1577,7 @@ function getOpenDataRow(testdata, showUnits) {
 
     //ping
     if (testdata.ping_ms >= 0 && testdata.ping_ms !== null) {
-        row += "<td class='test-ping uk-text-right'>" + link + (testdata.ping_ms).formatNumber(getSignificantDigits(testdata.ping_ms))+ (showUnits ? '&nbsp;' + Lang.getString('ms') : '') + "</a></td>";
+        row += "<td class='test-ping uk-text-right'>" + link + (testdata.ping_ms).formatNumber(0)+ (showUnits ? '&nbsp;' + Lang.getString('ms') : '') + "</a></td>";
     }
     else {
         row += "<td class='test-ping uk-text-right'>" + link + "-</a></td>";
@@ -1694,6 +1677,35 @@ function getCapabilities() {
 	};
 }
 
+/**
+ * Formats a number to 2 significant digits
+ * @param {double} number the number
+ * @return the formatted number
+ */
+function getSignificantDigits(number) {
+    if(number > 1000) {
+        return -1;
+    }
+    else if (number > 100) {
+        return 0;
+    }
+    else if (number >= 10) {
+        return 1;
+    }
+    else if (number >= 1) {
+        return 2;
+    }
+    else if (number >= 0.1) {
+        return 3;
+    }
+    else if (number >= 0.01) {
+        return 4;
+    }
+    else  {
+        return 5;
+    }
+}
+
 //i18n class
 var Lang = new Object();
 
@@ -1728,7 +1740,7 @@ Lang.setStrings  = function(map) {
  * @param {String} decSeperator the decimal seperator
  * @returns {String} the formatted number
  */
-Number.prototype.formatNumber = function(decimals,thouSeperator,decSeperator) {
+Number.prototype.formatNumber = function(decimals, thouSeperator = undefined, decSeperator = undefined) {
     //Standard values
     if (decimals === undefined) {
         decimals = 0;
