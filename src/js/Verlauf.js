@@ -631,7 +631,7 @@ function show_addressPopup(testID) {
         });
 
         if (useAddressPopup) {
-            makeMap();
+            //makeMap();
             $("#outside-austria").change(function() {
                 if ($('#outside-austria:checked').length === 1) {
                     $('#address input[type=text]').attr('disabled','disabled');

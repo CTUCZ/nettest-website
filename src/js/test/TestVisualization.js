@@ -434,7 +434,7 @@ var SvgTestVisualization = (function () {
                     result["testUUID"] = _testUUID;
                     t(result);
                 }
-                redirectToTestResult();
+                // redirectToTestResult();
             }
         }
     }
