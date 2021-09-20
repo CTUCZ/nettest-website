@@ -60,12 +60,12 @@ Lang.setStrings({
    'largeView': 'large view',
    'baseLayer' : 'Base layer',
    'Skip' : 'Skip',
-   'basemap_bmapgrau': 'Basemap.at - grey',
-   'basemap_geolandbasemap': 'Basemap.at - standard',
-   'basemap_bmaphidpi': 'Basemap.at - high dpi',
-   'basemap_bmaporthofoto30cm': 'Basemap.at - satellite',
-   'map_dateformat' : 'D.M.YYYY, hh:mm:ss', //http://momentjs.com/docs/#/displaying/
-   'map_index_dateformat' : 'hh:mm:ss',
+   //'basemap_bmapgrau': 'Basemap.at - grey',
+   //'basemap_geolandbasemap': 'Basemap.at - standard',
+   //'basemap_bmaphidpi': 'Basemap.at - high dpi',
+   //'basemap_bmaporthofoto30cm': 'Basemap.at - satellite',
+   'map_dateformat' : 'D.M.YYYY, HH:mm:ss', //http://momentjs.com/docs/#/displaying/
+   'map_index_dateformat' : 'HH:mm:ss',
    'all' : 'All',
 
    //fields from controlserver-resource

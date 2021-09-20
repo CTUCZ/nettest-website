@@ -267,6 +267,7 @@ exports.strings = {
     "framework_loading": "Testovací framework se načítá...",
     "home": "Domů",
     "link_to_certified": "<a href='/cs/CertMeasurement'>Pro účely reklamace služby využijte certifikovaného měření.</a>",
+    "loop_tab_warning": "Upozorňujeme uživatele, že pro správný průběh opakovaného měření, je nutné mít aktivní záložku s měřením v prohlížeči, jinak se nemusí spustit následný test.",
 
     //common words
     "top" : "Top",
