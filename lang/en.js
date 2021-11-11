@@ -11,12 +11,14 @@ exports.strings = {
         "qostest" : "www.qostest.eu"
     },
     "template": {
-        "RTR": "RTR",
-        "rtr_url" : "https://www.rtr.at/rtr/startseite.de.html",
-        "tk_postal" : "Telecommunications and Postal Division",
-        "tk_postal_url" : "https://www.rtr.at/TKP/Telecommunications_and_Postal_Division.en.html",
-        "media": "Media",
-        "media_url" : "https://www.rtr.at/medien/startseite_medien.de.html"
+        "qos_ctu": "Visualization portal",
+        "qos_url" : "https://qos.ctu.cz/",
+        "complaint" : "Jak reklamovat",
+        "complaint_url" : "https://www.ctu.cz/plattezaskutecnourychlost",
+        "ctu": "Czech Telecommunication office",
+        "ctu_url" : "https://www.ctu.cz/",
+        "comparison_tool": "Srovnávací nástroj",
+        "comparison_tool_url": "https://srovnavac.ctu.cz/"
     },
     "index_content": {
         "service_description": {
@@ -151,8 +153,8 @@ exports.strings = {
         "choose_server_desc" : "Please choose which server should be used for conducting the WebSocket-based test.",
         "config_saved" : "The configuration has been saved.",
         "run_ndt" : "I wish to run the optional NDT-Test.",
-        "email_subject" : "RTR-NetTest%20support%20request",
-        "email_address": "netztest@rtr.at",
+        "email_subject" : "CTU-NetTest%20support%20request",
+        "email_address": "nettest@ctu.cz",
         "fix_threads": "lock parallel threads"
     },
 
@@ -163,7 +165,7 @@ exports.strings = {
         "recent_tests_hours" : 'The results of the last 48 hours are available as zip-archive under <a href="/RMBTStatisticServer/export/netztest-opendata_hours-048.zip" title="RTR-Netztest Open Data 48h" target="_blank" class="external-link-new-window">netztest-opendata_hours-048.zip</a> and as xlsx under <a href="/RMBTStatisticServer/export/netztest-opendata_hours-048.xlsx" title="RTR-Netztest Open Data 48h" target="_blank" class="external-link-new-window">netztest-opendata_hours-048.xlsx</a>.',
         "recent_tests" : 'The results of the last 31 days are available as zip-archive under <a href="/RMBTStatisticServer/export/netztest-opendata.zip" title="RTR-Netztest Open Data" target="_blank" class="external-link-new-window">netztest-opendata.zip</a> and as xlsx under <a href="/RMBTStatisticServer/export/netztest-opendata.xlsx" title="RTR-Netztest Open Data" target="_blank" class="external-link-new-window">netztest-opendata.xlsx</a>.',
         "further_results" : "Further results are available on a monthly basis:",
-        "note_timestamp" : "Please note that time stamps are in UTC (not in local time). To ensure the correctness of the results, implausible and/or obvious abusive measurements may be marked with the flag 'implausible' by RTR.",
+        "note_timestamp" : "Please note that time stamps are in UTC (not in local time). To ensure the correctness of the results, implausible and/or obvious abusive measurements may be marked with the flag 'implausible' by CTU.",
         "license_text" : 'The data is published under the <a href="https://creativecommons.org/licenses/by/4.0/deed.de" target="_blank" class="external-link-new-window">Creative Commons Attribution 4.0 (CC BY 4.0)</a> license. Please also refer the additional <a rel="license" href="https://www.rtr.at/TKP/service/rtr-nettest/help/legal_aspects/netztest_3rd_party_open_data.en.html">licensing terms</a>.'
     },
 
@@ -242,15 +244,21 @@ exports.strings = {
     "opentests": "Open data measurement results",
     "opendata": "Open data",
     "help": "Help",
-    "help_url": "https://www.rtr.at/en/tk/netztesthilfe",
+    "help_url": "https://www.nettest.cz/en/Help",
     "imprint" : "Publishing information",
-    "imprint_url" : "https://www.rtr.at/en/rtr/impressum",
+    "imprint_url" : "https://www.ctu.cz",
     "menu" : "Menu",
     "loop_mode" : "Loop mode",
+    "loop_mode_loading" : "Loop mode is loading...",
     "certified_measurement": "Certified measurement",
     "further": "Further",
     "start_test": "Start test",
     "test": "Test",
+    "framework_loading": "Test framework is loading...",
+    "home": "Home",
+    "link_to_certified": "<a href='/en/CertMeasurement'></a>",
+    "loop_tab_warning": "...",
+    "cert_tab_warning": "...",
 
     //common words
     "top" : "Top",
@@ -379,8 +387,8 @@ exports.strings = {
     "land_cover": "Land cover",
     "next": "Next",
     "privacy": "Privacy",
-    "email_address": "netztest@rtr.at",
-    "email_subject": "Support%20request%20RTR-NetTest%20%28Web%29",
+    "email_address": "nettest@ctu.cz",
+    "email_subject": "Support%20request%20CTU-NetTest%20%28Web%29",
     "accessibility": "Accessibility",
     "down_max": "DL (max)",
     "up_max": "UL (max)",

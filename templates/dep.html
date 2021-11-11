@@ -1,5 +1,5 @@
 {% extends basetemplate %}
-{% set title = Lang.help_page.ping_title %}
+{% set title = Lang.help_page.dep %}
 {% set containerclass = "full-width" %}
 
 {% block headerscriptingExtended %}
@@ -16,10 +16,14 @@
 {% block content %}
 <div class="uk-section-default uk-section content">
     <div class="uk-container">
-        <h3>{{ Lang.help_page.ping_title }}</h3>
+        <h3>{{ Lang.help_page.dep }}</h3>
         <div class="uk-grid-margin uk-container-rtr uk-grid uk-grid-stack" uk-grid="">
             <div class="uk-flex-auto uk-first-column">
-                <p>{{ Lang.help_content.desc_ping }}</p>
+                <picture>
+                    <img src='/images/DeP6.png' alt="DeP6">
+                    <p><br></p>
+                    <img src='/images/DeP7.png' alt="DeP7">
+                </picture>
             </div>
         </div>
     </div>

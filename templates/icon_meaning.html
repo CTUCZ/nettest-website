@@ -1,5 +1,5 @@
 {% extends basetemplate %}
-{% set title = Lang.help_icon_meaning %}
+{% set title = Lang.help_page.icon_meaning %}
 {% set containerclass = "full-width" %}
 
 {% block headerscriptingExtended %}
@@ -16,114 +16,86 @@
 {% block content %}
 <div class="uk-section-default uk-section content">
     <div class="uk-container">
-        <h3>{{ Lang.help_icon_meaning }}</h3>
+        <h3>{{ Lang.help_page.icon_meaning }}</h3>
         <div class="uk-grid-margin uk-container-rtr uk-grid uk-grid-stack" uk-grid="">
-            <div class="uk-flex-auto uk-first-column"><p>Barevná škála interpretace výsledků měření poskytuje informaci
-                o tom, jaký výkon dosahuje služba přístupu k internetu v dané lokalitě. Vyhodnocení naměřených hodnot
-                jednotlivých sledovaných parametrů se zobrazí bez ohledu na vaši službu přístupu k internetu. Žlutá a
-                červená barva představují oblasti, kde služby přístupu k internetu vykazují nižší výkony (download,
-                upload, ping). Naproti tomu zelená a tmavě zelená barva představují oblasti, kde služby přístupu
-                k internetu dosahují vysokých výkonů.</p>
+            <div class="uk-flex-auto uk-first-column">
+                <p>{{ Lang.help_content.desc_icon_1 }}</p>
 
-                <p>Použité barevné škálování je nezávislé na přístupové technologii a vychází výhradně z naměřených
-                    hodnot sledovaných parametrů služby přístupu k internetu na základě definovaných rozsahů hodnot pro
-                    jednotlivé parametry pro dané barevné označení.</p>
+                <p>{{ Lang.help_content.desc_icon_2 }}</p>
                 <table class="uk-table">
                     <thead>
                     <tr>
                         <th>
-                            Parametr
-
+                            {{ Lang.parameter }}
                         </th>
                         <th>
-                            Tmavě zelená
-
-                        </th>
-                        <th>Zelená
-
+                            {{ Lang.dark_green }}
                         </th>
                         <th>
-                            Žlutá
-
+                            {{ Lang.green }}
                         </th>
                         <th>
-                            Červená
-
+                            {{ Lang.yellow }}
+                        </th>
+                        <th>
+                            {{ Lang.red }}
                         </th>
                     </tr>
                     </thead>
                     <tbody>
-
                     <tr>
                         <td>
-                            <p>Rychlost stahování (Download)
-                            </p>
+                            <p>{{ Lang.down }}</p>
                         </td>
                         <td>
-                            <p>≥100 Mb/s
-                            </p>
+                            <p>≥ 100 Mb/s</p>
                         </td>
                         <td>
-                            <p>≥ 30 &lt; 100 Mb/s
-                            </p>
+                            <p>≥ 30 &lt; 100 Mb/s</p>
                         </td>
                         <td>
-                            <p>≥ 10 &lt; 30 Mb/s
-                            </p>
+                            <p>≥ 10 &lt; 30 Mb/s</p>
                         </td>
                         <td>
-                            <p>&lt; 10 Mb/s
-                            </p>
+                            <p>&lt; 10 Mb/s</p>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <p>Rychlost vkládání (Upload)
-                            </p>
+                            <p>{{ Lang.up }}</p>
                         </td>
                         <td>
-                            <p>≥100 Mb/s
-                            </p>
+                            <p>≥ 100 Mb/s</p>
                         </td>
                         <td>
-                            <p>≥ 30 &lt; 100 Mb/s
-                            </p>
+                            <p>≥ 30 &lt; 100 Mb/s</p>
                         </td>
                         <td>
-                            <p>≥ 10 &lt; 30 Mb/s
-                            </p>
+                            <p>≥ 10 &lt; 30 Mb/s</p>
                         </td>
                         <td>
-                            <p>&lt; 10 Mb/s
-                            </p>
+                            <p>&lt; 10 Mb/s</p>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <p>Doba odezvy (Ping)
-                            </p>
+                            <p>{{ Lang.ping }}</p>
                         </td>
                         <td>
-                            <p>≥ 0 &lt; 10 ms
-                            </p>
+                            <p>≥ 0 &lt; 10 ms</p>
                         </td>
                         <td>
-                            <p>≥ 10 &lt; 25 ms
-                            </p>
+                            <p>≥ 10 &lt; 25 ms</p>
                         </td>
                         <td>
-                            <p>&nbsp;≥ 25 &lt; 50 ms
-                            </p>
+                            <p>&nbsp;≥ 25 &lt; 50 ms</p>
                         </td>
                         <td>
-                            <p>&gt; 50 ms
-                            </p>
+                            <p>&gt; 50 ms</p>
                         </td>
                     </tr>
                     </tbody>
                 </table>
-
-
             </div>
         </div>
     </div>

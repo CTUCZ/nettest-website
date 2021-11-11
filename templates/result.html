@@ -1,5 +1,5 @@
 {% extends basetemplate %}
-{% set title = Lang.help_result_good_or_bad %}
+{% set title = Lang.help_page.result_good_or_bad %}
 {% set containerclass = "full-width" %}
 
 {% block headerscriptingExtended %}
@@ -16,25 +16,11 @@
 {% block content %}
 <div class="uk-section-default uk-section content">
     <div class="uk-container">
-        <h3>{{ Lang.help_result_good_or_bad }}</h3>
+        <h3>{{ Lang.help_page.result_good_or_bad }}</h3>
         <div class="uk-grid-margin uk-container-rtr uk-grid uk-grid-stack" uk-grid="">
-            <div class="uk-flex-auto uk-first-column"><p>
-                Výsledek provedeného měření je nutno porovnat s hodnotami rychlostí, které máte uvedeny ve Vašich
-                smluvních podmínkách sjednaných s poskytovatelem služby přístupu k internetu. Dle Nařízení (EU)
-                2015/2120, čl. 4 odst. 1 písm. d), musí být ve smluvních podmínkách o poskytování služby přístupu k
-                internetu v pevném místě (pevný internet) uvedeny pro oba směry datové komunikace zvlášť (upload a
-                download) čtyři rychlosti, a to rychlost inzerovaná, rychlost maximální, rychlost běžně dostupná a
-                rychlost minimální. Všeobecné oprávnění VO-S/1/08.2020-9 vydané ČTÚ navíc mezi těmito rychlostmi
-                definuje vzájemný vztah a také konkretizuje definice velké opakující se a velké trvající odchylky výkonu
-                služby. Hodnota skutečně dosahované rychlosti (upload a download), kterou jste naměřili pomocí nástroje
-                NetTest, by se po většinu času dne (95 % času dne) měla pohybovat v rozmezí hodnot maximální rychlosti a
-                běžně dostupné rychlosti. Skutečně dosahovaná rychlost může na krátký okamžik klesnout pod hodnotu běžně
-                dostupné rychlosti, ovšem nikoliv takovým způsobem, aby tento pokles způsobil vznik velkých odchylek
-                nebo dokonce výpadku služby, kdy skutečně dosahovaná rychlost klesne pod hodnotu sjednané minimální
-                rychlosti. V těchto případech máte právo reklamovat vadné poskytnutí služby přístupu k internetu. Měřicí
-                nástroj NetTest a využití jeho režimu certifikovaného měření Vám automaticky připraví podklady v podobě
-                PDF dokumentu, který pak jednoduše můžete použít pro účely reklamace.
-            </p></div>
+            <div class="uk-flex-auto uk-first-column">
+                <p>{{ Lang.help_content.desc_result }}</p>
+            </div>
         </div>
     </div>
 </div>

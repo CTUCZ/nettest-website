@@ -1,5 +1,5 @@
 {% extends basetemplate %}
-{% set title = Lang.help %}
+{% set title = Lang.help_title %}
 {% set containerclass = "full-width" %}
 
 {% block headerscriptingExtended %}
@@ -17,18 +17,24 @@
 <div class="uk-section-default uk-section content">
     <div class="uk-container">
         <div class="uk-grid-margin uk-container-rtr uk-grid uk-grid-stack" uk-grid="">
-            <div class="uk-flex-auto uk-first-column"><h2 id="heading_Links">{{ Lang.Links }}</h2>
+            <div class="uk-flex-auto uk-first-column"><h2 id="heading_Links">{{ Lang.help_page.help_title }}</h2>
                 <ul class="uk-list uk-list-bullet">
-                    <li><a title="{{ Lang.help_download_title }}" target="_self"
-                           href="HelpDownload">{{ Lang.help_download_title }}</a></li>
-                    <li><a title="{{ Lang.help_upload_title }}" target="_self"
-                           href="HelpUpload">{{ Lang.help_upload_title }}</a></li>
-                    <li><a title="{{ Lang.help_ping_title }}" target="_self"
-                           href="HelpPing">{{ Lang.help_ping_title }}</a></li>
-                    <li><a title="{{ Lang.help_result_good_or_bad }}" target="_self"
-                           href="HelpResult">{{ Lang.help_result_good_or_bad }}</a></li>
-                    <li><a title="{{ Lang.help_icon_meaning }}" target="_self"
-                           href="HelpIcon">{{ Lang.help_icon_meaning }}</a></li>
+                    <li><a title="{{ Lang.help_page.download_title }}" target="_self"
+                           href="HelpDownload">{{ Lang.help_page.download_title }}</a></li>
+                    <li><a title="{{ Lang.help_page.upload_title }}" target="_self"
+                           href="HelpUpload">{{ Lang.help_page.upload_title }}</a></li>
+                    <li><a title="{{ Lang.help_page.help_ping_title }}" target="_self"
+                           href="HelpPing">{{ Lang.help_page.ping_title }}</a></li>
+                    <li><a title="{{ Lang.help_page.result_good_or_bad }}" target="_self"
+                           href="HelpResult">{{ Lang.help_page.result_good_or_bad }}</a></li>
+                    <li><a title="{{ Lang.help_page.icon_meaning }}" target="_self"
+                           href="HelpIcon">{{ Lang.help_page.icon_meaning }}</a></li>
+                    <li><a title="{{ Lang.help_page.cert_tool }}" target="_self"
+                           href="HelpCTool">{{ Lang.help_page.cert_tool }}</a></li>
+                    <li><a title="{{ Lang.help_page.cert_measurement }}" target="_self"
+                        href="HelpCMeasurement">{{ Lang.help_page.cert_measurement }}</a></li>
+                    <li><a title="{{ Lang.help_page.dep }}" target="_self"
+                           href="HelpDep">{{ Lang.help_page.dep }}</a></li>
                 </ul>
             </div>
         </div>

@@ -11,14 +11,14 @@ exports.strings = {
         "qostest" : "www.qostest.eu"
     },
     "template": {
-        "RTR": "Vizualizační portál",
-        "rtr_url" : "https://qos.ctu.cz/",
-        "tk_postal" : "Jak reklamovat",
-        "tk_postal_url" : "https://www.ctu.cz/plattezaskutecnourychlost",
-        "media": "Český telekomunikační úřad",
-        "media_url" : "https://ctu.cz/",
-        "srovnavaci_nastroj": "Srovnávací nástroj",
-        "srovnavaci_nastroj_url": "https://srovnavac.ctu.cz/"
+        "qos_ctu": "Vizualizační portál",
+        "qos_url" : "https://qos.ctu.cz/",
+        "complaint" : "Jak reklamovat",
+        "complaint_url" : "https://www.ctu.cz/plattezaskutecnourychlost",
+        "ctu": "Český telekomunikační úřad",
+        "ctu_url" : "https://www.ctu.cz/",
+        "comparison_tool": "Srovnávací nástroj",
+        "comparison_tool_url": "https://srovnavac.ctu.cz/"
     },
     "index_content": {
         "service_description": {
@@ -77,11 +77,11 @@ exports.strings = {
 
     "statistics_content" : {
         "teaser" : {
-            "netztest" : 'The values listed here represent the RTR-NetTest results.     Additional information can be found <a href="https://www.rtr.at/TKP/service/rtr-nettest/help/test_result/netztestfaq_testergebnis.en.html">here</a>.',
+            "netztest" : 'Zde uvedené hodnoty jsou výsledky měření nástroje NetTest.     Další informace najdete <a href="https://www.rtr.at/TKP/service/rtr-nettest/help/test_result/netztestfaq_testergebnis.en.html">zde</a>.',
             "qostest" : 'The values listed here represent the qostest.eu results.     Additional information can be found <a href="https://www.rtr.at/TKP/service/rtr-nettest/help/test_result/netztestfaq_testergebnis.en.html">here</a>.'
         },
         "operators_from" : "Operators from",
-        "disclaimer" : 'Repeated tests are filtered for the compilation of statistics.',
+        "disclaimer" : 'Opakované testy jsou filtrovány pro statistický přehled.',
         "opendata_disclaimer" : 'Please note: <a href="Opendata.html">measurement data available</a> as open data',
         "burgenland" : 'Burgenland',
         "carinthia" : 'Carinthia',
@@ -145,18 +145,18 @@ exports.strings = {
     },
 
     "options_content" : {
-        "client_uuid" : "Client-UUID",
-        "options_apps_text" : "<h5>Android-App</h5><p>The RTR-NetTest measures, in addition to the speed of your current internet connection (upload, download, ping, signal strength), also a number of quality parameters (VoIP, unchanged content, website, transparent connection, DNS, ports).<br /> <br /> When starting the app, several symbols will give you information about your internet connection: mobile data or WLAN connection, background data transmission, IP address and location. The start button initiates the RTR-NetTest. The speed tests are followed by QoS tests. QoS stands for Quality of Service. Horizontal bars show the progress of the QoS tests. Once all tests are completed, the results as well as other detailed information can be viewed in the summary. The menu is located on the left and contains buttons to access the pages home , history, map, statistics, help, information and settings.</p><p>The Android-App Version 2.2 can be downloaded using the&nbsp; <a href=\"https://play.google.com/store/apps/details?id=at.alladin.rmbt.android\" title=\"Download RTR-Netztest\" target=\"_blank\">Google Play Store</a> or direcly <a href=\"https://www.netztest.at/RTR-Netztest.apk\" title=\"Opens external link in new window\" target=\"_blank\">here</a>. It is available for devices with Android 4.0 and above. <a href=\"https://www.rtr.at/en/tk/netztestfaq_app\" title=\"Opens internal link in current window\">More information...</a></p><h5>iOS-App (iPhone, iPad)</h5><p>The iOS-App can be downloaded using the App <a href=\"https://itunes.apple.com/at/app/rtr-netztest/id724321403\" title=\"Download RTR-Netztest iOS\" target=\"_blank\">Apple iTunes-Store</a>. It is available for devices with iOS 7.0 and above. <a href=\"https://www.rtr.at/en/tk/netztestfaq_app\" title=\"Opens internal link in current window\">More information...</a></p><h5>Web-Browser</h5><p>Measurements with the RTR-NetTest with other mobile operating systems and with the desktop&nbsp;can be conducted with a web browser&nbsp; - <a href=\"https://www.netztest.at/en/Test?websocket=t\" title=\"Start RTR-Netztest using WebSockets\" target=\"_blank\">start test using Websockets</a></p><p><a href=\"https://www.rtr.at/en/tk/netztestfaq_web\" title=\"Opens internal link in current window\">More information on Web-Browsers.<br /></a></p>",
-        "your_uuid" : "Your UUID is",
-        "ip_version": "IP-Version",
-        "ip_version_desc": "If your internet access supports both IPv4 and IPv6, you can choose which protocol version is used for conducting the test.",
-        "ipvX_only": "IPv%X% only",
+        "client_uuid" : "UUID klienta",
+        //"options_apps_text" : "<h5>Android-App</h5><p>The RTR-NetTest measures, in addition to the speed of your current internet connection (upload, download, ping, signal strength), also a number of quality parameters (VoIP, unchanged content, website, transparent connection, DNS, ports).<br /> <br /> When starting the app, several symbols will give you information about your internet connection: mobile data or WLAN connection, background data transmission, IP address and location. The start button initiates the RTR-NetTest. The speed tests are followed by QoS tests. QoS stands for Quality of Service. Horizontal bars show the progress of the QoS tests. Once all tests are completed, the results as well as other detailed information can be viewed in the summary. The menu is located on the left and contains buttons to access the pages home , history, map, statistics, help, information and settings.</p><p>The Android-App Version 2.2 can be downloaded using the&nbsp; <a href=\"https://play.google.com/store/apps/details?id=at.alladin.rmbt.android\" title=\"Download RTR-Netztest\" target=\"_blank\">Google Play Store</a> or direcly <a href=\"https://www.netztest.at/RTR-Netztest.apk\" title=\"Opens external link in new window\" target=\"_blank\">here</a>. It is available for devices with Android 4.0 and above. <a href=\"https://www.rtr.at/en/tk/netztestfaq_app\" title=\"Opens internal link in current window\">More information...</a></p><h5>iOS-App (iPhone, iPad)</h5><p>The iOS-App can be downloaded using the App <a href=\"https://itunes.apple.com/at/app/rtr-netztest/id724321403\" title=\"Download RTR-Netztest iOS\" target=\"_blank\">Apple iTunes-Store</a>. It is available for devices with iOS 7.0 and above. <a href=\"https://www.rtr.at/en/tk/netztestfaq_app\" title=\"Opens internal link in current window\">More information...</a></p><h5>Web-Browser</h5><p>Measurements with the RTR-NetTest with other mobile operating systems and with the desktop&nbsp;can be conducted with a web browser&nbsp; - <a href=\"https://www.netztest.at/en/Test?websocket=t\" title=\"Start RTR-Netztest using WebSockets\" target=\"_blank\">start test using Websockets</a></p><p><a href=\"https://www.rtr.at/en/tk/netztestfaq_web\" title=\"Opens internal link in current window\">More information on Web-Browsers.<br /></a></p>",
+        "your_uuid" : "Vaše UUID je",
+        "ip_version": "Verze IP",
+        "ip_version_desc": "Pokud Váš přístup k internetu podporuje IPv4 i IPv6, můžete si vybrat, který protokol použijete pro test.",
+        "ipvX_only": "Pouze IPv%X%",
         "preferred_test_type" : "Preferred Test Type",
-        "choose_server_desc" : "Please choose which server should be used for conducting the WebSocket-based test.",
-        "config_saved" : "The configuration has been saved.",
+        "choose_server_desc" : "Prosím vyberte, který server bude použit pro měření prostřednictvím WebSocket protokolu.", 
+        "config_saved" : "Nastavení bylo uloženo.",
         "run_ndt" : "I wish to run the optional NDT-Test.",
-        "email_subject" : "RTR-NetTest%20support%20request",
-        "email_address": "netztest@rtr.at",
+        "email_subject" : "ČTÚ-NetTest%20žádost%20o%20podporu",
+        "email_address": "nettest@ctu.cz",
         "fix_threads": "lock parallel threads"
     },
 
@@ -289,7 +289,7 @@ exports.strings = {
     'more' : "more",
     'less' : "less",
 
-    "automatic" : "Automatic",
+    "automatic" : "Automaticky",
     "heatmap" : "Heatmap",
     "points" : "Points",
     "shapes" : "Shapes",
@@ -330,9 +330,9 @@ exports.strings = {
     "any" : "any",
     "name" : "Name",
     "all" : "Vše",
-    "devices" : "Devices",
+    "devices" : "Zařízení",
     'open_uuid': 'Open-User-UUID',
-    "client_uuid" : "Client-UUID",
+    "client_uuid" : "UUID klienta",
     "begin" : "začátek",
     "end" : "konec",
     "timespan" : "Časové rozpětí",
@@ -347,7 +347,7 @@ exports.strings = {
     "access" : "Připojení",
     "date" : "Datum a čas měření",
     "synchronization_code" : "Synchronization code",
-    "code" : "Code",
+    "code" : "Kód",
     "submit" : "Odeslat",
 
     "quality_of_service" : "Quality of Service",
@@ -368,24 +368,24 @@ exports.strings = {
 
     "measurement_result" : "Výsledek měření",
     "detailed_measurements" : "Podrobné výsledky",
-    "measurements" : "Measurements",
-	"measurement": "Measurement",
-    "moreInfo" : "More Info",
+    "measurements" : "Měření",
+	"measurement": "Měření",
+    "moreInfo" : "Více informací",
 	"net": "Net",
 
     "websocket" : "WebSocket",
     "java_applet" : "Java-Applet",
-    "default_server" : "Default Server",
-    "save" : "Save",
+    "default_server" : "Výchozí server",
+    "save" : "Uložit",
 
     "test_results" : "Výsledky měření",
     "advanced_search" : "Rozšířené vyhledávání",
     "from" : "od",
     "up_to" : "do",
-    "zip_code" : "Zip code",
+    "zip_code" : "PSČ",
     "platform" : "Platform",
-    "software_version" : "Software version",
-    "asn" : "AS number",
+    "software_version" : "Verze softwaru",
+    "asn" : "Číslo AS",
     "apply_filters" : "Filtrovat",
     "reset" : "Zrušit",
     "histogram" : "Histogram",
@@ -399,8 +399,8 @@ exports.strings = {
     "land_cover": "Land cover",
     "next": "Další",
     "privacy": "Privacy",
-    "email_address": "netztest@rtr.at",
-    "email_subject": "Support%20request%20RTR-NetTest%20%28Web%29",
+    "email_address": "nettest@ctu.cz",
+    "email_subject": "Žádost%20o%20podporu%20ČTÚ-NetTest%20%28Web%29",
     "accessibility": "Accessibility",
     "down_max": "DL (max)",
     "up_max": "UL (max)",
@@ -411,14 +411,42 @@ exports.strings = {
     "service_overload": "Dočasné upozornění: Pokud se váš test nespustí do 2 minut, opakujte test později. V tuto chvíli je prováděno velké množství testů, které má za následek delší prodlevu před spuštěním samotného testu. Děkujeme za pochopení.",
 
     // Help
-    "help_download_title": "Co znamená rychlost stahování (Download)?",
-    "help_upload_title": "Co znamená rychlost vkládání (Upload)?",
-    "help_ping_title": "Co znamená doba odezvy (Ping)?",
-    "help_result_good_or_bad": "Jak poznám, zda je můj naměřený výsledek špatný?",
-    "help_icon_meaning": "Jakým prahovým hodnotám odpovídají jednotlivé barevné interpretace?",
-    "Links": "Odkazy na vysvětlivky jednotlivých parametrů testu",
+    "help_page" : {
+        "help_title": "Vysvětlivky jednotlivých parametrů testu a dalších pojmů",
+        "download_title": "Co znamená rychlost stahování (Download)?",
+        "upload_title": "Co znamená rychlost vkládání (Upload)?",
+        "ping_title": "Co znamená doba odezvy (Ping)?",
+        "result_good_or_bad": "Jak poznám, zda je můj naměřený výsledek špatný?",
+        "icon_meaning": "Jakým prahovým hodnotám odpovídají jednotlivé barevné interpretace?",
+        "cert_tool": "Co znamená certifikovaný nástroj?",
+        "cert_measurement": "Co znamená certifikované měření?",
+        "dep": "Co znamenají demarkační body?"
+    },
 
-    "opendata_specification_title": "Otevřená data - specifikace formátu",
+    "opendata_specification_title" : "Otevřená data - specifikace formátu",
+
+    // Help text
+    "help_content" : {
+        "desc_down_1" : "Pojem rychlost stahování (download) označuje směr přenosu dat z internetu k Vám. Ve spojení s datovou rychlostí tohoto směru přenosu se doplňuje parametr download základní jednotkou v b/s, přičemž nejčastěji se setkáte s Mb/s (Megabity za sekundu), případně Gb/s (Gigabity za sekundu). Výsledná hodnota rychlosti stahování, která je součástí výsledku Vámi provedeného testu měřicím nástrojem ČTÚ-NetTest je skutečně dosahovanou rychlostí za daný interval měření. V případě provádění jednoho testu nástrojem NetTest je to 10 sekund. Tato skutečně dosahovaná rychlost charakterizuje skutečný výkon služby přístupu k internetu.",
+        "desc_down_2" : "Je důležité také uvést, že hodnota rychlosti stahování odpovídá transportní vrstvě Vaší služby přístupu k internetu (připojení k internetu), a to při použití protokolu TCP, tedy nejčastěji využívaného protokolu transportní vrstvy z pohledu koncového uživatele. Hodnota rychlosti stahování (download) by se měla po většinu dne (95 % času dne) pohybovat v rozmezí hodnot maximální rychlosti a běžně dostupné rychlosti. Tyto rychlosti naleznete ve Vašich smluvních podmínkách (např. ve smlouvě o poskytování služby přístupu k internetu, případně ve Všeobecných podmínkách, nebo v Ceníku apod.). Rychlost stahování může na krátký okamžik klesnout pod hodnotu běžně dostupné rychlosti, ovšem nikoliv takovým způsobem, aby tento pokles způsobil vznik velkých odchylek nebo dokonce výpadku služby. Výpadkem služby se rozumí takový stav, kdy rychlost stahování (download) klesne pod hodnotu minimální rychlosti uvedenou ve smluvních podmínkách. V těchto případech můžete využít svého práva reklamovat vadné poskytnutí služby u svého poskytovatele služby přístupu k internetu.",
+        "desc_up_1" : "Pojem rychlost vkládání (upload) označuje směr přenosu dat od Vás do internetu. Ve spojení s datovou rychlostí tohoto směru přenosu se doplňuje parametr upload, stejně jako download základní jednotkou v b/s, přičemž nejčastěji se setkáte s Mb/s (Megabity za sekundu), případně Gb/s (Gigabity za sekundu). Výsledná hodnota rychlosti vkládání, která je součástí výsledku Vámi provedeného testu měřicím nástrojem ČTÚ-NetTest je skutečně dosahovanou rychlostí za daný interval měření. V případě provádění jednoho testu nástrojem NetTest je to 10 sekund. Tato skutečně dosahovaná rychlost charakterizuje skutečný výkon služby přístupu k internetu.",
+        "desc_up_2" : "Rychlost vkládání je často inzerována s&nbsp;výrazně nižší hodnotou než rychlost stahování (download). Nicméně i rychlost vkládání je důležitá, protože komunikace na internetu prostřednictvím TCP protokolu probíhají obousměrně (úspěšně stažená data jsou průběžně potvrzována a naopak). Rychlost vkládání je zvláště důležitá např. při odesílání fotografií, sdílení souborů nebo videokonferencích.",
+        "desc_up_3" : "Je důležité také uvést, že hodnota rychlosti vkládání odpovídá transportní vrstvě Vaší služby přístupu k internetu (připojení k internetu), a to při použití protokolu TCP, tedy nejčastěji využívaného protokolu transportní vrstvy z pohledu koncového uživatele. Hodnota rychlosti vkládání (upload) by se měla po většinu dne (95 % času dne) pohybovat v rozmezí hodnot maximální rychlosti a běžně dostupné rychlosti. Tyto rychlosti naleznete ve Vašich smluvních podmínkách (např. ve smlouvě o poskytovaní služby přístupu k internetu, případně ve Všeobecných podmínkách, nebo v Ceníku apod.). Rychlost vkládání může na krátký okamžik klesnout pod hodnotu běžně dostupné rychlosti, ovšem nikoliv takovým způsobem, aby tento pokles způsobil vznik velkých odchylek nebo dokonce výpadku služby. Výpadkem služby se rozumí takový stav, kdy rychlost vkládání (upload) klesne pod hodnotu minimální rychlosti uvedenou ve smluvních podmínkách. V těchto případech můžete využít svého práva reklamovat vadné poskytnutí služby u svého poskytovatele služby přístupu k internetu.",
+        "desc_ping" : "Pod pojmem doba odezvy (ping), technicky správně obousměrné zpoždění, si lze představit čas, po který putuje datový paket vyslaný z vašeho uživatelského zařízení (počítač, notebook, mobilní telefon) prostřednictvím internetu až k měřicímu serveru nástroje ČTÚ-NetTest a zpět. Ping (zpoždění v datových sítích) se udává v jednotkách ms (milisekundách). Vysoké hodnoty obousměrného zpoždění mohou znemožnit využívání služeb v reálném čase (např. TV nebo VoIP) a bývají také jednou z příčin poklesu skutečně dosahovaných rychlostí (download a upload). Obecně platí, že vlivem zatížení sítě poskytovatele služby přístupu k internetu hodnota pingu roste a naopak. Během měření obousměrného zpoždění prostřednictvím pingu se využívá protokol síťové vrstvy ICMP.",
+        "desc_result" : "Výsledek provedeného měření je nutno porovnat s hodnotami rychlostí, které máte uvedeny ve Vašich smluvních podmínkách sjednaných s poskytovatelem služby přístupu k internetu. Dle Nařízení (EU) 2015/2120, čl. 4 odst. 1 písm. d), musí být ve smluvních podmínkách o poskytování služby přístupu k internetu v pevném místě (pevný internet) uvedeny pro oba směry datové komunikace zvlášť (upload a download) čtyři rychlosti, a to rychlost inzerovaná, rychlost maximální, rychlost běžně dostupná a rychlost minimální. Všeobecné oprávnění VO-S/1/08.2020-9 vydané ČTÚ navíc mezi těmito rychlostmi definuje vzájemný vztah a také konkretizuje definice velké opakující se a velké trvající odchylky výkonu služby. Hodnota skutečně dosahované rychlosti (upload a download), kterou jste naměřili pomocí nástroje NetTest, by se po většinu času dne (95 % času dne) měla pohybovat v rozmezí hodnot maximální rychlosti a běžně dostupné rychlosti. Skutečně dosahovaná rychlost může na krátký okamžik klesnout pod hodnotu běžně dostupné rychlosti, ovšem nikoliv takovým způsobem, aby tento pokles způsobil vznik velkých odchylek nebo dokonce výpadku služby, kdy skutečně dosahovaná rychlost klesne pod hodnotu sjednané minimální rychlosti. V těchto případech máte právo reklamovat vadné poskytnutí služby přístupu k internetu. Měřicí nástroj NetTest a využití jeho režimu certifikovaného měření Vám automaticky připraví podklady v podobě PDF dokumentu, který pak jednoduše můžete použít pro účely reklamace.",
+        "desc_icon_1" : "Barevná škála interpretace výsledků měření poskytuje informaci o tom, jaký výkon dosahuje služba přístupu k internetu v dané lokalitě. Vyhodnocení naměřených hodnot jednotlivých sledovaných parametrů se zobrazí bez ohledu na vaši službu přístupu k internetu. Žlutá a červená barva představují oblasti, kde služby přístupu k internetu vykazují nižší výkony (download, upload, ping). Naproti tomu zelená a tmavě zelená barva představují oblasti, kde služby přístupu k internetu dosahují vysokých výkonů.",
+        "desc_icon_2" : "Použité barevné škálování je nezávislé na přístupové technologii a vychází výhradně z naměřených hodnot sledovaných parametrů služby přístupu k internetu na základě definovaných rozsahů hodnot pro jednotlivé parametry pro dané barevné označení.",
+        "desc_cert_tool" : "ČTÚ-NetTest je certifikovaným nástrojem ve smyslu Nařízení (EU) 2015/2120. Znamená to, že jde o monitorovací mechanismus zavedený a provozovaný Českým telekomunikačním úřadem za účelem ověření výkonu služby přístupu k internetu koncovým uživatelem a možnosti aktivace prostředků nápravy. ČTÚ garantuje jeho funkčnost, jistou míru přesnosti, konektivitu s vysokou kapacitou připojení do peeringového uzlu a transparentnost metody.",
+        "desc_cert_measurement" : "Certifikované měření znamená proces, který je pevně definován provedením 6 časově diverzifikovaných testů během kalendářního dne v rámci měřicího cyklu a za splnění předepsaných podmínek měření. Měřicí rámec trvá 1 hodinu a 30 minut. V rámci testu jsou automaticky prováděna jednotlivá měření o celkové délce měření 10 sekund pro každý směr datové komunikace (download a upload). Časový rozestup mezi jednotlivými testy je 15 minut. ČTÚ doporučuje používat nástroj ČTÚ-NetTest v režimu certifikovaného měření služeb přístupu k internetu do inzerovaných rychlostí (včetně) 500/250 Mb/s (download/upload)."
+    },
+
+    // Icon meaning table
+    "parameter" : "Parametr",
+    "dark_green" : "Tmavě zelená",
+    "green" : "Zelená",
+    "yellow" : "Žlutá",
+    "red" : "Červená",
+
 
     //404
     "not_found_page": {
