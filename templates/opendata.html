@@ -30,7 +30,7 @@
             if (!(now.getFullYear() === startY && now.getMonth() + 1 <= startMonth)) {
                 $.each(options, function (i, option) {
                     var date = now.getFullYear() + "-" + pad(now.getMonth() + 1, 2);
-                    var value = "netztest-opendata-" + date + "." + option.extension;
+                    var value = "nettest-opendata-" + date + "." + option.extension;
                     $(option.id).append('<option value="' + value + '">' + date + '</option>');
                 });
             }
