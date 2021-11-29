@@ -109,8 +109,8 @@ function show_agbform(run_Test, callback, options) {
 function show_agb_popup(onAccept, onDecline, options) {
     options = options || {};
 	var cookieIdentifier = options.cookieIdentifier || null;
-    var cookieExpiresSeconds = options.cookieExpiresSeconds || (20 * 365 * 24 * 60 * 60); //20 years
-    var cookieExpiresSecondsWithCheckbox = options.cookieExpiresSecondsWithCheckbox || (20 * 365 * 24 * 60 * 60); //20 years
+    var cookieExpiresSeconds = options.cookieExpiresSeconds || (90 * 24 * 60 * 60); //90 days
+    var cookieExpiresSecondsWithCheckbox = options.cookieExpiresSecondsWithCheckbox || (90 * 24 * 60 * 60); //90 days
 	var title = options.title || "";
 	var tocFile = options.tocFile || null;
 	var toc = options.toc || "";
@@ -315,15 +315,15 @@ function show_ndtform(run_Test, callback, options, terms_accepted) {
 	        bValid = true;
 	        //console.log(terms_accepted);
                 if(terms_accepted != null && terms_accepted == true) {
-                        setCookie("RMBTTermsV6", true, 365 * 20 * 24 * 3600);
+                        setCookie("RMBTTermsV6", true, 90 * 24 * 3600);
                         //console.log("cookie set!");
                 }
 
                         if ($('#form_ndt').attr('checked')) {
-                                setCookie("RMBTndt", '1', 365 * 20 * 24 * 3600);
+                                setCookie("RMBTndt", '1', 90 * 24 * 3600);
                         }
                         else {
-                                setCookie("RMBTndt", '0', 365 * 20 * 24 * 3600);
+                                setCookie("RMBTndt", '0', 90 * 24 * 3600);
                         }
                         $(this).dialog("close");
                         if (run_Test){
