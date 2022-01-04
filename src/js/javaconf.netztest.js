@@ -56,6 +56,7 @@ var bing_api_key = "";
 var osm_server = "";
 var fallbackOnJS = false;
 var terms_version = 6;
+var ping_interval_milliseconds = 1000;
 
 test_timezone = "Europe/Prague";
 
