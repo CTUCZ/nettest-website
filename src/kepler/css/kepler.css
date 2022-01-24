@@ -1,0 +1,45 @@
+/* (c) ETSI 2011 */
+
+@page {
+    size:21.0cm 14.85cm;
+    margin-top:1cm;
+    margin-bottom:1.4cm;
+    margin-left:0.75cm;
+    margin-right:0.5cm
+}
+
+body {
+    color: #000;
+    background-color: #fff;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+td {
+    font-size: 12px;
+	padding-bottom:2em
+}
+
+a {text-decoration: underline;}
+a:active {color: #00f;}
+a:link {color: #008;}
+a:visited {color: #004;}
+
+img {border: 1px solid #ddd;}
+
+.img45 {
+	float:left;
+	margin-right:1em;
+	margin-bottom:0.5em;
+}
+
+.noborder {
+	border: 0;
+}
+
+.copyright {
+	font-size:x-small;
+}
+
+.blindtext {
+	color:#aaa;
+}
