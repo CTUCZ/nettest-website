@@ -245,6 +245,8 @@ exports.strings = {
         "finished_note": "<p>Pokud v rámci certifikovaného měření libovolné 3 výsledky testů ze 6 celkových vykazují výkon služby v podobě výsledné rychlosti stahování (download) nebo vkládání (upload) menší než výkon, který Váš poskytovatel služby přístupu k internetu uvedl ve smluvních podmínkách v podobě běžně dostupné rychlosti pro daný směr (download/upload), vzniká velká opakující se odchylka od výkonu služby.</p><p>Pokud 5 po sobě jdoucích výsledků testů ze 6 celkových vykazují výslednou rychlost stahování (download) nebo vkládání (upload) menší než běžně dostupná rychlost pro daný směr (download/upload), vzniká velká trvající odchylka výkonu služby.</p><p>V obou dvou případech velkých odchylek můžete využít svého práva reklamovat vadné poskytnutí služby u svého poskytovatele služby přístupu k internetu.</p>"
     },
     //Page titles and link descriptions
+    "ctu": "Český telekomunikační úřad",
+    "copyright": "ČTÚ, Všechna práva vyhrazena", 
     "index": "Úvod",
     "statistics": "Historie měření",
     "history": "Moje měření",
@@ -255,8 +257,7 @@ exports.strings = {
     "opendata": "Otevřená data",
     "help": "Nápověda",
     "help_url": "https://www.nettest.cz/cs/Help",
-    "imprint" : "Aktuální informace",
-    "imprint_url" : "https://www.ctu.cz",
+    "news" : "Aktuální informace",
     "menu" : "Menu",
     "loop_mode" : "Opakované měření",
     "loop_mode_loading" : "Opakované měření se načítá...",

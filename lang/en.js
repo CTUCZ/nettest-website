@@ -235,6 +235,8 @@ exports.strings = {
         "generate_new": "Try again"
     },
     //Page titles and link descriptions
+    "ctu": "Czech Telecommunication Office",
+    "copyright": "CTO, All rights reserved",
     "index": "Home",
     "statistics": "Statistics",
     "history": "History",
@@ -245,7 +247,7 @@ exports.strings = {
     "opendata": "Open data",
     "help": "Help",
     "help_url": "https://www.nettest.cz/en/Help",
-    "imprint" : "Publishing information",
+    "news" : "Actual information",
     "imprint_url" : "https://www.ctu.cz",
     "menu" : "Menu",
     "loop_mode" : "Loop mode",
