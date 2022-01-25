@@ -100,8 +100,8 @@ exports.strings = {
     },
 
     "history_content" : {
-        "request_code" : "Request synchronization code",
-        "enter_code" : "or enter a known synchronization code in the input box below and confirm your entry by clicking on submit",
+        "request_code" : "Požádat o synchronizační kód",
+        "enter_code" : "nebo zadejte již přidělený synchronizační kód a potvrďte stisknutím tlačítka odeslat.",
         "download": "Stažení historie Vašich měření",
         "csv": "CSV",
         "xlsx": "XLSX",
@@ -346,7 +346,7 @@ exports.strings = {
 
     "access" : "Připojení",
     "date" : "Datum a čas měření",
-    "synchronization_code" : "Synchronization code",
+    "synchronization_code" : "Synchronizační kód",
     "code" : "Kód",
     "submit" : "Odeslat",
 
