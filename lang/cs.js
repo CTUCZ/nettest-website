@@ -448,7 +448,6 @@ exports.strings = {
     "yellow" : "Žlutá",
     "red" : "Červená",
 
-
     //404
     "not_found_page": {
         "title": "Stránka nenalezena",
