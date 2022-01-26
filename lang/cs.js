@@ -347,6 +347,7 @@ exports.strings = {
 
     "access" : "Připojení",
     "date" : "Datum a čas měření",
+    "sync_title" : "Synchronizace výsledků",
     "synchronization_code" : "Synchronizační kód",
     "code" : "Kód",
     "submit" : "Odeslat",
