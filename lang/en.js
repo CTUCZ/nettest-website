@@ -336,7 +336,7 @@ exports.strings = {
 
     "access" : "Access",
     "date" : "Date",
-    "sync_title" : "Synchronization of results",
+    "sync_title" : "Results synchronizations",
     "synchronization_code" : "Synchronization code",
     "code" : "Code",
     "submit" : "Submit",

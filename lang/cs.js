@@ -100,7 +100,7 @@ exports.strings = {
     },
 
     "history_content" : {
-        "request_code" : "Požádat o synchronizační kód",
+        "request_code" : "Získat synchronizační kód",
         "enter_code" : "nebo zadejte již přidělený synchronizační kód a potvrďte stisknutím tlačítka odeslat.",
         "download": "Stažení historie Vašich měření",
         "csv": "CSV",
