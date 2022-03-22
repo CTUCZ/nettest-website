@@ -163,9 +163,10 @@ function requestBrowserData(callback, options) {
                             // -> inform the user
                             //https://bugs.webkit.org/show_bug.cgi?id=170463
                             if ((browser_agent.match(/Version\/10\.1.*Safari/) &&
-                                !browser_agent.match(/Version\/10\.1\.2.*Safari/)) ||
-                                browser_agent.match(/iPhone; CPU iPhone OS/) ||
-                                (browser_agent.match(/Version\/15\..*Safari/))){
+                                    !browser_agent.match(/Version\/10\.1\.2.*Safari/)) ||
+                                ((browser_agent.match(/iPhone; CPU iPhone OS/) ||
+                                        (browser_agent.match(/Version\/15\..*Safari/))) &&
+                                    !browser_agent.match(/Version\/15\.4.*Safari/))) {
                                 $("#popuperror").append(Lang.getString("SafariBroken"));
                                 show_errorPopup();
                                 return;
