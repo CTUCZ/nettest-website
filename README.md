@@ -20,13 +20,13 @@ Building and running the Website
 
 	```bash
 	npm install
-	node build netztest 
+	node build nettest 
 	```
 	
 	It is possible to live-rebuild changed sources by running
 	
 	```bash
-	node build netztest watch
+	node build nettest watch
 	```
 	
 2. Deploy

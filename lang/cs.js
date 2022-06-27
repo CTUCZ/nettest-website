@@ -3,12 +3,10 @@ exports.strings = {
     "lang": "cs",
     "LANG": "CS",
     "title": {
-        "netztest": "ČTÚ – NetTest",
-        "qostest": "QosTest"
+        "nettest": "ČTÚ – NetTest",
     },
     "headline" : {
-        "netztest" : "ČTÚ – NetTest",
-        "qostest" : "www.qostest.eu"
+        "nettest" : "ČTÚ – NetTest",
     },
     "template": {
         "qos_ctu": "Vizualizační portál",
@@ -23,15 +21,13 @@ exports.strings = {
     },
     "index_content": {
         "service_description": {
-            "netztest": "Nástroj <b>ČTÚ-NetTest</b>, provozovaný Českým telekomunikačním úřadem, informuje uživatele o aktuální kvalitě jejich služby přístupu k internetu v podobě <b>skutečně dosahované rychlosti</b> stahování (download), vkládání (upload) a doby odezvy (ping). Nabízí možnost <b>certifikovaného měření</b>, které plně automaticky provede celý proces měření s výsledkem v podobě PDF dokumentu, který může uživatel použít pro případnou reklamaci služby přístupu k internetu v pevném místě. Pokud chcete provést reklamaci služby přístupu k internetu v pevném místě (tzv. pevného internetu), je nutné vždy využít režimu certifikovaného měření, přičemž jediným přípustným způsobem měření je připojení vašeho uživatelského zařízení (PC, notebook) přímo ke koncovému zařízení (routeru, resp. modemu) nebo do koncového bodu sítě (pokud umožňuje přímé připojení uživatelského zařízení bez nutnosti konverze), a to kabelem (nikoli pomocí Wi-Fi), za dále definovaných podmínek.",
-            "qostest": "qostest.eu informs users about the current service quality (including upload, download, ping, signal strength) of their Internet connection. In addition, a map view and statistics of previous tests can be accessed."
+            "nettest": "Nástroj <b>ČTÚ-NetTest</b>, provozovaný Českým telekomunikačním úřadem, informuje uživatele o aktuální kvalitě jejich služby přístupu k internetu v podobě <b>skutečně dosahované rychlosti</b> stahování (download), vkládání (upload) a doby odezvy (ping). Nabízí možnost <b>certifikovaného měření</b>, které plně automaticky provede celý proces měření s výsledkem v podobě PDF dokumentu, který může uživatel použít pro případnou reklamaci služby přístupu k internetu v pevném místě. Pokud chcete provést reklamaci služby přístupu k internetu v pevném místě (tzv. pevného internetu), je nutné vždy využít režimu certifikovaného měření, přičemž jediným přípustným způsobem měření je připojení vašeho uživatelského zařízení (PC, notebook) přímo ke koncovému zařízení (routeru, resp. modemu) nebo do koncového bodu sítě (pokud umožňuje přímé připojení uživatelského zařízení bez nutnosti konverze), a to kabelem (nikoli pomocí Wi-Fi), za dále definovaných podmínek.",
         },
         "detailed_dsc": "<p><strong>Mějte prosím na paměti, že nejen výkon vašeho uživatelského zařízení, ale i operační systém má zásadní vliv na naměřené hodnoty skutečné rychlosti.</strong></p>",
         "tos": {
             "text": "Prohlášení o ochraně osobních údajů a podmínky užití",
             "url": {
-                "netztest": "/cs/Privacy",
-                "qostest": "/cs/Privacy"
+                "nettest": "/cs/Privacy",
             }
         },
        /*"apps_content": 'Stáhněte si měřicí aplikaci pro <a href="">Android</a> nebo <a href="">iOS</a> nebo proveďte test pomocí <a href="">webového prohlížeče</a>.',
@@ -46,12 +42,10 @@ exports.strings = {
             "heading" : "Spustit test",
             "desc" : "Provede jedno měření nástrojem NetTest",
             "alt" : {
-                "netztest" : "Spustit test",
-                "qostest" : "qostest teaser"
+                "nettest" : "Spustit test",
             },
             "source" : {
-                "netztest" : "../img/rtr-netztest/rtr-netztest.png",
-                "qostest" : "../img/qostest/qostest-start.png"
+                "nettest" : "../img/rtr-nettest/rtr-nettest.png",
             },
             "start" : "Start"
         },
@@ -147,7 +141,7 @@ exports.strings = {
 
     "options_content" : {
         "client_uuid" : "UUID klienta",
-        //"options_apps_text" : "<h5>Android-App</h5><p>The RTR-NetTest measures, in addition to the speed of your current internet connection (upload, download, ping, signal strength), also a number of quality parameters (VoIP, unchanged content, website, transparent connection, DNS, ports).<br /> <br /> When starting the app, several symbols will give you information about your internet connection: mobile data or WLAN connection, background data transmission, IP address and location. The start button initiates the RTR-NetTest. The speed tests are followed by QoS tests. QoS stands for Quality of Service. Horizontal bars show the progress of the QoS tests. Once all tests are completed, the results as well as other detailed information can be viewed in the summary. The menu is located on the left and contains buttons to access the pages home , history, map, statistics, help, information and settings.</p><p>The Android-App Version 2.2 can be downloaded using the&nbsp; <a href=\"https://play.google.com/store/apps/details?id=at.alladin.rmbt.android\" title=\"Download RTR-Netztest\" target=\"_blank\">Google Play Store</a> or direcly <a href=\"https://www.netztest.at/RTR-Netztest.apk\" title=\"Opens external link in new window\" target=\"_blank\">here</a>. It is available for devices with Android 4.0 and above. <a href=\"https://www.rtr.at/en/tk/netztestfaq_app\" title=\"Opens internal link in current window\">More information...</a></p><h5>iOS-App (iPhone, iPad)</h5><p>The iOS-App can be downloaded using the App <a href=\"https://itunes.apple.com/at/app/rtr-netztest/id724321403\" title=\"Download RTR-Netztest iOS\" target=\"_blank\">Apple iTunes-Store</a>. It is available for devices with iOS 7.0 and above. <a href=\"https://www.rtr.at/en/tk/netztestfaq_app\" title=\"Opens internal link in current window\">More information...</a></p><h5>Web-Browser</h5><p>Measurements with the RTR-NetTest with other mobile operating systems and with the desktop&nbsp;can be conducted with a web browser&nbsp; - <a href=\"https://www.netztest.at/en/Test?websocket=t\" title=\"Start RTR-Netztest using WebSockets\" target=\"_blank\">start test using Websockets</a></p><p><a href=\"https://www.rtr.at/en/tk/netztestfaq_web\" title=\"Opens internal link in current window\">More information on Web-Browsers.<br /></a></p>",
+        //"options_apps_text" : "<h5>Android-App</h5><p>The RTR-NetTest measures, in addition to the speed of your current internet connection (upload, download, ping, signal strength), also a number of quality parameters (VoIP, unchanged content, website, transparent connection, DNS, ports).<br /> <br /> When starting the app, several symbols will give you information about your internet connection: mobile data or WLAN connection, background data transmission, IP address and location. The start button initiates the RTR-NetTest. The speed tests are followed by QoS tests. QoS stands for Quality of Service. Horizontal bars show the progress of the QoS tests. Once all tests are completed, the results as well as other detailed information can be viewed in the summary. The menu is located on the left and contains buttons to access the pages home , history, map, statistics, help, information and settings.</p><p>The Android-App Version 2.2 can be downloaded using the&nbsp; <a href=\"https://play.google.com/store/apps/details?id=at.alladin.rmbt.android\" title=\"Download RTR-nettest\" target=\"_blank\">Google Play Store</a> or direcly <a href=\"https://www.nettest.at/RTR-nettest.apk\" title=\"Opens external link in new window\" target=\"_blank\">here</a>. It is available for devices with Android 4.0 and above. <a href=\"https://www.rtr.at/en/tk/nettestfaq_app\" title=\"Opens internal link in current window\">More information...</a></p><h5>iOS-App (iPhone, iPad)</h5><p>The iOS-App can be downloaded using the App <a href=\"https://itunes.apple.com/at/app/rtr-nettest/id724321403\" title=\"Download RTR-nettest iOS\" target=\"_blank\">Apple iTunes-Store</a>. It is available for devices with iOS 7.0 and above. <a href=\"https://www.rtr.at/en/tk/nettestfaq_app\" title=\"Opens internal link in current window\">More information...</a></p><h5>Web-Browser</h5><p>Measurements with the RTR-NetTest with other mobile operating systems and with the desktop&nbsp;can be conducted with a web browser&nbsp; - <a href=\"https://www.nettest.at/en/Test?websocket=t\" title=\"Start RTR-nettest using WebSockets\" target=\"_blank\">start test using Websockets</a></p><p><a href=\"https://www.rtr.at/en/tk/nettestfaq_web\" title=\"Opens internal link in current window\">More information on Web-Browsers.<br /></a></p>",
         "your_uuid" : "Vaše UUID je",
         "ip_version": "Verze IP",
         "ip_version_desc": "Pokud Váš přístup k internetu podporuje IPv4 i IPv6, můžete si vybrat, který protokol použijete pro test.",

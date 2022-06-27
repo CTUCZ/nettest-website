@@ -3,11 +3,11 @@ exports.strings = {
     "lang": "en",
     "LANG": "EN",
     "title": {
-        "netztest": "CTU - NetTest",
+        "nettest": "CTU - NetTest",
         "qostest": "QosTest"
     },
     "headline" : {
-        "netztest" : "CTU-NetTest",
+        "nettest" : "CTU-NetTest",
         "qostest" : "www.qostest.eu"
     },
     "template": {
@@ -23,21 +23,21 @@ exports.strings = {
     },
     "index_content": {
         "service_description": {
-            "netztest": "The <b>CTU-NetTest</b> tool, operated by Czech Telecommunication Office, provides information to users on the current quality of their IAS in the form of <b>actually achieved speed</b> of download, upload and roundtrip delay (ping). It offers the possibility of <b>certified measurement</b> that will carry out fully automated process of measurement with result provided in PDF document that the user can use for possible claim against the quality of IAS at a fixed location. If you want to submit a claim against IAS at a fixed location (so called ‘fixed internet’), you must always use the certified measurement mode, while the only appropriate means of measurement is connecting your end device (PC, laptop) directly to the terminal equipment device (router or modem) or to the network termination point (if it allows a direct connection of end device without the necessity of conversion) through a cable (not through Wi-Fi) under further defined conditions.",
+            "nettest": "The <b>CTU-NetTest</b> tool, operated by Czech Telecommunication Office, provides information to users on the current quality of their IAS in the form of <b>actually achieved speed</b> of download, upload and roundtrip delay (ping). It offers the possibility of <b>certified measurement</b> that will carry out fully automated process of measurement with result provided in PDF document that the user can use for possible claim against the quality of IAS at a fixed location. If you want to submit a claim against IAS at a fixed location (so called ‘fixed internet’), you must always use the certified measurement mode, while the only appropriate means of measurement is connecting your end device (PC, laptop) directly to the terminal equipment device (router or modem) or to the network termination point (if it allows a direct connection of end device without the necessity of conversion) through a cable (not through Wi-Fi) under further defined conditions.",
             "qostest": "qostest.eu informs users about the current service quality (including upload, download, ping, signal strength) of their Internet connection. In addition, a map view and statistics of previous tests can be accessed."
         },
         "detailed_dsc": "<p><strong>Please, have on mind that the performance of your end device as well as the operation system have significant impact on the measured values of the actual speed.</strong></p>",
         "tos": {
             "text": "Privacy Policy and Terms of Use",
             "url": {
-                "netztest": "/en/Privacy",
+                "nettest": "/en/Privacy",
                 "qostest": "/en/Privacy"
             }
         },
         /*"apps_content": 'Download the measurement application for Android or iOS or carry out the test on web browser.',
         "apps_url" : "",
         "apps" : {
-            "netztest" : "Application and a web test",
+            "nettest" : "Application and a web test",
             "qostest" : "NetTest Apps"
         },
         "apps_alt" : "RTR-NetTest app",*/
@@ -46,11 +46,11 @@ exports.strings = {
             "heading" : "Start test",
             "desc" : "Carry out one measurement by NetTest tool",
             "alt" : {
-                "netztest" : "Start the test",
+                "nettest" : "Start the test",
                 "qostest" : "qostest teaser"
             },
             "source" : {
-                "netztest" : "../img/rtr-netztest/rtr-netztest.png",
+                "nettest" : "../img/rtr-nettest/rtr-nettest.png",
                 "qostest" : "../img/qostest/qostest-start.png"
             },
             "start" : "Start"
@@ -69,8 +69,8 @@ exports.strings = {
 
     "map_content" : {
         "teaser" : {
-            "netztest" : 'This map shows the existing RTR-NetTest results,  it is not always possible to draw conclusions on the broadband coverage. Additional information can be found  <a href="https://www.rtr.at/TKP/service/rtr-nettest/help/map/netztestfaq_karte.en.html">here</a>.',
-            "qostest" : 'This map shows the existing qostest.eu results, it is not always possible to draw conclusions on the broadband coverage. Additional information can be found <a href="https://www.rtr.at/TKP/service/rtr-nettest/help/map/netztestfaq_karte.en.html">here</a>.'
+            "nettest" : 'This map shows the existing RTR-NetTest results,  it is not always possible to draw conclusions on the broadband coverage. Additional information can be found  <a href="https://www.rtr.at/TKP/service/rtr-nettest/help/map/nettestfaq_karte.en.html">here</a>.',
+            "qostest" : 'This map shows the existing qostest.eu results, it is not always possible to draw conclusions on the broadband coverage. Additional information can be found <a href="https://www.rtr.at/TKP/service/rtr-nettest/help/map/nettestfaq_karte.en.html">here</a>.'
         },
         "search_address" : "Search for an address or city",
         "large_view" : "Large view"
@@ -78,7 +78,7 @@ exports.strings = {
 
     "statistics_content" : {
         "teaser" : {
-            "netztest" : 'Values stated here are the results of NetTest tool measurement. Find more information here.',
+            "nettest" : 'Values stated here are the results of NetTest tool measurement. Find more information here.',
             "qostest" : ''
         },
         "operators_from" : "Operators from",
@@ -111,7 +111,7 @@ exports.strings = {
 
     "opentest_content" : {
         "measurement_result_from" : "Measurement results from",
-        "coverage_hint": "Please note that these data rates are not measurement results of the RTR-NetTest, but data rates published by the respective operators. The information refers to an area of 100m x 100m. For questions - such as the tariff with which bandwidths can be achieved or whether installation is possible at your specific location - please contact the respective network operator. <a href='https://www.rtr.at/TKP/service/rtr-nettest/help/test_result/netztestfaq_coverage.en.html' target='_blank'>Further information</a>",
+        "coverage_hint": "Please note that these data rates are not measurement results of the RTR-NetTest, but data rates published by the respective operators. The information refers to an area of 100m x 100m. For questions - such as the tariff with which bandwidths can be achieved or whether installation is possible at your specific location - please contact the respective network operator. <a href='https://www.rtr.at/TKP/service/rtr-nettest/help/test_result/nettestfaq_coverage.en.html' target='_blank'>Further information</a>",
         "coverage_unavailable": "For this location, no operator open data is available.",
         "coverage_intro": "For this location the following information has been published by operators:",
         "down_avg": "Downlink (normally available speed)",
@@ -147,7 +147,7 @@ exports.strings = {
 
     "options_content" : {
         "client_uuid" : "Client-UUID",
-        //"options_apps_text" : "<h5>Android-App</h5><p>The RTR-NetTest measures, in addition to the speed of your current internet connection (upload, download, ping, signal strength), also a number of quality parameters (VoIP, unchanged content, website, transparent connection, DNS, ports).<br /> <br /> When starting the app, several symbols will give you information about your internet connection: mobile data or WLAN connection, background data transmission, IP address and location. The start button initiates the RTR-NetTest. The speed tests are followed by QoS tests. QoS stands for Quality of Service. Horizontal bars show the progress of the QoS tests. Once all tests are completed, the results as well as other detailed information can be viewed in the summary. The menu is located on the left and contains buttons to access the pages home , history, map, statistics, help, information and settings.</p><p>The Android-App Version 2.2 can be downloaded using the&nbsp; <a href=\"https://play.google.com/store/apps/details?id=at.alladin.rmbt.android\" title=\"Download RTR-Netztest\" target=\"_blank\">Google Play Store</a> or direcly <a href=\"https://www.netztest.at/RTR-Netztest.apk\" title=\"Opens external link in new window\" target=\"_blank\">here</a>. It is available for devices with Android 4.0 and above. <a href=\"https://www.rtr.at/en/tk/netztestfaq_app\" title=\"Opens internal link in current window\">More information...</a></p><h5>iOS-App (iPhone, iPad)</h5><p>The iOS-App can be downloaded using the App <a href=\"https://itunes.apple.com/at/app/rtr-netztest/id724321403\" title=\"Download RTR-Netztest iOS\" target=\"_blank\">Apple iTunes-Store</a>. It is available for devices with iOS 7.0 and above. <a href=\"https://www.rtr.at/en/tk/netztestfaq_app\" title=\"Opens internal link in current window\">More information...</a></p><h5>Web-Browser</h5><p>Measurements with the RTR-NetTest with other mobile operating systems and with the desktop&nbsp;can be conducted with a web browser&nbsp; - <a href=\"https://www.netztest.at/en/Test?websocket=t\" title=\"Start RTR-Netztest using WebSockets\" target=\"_blank\">start test using Websockets</a></p><p><a href=\"https://www.rtr.at/en/tk/netztestfaq_web\" title=\"Opens internal link in current window\">More information on Web-Browsers.<br /></a></p>",
+        //"options_apps_text" : "<h5>Android-App</h5><p>The RTR-NetTest measures, in addition to the speed of your current internet connection (upload, download, ping, signal strength), also a number of quality parameters (VoIP, unchanged content, website, transparent connection, DNS, ports).<br /> <br /> When starting the app, several symbols will give you information about your internet connection: mobile data or WLAN connection, background data transmission, IP address and location. The start button initiates the RTR-NetTest. The speed tests are followed by QoS tests. QoS stands for Quality of Service. Horizontal bars show the progress of the QoS tests. Once all tests are completed, the results as well as other detailed information can be viewed in the summary. The menu is located on the left and contains buttons to access the pages home , history, map, statistics, help, information and settings.</p><p>The Android-App Version 2.2 can be downloaded using the&nbsp; <a href=\"https://play.google.com/store/apps/details?id=at.alladin.rmbt.android\" title=\"Download RTR-nettest\" target=\"_blank\">Google Play Store</a> or direcly <a href=\"https://www.nettest.at/RTR-nettest.apk\" title=\"Opens external link in new window\" target=\"_blank\">here</a>. It is available for devices with Android 4.0 and above. <a href=\"https://www.rtr.at/en/tk/nettestfaq_app\" title=\"Opens internal link in current window\">More information...</a></p><h5>iOS-App (iPhone, iPad)</h5><p>The iOS-App can be downloaded using the App <a href=\"https://itunes.apple.com/at/app/rtr-nettest/id724321403\" title=\"Download RTR-nettest iOS\" target=\"_blank\">Apple iTunes-Store</a>. It is available for devices with iOS 7.0 and above. <a href=\"https://www.rtr.at/en/tk/nettestfaq_app\" title=\"Opens internal link in current window\">More information...</a></p><h5>Web-Browser</h5><p>Measurements with the RTR-NetTest with other mobile operating systems and with the desktop&nbsp;can be conducted with a web browser&nbsp; - <a href=\"https://www.nettest.at/en/Test?websocket=t\" title=\"Start RTR-nettest using WebSockets\" target=\"_blank\">start test using Websockets</a></p><p><a href=\"https://www.rtr.at/en/tk/nettestfaq_web\" title=\"Opens internal link in current window\">More information on Web-Browsers.<br /></a></p>",
         "your_uuid" : "Your UUID is",
         "ip_version": "IP version",
         "ip_version_desc": "If your internet access supports both IPv4 and IPv6, you can choose which protocol version is used for conducting the test.",

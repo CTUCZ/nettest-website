@@ -1,10 +1,9 @@
 /build
 /.idea
 /node_modules
-/jstest.netztest/files
+/jstest.nettest/files
 /build.sh
-/src/fileadmin.netztest/
+/src/fileadmin.nettest/
 *.marks
 templates/parts/
-
-
+src/js/javaconf.nettest.js

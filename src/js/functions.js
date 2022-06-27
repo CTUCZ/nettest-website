@@ -14,9 +14,9 @@
  * limitations under the License.
  ******************************************************************************/
 
-var tc_short_de = '<b>Im Sinne größtmöglicher Transparenz und Information für den Nutzer, ist die Verwendung der Browser-Version des RTR-Netztests erst nach ausdrücklicher Zustimmung zur Datenschutzerklärung sowie zu den Nutzungsbedingungen der RTR-GmbH hinsichtlich des RTR-Netztests möglich:';
+var tc_short_de = '<b>Im Sinne größtmöglicher Transparenz und Information für den Nutzer, ist die Verwendung der Browser-Version des RTR-nettests erst nach ausdrücklicher Zustimmung zur Datenschutzerklärung sowie zu den Nutzungsbedingungen der RTR-GmbH hinsichtlich des RTR-nettests möglich:';
 var tc_short_en = '<b>In order to ensure users with the greatest possible transparency and information, the RTR-NetTest browser version can be used only after explicit consent to RTR’s Privacy Policy and Terms of Use for the RTR-NetTest:';
-var tc_agree_de = 'Ich stimme der Datenschutzerklärung und den Nutzungsbedingungen der RTR-GmbH hinsichtlich des RTR-Netztests zu.';
+var tc_agree_de = 'Ich stimme der Datenschutzerklärung und den Nutzungsbedingungen der RTR-GmbH hinsichtlich des RTR-nettests zu.';
 var tc_agree_en = 'I agree with RTR’s Privacy Policy and Terms of Use for the RTR-NetTest.';
 
 var ndt_short_de = 'Der NDT-Test der Forschungsplattform M-Lab ist ein optionaler, vertiefender Test, der weitere technische Parameter misst – allerdings auch die Messdauer und das übertragene Datenvolumen deutlich erhöht. Im Rahmen dieses vertiefenden Tests werden Daten, ua. die IP-Adresse, auch ins Ausland au&szlig;erhalb der EU an die Forschungsplattform M-Lab übermittelt, dh. diese Daten werden durch M-Lab dauerhaft gespeichert, veröffentlicht und der Allgemeinheit zur Information, Nutzung, Weiterverbreitung und Weiterverwendung unter M-Lab-Open Data frei zug&auml;nglich gemacht. Aufgrund der Verarbeitung und der Übermittlung der IP-Adresse ins Ausland au&szlig;erhalb der EU könnte gegebenenfalls die Identität des Nutzers bestimmt werden oder bestimmbar sein und somit könnte ein Personenbezug hergestellt werden.<br /><br />Durch Anklicken des Zurück-Button wird der Datenschutztext wieder aufgerufen. Dort finden sich unter <b>1.3</b> die ausführlichen Informationen zum NDT-Test.';

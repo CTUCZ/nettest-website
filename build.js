@@ -5,11 +5,11 @@
  */
 
     //https://github.com/segmentio/metalsmith/blob/master/examples/project-scaffolder/build.js
-    var RTR_LINKS_BASEURL = "https://www.rtr.at";
+    var CTU_LINKS_BASEURL = "https://www.ctu.cz";
 
 
 
-    var debug = require('debug')('nodeNetztest:server');
+    var debug = require('debug')('nodeNettest:server');
     var request = require('request');
     var fs = require('fs');
     var path = require('path');
@@ -36,14 +36,14 @@
     
     var remoteFiles = require("./conf/remoteFiles.json");
     
-    var target = null, targets = ["qostest","netztest"];
+    var target = null, targets = ["qostest","nettest"];
     var useWatch = false;
     var downloadedOnce = false;
     var updateRtrDependencies = true;
     
     //check command line to find which target should be built
     process.argv.forEach(function(val, index, array) {
-        //node build netztest/qostest
+        //node build nettest/qostest
         if (index === 2) {
             if (targets.indexOf(val) >= 0) {
                 target = val;
@@ -58,7 +58,7 @@
     });
     
     if (target === null ){
-        console.log("invalid target, try 'node build netztest' or 'node build qostest");
+        console.log("invalid target, try 'node build nettest' or 'node build qostest");
         process.exit();
     }
     
@@ -118,7 +118,7 @@
             var createdFiles = false;
             for (var i=0;i<=102400;i=Math.max(100,i*2)) {
                 //check if file exists
-                var filePath = "jstest.netztest%PS%files%PS%".replace(/%PS%/g,path.sep) + ("000000"+i).slice(-6);
+                var filePath = "jstest.nettest%PS%files%PS%".replace(/%PS%/g,path.sep) + ("000000"+i).slice(-6);
                 if (fileArray.indexOf(filePath) < 0) {
                     //generate
                     //var fileStream = fs.openSync(filePath,"w");
@@ -154,7 +154,7 @@
      * to accomodate the fetchRemoteFiles-Metalsmith-Plugin
      * @param json
      */
-    function transformRemoteNetztestJSONtoFetchableFiles(json) {
+    function transformRemoteNettestJSONtoFetchableFiles(json) {
         var filesArray = [];
         json.forEach(function(arg) {
             if (arg.dirAndFile.indexOf("/__nettest") === 0) {
@@ -166,7 +166,7 @@
             else {
                 var file = {
                     source : RTR_FILES_BASEURL + arg.dirAndFile,
-                    target : "src/" + arg.dirAndFile.replace("fileadmin","fileadmin.netztest")
+                    target : "src/" + arg.dirAndFile.replace("fileadmin","fileadmin.nettest")
                 };
             }
             filesArray.push(file);
@@ -251,7 +251,8 @@
             "/Loop": "Loop",
             "/Opentests": "Opentests",
             "/ZertMessung": "ZertMessung",
-            "/tk/netztest" : "",
+            "/tk/nettest" : "",
+            //"/de": "",
             "/en": "",
             "/cs": ""
         };
@@ -273,11 +274,11 @@
                         var href = $(this).attr("href");
     
                         //only replace relative URLs (no mailtos, tel, http, etc.)
-                        if (href.indexOf(":") === -1 || href.indexOf(":") > 6 || href.indexOf('netztest') !== -1) {
-                            $(this).attr("href", RTR_LINKS_BASEURL + href);
+                        if (href.indexOf(":") === -1 || href.indexOf(":") > 6 || href.indexOf('nettest') !== -1) {
+                            $(this).attr("href", CTU_LINKS_BASEURL + href);
     
                             //maybe it's even a special nettest url that needs to be relative?
-                            if (href.indexOf('netztest') !== -1) {
+                            if (href.indexOf('nettest') !== -1) {
                                 for(var key in specialNetTestUrls) {
                                     if (href.endsWith(key) === true) {
                                         $(this).attr("href", "/" + language + "/" + specialNetTestUrls[key]);
@@ -308,10 +309,10 @@
     
     function setConfig() {
         return function (files, metalsmith, done) {
-            //netztest or qostest?
+            //nettest or qostest?
             var metadata = metalsmith.metadata();
             metadata['target'] = target;
-            metadata['basetemplate'] = (target === "qostest")?"templates/qosPage.html":"templates/netztestPage.html";
+            metadata['basetemplate'] = (target === "qostest")?"templates/qosPage.html":"templates/nettestPage.html";
             try {
                 metadata['gitDescribe'] = gitDescribe({
                     match: false

@@ -20,7 +20,7 @@ var fullscreenMap = getParam("fullscreenMap");
 
 $(window).bind("load", function() {
     //show custom font objects when the font and content is loaded
-    $(".teaser-icon, .teaser-netztest").css("visibility","visible");
+    $(".teaser-icon, .teaser-nettest").css("visibility","visible");
 });
 
 $(document).ready(function() {
@@ -40,7 +40,7 @@ $(document).ready(function() {
     //is it iOS?
     else if (mobile_client.match(/iP(hone|od|ad)/g)) {
         $("#iOSApp").show();
-        var url = 'https://itunes.apple.com/at/app/rtr-netztest/id724321403';
+        var url = 'https://itunes.apple.com/at/app/rtr-nettest/id724321403';
         $("a#teaserlink").attr("href",url);
     }
 */

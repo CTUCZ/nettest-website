@@ -47,9 +47,9 @@ $(document).ready(function() {
     
 
     //add trigger
-    $("header #netztestmenu").after('<div class="menu-trigger"><a href="#netztestmenu"></a></div>');
+    $("header #nettestmenu").after('<div class="menu-trigger"><a href="#nettestmenu"></a></div>');
     
-    $("#netztestmenu").mmenu({
+    $("#nettestmenu").mmenu({
         // options:
         header: true,
         searchfield: true,
@@ -60,5 +60,5 @@ $(document).ready(function() {
     });
 
     //add link to homepage
-    //$("#mm-netztestmenu ul").prepend("<li><a href='/'><strong>" + $("#netztestmenu").parent().children("a").first().html() + "</strong></a></li>");
+    //$("#mm-nettestmenu ul").prepend("<li><a href='/'><strong>" + $("#nettestmenu").parent().children("a").first().html() + "</strong></a></li>");
 });                    

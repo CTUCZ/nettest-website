@@ -16,7 +16,7 @@ $(document).ready(function() {
     linkLanguageSwitcherToCurrentPage();
 
     //add link to homepage
-    //$("#mm-netztestmenu ul").prepend("<li><a href='/'><strong>" + $("#netztestmenu").parent().children("a").first().html() + "</strong></a></li>");
+    //$("#mm-nettestmenu ul").prepend("<li><a href='/'><strong>" + $("#nettestmenu").parent().children("a").first().html() + "</strong></a></li>");
 });
 
 /**
