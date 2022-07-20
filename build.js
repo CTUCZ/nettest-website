@@ -252,7 +252,6 @@
             "/Opentests": "Opentests",
             "/ZertMessung": "ZertMessung",
             "/tk/nettest" : "",
-            //"/de": "",
             "/en": "",
             "/cs": ""
         };
@@ -379,7 +378,7 @@
                 if (isRootHTML(file)) {
                     langs.forEach(function (lang) {
     
-                        //add for DE and EN
+                        //add for CS and EN
                         var data = files[file];
                         var newFilename = lang.language + path.sep + file;
                         var clone = JSON.parse(JSON.stringify(data));

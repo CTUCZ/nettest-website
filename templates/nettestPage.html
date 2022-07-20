@@ -11,7 +11,6 @@
     <!-- CSS includes -->
     <link rel="stylesheet" href="../{{ fingerprint['css/jquery-ui.min.css'] }}">
     <link rel="stylesheet" href="../{{ fingerprint['scss/app.css'] }}">
-    <!-- <link rel="stylesheet" href="/scss/nettest.css"> -->
     <!-- Meta information -->
     <meta name="description" content="{{ Lang.index_content.service_description }}"/>
     <meta name="robots" content="index, follow">
@@ -90,11 +89,6 @@
                                                               <a href="/en" data-lang-name="en">
                                                                   English
                                                               </a>
-                                                          <!--<li>
-                                                              <a href="/de" data-lang-name="de">
-                                                                  Deutsch
-                                                              </a>
-                                                          </li> -->
                                                       </ul>
                                                   </div>
                                               </div>
@@ -156,54 +150,6 @@
                                     <li class="">
                                         <a href="Result">{{ Lang.history }}</a>
                                     </li>
-                                    <!--    <li class="">
-                                            <a href="Karte">{{ Lang.map }}</a>
-                                        </li>
-                                        <li class="">
-                                            <a href="Statistik">{{ Lang.statistics }}</a>
-                                        </li>
-                                        <li class="uk-parent">
-                                            <div class="uk-navbar-container uk-navbar"
-                                                 uk-navbar="dropbar: true; dropbar-mode: push;mode: click">
-                                                <ul class="uk-navbar-nav second-level-nav">
-                                                    <li class="uk-parent">
-                                                        <a href="#" aria-expanded="false">{{ Lang.further }}<span
-                                                                class="icon-drop uk-icon"
-                                                                uk-icon="icon: chevron-down; ratio: 1.5"><svg
-                                                                width="30" height="30" viewBox="0 0 20 20"
-                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                data-svg="chevron-down"><polyline fill="none"
-                                                                                                  stroke="#000"
-                                                                                                  stroke-width="1.03"
-                                                                                                  points="16 7 10 13 4 7"></polyline></svg></span></a>
-                                                        <div class="uk-navbar-dropdown uk-navbar-dropdown-bottom-left"
-                                                             style="left: 861.844px; top: 80px;">
-                                                            <div class="uk-navbar-dropdown-grid uk-child-width-1-1 uk-grid uk-grid-stack"
-                                                                 uk-grid="">
-                                                                <div class="uk-first-column">
-                                                                    <ul class="uk-nav uk-navbar-dropdown-nav">
-                                                                        <li><a href="Loop">{{ Lang.loop_mode }}</a></li>
-
-                                                                        <li><a href="ZertMessung">{{
-                                                                            Lang.certified_measurement }}</a></li>
-
-                                                                        <li><a href="{{ Lang.index_content.apps_url }}">{{
-                                                                            Lang.index_content.apps }}</a></li>
-
-                                                                        <li><a href="Opentests">{{ Lang.opendata }}</a></li>
-
-                                                                        <li><a href="Optionen">{{ Lang.options }}</a></li>
-
-                                                                        <li><a href="{{ Lang.help_url }}">{{ Lang.help
-                                                                            }}</a></li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </li>-->
                                     <li><a href="Test">{{ Lang.start_test }}</a></li>
                                 </ul>
                             </div>
@@ -213,7 +159,6 @@
             </div>
         </div>
     </div>
-    <!-- Desktop -->
     <!-- Desktop -->
     <div class="tm-header uk-visible@l" uk-header="">
         <div uk-sticky="" media="@l" cls-active="uk-navbar-sticky" sel-target=".uk-navbar-container" class="uk-sticky"
@@ -241,48 +186,6 @@
                                 <li class="">
                                     <a href="Result">{{ Lang.history }}</a>
                                 </li>
-
-                                <!--
-
-                                    <li class="">
-                                        <a href="Karte">{{ Lang.map }}</a>
-                                    </li>
-                                    <li class="">
-                                        <a href="Statistik">{{ Lang.statistics }}</a>
-                                    </li>
-
-                                    <li class="uk-parent">
-                                        <a href="#" aria-expanded="false">{{ Lang.further }}
-                                            <span uk-icon="chevron-down"></span>
-                                        </a>
-                                        <div class="uk-navbar-dropdown uk-navbar-dropdown-bottom-left"
-                                             style="left: 861.844px; top: 80px;">
-                                            <div class="uk-navbar-dropdown-grid uk-child-width-1-1 uk-grid uk-grid-stack"
-                                                 uk-grid="">
-                                                <div class="uk-first-column">
-                                                    <ul class="uk-nav uk-navbar-dropdown-nav">
-
-                                                        <li><a href="Loop">{{ Lang.loop_mode }}</a></li>
-
-                                                        <li><a href="ZertMessung">{{ Lang.certified_measurement }}</a></li>
-
-                                                        <li><a href="{{ Lang.index_content.apps_url }}">{{
-                                                            Lang.index_content.apps }}</a></li>
-
-                                                        <li><a href="Opentests">{{ Lang.opendata }}</a></li>
-
-                                                        <li><a href="Optionen">{{ Lang.options }}</a></li>
-
-                                                        <li><a href="{{ Lang.help_url }}">{{ Lang.help }}</a></li>
-
-
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </li>
-    -->
                                 <li class="nav-button"><a href="Test" class="uk-button uk-button-default">{{
                                     Lang.start_test }}</a></li>
                             </ul>
@@ -341,10 +244,6 @@
                     <li>
                         <a href="{{ Lang.index_content.tos.url }}">{{ Lang.index_content.tos.text }}</a>
                     </li>
-                    <!--    <li>
-                            <a href="https://www.rtr.at/rtr/footer/Barrierefreiheit.{{ Lang.lang }}.html">{{
-                                Lang.accessibility }}</a>
-                        </li> -->
                     <li>
                         <!--© 2021–<script>document.write(/\d{4}/.exec(Date())[0])</script>-->
                         © <script>document.write(/\d{4}/.exec(Date())[0])</script>

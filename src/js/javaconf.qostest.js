@@ -1,5 +1,5 @@
-//var controlProxy = "https://www.netztest.at";
-//var mapProxy = "https://www.netztest.at";
+//var controlProxy = "https://nettest.cz";
+//var mapProxy = "https://nettest.cz";
 var controlProxy = "";
 var mapProxy = "";
 var statisticProxy = "";
@@ -18,7 +18,7 @@ var TestTypes = {
 
 var preferredTest = TestTypes.Websocket;
 
-//can be changed in cookie (/Optionen-Page)
+//can be changed in cookie (/Options-Page)
 var UserConf = {
     runQos: true,
     qosSsl: true,
@@ -32,17 +32,17 @@ var test_language;
 var cookie_uuid;
 var test_type = "DESKTOP";
 var test_version_code = "1";
-var test_name = "RTR-Netztest"; 
+var test_name = "RMBT"; 
 var test_timezone;
 var test_devices;
 var test_networks;
 var client_name = "RMBTjs";
 var test_token, testUUID;
-var bing_api_key = "AhtZ2SmIKuAaKmtpxQksx2lFYBLkqF7xi-AXtnyrb7ocVo1DldoaGSpOtziHjytA";
+var bing_api_key = "";
 var fallbackOnJS = false;
 var terms_version = 4;
 
-test_timezone = "Europe/Vienna"; // ToDo Timezone dynamisch erzeugen.
+test_timezone = "Europe/Prague"; 
 
 
 var geo_HighAccuracy = true;
