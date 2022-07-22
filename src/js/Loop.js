@@ -421,7 +421,7 @@ function conductTests() {
         results.push(result);
 
         //add result to table
-        $("#verlauf_tbody").prepend(resultTemplate(result));
+        $("#result_tbody").prepend(resultTemplate(result));
 
         //calculate median
         var calculateAndFormatMedian = function(field) {
@@ -459,7 +459,7 @@ function conductTests() {
         }
 
         //add error to table
-        $("#verlauf_tbody").prepend(resultTemplate(result));
+        $("#result_tbody").prepend(resultTemplate(result));
 
         testFinished();
     };

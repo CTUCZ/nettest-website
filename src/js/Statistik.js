@@ -193,12 +193,12 @@ function getLastOpenDataResults() {
             //for each opentest in the "openTests"-table
             var tests = data.results;
             //empty so that refresh does not append to existing results
-            $("#verlauf tbody").empty();
+            $("#result tbody").empty();
             for (var i = 0; i < tests.length; i++) {
-                 $("#verlauf tbody").append(getOpenDataRow(tests[i],false));
+                 $("#result tbody").append(getOpenDataRow(tests[i],false));
             }
             //link table rows
-            $('#verlauf tbody tr').click( function() {
+            $('#result tbody tr').click( function() {
                 window.location = $(this).find('a').first().attr('href');
             });
         }

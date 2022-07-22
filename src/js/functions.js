@@ -378,12 +378,12 @@ function RMBTsettings(options) {
                         else if (options === 'certTest') {
                                 RMBTCertTest(uuid);
                         }
-                        else if (options !== 'verlauf') {
+                        else if (options !== 'result') {
                             var testStartFunction = function() {
                                 try {
                                     rmbtApplet.setBrowserInfo(browser_product);
 
-                                    if (options !== 'verlauf') {
+                                    if (options !== 'result') {
                                         rmbtApplet.startTest(uuid);
                                         //set updated coords sometime later in the test
                                         window.setTimeout(function() {
@@ -439,7 +439,7 @@ function RMBTsettings(options) {
 
                         }
                         else {
-                                //Verlauf
+                                //result
                                 requestBrowserData('RMBThistory');
                         }
 
@@ -460,7 +460,7 @@ function RMBTsettings(options) {
 
 /**
  *
- * Called from Verlauf.js:document.ready()
+ * Called from result.js:document.ready()
  * @param {int} testUUID the test uuid
  * @returns {undefined}
  */
@@ -473,13 +473,13 @@ function RMBTtestresult(testUUID) {
         };
         var stateObj = {page: testUUID};
 
-        //Push history state if User visits from Verlauf (from Verlauf or Verlauf?asdfasdfasdf or Verlauf#asdfasdfsdf)
+        //Push history state if User visits from result (from result or result?asdfasdfasdf or result#asdfasdfsdf)
         //to enable navigating between old test results
         if (History)
-                //if the user navigates from Verlauf, push a new state to the history (was "Verlauf")
+                //if the user navigates from result, push a new state to the history (was "result")
                 if (fromTest === false)
                         History.pushState(stateObj,'Detail','/' + selectedLanguage + '/Result?'+testUUID);
-                //if the user just conducted a test, replace the current state ("Verlauf#testuuid") by the new state
+                //if the user just conducted a test, replace the current state ("result#testuuid") by the new state
                 //to prohibit from navigating backwards
                 else if (fromTest === true)
                         History.replaceState(stateObj,'Detail','/' + selectedLanguage + '/Result?'+testUUID);
@@ -522,7 +522,7 @@ function RMBTtestresult(testUUID) {
                                 else {
                                     loadOpenTestData(data.testresult[0].open_test_uuid);
                                 }
-                                $("#verlauf-detailcontainer .shareMail").attr("href",
+                                $("#result-detailcontainer .shareMail").attr("href",
                                    "mailto:?subject=" +
                                    encodeURIComponent(data.testresult[0].share_subject)+
                                    "&body=" +
@@ -530,7 +530,7 @@ function RMBTtestresult(testUUID) {
                                 $('#code-eingabe').hide();
 
                                 var tmp = Lang.getString('MeasurementResultFrom');
-                                $("#verlauf-result-from").html(
+                                $("#result-result-from").html(
                                     tmp + ' ' + data.testresult[0].time_string +
                                     ' <span class="align-right"><a href="Help" target="_blank">' + Lang.getString('help') + '</a></span>');
 
@@ -544,7 +544,7 @@ function RMBTtestresult(testUUID) {
                                             sprite = 'svg-empty';
                                         }
 
-                                        $('#verlauf-detail').append(
+                                        $('#result-detail').append(
                                                 '<tr>' +
                                                 '<td class="uk-width-medium@s">'+row.title+'</td>' +
                                                 '<td><i class="svg-icon svg16 ' + sprite + '"></i></a> ' +row.value+'</td>' +
@@ -576,8 +576,8 @@ function RMBTtestresult(testUUID) {
                                         }
                                 });
 
-                                $('#verlaufcontainer').css('display','none');
-                                $('#verlauf-detailcontainer').css('display','block');
+                                $('#resultcontainer').css('display','none');
+                                $('#result-detailcontainer').css('display','block');
                                 $('#h2').html(Lang.getString('TestResult'));
                         }
 
@@ -673,11 +673,11 @@ function RMBThistory() {
                         //console.log(data);
                         if (data.error.length > 0 || data.history.length == 0) {
                                  //var tmp = (selectedLanguage=='de')?'Keine Tests gefunden':'No tests found';
-                                 //$('#verlaufcontainer').html('<div class="message">'+tmp+'</div>');
-                                 $('table#verlauf').css('display','none');
+                                 //$('#resultcontainer').html('<div class="message">'+tmp+'</div>');
+                                 $('table#result').css('display','none');
                         }
                         else {
-                                $('#verlauf_tbody').empty();
+                                $('#result_tbody').empty();
                                 $.each(data.history, function(key,row){
                                 var klasse, model, network, time, upload, download, ping;
                                 if (key == 0) {
@@ -731,7 +731,7 @@ function RMBThistory() {
 
 								//History.pushState({uid:'+row.uid+'}, \'RTR - Messergebnis '+time_string+'\', \'?test='+row.uid+'\');
 
-                                $('#verlauf_tbody').append(
+                                $('#result_tbody').append(
                                         '<tr class="'+klasse+'">' +
                                         '<td onclick="requestBrowserData(\'RMBTtestresult\',\''+row.test_uuid+'\');">'+model+'</td>' +
                                         '<td onclick="requestBrowserData(\'RMBTtestresult\',\''+row.test_uuid+'\');">'+network_type+'</td>'+
@@ -1405,7 +1405,7 @@ function RMBTjstest_result(token,options,callback) {
                 data: json_string,
                 success: function(data) {
                 	//console.log(data);
-                    //var forwardUrl = '/' + selectedLanguage + '/Verlauf#';
+                    //var forwardUrl = '/' + selectedLanguage + '/result#';
                     //forwardUrl += testUUID;
                     //setTimeout(function() {window.location.href = forwardUrl}, 2000);
                     if (callback !== undefined) {
@@ -1510,7 +1510,7 @@ $(document).ready(function() {
 
 
 /**
- * Prints the given test-data into the table "verlauf"
+ * Prints the given test-data into the table "result"
  * @param {json} testdata json-result representing the test-data from the control server
  * @param {boolean} showUnits true, if the units for the results should be shown
  * @return {String} The table row including the wrapping tr-elements

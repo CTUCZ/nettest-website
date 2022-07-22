@@ -483,8 +483,8 @@ div#map_key_heatmap .map_key_caption {
     }
 }
 
-/* Verlauf: Mouse pointer for table */
-table#verlauf tr {
+/* result: Mouse pointer for table */
+table#result tr {
     cursor: pointer;
 
     a {
@@ -1056,7 +1056,7 @@ b, strong {
     color: #fff;
 }
 
-#verlauf-detail,
+#result-detail,
 #testresult-detail {
     margin-bottom: 50px;
 
@@ -1073,11 +1073,11 @@ b, strong {
     display: none;
 }
 
-#verlauf .test-network-signal {
+#result .test-network-signal {
     display: none !important;
 }
 
-#verlauf .time {
+#result .time {
     white-space: nowrap;
     min-width: 215px;
 }

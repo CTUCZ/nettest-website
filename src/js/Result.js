@@ -243,7 +243,7 @@ function searchAndPositionOnAddress(callback) {
 
     //temporary log to server
     /*$.ajax({
-        url: controlProxy + "/" + wspath+ "/geocoding/verlauf/" + query,
+        url: controlProxy + "/" + wspath+ "/geocoding/result/" + query,
         type: 'GET',
         dataType: 'json',
         cache: false
@@ -412,17 +412,17 @@ $(document).ready(function() {
 			if (e.target.location.href.indexOf('?')>=0) {
                 //adjust view to 2/3 of screen width
                 $("div.container").removeClass("full-width");
-				$('#verlaufcontainer').css('display','none');
+				$('#resultcontainer').css('display','none');
 				$('#code-eingabe').css('display','none');
-				$('#verlauf-detailcontainer').css('display','block');
+				$('#result-detailcontainer').css('display','block');
 				$('#h1').html(Lang.getString('TestResult'));
 			}
 			else {
                 //adjust view to 2/3 of screen width
                 $("div.container").addClass("full-width");
-				$('#verlaufcontainer').css('display','block');
+				$('#resultcontainer').css('display','block');
 				$('#code-eingabe').css('display','block');
-				$('#verlauf-detailcontainer').css('display','none');
+				$('#result-detailcontainer').css('display','none');
 				$('#h1').html(Lang.getString('CourseOverview'));
 			}
 
@@ -449,15 +449,15 @@ $(document).ready(function() {
 
 
                 if (window.location.search.length > 0) {
-                        //if the user visits /Verlauf?test-uuid -> show the test result
+                        //if the user visits /result?test-uuid -> show the test result
                         testID = window.location.search.substr(1);
                         show_agbform(false, 'RMBTtestresult', testID);
                         //adjust view to 2/3 of screen width
                         $("div.container").removeClass("full-width");
                 }
                 else {
-                        //if the user visits /Verlauf, show the /Verlauf-page
-                        show_agbform(false, 'RMBTsettings', 'verlauf');
+                        //if the user visits /result, show the /result-page
+                        show_agbform(false, 'RMBTsettings', 'result');
                 }
         }
 
@@ -593,8 +593,8 @@ function show_addressPopup(testID) {
                             else {
                                 if (lat !== null && long !== null && accuracy !== null ) {
                                     sendLatLong(testID, lat, long, accuracy, provider, function() {
-                                        $("#verlauf-detailcontainer .test-map").show();
-                                        setPosition("#verlauf-detailcontainer", lat, long, accuracy, [], 0, true);
+                                        $("#result-detailcontainer .test-map").show();
+                                        setPosition("#result-detailcontainer", lat, long, accuracy, [], 0, true);
                                         reloadShareText(testID);
                                     });
                                 }
@@ -700,7 +700,7 @@ function reloadShareText(testUUID) {
         contentType: "application/json",
         data: JSON.stringify(json_data),
         success: function(data) {
-            $("#verlauf-detailcontainer .shareMail").attr("href",
+            $("#result-detailcontainer .shareMail").attr("href",
                     "mailto:?subject=" +
                     encodeURIComponent(data.testresult[0].share_subject) +
                     "&body=" +
@@ -760,36 +760,36 @@ function loadOpenTestData(openTestUUID, testUUIDForZipPopup) {
             //warn user if fast internet connection and websocket test
             handleFastConnections(testdata);
 
-            $("#verlauf-detailcontainer a.shareBanner").unbind('click');
-            $("#verlauf-detailcontainer a.shareBanner").click(function() { showShareBanner("#verlauf-detailcontainer", openTestUUID); });
+            $("#result-detailcontainer a.shareBanner").unbind('click');
+            $("#result-detailcontainer a.shareBanner").click(function() { showShareBanner("#result-detailcontainer", openTestUUID); });
 
             //reset everything
-            $("#verlauf-detailcontainer .speed-curve-graph-download").empty();
-            $("#verlauf-detailcontainer .speed-curve-table-download").find("tr:gt(0)").remove();
-            $("#verlauf-detailcontainer .speed-curve-graph-upload").empty();
-            $("#verlauf-detailcontainer .speed-curve-table-upload").find("tr:gt(0)").remove();
-            $("#verlauf-detailcontainer .signal-curve-graph").empty();
-            $("#verlauf-detailcontainer .signal-curve-table").find("tr:gt(0)").remove();
-            $("#verlauf-detailcontainer .test-map-container").find("*").not("#lightboxbutton").remove();
-            $("#verlauf-detailcontainer .social").empty();
+            $("#result-detailcontainer .speed-curve-graph-download").empty();
+            $("#result-detailcontainer .speed-curve-table-download").find("tr:gt(0)").remove();
+            $("#result-detailcontainer .speed-curve-graph-upload").empty();
+            $("#result-detailcontainer .speed-curve-table-upload").find("tr:gt(0)").remove();
+            $("#result-detailcontainer .signal-curve-graph").empty();
+            $("#result-detailcontainer .signal-curve-table").find("tr:gt(0)").remove();
+            $("#result-detailcontainer .test-map-container").find("*").not("#lightboxbutton").remove();
+            $("#result-detailcontainer .social").empty();
 
 
             //ping curve
             if (testdata.speed_curve.ping.length > 0) {
-                drawPingCurve("#verlauf-detailcontainer", testdata.speed_curve.ping);
+                drawPingCurve("#result-detailcontainer", testdata.speed_curve.ping);
             }
 
             if (testdata.speed_curve.download.length>0 && testdata.speed_curve.upload.length>0) {
                 try {
-                    drawSingleSpeedCurve("#verlauf-detailcontainer",testdata.speed_curve.download,"download");
-                    drawSingleSpeedCurve("#verlauf-detailcontainer",testdata.speed_curve.upload,"upload");
-                    $("#verlauf-detailcontainer .speed-curve").show(); //both
+                    drawSingleSpeedCurve("#result-detailcontainer",testdata.speed_curve.download,"download");
+                    drawSingleSpeedCurve("#result-detailcontainer",testdata.speed_curve.upload,"upload");
+                    $("#result-detailcontainer .speed-curve").show(); //both
                 } catch(e) {
                     /* IE without canvas */
-                    $("#verlauf-detailcontainer .speed-curve").hide();
+                    $("#result-detailcontainer .speed-curve").hide();
                 }
             } else {
-                $("#verlauf-detailcontainer .speed-curve").hide();
+                $("#result-detailcontainer .speed-curve").hide();
             }
 
             //if at least two entries
@@ -802,26 +802,26 @@ function loadOpenTestData(openTestUUID, testUUIDForZipPopup) {
                         durationPing = (lastPing.time_elapsed + lastPing.ping_ms) - beginPing;
                     }
 
-                    drawSignalCurve("#verlauf-detailcontainer", testdata.speed_curve, testdata.time_dl_ms, testdata.duration_download_ms, testdata.time_ul_ms, testdata.duration_upload_ms, beginPing, durationPing);
+                    drawSignalCurve("#result-detailcontainer", testdata.speed_curve, testdata.time_dl_ms, testdata.duration_download_ms, testdata.time_ul_ms, testdata.duration_upload_ms, beginPing, durationPing);
                 } catch (e) { /* IE without canvas */
                 }
             } else {
                 //if no speed curve => hide graph
-                $("#verlauf-detailcontainer" + " .signal-curve").hide();
+                $("#result-detailcontainer" + " .signal-curve").hide();
             }
 
             //if there is no position => hide map
             if (testdata.lat === null && testdata.long === null) {
-                $("#verlauf-detailcontainer .test-map").hide();
-                $("#verlauf-detailcontainer .test-long").parent().parent().remove();
+                $("#result-detailcontainer .test-map").hide();
+                $("#result-detailcontainer .test-long").parent().parent().remove();
             } else {
                   //if there is no position or not accurate => hide map
                 if (testdata.loc_accuracy !== null && testdata.loc_accuracy <= 2000) {
-                    $("#verlauf-detailcontainer .test-map").show();
+                    $("#result-detailcontainer .test-map").show();
                     var useBasemapAT = (testdata.country_location !== null && testdata.country_location.toLowerCase() === "at")?true:false;
-                    setPosition("#verlauf-detailcontainer",testdata.lat,testdata.long,testdata.loc_accuracy, testdata.speed_curve.location,testdata.distance, useBasemapAT);
+                    setPosition("#result-detailcontainer",testdata.lat,testdata.long,testdata.loc_accuracy, testdata.speed_curve.location,testdata.distance, useBasemapAT);
                 } else {
-                    $("#verlauf-detailcontainer .test-map").hide();
+                    $("#result-detailcontainer .test-map").hide();
                 }
             }
         }
@@ -835,18 +835,18 @@ function loadOpenTestData(openTestUUID, testUUIDForZipPopup) {
             //put results in the table
             //reset + save for later
             if (qosPrototypeHTML === null) {
-                qosPrototypeHTML = $("#verlauf-detailcontainer .testresult-qos").find(".prototype").clone();
+                qosPrototypeHTML = $("#result-detailcontainer .testresult-qos").find(".prototype").clone();
             }
             else {
                 //reset
-                $("#verlauf-detailcontainer .testresult-qos tbody").remove();
-                $("#verlauf-detailcontainer .testresult-qos table").append(qosPrototypeHTML);
+                $("#result-detailcontainer .testresult-qos tbody").remove();
+                $("#result-detailcontainer .testresult-qos table").append(qosPrototypeHTML);
             }
             if (data.error.length === 0) {
-                printQoSTestData(data, "#verlauf-detailcontainer");
-                $("#verlauf-detailcontainer .testresult-qos").show();
+                printQoSTestData(data, "#result-detailcontainer");
+                $("#result-detailcontainer .testresult-qos").show();
             } else {
-                $("#verlauf-detailcontainer .testresult-qos").hide();
+                $("#result-detailcontainer .testresult-qos").hide();
             }
         }
     });

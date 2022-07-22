@@ -243,11 +243,8 @@
             "/Result": "Result",
             "/Ping": "Ping",
             "/Icon": "Icon",
-            "/Karte": "Karte",
-            "/Statistik": "Statistik",
             "/Opentests": "Opentests",
-            "/Verlauf": "Verlauf",
-            "/Optionen": "Optionen",
+            "/Result": "Result",
             "/Loop": "Loop",
             "/Opentests": "Opentests",
             "/CertMeasurement": "CertMeasurement",
@@ -288,9 +285,6 @@
                     });
     
                     var html = $.html();
-    
-                    //remove piwik
-                    html = html.replace(/piwik\.rtr\.at/g,"www.netztest.at/piwik");
     
                     fs.writeFile(path, html, function(err) {
                         count++;
