@@ -250,7 +250,7 @@
             "/Optionen": "Optionen",
             "/Loop": "Loop",
             "/Opentests": "Opentests",
-            "/ZertMessung": "ZertMessung",
+            "/CertMeasurement": "CertMeasurement",
             "/tk/nettest" : "",
             "/en": "",
             "/cs": ""
