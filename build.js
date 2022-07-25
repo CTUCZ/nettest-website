@@ -17,7 +17,7 @@
     var randomstring = require('randomstring');
     var gitDescribe = require('git-describe');
     var mkdirp = require('mkdirp');
-    var sass = require('metalsmith-sass');
+    var sass = require('@metalsmith/sass');
     var ignore = require('metalsmith-ignore');
     
     var nunjucks = require('nunjucks');
@@ -39,7 +39,7 @@
     var target = null, targets = ["qostest","nettest"];
     var useWatch = false;
     var downloadedOnce = false;
-    var updateRtrDependencies = true;
+    var updateCtuDependencies = true;
     
     //check command line to find which target should be built
     process.argv.forEach(function(val, index, array) {
@@ -52,8 +52,8 @@
         if (index >= 3 && val === "watch") {
             useWatch = true;
         }
-        else if (index >= 3 && val == "--ignore-rtr-dependencies") {
-            updateRtrDependencies = false;
+        else if (index >= 3 && val == "--ignore-ctu-dependencies") {
+            updateCtuDependencies = false;
         }
     });
     
@@ -66,7 +66,7 @@
     //execute
     var metalsmith = Metalsmith(__dirname)
         //.use(generateRandomJSTestFilesIfMissing())
-        //.use(updateRtrDependencies ? fetchRemoteFiles(remoteFiles) : noOp)
+        //.use(updateCtuDependencies ? fetchRemoteFiles(remoteFiles) : noOp)
         .use(setConfig())
         .use(duplicateFile())
         .use(ignore( ['scss/**/*.scss','!scss/app.scss']))
@@ -150,7 +150,7 @@
     function noOp(files, metalsmith, done) { done() }
     
     /**
-     * Transform the filelist provided by alladin-it for RTR-dependencies
+     * Transform the filelist provided by alladin-it for CTU-dependencies
      * to accomodate the fetchRemoteFiles-Metalsmith-Plugin
      * @param json
      */
@@ -159,13 +159,13 @@
         json.forEach(function(arg) {
             if (arg.dirAndFile.indexOf("/__nettest") === 0) {
                 var file = {
-                    source : RTR_FILES_BASEURL + arg.dirAndFile,
+                    source : CTU_FILES_BASEURL + arg.dirAndFile,
                     target : "./templates/parts/" + arg.file
                 };
             }
             else {
                 var file = {
-                    source : RTR_FILES_BASEURL + arg.dirAndFile,
+                    source : CTU_FILES_BASEURL + arg.dirAndFile,
                     target : "src/" + arg.dirAndFile.replace("fileadmin","fileadmin.nettest")
                 };
             }
@@ -228,13 +228,13 @@
     
     /**
      * Replaces all URLS in the given files with URLS now redirecting
-     * to the RTR baseurl
+     * to the CTU baseurl
      *
      * @param fileList
      * @returns {Function}
      */
-    function transformRTRUrls(fileList) {
-        //transformation for RTR Nettest 301 URLs
+    function transformCTUUrls(fileList) {
+        //transformation for CTU Nettest 301 URLs
         var specialNetTestUrls = {
             "/Test": "Test",
             "/Help": "Help",
@@ -397,5 +397,4 @@
         var isRoot = (file.indexOf(path.sep) <0);
     
         return isHTML && isRoot;
-    }
-    
+    }    
