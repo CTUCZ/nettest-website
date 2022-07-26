@@ -1,0 +1,12 @@
+{% extends basetemplate %}
+{% set title = Lang.not_found_page.title %}
+{% set containerclass = "full-width" %}
+
+{% block content %}
+<div class="uk-section-default uk-section content">
+    <div class="uk-container uk-text-center">
+        <h2>{{ Lang.not_found_page.main }}</h2>
+        <p>{{ Lang.not_found_page.note}}</p>
+    </div>
+</div>
+{% endblock %}

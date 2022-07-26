@@ -1,0 +1,20 @@
+{% extends basetemplate %}
+{% set title = Lang.news %}
+{% set containerclass = "full-width" %}
+
+{% block headerscriptingExtended %}
+<script src="jquery.js"></script> 
+    <script> 
+    $(function(){
+      $("#includeNews").load("news.html"); 
+    });
+    </script>
+{% endblock %}
+
+{% block content %}
+<div class="uk-section-default uk-section content">
+    <div class="uk-container">
+        <div id="includeNews"></div>
+    </div>
+</div>
+{% endblock %}

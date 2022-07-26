@@ -1,0 +1,8 @@
+/build
+/.idea
+/node_modules
+/jstest.nettest/files
+/build.sh
+/src/fileadmin.nettest/
+*.marks
+templates/parts/

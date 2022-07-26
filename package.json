@@ -1,0 +1,30 @@
+{
+  "name": "nodeNettest",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node ./build.js nettest && http-server build -p 8081 -c-1",
+    "dev": "concurrently --kill-others \"node ./build.js nettest watch\" \"http-server build -p 8081 -c-1\"",
+    "build": "node ./build.js nettest"
+  },
+  "dependencies": {
+    "debug": ">=2.6.9",
+    "git-describe": "^1.1.2",
+    "metalsmith": "^1.0.0",
+    "metalsmith-fingerprint-ignore": "cproof/metalsmith-fingerprint-ignore",
+    "metalsmith-ignore": "^1.0.0",
+    "metalsmith-layouts": "^1.4.2",
+    "metalsmith-sass": "2.0.0",
+    "metalsmith-watch": "^1.0.3",
+    "node-sass": "6.0.1",
+    "mkdirp": "^0.5.1",
+    "nunjucks": "^2.0.0",
+    "randomstring": "^1.0.7",
+    "request": "^2.57",
+    "uikit": "3.5.8",
+    "cheerio": "^0.22.0"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.1"
+  }
+}

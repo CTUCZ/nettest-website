@@ -1,0 +1,88 @@
+{% extends basetemplate %}
+{% set title = Lang.index %}
+
+
+{% block headerscriptingExtended %}
+
+
+<script src="../{{ fingerprint['lib/olv3/ol.js'] }}" type="text/javascript"></script>
+<script src="../{{ fingerprint['lib/handlebars.min.js'] }}" type="text/javascript"></script>
+<script src="../{{ fingerprint['lib/moment.min.js'] }}" type="text/javascript"></script>
+<script src="../{{ fingerprint['lib/screenfull.min.js'] }}" type="text/javascript"></script>
+
+<script type="text/javascript" src="../{{ fingerprint['js/Index.js'] }}"></script>
+
+<link rel="stylesheet" type="text/css" href="../{{ fingerprint['lib/olv3/ol.css'] }}" media="screen"/>
+
+<script src="../{{ fingerprint['lib/date-de-AT.js'] }}" type="text/javascript"></script>
+
+<style>
+
+</style>
+{% endblock %}
+
+
+{% block content %}
+<div class="uk-container" id="nettest_homepage">
+    <div class="uk-grid-margin uk-container-rtr uk-grid uk-grid-stack" uk-grid="">
+        <div class="uk-flex-auto uk-first-column">
+            <!-- Page Content -->
+            <p>{{ Lang.index_content.service_description }}</p>
+            {{ Lang.index_content.detailed_dsc }}
+            <!-- Our Services -->
+            <div class="uk-flex-auto uk-first-column">
+                <div class="uk-grid-margin uk-grid uk-grid-stack" uk-grid="">
+                    <div class="uk-flex-auto uk-width-1-1@m uk-first-column">
+
+                    </div>
+                </div>
+                <div class="uk-grid-margin-large  uk-grid uk-grid-stack uk-container" uk-grid="">
+                    <div class="uk-flex-auto uk-width-1-1@m uk-first-column">
+                        <div class="uk-margin-large">
+                            <div class="rozcestnik">
+                                <div class="rozcestnik-item">
+                                    <a href="Test">
+                                        <div class="rozcestink-title">
+                                            {{ Lang.index_content.test_section.heading }}
+                                        </div>
+                                        <div class="rozcestink-content">{{ Lang.index_content.test_section.desc }}</div>
+                                    </a>
+                                </div>
+                                <div class="rozcestnik-item">
+                                    <a href="Loop">
+                                        <div class="rozcestink-title">
+                                            {{ Lang.loop_mode }}
+                                        </div>
+                                        <div class="rozcestink-content">{{ Lang.index_content.loop_mode_content }}</div>
+
+                                    </a>
+                                </div>
+                                <div class="rozcestnik-item">
+                                    <a href="/{{ Lang.lang }}/CertMeasurement">
+                                        <div class="rozcestink-title">
+                                            {{ Lang.certified_measurement }}
+                                        </div>
+                                        <div class="rozcestink-content">{{ Lang.index_content.certified_content }}</div>
+
+                                    </a>
+                                </div>
+                                <div class="rozcestnik-item">
+                                    <a href="/{{ Lang.lang }}/Opentests">
+                                        <div class="rozcestink-title">
+                                            {{ Lang.opendata }}
+                                        </div>
+                                        <div class="rozcestink-content">{{ Lang.index_content.opendata_content }}</div>
+
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+    {% endblock %}
