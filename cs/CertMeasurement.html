@@ -1,0 +1,639 @@
+<!doctype html>
+<html lang="cs">
+<head>
+    <!-- Basic page info -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Certifikované měření | ČTÚ – NetTest</title>
+
+    <!-- CSS includes -->
+    <link rel="stylesheet" href="../css/jquery-ui.min-f8f1a615f0d7a466e1c84fafadc3f523.css">
+    <link rel="stylesheet" href="../scss/app-7c89e0ed6e8bd0eecb169c4a66253673.css">
+    <!-- Meta information -->
+    <meta name="description" content="Nástroj <b>ČTÚ-NetTest</b>, provozovaný Českým telekomunikačním úřadem, informuje uživatele o aktuální kvalitě jejich služby přístupu k internetu v podobě <b>skutečně dosahované rychlosti</b> stahování (download), vkládání (upload) a doby odezvy (ping). Nabízí možnost <b>certifikovaného měření</b>, které plně automaticky provede celý proces měření s výsledkem v podobě PDF dokumentu, který může uživatel použít pro případnou reklamaci služby přístupu k internetu v pevném místě. Pokud chcete provést reklamaci služby přístupu k internetu v pevném místě (tzv. pevného internetu), je nutné vždy využít režimu certifikovaného měření, přičemž jediným přípustným způsobem měření je připojení vašeho uživatelského zařízení (PC, notebook) přímo ke koncovému zařízení (routeru, resp. modemu) nebo do koncového bodu sítě (pokud umožňuje přímé připojení uživatelského zařízení bez nutnosti konverze), a to kabelem (nikoli pomocí Wi-Fi), za dále definovaných podmínek."/>
+    <meta name="robots" content="index, follow">
+    <!-- Social media (frontend only) -->
+    <meta property="og:site_name" content="ČTÚ – NetTest"/>
+
+    <meta property="og:title" content="Certifikované měření - ČTÚ – NetTest"/>
+
+    <meta property="og:type" content="website"/>
+
+    
+    <script type="text/javascript" src="../js/jquery-1.8.2.min-5b9201ae3ab8f5dcf8c5792bcbd316c2.js"></script>
+    <script type="text/javascript" src="../js/menu-cf5caea848aefa6afcc67b45ea2f1dd3.js"></script>
+    <script type="text/javascript" src="../lib/jquery_ui/jquery-ui.min-1043f80cd6a5a8b2e82e1bde0f31b3a9.js"></script>
+    <script type="text/javascript" src="../js/jquery.history-cc1c80297e02d927f9b07e82f7cfcaf8.js"></script>
+    <script type="text/javascript" src="../js/javaconf-ca23a74bac6f5c3cf64829b75e08853f.js"></script>
+    <script type="text/javascript" src="../js/functions-1c8c16534ef21aea3785d63073ac6d24.js"></script>
+    <script src="../lib/handlebars.min-fdc5dfd7ea2aca849de7ef99eaf9f807.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="Lang.js"></script>
+    <script type="text/javascript" src="../js/popupform-c5a1bb01fdb9491dc655609b4c7c8a4e.js"></script>
+    <script type="text/javascript" src="../js/global-b302c6c2df017181cd0ffb092b21bfff.js"></script>
+
+    
+    
+    <link rel="stylesheet" href="../">
+
+    <script src="../js/vendor/modernizr-2.6.1.min-69933cd1a19bd052d23f4f9f5b26e574.js"></script>
+    <script type="text/javascript" src="../lib/rmbtws.min-c1f09e5d658ad918dbcb06cb8e109654.js"></script>
+    <script type="text/javascript" src="../lib/moment.min-23901df223d46bc4aabc4c0e40a23368.js"></script>
+    <script type="text/javascript" src="../lib/handlebars.min-fdc5dfd7ea2aca849de7ef99eaf9f807.js"></script>
+    <script type="text/javascript" src="../lib/jquery.validate.min-67ee7e1915b04a83345a2c2b62f1fd31.js"></script>
+    <script type="text/javascript" src="../lib/client-compress.min-98b72316e90f389f71fa492b0987c9ec.js"></script>
+    <script type="text/javascript" src="../js/CertMeasurement-e9f58fc00f92dad2b2956904654e95d9.js"></script>
+    <script type="text/javascript" src="../js/Loop-38e652baf056578b1798233de7d75eb3.js"></script>
+    <script>
+        repetitions = 6;
+        waitingTime = 15*60;
+        certTest = true;
+    </script>
+
+    <style>
+        input.form-control {
+            background-color: white;
+        }
+
+        .loader {
+            border: 2px solid #c3c3c3;
+            border-top: 2px solid #2362a2;
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            animation: loader-spin 2s linear infinite;
+            float: left;
+            margin-right: 10px;
+            margin-top: 3px;
+            display: none;
+        }
+
+        @keyframes loader-spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .progress-bar.inactive {
+            background-color: #545454;
+        }
+
+        tr.median {
+            font-weight: bold;
+        }
+
+        #loop-mode, #loop-mode-form-container, #infofinished, #infofailed {
+            display: none;
+        }
+    </style>
+
+
+
+</head>
+
+<body class="blue">
+
+<div class="tm-page">
+    <!-- Toolbar -->
+    <div class="tm-toolbar tm-toolbar-default">
+        <div class="uk-navbar-container"
+             uk-navbar="mode: click;boundary-align:true;dropbar:true;dropbar-anchor:!.uk-container;dropbar-mode:slide">
+            <div class="w100">
+                <div class="uk-container uk-container-large">
+                    <div id="icontoggle" class="uk-grid">
+                        <div class="uk-inline">
+                            <button class="uk-button uk-button-top" type="button">
+                                ČTÚ
+                                <span class="uk-margin-small-right chevdown" uk-icon="chevron-down"></span><span
+                                    class="uk-margin-small-right chevup" uk-icon="chevron-up"></span></button>
+                            <div class="uk-navbar-dropdown"
+                                 uk-drop="mode:click;offset:0;duration:100;delay-show:0;boundary: !.uk-container; boundary-align: true; pos: bottom-justify;">
+                                <div class="uk-container uk-container-large">
+                                    <ul class="uk-subnav uk-list-divider">
+                                        <li><a href="https://www.ctu.cz/plattezaskutecnourychlost" class="area-switch" target="_blank">Jak reklamovat</a></li>
+                                        <li><a href="https://www.ctu.cz/" class="area-switch" target="_blank">Český telekomunikační úřad</a></li>
+                                        <li><a href="https://qos.ctu.cz/" class="area-switch" target="_blank">Vizualizační portál</a></li>
+                                        <li><a href="https://srovnavac.ctu.cz/" class="area-switch" target="_blank">Srovnávací nástroj</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                                          <div class="uk-inline">
+                                              <button class="uk-button uk-button-top" type="button">CS<span
+                                                      class="uk-margin-small-right chevdown" uk-icon="chevron-down"></span><span
+                                                      class="uk-margin-small-right  chevup" uk-icon="chevron-up"></span></button>
+                                              <div class="uk-navbar-dropdown"
+                                                   uk-drop="mode:click;offset:0;duration:100;delay-show:0;boundary: !.uk-container; boundary-align: true; pos: bottom-justify;">
+                                                  <div class="uk-container uk-container-large">
+                                                      <ul class="uk-subnav uk-list-divider language-select">
+                                                          <li>
+                                                              <a href="/cs" data-lang-name="cs">
+                                                                  Czech
+                                                              </a>
+                                                          </li>
+                                                          <li>
+                                                              <a href="/en" data-lang-name="en">
+                                                                  English
+                                                              </a>
+                                                      </ul>
+                                                  </div>
+                                              </div>
+                                          </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Mobiles -->
+    <div class="tm-header-mobile uk-hidden@l">
+        <div sel-target=".uk-navbar-container">
+            <div class="uk-navbar-container">
+                <nav uk-navbar="" class="uk-navbar">
+                    <div class="uk-navbar-left">
+                        <div class="uk-grid-small uk-text-center logos-mobile uk-grid uk-grid-stack" uk-grid="">
+                            <div class="uk-first-column">
+                                <a href="/cs">
+                                    <picture>
+                                        <img src='/images/logo.svg' alt="Logo ČTÚ – NetTest" title="ČTÚ"
+                                             style="height:30px;">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-navbar-right">
+                        <a id="mobmenu" class="uk-navbar-toggle" href="#tm-mobile" uk-toggle="animation: true;">
+                            <div class="toggleopen uk-icon uk-navbar-toggle-icon" uk-navbar-toggle-icon="">
+                                <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+                                     data-svg="navbar-toggle-icon">
+                                    <rect y="9" width="20" height="2"></rect>
+                                    <rect y="3" width="20" height="2"></rect>
+                                    <rect y="15" width="20" height="2"></rect>
+                                </svg>
+                            </div>
+                            <span class="menclose uk-icon" uk-icon="icon: close; ratio: 1.8">
+                            <svg width="36" height="36"
+                                 viewBox="0 0 20 20"
+                                 xmlns="http://www.w3.org/2000/svg"
+                                 data-svg="close"><path
+                                    fill="none" stroke="#000" stroke-width="1.06" d="M16,16 L4,4"></path><path
+                                    fill="none"
+                                    stroke="#000"
+                                    stroke-width="1.06"
+                                    d="M16,4 L4,16"></path></svg>
+                        </span>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+            <div id="tm-mobile" class="" hidden="">
+                <div class="uk-background-default uk-padding">
+                    <div class="uk-child-width-1-1 uk-grid uk-grid-stack" uk-grid="">
+                        <div>
+                            <div class="uk-panel" id="module-menu-mobile">
+                                <ul class="uk-nav uk-nav-default uk-list uk-list-divider">
+                                    <li><a href="/">Domů</a></li>
+                                    <li class="">
+                                        <a href="Result">Moje měření</a>
+                                    </li>
+                                    <li><a href="Test">Spustit test</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Desktop -->
+    <div class="tm-header uk-visible@l" uk-header="">
+        <div uk-sticky="" media="@l" cls-active="uk-navbar-sticky" sel-target=".uk-navbar-container" class="uk-sticky"
+             style="">
+            <div class="uk-navbar-container">
+                <div class="uk-container uk-container-large">
+                    <nav uk-navbar="mode: click;boundary-align:true;dropbar:true;dropbar-anchor:!.uk-navbar-container;dropbar-mode:slide"
+                         class="uk-navbar">
+                        <div class="uk-navbar-left">
+                            <div class="uk-child-width-expand@s uk-text-center logos uk-grid-small uk-grid" uk-grid="">
+                                <div class="uk-first-column">
+                                    <a href="/cs">
+                                        <picture>
+
+                                            <img src='/images/logo.svg' alt="Logo ČTÚ" class="logo">
+                                        </picture>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="uk-navbar-right">
+                            <ul class="uk-navbar-nav">
+                                <li><a href="/cs">Domů</a></li>
+                                <li class="">
+                                    <a href="Result">Moje měření</a>
+                                </li>
+                                <li class="nav-button"><a href="Test" class="uk-button uk-button-default">Spustit test</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="uk-sticky-placeholder" style="height: 70px; margin: 0px;" hidden=""></div>
+    </div>
+    <!-- Breadcrumbs -->
+    <div class="uk-section-default uk-section uk-section-xsmall" id="breadcrumbs">
+        <div class="uk-container uk-container-large">
+            <ul class="uk-breadcrumb">
+                <li><a href="/cs">ČTÚ – NetTest</a></li>
+                <li class="uk-disabled">
+                    <a>Certifikované měření</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="uk-section-default uk-section">
+        <div id="popuperror"></div>
+        
+<div class="uk-container">
+    <div class="steps uk-container uk-margin-bottom">
+        <ul class="breadCrumbs">
+            <li class="breadCrumb-intro"><a>1. Informace</a></li>
+            <li class="breadCrumb-intermediate"><a>2. Údaje</a></li>
+            <li class="breadCrumb-additional"><a>3. Informace o službě</a></li>
+            <li class="breadCrumb-measurement"><a>4. Měření</a></li>
+            <li class="breadCrumb-report"><a>5. Výsledek</a></li>
+        </ul>
+    </div>
+
+    <h2 id="h2">Certifikované měření</h2>
+    <!-- <div id="loading-placeholder">
+        <h2>Test framework is loading...</h2>
+    </div>-->
+
+    <div id="intro-container">
+        <p>Jsou-li splněny všechny podmínky měření, umožňuje certifikované měření uplatnit výsledky tohoto měření jako průkazná zjištění o kvalitě Vaší služby přístupu k internetu v pevném místě (tzv. pevného internetu), pokud je nabízena na území České republiky. Tato zjištění můžete uplatnit v případě, pokud se rozhodnete využít prostředky nápravy, které máte k dispozici podle vnitrostátního práva.</p>
+        <p>V případě vzniku jakékoliv <b>velké trvající</b> či <b>velké pravidelně se opakující odchylky</b> skutečného výkonu služby, pokud jde o rychlost stahování (download) nebo vkládání (upload), od výkonu, který Váš poskytovatel služby přístupu k internetu uvedl ve smluvních podmínkách, můžete u něj kvalitu poskytované služby reklamovat.</p>
+        <p>Důležitým parametrem pro posouzení výkonu služby je v případě služby přístupu k internetu v pevném místě smluvně udávaná hodnota <b>běžně dostupné rychlosti</b>. Ta je rozhodující pro určení, zda dochází k případný odchylkám.</p>
+        <p>Dalším důležitým parametrem je smluvně udávaná <b>minimální rychlost</b>. Pokud skutečně dosahovaná rychlost stahování (download) nebo vkládání (upload) klesne pod smluvně udávanou minimální rychlost pro daný směr datové komunikace, dochází k výpadku služby, tedy k jejímu neposkytování. I v tomto případě máte právo na reklamaci služby.</p>
+        <p><strong>Upozorňujeme, že z obecné povahy přesnosti měřicích nástrojů založených na principu webových prohlížečů lze měřicí nástroj ČTÚ-NetTest použít pro rychlost stahování do (včetně) 500 Mb/s a pro rychlost vkládání do (včetně) 250 Mb/s hodnoty inzerované rychlosti služby</strong>.</p>
+        <h3>Podmínky měření</h3>
+        <p class="preface">Před provedením certifikovaného měření si pozorně přečtěte úplné znění podmínek měření, které jsou uvedeny v <a href='https://nettest.cz/Pruvodce_certifikovanym_merenim.pdf'>návodu k jeho provedení</a>. Obsahuje také kontrolní seznam, který Vám pomůže certifikované měření provést. S dotazy ohledně certifikovaného měření se můžete obrátit na <a href='mailto:nettest@ctu.cz'>nettest@ctu.cz</a>.<p>
+        </p>
+        <p>
+            <strong>Prosíme, věnujte pozornost zejména následujícímu:</strong>
+        <ul>
+            <li>
+                Certifikované měření lze provádět pomocí webového prohlížeče (Chrome, Edge, Firefox apod.) na Vašem uživatelském zařízení (tj. desktop PC, notebook) s aktualizovaným operačním systémem a webovým prohlížečem.
+            </li>
+            <li>
+                Vaše uživatelské zařízení (desktop PC, notebook) musí být vždy připojeno k uživatelskému ethernetovému rozhraní (porty RJ‑45) koncového zařízení pevným způsobem, tedy metalickým (min. Cat. 5e) nebo případně optickým kabelem.
+            </li>
+            <li>
+                Výkon uživatelského zařízení, ale i operační systém má zásadní vliv na naměřené hodnoty skutečné rychlosti. Pro měření rychlostí vyšších něž 100 Mb/s se doporučuje operační systém, který využívá algoritmus TCP CUBIC (Windows 10 a vyšší, MacOS X Yosemite a vyšší, Linux kernel 2.6.19 a vyšší).
+            </li>
+            <li>
+                Z povahy měřicích nástrojů založených na bázi webových prohlížečů lze měřicí nástroj NetTest použít pro certifikované měření kvality služeb přístupu k internetu do inzerovaných hodnot menších nebo rovno limitním hodnotám 500 Mbit/s (download) a 250 Mb/s (upload).
+            </li>
+            <li>
+                Během celého procesu certifikovaného měření nepoužívejte Vaše zařízení pro jiné aplikace.
+            </li>
+            <li>
+                Před spuštěním měřicího cyklu se ujistěte, že po celou dobu měření nebudou službu přístupu k internetu využívat jiní uživatelé (např. rodinní příslušníci v rámci chytrých koncových zařízení, např. prostřednictvím mobilních telefonů, tabletů, TV atd.).
+            </li>
+        </ul>
+        </p>
+        <h3>Proces certifikovaného měření</h3>
+        <p>
+            Certifikované měření se skládá ze 6 časově diverzifikovaných testů během dne v rámci měřicího cyklu. Měřicí cyklus trvá 1 hodinu a 30 minut. V rámci testu jsou automaticky prováděna jednotlivá měření o celkové délce měření 10 sekund pro každý směr datové komunikace (download a upload). Časový rozestup mezi jednotlivými testy je 15 minut.
+        </p>
+        <p>
+            Dotazy ohledně certifikovaného měření směřujte, prosím, na adresu <a href='mailto:nettest@ctu.cz'> nettest@ctu.cz </a>.
+        </p>
+        <p>
+            <button type="submit" class="uk-button uk-button-primary">Další</button>
+        </p>
+    </div>
+
+    <div id="intermediate-container" style="display:none">
+        <h3>Základní informace o certifikovaném měření</h3>
+        <form id="intermediate-form" class="uk-form uk-padding-remove">
+            <div class="uk-margin-bottom">
+                <label class="uk-form-label" for="title_prepend">Oslovení</label>
+                <input id="title_prepend" name="title_prepend" type="text" class="uk-input">
+            </div>
+            <div class="uk-margin-bottom">
+                <label class="uk-form-label" for="first_name">Křestní jméno (povinná položka)</label>
+                <input id="first_name" name="first_name" type="text" class="uk-input"
+                       required="required">
+            </div>
+            <div class="uk-margin-bottom">
+                <label class="uk-form-label" for="last_name">Příjmení (povinná položka)</label>
+                <input id="last_name" name="last_name" type="text" class="uk-input" required="required">
+            </div>
+            <div class="uk-margin-bottom">
+                <label class="uk-form-label" for="title_append">Akademický titul</label>
+                <input id="title_append" name="title_append" type="text" class="uk-input">
+            </div>
+            <div class="uk-margin-bottom">
+                <label class="uk-form-label" for="address">Místo měření (povinná položka)</label>
+                <textarea id="address" name="address" cols="40" rows="2" class="uk-textarea" placeholder="Adresní místo, ve kterém je měření prováděno"
+                          aria-describedby="textareaHelpBlock" required="required"></textarea>
+            </div>
+
+            <div class="uk-margin-bottom">
+                <div style="visibility: hidden">
+                    <label class="uk-form-label">*</label>
+                    <div class="">
+                        <label for="first">
+                            <input name="first" id="first" type="radio" value="y" checked="checked" class="uk-radio" />
+                            </label>
+                    </div>
+                    <div class="uk-margin-bottom">
+                        <label for="not_first">
+                            <input name="first" id="not_first" type="radio" value="n" class="uk-radio" />
+                            </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <p>
+                        <button type="submit" class="uk-button uk-button-primary"  data-next="Další" data-start="Spustit certifikované měření" >Další</button>
+                    </p>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+
+
+
+    <div id="additional-information-container" style="display: none">
+
+        <div id="additional-information">
+            <h3>Informace o službě přístupu k internetu v pevném místě</h3>
+            <div class="certified-form">
+                <form id="additional-information-form" class="uk-form uk-padding-remove">
+                    <div class="uk-margin-top" style="display: none">
+                        <label for="isp_name2"  class="uk-form-label">Název poskytovatele služby (povinná položka)</label>
+                        <input id="isp_name2" name="isp_name2" type="text" class="uk-input" required="required">
+                    </div>
+                    <div class="uk-margin-top">
+                        <label for="isp_name"  class="uk-form-label">Název poskytovatele služby (povinná položka)</label>
+                        <input id="isp_name" name="isp_name" type="text" class="uk-input" required="required">
+                    </div>
+                    <div class="uk-margin-top">
+                        <label for="isp_service_name"  class="uk-form-label">Název služby (povinná položka)</label>
+                        <input id="isp_service_name" name="isp_service_name" type="text" class="uk-input" required="required">
+                    </div>
+                    <div class="uk-margin-top">
+                        <label for="isp_contract_number"  class="uk-form-label">Číslo smlouvy (povinná položka)</label>
+                        <input id="isp_contract_number" name="isp_contract_number" type="text" class="uk-input" required="required">
+                    </div>
+                    <div class="uk-margin-top">
+                        <label for="type_text"  class="uk-form-label">Popište Váš přístup k internetu</label>
+                        <textarea id="type_text" name="type_text" cols="40" rows="5"
+                                  class="uk-textarea"
+                                  aria-describedby="type_textHelpBlock"></textarea>
+                        <span id="type_textHelpBlock" class="form-text text-muted help-block">Jakou přístupovou technologií je Vaše služba realizována (xDSL, optika, Wi-Fi, DOCSIS, jiná)? Jaké koncové zařízení pro připojení k internetu používáte? Je př ipojen Váš počítač (notebook) kabelem přímo do zásuvky (ethernet, RJ-45), nebo používáte k připojení k internetu modem, případně modem s funkcí routeru (disponuje LAN porty, případně umožňuje i připojení přes Wi-Fi)?  Pokud je to možné, vepište přesné výrobce a označení typu koncového zařízení (modem, router).</span>
+                    </div>
+                    <div class="uk-margin-top">
+                        <label for="test-device"  class="uk-form-label">Popište Vaše uživatelské zařízení, které používáte pro měření</label>
+                        <textarea id="test-device" name="test_device" cols="40" rows="3"
+                                  class="uk-textarea" aria-describedby="test-deviceHelpBlock"></textarea>
+                        <span id="test-deviceHelpBlock" class="form-text text-muted help-block">Uveďte typ Vašeho uživatelského zařízení (počítač, notebook), kterým budete test provádět, typ a verzi operačního systému (např. pro operační systém Windows naleznete vše zde: Start / Ovládací panely / Systém a zabezpečení / Systém) , název a verzi webového prohlížeče v kterém budete certifikované měření provádět (najdete většinou v záložce nastavení / informace o daném webovým prohlížeči).</span>
+                    </div>
+                    <div class="uk-margin-top upload">
+                        <label for="test-pictures"  class="uk-form-label">Nahrávání fotografií</label>
+                        <input id="test-pictures" class="uk-display-block" type="file" multiple="multiple" name="test_pictures[]" accept="image/*"  />
+                        <span id="test-deviceUploadBlock" class="form-text text-muted help-block">Prosíme, zašlete fotografii způsobu připojení k internetu Vašeho uživatelského zařízení (počítač, notebook), na kterém budete provádět měření, tedy zásuvky pro připojení, případně koncového zařízení v podobě modemu, nebo modemu s funkcí routeru, v jejichž případě bude na fotografii vidět stav indikačních LED diod (jejich barva), výrobce a typ. Pro tento způsob připojení k internetu se doporučuje i vytvořit fotografii zapojení připojovacího kabelu do koncového zařízení.</span>
+                    </div>
+
+                    <div class="uk-margin-top">
+                        <button name="submit" type="submit" class="uk-button uk-button-primary">Spustit certifikované měření</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="loop-mode" style="display: none">
+
+        <h3>Proces měření</h3>
+        <p>Upozorňujeme uživatele, že pro správný průběh certifikovaného měření, je nutné mít aktivní záložku s měřením v prohlížeči, jinak se nemusí spustit následný test.</p>
+	<p>
+            Test <span id="testcount">0</span>/<span id="teststotal">8</span>
+        </p>
+
+        <div uk-grid>
+            <div class="progress uk-width-1-1">
+                <div id="testprogress" class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0"
+                     aria-valuemax="100"
+                     style="min-width: 3em;width: 0%">
+                    0%
+                </div>
+            </div>
+            <div id="infocurrent" class="uk-width-1-1">
+                <div class="uk-grid uk-grid-row-collapse uk-grid-column-small" uk-grid>
+                    <div class="uk-width-1-4">Stav</div>
+                    <div class="uk-width-3-4" id="infostatus">-</div>
+                </div>
+                </p>
+                <p></p>
+                <div class="uk-grid uk-grid-row-collapse uk-grid-column-small" uk-grid>
+                    <div class="uk-width-1-4">Zpoždění (Ping)</div>
+                    <div class="uk-width-3-4" id="infoping">
+                        <div class="loader"></div>
+                        <span>-</span></div>
+                </div>
+                <div class="uk-grid uk-grid-row-collapse uk-grid-column-small" uk-grid>
+                    <div class="uk-width-1-4">Rychlost stahování (Download)</div>
+                    <div class="uk-width-3-4" id="infodown">
+                        <div class="loader"></div>
+                        <span>-</span></div>
+                </div>
+                <div class="uk-grid uk-grid-row-collapse uk-grid-column-small" uk-grid>
+                    <div class="uk-width-1-4">Rychlost vkládání (Upload)</div>
+                    <div class="uk-width-3-4" id="infoup">
+                        <div class="loader"></div>
+                        <span>-</span></div>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="uk-margin-top">Měření</h3>
+        <table id="loop_result_table" class="dont-stack uk-table uk-table-small">
+            <thead>
+            <tr>
+                <th scope="col">Čas</th>
+                <th scope="col" class="uk-text-right">Rychlost stahování (Download) Mb/s</th>
+                <th scope="col" class="uk-text-right">Rychlost vkládání (Upload) Mb/s</th>
+                <th scope="col" class="uk-text-right">Zpoždění (Ping) ms</th>
+            </tr>
+            </thead>
+            <tbody id="result_tbody">
+
+            <tr class="median">
+                <td>Průměr</td>
+                <td class="uk-text-right" id="mediandown">-</td>
+                <td class="uk-text-right" id="medianup">-</td>
+                <td class="uk-text-right" id="medianping">-</td>
+            </tr>
+            </tbody>
+        </table>
+        
+            <script id="resultTemplate" type="text/x-handlebars-template">
+                {{#if error }}
+                <tr class="test-result-error">
+                    <td>
+                    {{#if fullDate }}
+                    {{ formatFullDate time }}
+                    {{ else }}
+                    {{ formatDate time }}
+                    {{/if }}
+                    </td>
+                    <td colspan="3">Během meření se vyskytla chyba.</td>
+                </tr>
+                {{ else }}
+                <tr class="test-result">
+                    <td class="uk-table-link">
+                        <a href="Result?{{ testUUID }}" target="_blank">{{#if fullDate }}
+                            {{ formatFullDate time }}
+                        {{ else }}
+                            {{ formatDate time }}
+                        {{/if }}</a>
+                    </td>
+                    <td class="uk-text-right">{{ formatNumberSignificant down }}</td>
+                    <td class="uk-text-right">{{ formatNumberSignificant up }}</td>
+                    <td class="uk-text-right">{{ formatNumberSignificant ping }}</td>
+                </tr>
+                {{/if }}
+            </script>
+        
+        <div class="uk-margin-top">
+            <h3>Výsledek měření</h3>
+            <div id="infonotfinished">
+                <p>Výsledek Vašeho měření bude dostupný ke stažení po ukončení všech časově diverzifikovaných testů.</p>
+                <p id="plannedEnd">Plánované dokončení měření: cca. %X%.</p>
+            </div>
+            <div id="infofailed">
+                <p>Chyba při generování dokumentu. <a href="#">Zkusit znovu</a></p>
+            </div>
+            <div id="infofinished">
+                <form id="download-link-form" method="post" style="display:inline">
+                    <div uk-grid>
+                        <div class="progress uk-width-1-1" id="pdfProgressContainer">
+                            <div id="pdfProgress" class="progress-bar" role="progressbar"
+                                 aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"
+                                 style="min-width: 3em;width: 0%">
+                                0%
+                            </div>
+                        </div>
+                        <p class="uk-width-1-1"><a id="report-link" target="_blank" download="download">Dokument se vytváří ...</a>
+                        </p>
+                    </div>
+                </form>
+                <p>
+                    Měřicí cyklus je dokončen.
+                </p>
+                <p>
+                    <strong>Výsledek certifikovaného měření si uložte nebo vytiskněte. ČTÚ tento dokument neukládá.</strong>
+                </p>
+                <p>
+                    Pokud v rámci certifikovaného měření libovolné 3 výsledky testů ze 6 celkových vykazují výslednou (tj. skutečně dosahovanou) rychlost stahování (download) nebo vkládání (upload) nižší, než je hodnota běžně dostupné rychlosti, kterou Váš poskytovatel služby přístupu k internetu uvedl ve smluvních podmínkách, jedná se s velkou pravděpodobností o vznik velké opakující se odchylky od výkonu služby.
+                </p>
+                <p>
+                    Pokud všech 6 výsledků testů z 6 celkových vykazuje výslednou rychlost stahování (download) nebo vkládání (upload) menší než běžně dostupná rychlost pro daný směr (download/upload), jedná se s velkou pravděpodobností o vznik velké trvající odchylky od výkonu služby.
+                </p>
+                <p>
+                    V případě kteréhokoliv výsledku testu, který vykazuje výslednou rychlost stahování (download) nebo vkládání (upload) menší, než je minimální rychlost pro daný směr, uvedená ve smluvních podmínkách, jedná se o výpadek služby.
+                </p>
+                <p>
+                    V obou případech velkých odchylek, stejně jako v případě výpadku služby, můžete využít svého práva reklamovat vadné poskytnutí služby u svého poskytovatele služby přístupu k internetu.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+
+</div>
+
+
+<!-- Footer -->
+<div id="footer" class="uk-section-default uk-section uk-section-small">
+    <div class="uk-container uk-container-large">
+        <div class="uk-grid-margin uk-grid" uk-grid="" uk-height-match="target: .uk-card; row: false">
+            <div class="uk-flex-auto uk-width-1-2@s uk-first-column m1">
+                <div class="uk-margin">
+                    <p class="logo-footer">
+                        Český telekomunikační úřad
+                        <br/>E-mail: <a target='_self' href="mailto:nettest@ctu.cz">nettest@ctu.cz</a>
+                        <br/><a target='_self' href="https://www.ctu.cz/">www.ctu.cz</a>
+                        <br/><a target='_self' href="https://github.com/CTUCZ">GitHub</a>
+                    </p>
+                </div>
+            </div>
+            <div class="uk-flex-auto uk-width-1-2 uk-width-1-4@s footer-large">
+                <ul class="uk-list">
+                    <li>
+                        <a href="/cs/Help">Nápověda</a>
+                    </li>
+                    <li>
+                        <a href="/cs/News">Aktuální informace</a>
+                    </li>
+                    <li>
+                        <a href="/cs/Privacy">Prohlášení o ochraně osobních údajů a podmínky užití</a>
+                    </li>
+                    <li>
+                        <!--© 2021–<script>document.write(/\d{4}/.exec(Date())[0])</script>-->
+                        © <script>document.write(/\d{4}/.exec(Date())[0])</script>
+                        ČTÚ, Všechna práva vyhrazena
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<script id="modalTemplate" type="text/x-handlebars-template">
+    <div id="{{ container-id }}" class="{{ container-modifier }}" uk-modal>
+        <div class="uk-modal-dialog">
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+            {{#if title}}
+            <div class="uk-modal-header">
+                <h2 class="uk-modal-title">{{ title }}</h2>
+            </div>
+            {{/if}}
+            <div class="uk-modal-body" uk-overflow-auto>
+                {{{ content }}}
+            </div>
+            <div class="uk-modal-footer uk-text-right">
+                {{#if cancel}}
+                <button id="modal-cancel" class="uk-button uk-button-default uk-modal-close" type="button">{{ cancel
+                    }}
+                </button>
+                {{/if}}
+                <button id="modal-confirm" class="uk-button uk-button-primary" type="button">{{ confirm }}</button>
+            </div>
+        </div>
+    </div>
+</script>
+
+
+<script type="text/javascript" src="../lib/uikit.min-879ad74a43ab250119157514a61491bc.js"></script>
+<script type="text/javascript" src="../lib/uikit-icons.min-b6a1fee766dc04ff5edf3c680eda2e59.js"></script>
+
+</body>
+</html>
