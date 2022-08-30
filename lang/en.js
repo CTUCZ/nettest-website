@@ -53,7 +53,8 @@ exports.strings = {
         "fullscreen" : "Full screen",
         "loop_mode_content": "Carry out repeated measurement by customized settings",
         "opendata_content": "Measurement results are available as open data",
-        "certified_content": "Carry out certified measurement process to submit a claim"
+        "certified_content": "Carry out certified measurement process to submit a claim",
+        "mobile_apps": "Download application for Android"
     },
 
     "map_content" : {
@@ -253,6 +254,7 @@ exports.strings = {
     "test": "Test",
     "framework_loading": "Test framework loading...",
     "home": "Home",
+    "mobile_apps": "Mobile application",
     "link_to_certified": "<a href='/en/CertMeasurement'>Use the certified measurement for the purpose of submission a claim against the service.</a>",
     "loop_tab_warning": "Note that web-browser bookmark with the running measurement must remain active to allow correct course of the repeated measurement, otherwise the following test might not be started.",
     "cert_tab_warning": "Note that web-browser bookmark with the running measurement must remain active to allow correct course of the certified measurement, otherwise the following test might not be started.",
@@ -484,5 +486,10 @@ exports.strings = {
         "test_duration" : "Duration of the test per direction (up- or download) in seconds.",
         "time_utc" : "UTC date and time when test was started.",
         "upload_kbit" : "Upload speed in kilobit per second.",
+    },
+     // Apps
+     "apps_page": {
+        "title": "CTU-NetTest mobile application",
+        "android_title": "Mobile application for Android",
     }
 }

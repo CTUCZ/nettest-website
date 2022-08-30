@@ -46,7 +46,8 @@ exports.strings = {
         "fullscreen" : "Na celou obrazovku",
         "loop_mode_content": "Provede opakované měření dle vlastního nastavení",
         "opendata_content": "Výsledky měření jsou dostupné jako otevřená data",
-        "certified_content": "Provede proces certifikovaného měření pro účely reklamace služby"
+        "certified_content": "Provede proces certifikovaného měření pro účely reklamace služby",
+        "mobile_apps": "Stažení aplikace pro Andorid"
     },
 
     "history_content" : {
@@ -201,6 +202,7 @@ exports.strings = {
     "test": "Test",
     "framework_loading": "Testovací framework se načítá...",
     "home": "Domů",
+    "mobile_apps": "Mobilní aplikace",
     "link_to_certified": "<a href='/cs/CertMeasurement'>Pro účely reklamace služby využijte certifikovaného měření.</a>",
     "loop_tab_warning": "Upozorňujeme uživatele, že pro správný průběh opakovaného měření, je nutné mít aktivní záložku s měřením v prohlížeči, jinak se nemusí spustit následný test.",
     "cert_tab_warning": "Upozorňujeme uživatele, že pro správný průběh certifikovaného měření, je nutné mít aktivní záložku s měřením v prohlížeči, jinak se nemusí spustit následný test.",
@@ -418,6 +420,10 @@ exports.strings = {
         "test_duration" : "Doba trvání testu v sekundách.",
         "time_utc" : "Čas spuštění testu v časové zóně UTC.",
         "upload_kbit" : "Rychlost vkládání, kilobity za sekundu.",
+    },
+     // Apps
+     "apps_page": {
+        "title": "Mobilní aplikace ČTÚ-NetTest",
+        "android_title": "Mobilní aplikace pro Android",
     }
-
 }
