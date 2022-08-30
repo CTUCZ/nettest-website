@@ -266,7 +266,7 @@ exports.strings = {
     "timespan" : "Časové rozpětí",
     "timespan_end" : "Konec časového rozpětí",
     "timespan_begin" : "Začátek časového rozpětí",
-    "pinned" : "Pinned",
+    "pinned" : "Připnuto",
     "test_server" : "Měřicí server",
     "ip": "IP adresa",
     "state": "Stav",
