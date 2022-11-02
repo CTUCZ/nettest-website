@@ -191,7 +191,7 @@ exports.strings = {
     "opentests": "Otevřená data, výsledky měření",
     "opendata": "Otevřená data",
     "help": "Nápověda",
-    "help_url": "https://www.nettest.cz/cs/Help",
+    "help_url": "https://nettest.cz/cs/Help",
     "news" : "Aktuální informace",
     "menu" : "Menu",
     "loop_mode" : "Opakované měření",

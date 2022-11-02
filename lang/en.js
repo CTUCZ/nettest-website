@@ -243,7 +243,7 @@ exports.strings = {
     "opentests": "Open data, results of measurements",
     "opendata": "Open data",
     "help": "Help",
-    "help_url": "https://www.nettest.cz/en/Help",
+    "help_url": "https://nettest.cz/en/Help",
     "news" : "News",
     "menu" : "Menu",
     "loop_mode" : "Loop mode",
