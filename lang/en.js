@@ -499,6 +499,7 @@ exports.strings = {
         "tc_android": "Privacy Policy and Terms of Use for Android",
         "tc_android_url": "https://nettest.cz/en/PrivacyAndroid",
         "ios_title": "Mobile application for iOS",
-        "ios_tba": "To be announced.",  
+        "ios_tba": "To be announced.",
+        "tc_ios": "Privacy Policy and Terms of Use for iOS"
     }
 }

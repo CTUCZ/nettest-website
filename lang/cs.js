@@ -433,6 +433,7 @@ exports.strings = {
         "tc_android": "Prohlášení o ochraně osobních údajů a podmínky užití pro Android",
         "tc_android_url": "https://nettest.cz/cs/PrivacyAndroid",
         "ios_title": "Mobilní aplikace pro iOS",
-        "ios_tba": "Vydání bude oznámeno.",        
+        "ios_tba": "Vydání bude oznámeno.",
+        "tc_ios": "Prohlášení o ochraně osobních údajů a podmínky užití pro iOS"        
     }
 }
