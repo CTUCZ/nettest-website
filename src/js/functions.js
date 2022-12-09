@@ -125,11 +125,11 @@ function requestBrowserData(callback, options) {
                                 $("#noJavaWarning").hide();
 
                                 //is it android?
-                               // if (browser_agent.match(/Android|Opera M(obi|ini)|Dolfin|Dolphin/g)) {
-                                   // $("#androidApp").show();
-                                    //also display links to phone stores (if available)
-                                    //$("#androidApp").html('<p>' + Lang.getString('AndroidAppAvailable') + '</p>');
-                               // }
+                               if (browser_agent.match(/Android|Opera M(obi|ini)|Dolfin|Dolphin/g)) {
+                                    $("#androidApp").show();
+                                   //also display links to phone stores (if available)
+                                    $("#androidApp").html('<p>' + Lang.getString('AndroidAppAvailable') + '</p>');
+                               }
 
                                 //is it iOS?
                                // else if (browser_agent.match(/iP(hone|od|ad)/g)) {

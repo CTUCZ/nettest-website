@@ -14,6 +14,7 @@ Lang.setStrings({
    'North' : 'N',
    'South' : 'S',
    'showMoreDevices' : 'Další zařízení',
+   'AndroidAppAvailable' : 'Pro plné využití všech funkcí nástroje ČTÚ-NetTest použijte prosím naši <a href="https://play.google.com/store/apps/details?id=cz.ctu.rmbt.android.prod">mobilní aplikaci pro Android</a>.',
    'NoJavaAvailable' : 'Probíhá jednoduchý JavaScript test.',
    'BrowserOutdated' : 'Váš prohlížeč je zastaralý a nepodporuje všechny důležité funkce. Aktualizujte prosím svůj prohlížeč na nejnovější verzi.',
    'YourPostalCode' : 'Vaše PSČ',

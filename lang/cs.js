@@ -46,7 +46,8 @@ exports.strings = {
         "fullscreen" : "Na celou obrazovku",
         "loop_mode_content": "Provede opakované měření dle vlastního nastavení",
         "opendata_content": "Výsledky měření jsou dostupné jako otevřená data",
-        "certified_content": "Provede proces certifikovaného měření pro účely reklamace služby"
+        "certified_content": "Provede proces certifikovaného měření pro účely reklamace služby",
+        "mobile_apps": "Stažení aplikace pro Andorid"
     },
 
     "history_content" : {
@@ -201,6 +202,7 @@ exports.strings = {
     "test": "Test",
     "framework_loading": "Testovací framework se načítá...",
     "home": "Domů",
+    "mobile_apps": "Mobilní aplikace",
     "link_to_certified": "<a href='/cs/CertMeasurement'>Pro účely reklamace služby využijte certifikovaného měření.</a>",
     "loop_tab_warning": "Upozorňujeme uživatele, že pro správný průběh opakovaného měření, je nutné mít aktivní záložku s měřením v prohlížeči, jinak se nemusí spustit následný test.",
     "cert_tab_warning": "Upozorňujeme uživatele, že pro správný průběh certifikovaného měření, je nutné mít aktivní záložku s měřením v prohlížeči, jinak se nemusí spustit následný test.",
@@ -264,7 +266,7 @@ exports.strings = {
     "timespan" : "Časové rozpětí",
     "timespan_end" : "Konec časového rozpětí",
     "timespan_begin" : "Začátek časového rozpětí",
-    "pinned" : "Pinned",
+    "pinned" : "Připnuto",
     "test_server" : "Měřicí server",
     "ip": "IP adresa",
     "state": "Stav",
@@ -342,7 +344,9 @@ exports.strings = {
         "icon_meaning": "Jakým prahovým hodnotám odpovídají jednotlivé barevné interpretace?",
         "cert_tool": "Co znamená certifikovaný nástroj?",
         "cert_measurement": "Co znamená certifikované měření?",
-        "dep": "Co znamenají demarkační body?"
+        "dep": "Co znamenají demarkační body?",
+        "help_apps_title": "Vysvětlivky pro mobilní aplikaci",
+        "android_cert_title": "Jak provedu certifikované měření v mobilní aplikaci pro Android?"
     },
 
     "opendata_specification_title" : "Otevřená data - specifikace formátu",
@@ -418,6 +422,18 @@ exports.strings = {
         "test_duration" : "Doba trvání testu v sekundách.",
         "time_utc" : "Čas spuštění testu v časové zóně UTC.",
         "upload_kbit" : "Rychlost vkládání, kilobity za sekundu.",
+    },
+     // Apps
+     "apps_page": {
+        "title": "Mobilní aplikace ČTÚ-NetTest",
+        "desc": "Mobilní aplikace ČTÚ-NetTest Českého telekomunikačního úřadu umožňuje uživatelům získat informace o aktuální kvalitě mobilní služby přístupu k síti internet. V současné době je dostupná mobilní aplikace pro operační systém Android.",
+        "android_title": "Mobilní aplikace pro Android",
+        "download_android": "Stažení mobilní aplikace pro Android",
+        "cert_android": "Návod k provedení certifikovaného měření v mobilní aplikaci pro Android",
+        "tc_android": "Prohlášení o ochraně osobních údajů a podmínky užití pro Android",
+        "tc_android_url": "https://nettest.cz/cs/PrivacyAndroid",
+        "ios_title": "Mobilní aplikace pro iOS",
+        "ios_tba": "Vydání bude oznámeno.",
+        "tc_ios": "Prohlášení o ochraně osobních údajů a podmínky užití pro iOS"        
     }
-
 }

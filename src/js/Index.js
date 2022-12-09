@@ -26,7 +26,7 @@ $(window).bind("load", function() {
 $(document).ready(function() {
 
     var mobile_client = navigator.userAgent;
- /*
+ 
     //is it windows phone?
     if (mobile_client.match(/Windows Phone/)) {
         //do nothing (yet)
@@ -34,9 +34,10 @@ $(document).ready(function() {
     //is it android?
     else if (mobile_client.match(/Android|Opera M(obi|ini)|Dolfin|Dolphin/g)) {
         //@TODO: Save links somewhere else
-        var url = '';
+        var url = 'https://play.google.com/store/apps/details?id=cz.ctu.rmbt.android.prod';
         $("a#teaserlink").attr("href",url);
     }
+/*
     //is it iOS?
     else if (mobile_client.match(/iP(hone|od|ad)/g)) {
         $("#iOSApp").show();
