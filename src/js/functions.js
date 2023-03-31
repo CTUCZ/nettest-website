@@ -363,7 +363,7 @@ function RMBTsettings(options) {
                                 uuid = cookie_uuid;
                         }
                         else {
-                                alert("Keine UUID!");
+                                alert("Missing UUID! Please check cookies settings in your web browser.");
                                 return;
                         }
 
