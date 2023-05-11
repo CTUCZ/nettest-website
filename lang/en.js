@@ -50,7 +50,7 @@ exports.strings = {
         "map_content" : "View results on a map (VPortal)",
         "vportal_link" : "https://vportal.ctu.gov.cz/fix/mapa?bp=0_90&ba=0_80&tp=1_100&ta=1_80&l=en",
         "help_content" : "Detailled background information",
-        "statistics_content" : "Measurements carried out earlier",
+        "statistics_content" : "Statistical overview of measurement results",
         "enlarge_map" : "Zoom the map",
         "fullscreen" : "Full screen",
         "loop_mode_content": "Carry out repeated measurement by customized settings",
@@ -176,6 +176,7 @@ exports.strings = {
         "download_results": "Download results:",
         "available_history": "The measurement results are available under <a href='/en/Result'><strong style='font-weight: bold'>HISTORY</strong></a> bookmark."
     },
+
     "certified_measurement_content": {
         "info": "Info",
         "data": "Data",
@@ -242,11 +243,12 @@ exports.strings = {
         "finished_note_3": "If a random test shows the resulting download or upload speed is lower than the value of minimum speed for the given direction, stated in contractual conditions, it is the case of service outage.",
         "finished_note_4": "In case of both significant discrepancies, as well as in case of service outage, you can apply your right to submit a claim against defective service provision to your IAS provider."
     },
+
     //Page titles and link descriptions
     "ctu_long": "Czech Telecommunication Office",
     "copyright": "CTU, All rights reserved", 
     "index": "Introduction",
-    "statistics": "History of measurements",
+    "statistics": "Statistics",
     "history": "History",
     "map": "Map",
     "options": "Options",
@@ -287,7 +289,7 @@ exports.strings = {
     'dBm': 'dBm',
     'dB': 'dB',
     'X_recent_tests': "%X% recent tests",
-    'recent_tests': "Recent tests",
+    'recent_tests': "Recent measurements",
     'more' : "more",
     'less' : "less",
     "average" : "Average",
