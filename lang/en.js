@@ -12,7 +12,7 @@ exports.strings = {
     },
     "template": {
         "qos_ctu": "Visualization portal",
-        "qos_url" : "https://qos.ctu.cz/",
+        "qos_url" : "https://vportal.ctu.cz/",
         "complaint" : "How to claim",
         "complaint_url" : "https://www.ctu.eu/pay-actually-achived-speed",
         "ctu": "Czech Telecommunication Office",

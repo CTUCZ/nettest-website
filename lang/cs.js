@@ -10,7 +10,7 @@ exports.strings = {
     },
     "template": {
         "qos_ctu": "Vizualizační portál",
-        "qos_url" : "https://qos.ctu.cz/",
+        "qos_url" : "https://vportal.ctu.cz/",
         "complaint" : "Jak reklamovat",
         "complaint_url" : "https://www.ctu.cz/plattezaskutecnourychlost",
         "ctu": "Český telekomunikační úřad",
