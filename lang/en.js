@@ -46,7 +46,8 @@ exports.strings = {
         },
         "statistics_alt" : "Statistics teaser",
         "map": "Map",
-        "map_content" : "Maps with test results",
+        "map_content" : "View results on a map (VPortal)",
+        "vportal_link" : "https://vportal.ctu.cz/fix/mapa?bp=0_90&ba=0_80&tp=1_100&ta=1_80&l=en",
         "help_content" : "Detailled background information",
         "statistics_content" : "Measurements carried out earlier",
         "enlarge_map" : "Zoom the map",
@@ -54,7 +55,7 @@ exports.strings = {
         "loop_mode_content": "Carry out repeated measurement by customized settings",
         "opendata_content": "Measurement results are available as open data",
         "certified_content": "Carry out certified measurement process to submit a claim",
-        "mobile_apps": "Download application for Android and iOS"
+        "apps_content": "Download application for Android and iOS"
     },
 
     "map_content" : {

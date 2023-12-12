@@ -40,14 +40,15 @@ exports.strings = {
             "start" : "Start"
         },
         "map": "Mapa",
-        "map_content" : "Mapy s výsledky testů",
+        "map_content" : "Zobrazení výsledků v mapě (VPortal)",
+        "vportal_link" :"https://vportal.ctu.cz/fix/mapa?bp=0_90&ba=0_80&tp=1_100&ta=1_80&l=cs",
         "statistics_content" : "Dříve provedená měření",
         "enlarge_map" : "Zvětšit mapu",
         "fullscreen" : "Na celou obrazovku",
         "loop_mode_content": "Provede opakované měření dle vlastního nastavení",
         "opendata_content": "Výsledky měření jsou dostupné jako otevřená data",
         "certified_content": "Provede proces certifikovaného měření pro účely reklamace služby",
-        "mobile_apps": "Stažení aplikace pro Android a iOS"
+        "apps_content": "Stažení aplikace pro Android a iOS"
     },
 
     "history_content" : {
