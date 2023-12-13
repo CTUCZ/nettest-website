@@ -54,7 +54,7 @@ exports.strings = {
 
     "statistics_content" : {
         "teaser" : {
-            "nettest" : 'Zde uvedené hodnoty jsou výsledky měření nástrojem NetTest. Další informace najdete zde.',
+            "nettest" : 'Zde uvedené hodnoty jsou výsledky měření nástrojem NetTest. Další informace naleznete v <a href="Help.html">nápovědě</a>.',
             "qostest" : ''
         },
         "operators_from" : "Operátoři",
@@ -278,8 +278,12 @@ exports.strings = {
     "1_day" : "1 den",
     "1_week" : "1 týden",
     "1_month" : "1 měsíc",
+    "3_months" : "3 měsíce",
     "X_months" : "%X% měsíců",
     "1_year" : "1 rok",
+    "2_years" : "2 roky",
+    "3_years" : "3 roky",
+    "4_years" : "4 roky",
     "X_years" : "%X% let",
     "days" : "Den",
     "months" : "Měsíc",

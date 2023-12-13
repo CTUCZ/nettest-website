@@ -33,13 +33,11 @@
 
 <div class="uk-container uk-margin-large-bottom" id="recent-tests-container">
     <h3>{{ Lang.recent_tests }}</h3>
-    <table id="verlauf" class="uk-table uk-table-small uk-table-link uk-table-hover">
+    <table id="result" class="uk-table uk-table-small uk-table-link uk-table-hover">
         <thead>
         <tr>
-            <th scope="col">{{ Lang.time }}</th>
-            <th scope="col">{{ Lang.operator }}/
-                <wbr>
-                {{ Lang.device }}
+            <th scope="col">{{ Lang.date }}</th>
+            <th scope="col">{{ Lang.operator }}/{{ Lang.device }}
             </th>
             <th scope="col" class="uk-text-right">{{ Lang.down }} ({{ Lang.mbps }})</th>
             <th scope="col" class="uk-text-right">{{ Lang.up }} ({{ Lang.mbps }})</th>
@@ -109,13 +107,13 @@
                         <option value="7">{{ Lang.1_week }}</option>
                         <option value="30" id="statistik_duration_default_world">{{ Lang.1_month }}</option>
                         <option value="90" id="statistik_duration_default_at"
-                                selected="selected">{{ Lang.X_months | replace("%X%","3") }}
+                                selected="selected">{{ Lang.3_months }}
                         </option>
                         <option value="180">{{ Lang.X_months | replace("%X%","6") }}</option>
                         <option value="365">{{ Lang.1_year }}</option>
-                        <option value="730">{{ Lang.X_years | replace("%X%","2") }}</option>
-                        <option value="1095">{{ Lang.X_years | replace("%X%","3") }}</option>
-                        <option value="1460">{{ Lang.X_years | replace("%X%","4") }}</option>
+                        <option value="730">{{ Lang.2_years }}</option>
+                        <option value="1095">{{ Lang.3_years }}</option>
+                        <option value="1460">{{ Lang.4_years }}</option>
                         <option value="2920">{{ Lang.X_years | replace("%X%","8") }}</option>
                     </select>
                     <a href="#" id="show_more_button" class="uk-margin-left"
@@ -216,7 +214,7 @@
                             </div>
                             <div id="key_down" class="quantile_details">
                                 {{#if ../shortNames }}{{ shortname }}{{ else }}{{ name }}{{/if }}<br/>
-                                {{ formatNumberSignificant (divideBy quantile_down 1000) }} {% endraw %}{{ Lang.mbps }}{% raw %} <br/>
+                                Down: {{ formatNumberSignificant (divideBy quantile_down 1000) }} {% endraw %}{{ Lang.mbps }}{% raw %} <br/>
                                 <span><i class="svg-icon svg14 svg-traffic-light-4"></i>{{ percent down_ultragreen }}</span>
                                 <span><i class="svg-icon svg14 svg-traffic-light-3"></i>{{ percent down_green }}</span>
                                 <span><i class="svg-icon svg14 svg-traffic-light-2"></i>{{ percent down_yellow }}</span>
@@ -252,7 +250,7 @@
                             </div>
                             <div id="key_ping" class="quantile_details">
                                 {{ name }}<br/>
-                                Ping: {{ formatNumberSignificant (divideBy quantile_ping 1000000) }} {% endraw %}{{ Lang.mbps }}{% raw %} <br/>
+                                Ping: {{ formatNumberSignificant (divideBy quantile_ping 1000000) }} {% endraw %}{{ Lang.ms }}{% raw %} <br/>
                                 <span><i class="svg-icon svg14 svg-traffic-light-4"></i>{{ percent ping_ultragreen }}</span>
                                 <span><i class="svg-icon svg14 svg-traffic-light-3"></i>{{ percent ping_green }}</span>
                                 <span><i class="svg-icon svg14 svg-traffic-light-2"></i>{{ percent ping_yellow }}</span>
@@ -271,7 +269,7 @@
                             </div>
                             <div id="key_signal" class="quantile_details signal_details">
                                 {{ name }}<br />
-                                Signal: {{ quantile_signal }}  {% endraw %}{{ Lang.dBm }}{% raw %}<br />
+                                {{ Lang.signal }}: {{ quantile_signal }}  {% endraw %}{{ Lang.dBm }}{% raw %}<br />
                                 <span><i class="svg-icon svg14 svg-traffic-light-4"></i>{{ percent signal_ultragreen }}</span>
                                 <span><i class="svg-icon svg14 svg-traffic-light-3"></i>{{ percent signal_green }}</span>
                                 <span><i class="svg-icon svg14 svg-traffic-light-2"></i>{{ percent signal_green }}</span>

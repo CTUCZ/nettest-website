@@ -70,7 +70,7 @@ exports.strings = {
 
     "statistics_content" : {
         "teaser" : {
-            "nettest" : 'Values stated here are the results of NetTest tool measurement. Find more information here.',
+            "nettest" : 'Values stated here are the results of NetTest tool measurement. More information can be found in <a href="Help.html">help</a>.',
             "qostest" : ''
         },
         "operators_from" : "Operators from",
@@ -280,8 +280,8 @@ exports.strings = {
     "time": "Time",
     "operator": "Operator",
     "device": "Device",
-    "up": "Up",
-    "down": "Down",
+    "up": "Upload",
+    "down": "Download",
     "ping": "Ping",
     "signal": "Signal",
     'mbps': 'Mbps',
@@ -314,8 +314,12 @@ exports.strings = {
     "1_day" : "1 day",
     "1_week" : "1 week",
     "1_month" : "1 month",
+    "3_months" : "3 months",
     "X_months" : "%X% months",
     "1_year" : "1 year",
+    "2_years" : "2 years",
+    "3_years" : "3 years",
+    "4_years" : "4 years",
     "X_years" : "%X% years",
     "days" : "Days",
     "months" : "Months",
