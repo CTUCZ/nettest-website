@@ -260,6 +260,7 @@ exports.strings = {
     "link_to_certified": "<a href='/en/CertMeasurement'>Use the certified measurement for the purpose of submission a claim against the service.</a>",
     "loop_tab_warning": "Note that web-browser bookmark with the running measurement must remain active to allow correct course of the repeated measurement, otherwise the following test might not be started.",
     "cert_tab_warning": "Note that web-browser bookmark with the running measurement must remain active to allow correct course of the certified measurement, otherwise the following test might not be started.",
+    "javascript_warning": "The test could not be loaded, please activate JavaScript!",
 
     //common words
     "top" : "Top",
