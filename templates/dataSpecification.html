@@ -28,6 +28,12 @@
             </thead>
             <tbody>
                 <tr>
+                    <td>asn</td>
+                    <td>Číslo autonomního systému.</td>
+                    <td>Numeric</td>
+                    <td>203208</td>
+                </tr>
+                <tr>
                     <td>cat_technology</td>
                     <td>Kategorie použité technologie např. “4G”, “5G”, “LAN”.</td>
                     <td>String</td>
@@ -45,6 +51,18 @@
                     <td>Numeric</td>
                     <td>15500</td>
                 </tr>
+                <tr>
+                    <td>implausible</td>
+                    <td>Identifikace závadných měření.</td>
+                    <td>Boolean</td>
+                    <td>false</td>
+                </tr>
+                <tr>
+                    <td>ip_anonym</td>
+                    <td>Anonymizovaná IP adresa klienta.</td>
+                    <td>String</td>
+                    <td>185.68.212</td>
+                </tr>                    
                 <tr>
                     <td>lat</td>
                     <td>Zeměpisná šířka pozice klienta.</td>
@@ -88,6 +106,36 @@
                     <td>Chrome</td>
                 </tr>
                 <tr>
+                    <td>nat_type</td>
+                    <td>Typ připojení z hlediska NAT a verze IP (Např. veřejná IP, privátní adresa za NATem).</td>
+                    <td>String</td>
+                    <td>nat_local_to_public_ipv4</td>
+                </tr>
+                <tr>
+                    <td>ndt_download_kbit</td>
+                    <td>Rychlost stahování NDT-testu v kilobitech za sekundu.</td>
+                    <td>Numeric</td>
+                    <td>51343</td>
+                </tr>
+                <tr>
+                    <td>ndt_upload_kbit</td>
+                    <td>Rychlost vkládání NDT-testu v kilobitech za vteřinu.</td>
+                    <td>Numeric</td>
+                    <td>12335</td>
+                </tr>
+                <tr>
+                    <td>network_mcc_mnc</td>
+                    <td>Identifikace sítě, přičemž první tři čísla reprezentují zemi a čísla za pomlčkou operátora v rámci země.</td>
+                    <td>String</td>
+                    <td>111-11</td>
+                </tr>
+                <tr>
+                    <td>network_name</td>
+                    <td>Zobrazované jméno sítě.</td>
+                    <td>String</td>
+                    <td>CTU CZ</td>
+                </tr>
+                <tr>
                     <td>network_type</td>
                     <td>Typ sítě např. MOBILE, LTE, LAN.</td>
                     <td>String</td>
@@ -117,9 +165,15 @@
                     <td>Numeric</td>
                     <td>15.189354</td>
                 </tr>
+                 <tr>
+                    <td>pinned</td>
+                    <td>Identifikace relevantních měření.</td>
+                    <td>Boolean</td>
+                    <td>true</td>
+                </tr>
                 <tr>
                     <td>platform</td>
-                    <td>Platforma, na které byl test proveden. Např. “Android” (= Google Android App), “iOS” (= Apple iOs App)</td>
+                    <td>Platforma, na které byl test proveden. Např. “Android” (= Google Android App), “iOS” (= Apple iOs App).</td>
                     <td>String</td>
                     <td>Android</td>
                 </tr>
@@ -128,6 +182,12 @@
                     <td>Název měřicího serveru.</td>
                     <td>String</td>
                     <td>ČTÚ</td>
+                </tr>
+                <tr>
+                    <td>sim_mcc_mnc</td>
+                    <td>Identifikace sítě poskytovatele dle SIM karty. Význam čísel je stejný jako u network_mcc_mnc.</td>
+                    <td>String</td>
+                    <td>111-11</td>
                 </tr>
                 <tr>
                     <td>test_duration</td>
