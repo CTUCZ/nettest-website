@@ -1,14 +1,14 @@
-// Configuration www.netztest.at
+// Configuration nettest.cz
 
-var controlProxy = "https://c01.netztest.at";
-var statisticProxy = "https://m-cloud.netztest.at";
+var controlProxy = "https://nettest.cz";
+var statisticProxy = "https://nettest.cz";
 if (window.location.href.indexOf("github") !== -1) {
     //default for github pages
 } else if (window.location.href.indexOf("http://localhost") !== -1) {
     //default for localhost -> change to your server!
     statisticProxy = "";
     controlProxy = "";
-} else if (window.location.href.indexOf("https://www.netztest.at") !== 0) {
+} else if (window.location.href.indexOf("https://www.nettest.cz") !== 0) {
     statisticProxy = "";
     controlProxy = "";
 }
@@ -46,18 +46,18 @@ var test_language;
 var cookie_uuid;
 var test_type = "DESKTOP";
 var test_version_code = "1";
-var test_name = "RTR-Netztest"; 
+var test_name = "RMBT";
 var test_timezone;
 var test_devices;
 var test_networks;
 var client_name = "RMBTjs";
 var test_token, testUUID;
-var bing_api_key = "AhtZ2SmIKuAaKmtpxQksx2lFYBLkqF7xi-AXtnyrb7ocVo1DldoaGSpOtziHjytA";
-var osm_server = "https://cache.netztest.at/tile/osm"; //"https://tile.openstreetmap.org";
+var bing_api_key = "";
+var osm_server = "";
 var fallbackOnJS = false;
 var terms_version = 6;
 
-test_timezone = "Europe/Vienna"; // ToDo Timezone dynamisch erzeugen.
+test_timezone = "Europe/Prague";
 
 
 var geo_HighAccuracy = true;
@@ -65,9 +65,9 @@ var geo_timeout = 10000;
 var geo_maximumAge = 60000;
 
 var browser_list = [
-	"MSIE",
-	"Firefox",
-	"Chrome",
-	"Safari",
-	"Opera"
+        "MSIE",
+        "Firefox",
+        "Chrome",
+        "Safari",
+        "Opera"
 ];
