@@ -500,13 +500,21 @@ exports.strings = {
         "download_android": "Download mobile app for Android",
         "cert_android": "Information about certified measurement for Android",
         "tc_android": "Privacy Policy and Terms of Use for Android",
-        "tc_android_url": "https://nettest.cz/en/PrivacyAndroid",
         "ios_title": "Mobile application for iOS",
         "download_ios": "Download mobile app for iOS",
         "download_ios_url": "https://apps.apple.com/us/app/%C4%8Dt%C3%BA-nettest/id6449427820",
         "ios_tba": "To be announced.",
         "tc_ios": "Privacy Policy and Terms of Use for iOS",
-        "tc_ios_url": "https://nettest.cz/en/PrivacyApple",
         "ios_desc": "The main difference between the apps is the absence of a certified measurement mode within the iOS app. Established conditions for mobile certified measurement cannot be fulfilled on mobile phones and tablets with the iOS operating system – iOS applications are not allowed access to mobile network parameters within the operating system.",
+    },
+    // Privacy
+    "privacy_page" :{
+        "title": "Privacy Policy and Terms of Use",
+        "desc": "On the links below, you can find the Privacy Policy and Terms of Use for individual components of the CTU-NetTest tool (website and mobile epplications), as well as general information on the processing of personal data in the conditions of the Czech Telecommunication Office.",
+        "tc_web": "Privacy Policy and Terms of Use for the web version of CTU-NetTest",
+        "tc_android": "Privacy Policy and Terms of Use for Android",
+        "tc_ios": "Privacy Policy and Terms of Use for iOS",
+        "tc_ctu": "Information on the processing of personal data in the conditions of the Czech Telecommunication Office",
+        "tc_ctu_url": "https://www.ctu.cz/en/information-processing-personal-data-conditions"
     }
 }

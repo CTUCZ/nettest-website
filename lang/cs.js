@@ -434,13 +434,21 @@ exports.strings = {
         "download_android": "Stažení mobilní aplikace pro Android",
         "cert_android": "Návod k provedení certifikovaného měření v mobilní aplikaci pro Android",
         "tc_android": "Prohlášení o ochraně osobních údajů a podmínky užití pro Android",
-        "tc_android_url": "https://nettest.cz/cs/PrivacyAndroid",
         "ios_title": "Mobilní aplikace pro iOS",
         "download_ios": "Stažení mobilní aplikace pro iOS", 
         "download_ios_url": "https://apps.apple.com/cz/app/%C4%8Dt%C3%BA-nettest/id6449427820?l=cs",
         "ios_tba": "Vydání bude oznámeno.",
         "tc_ios": "Prohlášení o ochraně osobních údajů a podmínky užití pro iOS",
-        "tc_ios_url": "https://nettest.cz/cs/PrivacyApple",
-        "ios_desc": "Hlavním rozdílem mezi aplikacemi je absence režimu certifikovaného měření v rámci aplikace pro iOS. Stanovené podmínky pro mobilní certifikované měření není možné na mobilních telefonech a tabletech s operačním systémem iOS naplnit – aplikacím pro iOS není v rámci operačního systému umožněn přístup k parametrům mobilní sítě."
+        "ios_desc": "Hlavním rozdílem mezi aplikacemi je absence režimu certifikovaného měření v rámci aplikace pro iOS. Stanovené podmínky pro mobilní certifikované měření není možné na mobilních telefonech a tabletech s operačním systémem iOS naplnit – aplikacím pro iOS není v rámci operačního systému umožněn přístup k parametrům mobilní sítě.",
+    },
+    // Privacy
+    "privacy_page" :{
+        "title": "Prohlášení o ochraně osobních údajů a podmínky užití",
+        "desc": "Na níže uvedených odkazech je možné nalézt prohlášení o ochraně osobních údajů a podmínky užití pro jednotlivé součásti nástroje ČTÚ-NetTest (webové stránky a mobilní aplikace) a také obecné informace o zpracování osobních údajů v podmínkách Českého telekomunikačního úřadu.",
+        "tc_web": "Prohlášení o ochraně osobních údajů a podmínky užití pro webovou verzi ČTÚ-NetTest",
+        "tc_android": "Prohlášení o ochraně osobních údajů a podmínky užití pro Android",
+        "tc_ios": "Prohlášení o ochraně osobních údajů a podmínky užití pro iOS",
+        "tc_ctu": "Informace o zpracování osobních údajů v podmínkách Českého telekomunikačního úřadu",
+        "tc_ctu_url": "https://www.ctu.cz/zpracovani-osobnich-udaju-v-ctu"
     }
 }
