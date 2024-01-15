@@ -11,6 +11,11 @@
 <script src="../{{ fingerprint['lib/date-de-AT.js'] }}" type="text/javascript"></script>
 
 <script type="text/javascript" src="../{{ fingerprint['lib/selectize/selectize.min.js'] }}"></script>
+    <script> 
+    $(function(){
+      $("#includeDeP").load("dep.html"); 
+    });
+    </script>
 {% endblock %}
 
 {% block content %}
@@ -19,11 +24,7 @@
         <h3>{{ Lang.help_page.dep }}</h3>
         <div class="uk-grid-margin uk-container-rtr uk-grid uk-grid-stack" uk-grid="">
             <div class="uk-flex-auto uk-first-column">
-                <picture>
-                    <img src='/images/DeP6.png' alt="DeP6">
-                    <p><br></p>
-                    <img src='/images/DeP7.png' alt="DeP7">
-                </picture>
+                <div id="includeDeP"></div>
             </div>
         </div>
     </div>
