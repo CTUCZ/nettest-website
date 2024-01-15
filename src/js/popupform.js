@@ -507,7 +507,7 @@ function show_zipform(run_Test, callback, options) {
 function show_errorPopup() {
 	$("#popuperror").dialog({
 
-		autoOpen : false,
+		autoOpen : true,
 
 		title : Lang.getString('Error'),
 
@@ -526,7 +526,7 @@ function show_errorPopup() {
 			}
 		}
 		});
-	$("#popuperror").dialog("open");
+	//$("#popuperror").dialog("open");
 }
 function close_errorPopup() {
     try {
