@@ -1,25 +1,20 @@
 {% extends basetemplate %}
-{% set title = "Aktuální informace" %}
+{% set title = Lang.news %}
 {% set containerclass = "full-width" %}
 
 {% block headerscriptingExtended %}
-<style>
-    #news-list {
-        list-style-type: none;
-    }
-    #news-list li strong {
-        padding-right: 15px;
-    }
-</style>
+<script src="jquery.js"></script> 
+    <script> 
+    $(function(){
+      $("#includeNews").load("news.html"); 
+    });
+    </script>
 {% endblock %}
 
 {% block content %}
 <div class="uk-section-default uk-section content">
     <div class="uk-container">
-        <h3>Aktuální informace</h3>
-        <ul id="news-list">
-            <li><strong></strong></li>
-        </ul>
+        <div id="includeNews"></div>
     </div>
 </div>
 {% endblock %}
