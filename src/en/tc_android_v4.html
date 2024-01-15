@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Terms</title>
+    <title>Privacy Policy and Terms of Use</title>
     <style>
         h1 {
             font-size: 120%;
@@ -48,244 +48,136 @@
         }
 
         body {
-            color: #424242;
-            font-size: 80%;
+            color: black;
+            font-size: 100%;
             background-color: white;
             font-family: 'Roboto', sans-serif;
         }
     </style>
 </head>
 <body>
-<h1>1. Privacy Policy</h1>
-<h2>1.1. General </h2>
-<p>The use of the RTR-NetTest app is only possible after explicit consent to RTR’s Privacy Policy and Terms of Use for
-    the RTR-NetTest. Under 14 years can use the RTR-NetTest with the consent of their legal guardian(s). Note that the
-    IP address is transferred, among others, also to third countries (thus outside of the European Union, EU, and the
-    European Economic Area, EEA) for which neither an adequacy decision nor appropriate safeguards exist. For further
-    details see point 4.
-</p>
-<p>The RTR-NetTest informs users about the current service quality (including upload, download, ping, signal strength)
-    of their Internet connection. For technically interested users RTR-NetTest provides two further options: On the one
-    hand, RTR-NetTest offers a loop-mode, which enables automatically repeated RTR-NetTests; on the other hand, with
-    the signal-only loop-mode signal measurements are also carried out repeatedly - without speed- or quality tests
-    being carried out.
-</p>
-<p>RTR’s legal authorisation to offer RTR-NetTest is enshrined in&nbsp;<a
-        href="https://www.rtr.at/en/tk/TKG2003" title="Link to TKG 2003" target="_blank" rel="noopener noreferrer"
-        class="external-link">Art&nbsp;17 Par&nbsp;4 and Par&nbsp;5 Telecommunications Act 2003</a> as well as <a
-        href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:32015R2120"
-        title="Link to TSM Regulation" target="_blank"
-        class="external-link">Art 4 Par 4 and Art 5 Par 1 Regulation (EU) 2015/2120</a>.
-    To fulfil this duty and ensure users with the greatest possible transparency and information – while respecting
-    their privacy – RTR-NetTest is based on the open source and open data principle.
-<h2>1.2. Which data are processed?</h2>
-<h3>1.2.1. RTR-NetTest</h3>
-<p>The following data are processed as part of the <strong>RTR-NetTest</strong>:</p>
+<h2>Privacy Policy and Terms of Use</h2>
+
+<p>The web version of the CTU-NetTest can be used only after explicit consent to CTU’s Privacy Policy and Terms of Use for the CTU-NetTest. The web version of the CTU-NetTest can be used for certified measurements of quality of IAS, due to the nature of web-browser based tools, i.e. measurement of speed values in upload and download directions, up to their advertised speeds below or equal to the limit values of 500 Mb/s (download) and 250 Mb/s (upload). For measuring the advertised speeds above the defined limit values, it is necessary to contact the Czech Telecommunication Office (<a hef="https://www.ctu.eu/e-mailroom" target="_blank">https://www.ctu.eu/e-mailroom</a>).</p>
+<h3>1 General</h3>
+<p>The CTU-NetTest of the Czech Telecommunication Office (hereinafter “CTU”) informs users about the current QoS (including upload, download and ping) of their Internet connection. Additionally, CTU-NetTest offers also the option to repeat test automatically (loop mode). Furthermore, in case a provider provides the IAS on the area of the Czech Republic, the test offers the possibility to carry out a certified measurement. With this, conclusive findings about the quality of the IAS can be made. These findings enable the user to activate remedies available in compliance with national legislation in case of any significant and continuous or regularly recurring discrepancy of actual service performance regarding its upload and download speed, from the performance the IAS provider stated in the contract.</p>
+<p>CTU’s legal authorisation to offer the CTU-NetTest, including the possible processing of personal data within the CTU-NetTest, is enshrined in <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:32015R2120" target="_blank">Article 4 (4) and Article 5 (1) Regulation (EU) 2015/2120 </a> (hereinafter “EU Regulation”). To fulfil this duty and ensure users with the greatest possible transparency and information – while respecting their privacy – the CTU-NetTest is based on the open data and open source principles.</p>
+<h3>2 Which data are processed?</h3>
+<h4>2.1 CTU-NetTest and loop mode option</h4>
+<p>The following data are processed as part of the CTU-NetTest and loop mode option:</p>
 <ul>
-    <li>Speed of data connection in both directions (downlink/uplink)*</li>
-    <li>Latency of data connection (ping)*</li>
-    <li>Quality parameters (eg signal strength, connectivity on different ports, modifications of content, transfer
-        time for a reference web page, background traffic volume, Domain Name System server queries, Traceroute, VoIP
-        test call)*
-    </li>
-    <li>Test parameters (test method, test progress, test server, test configuration [eg test duration])*</li>
-    <li>Randomly generated client ID (Client UUID)</li>
-    <li>Evidence of acceptance of the Privacy Policy and Terms of Use</li>
-    <li>Public client ID*</li>
-    <li>Client sync code and client sync group</li>
-    <li>Test time*</li>
-    <li>Client location (if known) / time zone*</li>
-    <li>Meta information for the client location (eg location accuracy, method of location fix, covered distance)*
-    </li>
-    <li>Device type/model, operating system/software version of app*</li>
+    <li>actually achieved speed of data connection in both directions (download/upload)*</li>
+    <li>roundtrip delay of data connection (ping)*</li>
+    <li>test parameters (test method, test status, test server, test configuration)*</li>
+    <li>randomly generated client ID (Client UUID)</li>
+    <li>evidence of acceptance of the Privacy Policy and Terms of Use</li>
+    <li>public client ID*</li>
+    <li>client sync code and group</li>
+    <li>randomly generated ID of the measurement series (Loop UUID)</li>
+    <li>test start time</li>
+    <li>automatically determined client location (if known) / time zone*</li>
+    <li>exact client location (determined by the optional manually entered address of the measurement)</li>
+    <li>anonymised (dissected) location (determined by the optional manually entered address of the measurement)*</li>
+    <li>meta information for the client location (e.g. location accuracy, method of determining the location, distance)*</li>
+    <li>device type/model, operating system/software version of browser*</li>
     <li>NAT Yes/No (direct Internet access or private address used)*</li>
-    <li>Roaming status (national, international roaming)*</li>
     <li>IP version*</li>
     <li>IP address</li>
-    <li>IP network (autonomous system, AS) and anonymised IP address*</li>
-    <li>WLAN network ID (SSID) and numerical WLAN ID (BSSID)</li>
-    <li>Mobile network (eg home network, network used, type of connection [GSM, UMTS, LTE, etc], name of the mobile
-        network, used frequency, frequency band, base station identification)*
-    </li>
+    <li>IP network (autonomous system, AS) or anonymised IP address*</li>
 </ul>
-<p>The data marked with * are published on the RTR-NetTest website and in the RTR-NetTest app and are made freely
-    available to the general public as open data (<a href="https://www.netztest.at/en/Opendata"
-                                                     title="Link to Open Data" target="_blank"
-                                                     rel="noopener noreferrer">https://www.netztest.at/en/Opendata</a>)
-    for information, use, dissemination and other applications.</p>
-<p>Note: After consent to the privacy policy is given the authorization "Allow RTR-NetTest to start and manage calls"
-    appears for devices that can have multiple SIM cards. This is specified by the operating system of the device. In
-    the context of RTR-NetTest the identification of the SIM card, which is used for data traffic, is thus enabled. No
-    other possible functions based on this authorization are used by RTR-NetTest. </p>
-<h3>1.2.2. Loop-mode option</h3>
-<p>
-    The loop-mode option for technically interested users allows the automatic repetition of RTR-NetTest. The first
-    test starts right after activation of the loop-modus; further tests are carried out when either the waiting time
-    (default 30 minutes) has elapsed or the specified distance (default 250 meters) has been covered. Tests will be
-    performed until the configured number of tests (default 10 tests) has been reached. The signal strength is measured
-    continuously, also between two tests. The loop-modus can be stopped at any time respectively it stops after 48
-    hours. It needs to be explicitly pointed out that due to the loop modus it cannot be excluded that the tester is
-    identified.
-</p>
-<p>The same data as listed under 1.2.1 are processed.
-    The data marked with * are published on the RTR-NetTest website and in the RTR-NetTest app and are made freely
-    available to the general public as open data (<a href="https://www.netztest.at/en/Opendata"
-                                                     title="Link to Open Data" target="_blank"
-                                                     rel="noopener noreferrer">https://www.netztest.at/en/Opendata</a>)
-    for information, use, dissemination and other applications.</p>
-<h3>1.2.3. Signal-only loop-mode option</h3>
-<p>
-    The signal-only loop-mode option for technically interested users allows the automatic repetition of signal
-    measurements - without any speed- or quality tests being carried out. The signal-only loop-modus can be stopped at
-    any time respectively it stops automatically after 48 hours. It needs to be explicitly pointed out that due to the
-    signal-only loop modus it cannot be excluded that the tester is identified.
-</p>
-<p>The same data as listed under 1.2.1 are processed – with the exception that the latency of the data connection
-    (ping), the connectivity on different ports, modifications of content, the transfer time for a reference web page,
-    the background traffic volume, Domain Name System server queries, the traceroute, the VoIP test call are not tested
-    and thus no data exist that could be processed.</p>
-<p>
-    The data marked with * are published on the RTR-NetTest website and in the RTR-NetTest app and are made freely
-    available to the general public as open data (<a href="https://www.netztest.at/en/Opendata"
-                                                     title="Link to Open Data" target="_blank"
-                                                     rel="noopener noreferrer">https://www.netztest.at/en/Opendata</a>)
-    for information, use, dissemination and other applications.</p>
+            <p>The data marked with asterisk * are published on the CTU-NetTest website and are publicly available as 
+                <a href="/en/Opendata" target="_blank">open data</a> for information, use, dissemination and repetitive use.</p>
+            <h3>2.2 Certified measurement option</h3>
+            <p>In addition to the data listed under 2.1, the certified measurement processes the data that users enter in the online form for the certified measurement:</p>
+            <ul>
+                <li>first name and last name including title</li>
+                <li>address at which the certified measurement is carried out</li>
+                <li>photos uploaded by the user</li>
+                <li>information on the environment of the measurement (for example, the Internet connection).</li>
 
-<h2>1.3. Processing and the purposes for processing of personal data </h2>
-<p><strong>Processing</strong></p>
-<p>the following personal data are processed in the course of the RTR-NetTest, the option loop-modus and the option signal-only loop-mode:
-    (1) the <strong>Client UUID</strong>, (2) the <strong>WLAN network ID (SSID) and numerical WLAN ID (BSSID)</strong>
-    as well as (3) the <strong>IP address</strong>.</p>
-<p>Purposes for processing</p>
-<ul>
-    <li>in respect to the <strong>Client UUID</strong>: possibility of compiling a test result history for the user;
-        identifying associated tests to identify improper use or malfunctions; Percipience of the rights of the uses
-        according to item 1.6.
-    </li>
-    <li>in respect to the <strong>WLAN network ID (SSID)</strong> and <strong>numerical WLAN ID (BSSID)</strong>:
-        presentation in the user’s history; identifying associated tests to identify improper use or malfunctions.
-    </li>
-    <li>in respect to the <strong>IP address</strong>: Technical enabling of the RTR-NetTest and ensuring the full
-        functionality, in particular display of the map and quality measurements; in order to be able to assign the
-        tests to individual operators (via routing information [AS] or host names); detection of improper use or
-        malfunctions.
-    </li>
-</ul>
-<h2>1.4. Transferring</h2>
-<p>The IP address is transferred, among others, also to <strong>third countries</strong>:<strong> </strong></p>
-<ul>
-    <li><strong>within the EU and the EEA</strong>: Depending on the website and terminal equipment used, map data from
-        basemap.at (<a href="https://basemap.at"
-                                                                                 target="_blank"
-                                                                                 rel="noopener noreferrer">https://basemap.at</a>)
-        and OpenStreetMap (<a href="https://www.openstreetmap.org" target="_blank" rel="noopener noreferrer">https://www.openstreetmap.org</a>)
-        are retrieved in order to enable the map display as well as the position determination.
-    </li>
-    <li><strong>Third countries</strong>: In order to conduct DNS tests as part of the quality tests, DNS requests are
-        sent to public DNS servers of Google (<a href="https://www.google.com" target="_blank"
-                                                 rel="noopener noreferrer">https://www.google.com</a>), Cloudflare (<a
-                href="https://www.cloudflare.com" target="_blank"
-                rel="noopener noreferrer">https://www.cloudflare.com</a>) and Quad9 (<a href="https://www.quad9.net"
-                                                                                        target="_blank"
-                                                                                        rel="noopener noreferrer">https://www.quad9.net</a>).
-        Depending on the website and terminal equipment used, data from Google (<a href="https://www.google.at"
-                                                                                   target="_blank"
-                                                                                   rel="noopener noreferrer">https://www.google.at</a>)
-        and Microsoft (<a href="https://www.microsoft.com" target="_blank" rel="noopener noreferrer">https://www.microsoft.com</a>)
-        are retrieved in order to enable the map display as well as the position determination.
-    </li>
-</ul>
-<p>The transfer of data to Google, Cloudflare and Microsoft is based on adequacy decisions of the Commission - according
-    to Art 45 General Data Protection Regulation (GDPR). Regarding Quad9 neither an adequacy decisions nor appropriate
-    safeguards according to Art 46 GDPR exist. A possible risk of such a transfer is that the IP address of the user is
-    transferred to Quad9 and thus conclusions on the executing of RTR-NetTest may be drawn.</p>
-<h2>1.5. Duration of storage of personal data </h2>
-<p>The <strong>IP address</strong>, the <strong>WLAN network ID (SSID)</strong> and <strong>numerical WLAN ID
-    (BSSID)</strong> are stored by RTR for a maximum period of six months. In any case the <strong>Client
-    UUID</strong> will be deleted with the final termination of the RTR-NetTest.</p>
-<h2>1.6. Rights of users in connection with personal data </h2>
-<p>By providing the randomly generated client ID (= <strong>Client UUID</strong>) - which can be found in the app under
-    Info - the user has amongst others the following rights concerning her or his personal data:</p>
-<ul>
-    <li>information;</li>
-    <li>erasure, thus to withdraw her or his acceptance to the processing of her or his personal data at any time;</li>
-    <li>lodging a complaint with the supervision authority (<a href="https://www.dsb.gv.at" target="_blank"
-                                                               rel="noopener noreferrer" class="external-link">https://www.dsb.gv.at</a>);
-    </li>
-    <li>rectification;</li>
-    <li>restriction;</li>
-    <li>data portability.</li>
-</ul>
-<h2>1.7. Contact</h2>
-<p>Questions regarding the processing of personal data and data protection in connection with the RTR-NetTest can be
-    send to:</p>
-<ul>
-    <li>E-Mail: <a href="mailto:netztest@rtr.at">netztest@rtr.at</a></li>
-    <li>Data protection officers of the RTR-GmbH: E-Mail: <a href="mailto:dsba@rtr.at">dsba@rtr.at</a></li>
-    <li>Address: Rundfunk und Telekom Regulierungs-GmbH (RTR-GmbH), RTR-NetTest, Mariahilfer Straße 77-79, 1060 Vienna,
-        Austria
-    </li>
-</ul>
+            </ul>
+            <h2>3 Processing and the purposes of personal data </h2>
+            <h3>3.1 CTU-NetTest and loop mode option</h3>
+            <p>As a part of the CTU-NetTest and its loop mode option, the following personal data are processed: the Client UUID, the optional manually entered address of the measurement, and  the IP address.</p>
+            <p>Purposes for processing these personal data:</p>
+            <ul>
+                <li>client UUID: possibility of compiling a test result history for the user; identifying associated tests to identify improper use or malfunctions; 
+                    exercising of the user´s rights according to item 5.
+                </li>
+                <li>optional manually entered address of the measurement: 
+                    If the location cannot be determined automatically more precisely than to 2 km, the user has the option to enter the address of the measurement manually. 
+                    This data, marked with * (= exact location determined by the optional manually entered address of the measurement), is converted into coordinates and is visible 
+                    as a measurement point on the CTU-NetTest map only for the user who carried out the respective test. The entered address of the measurement is not kept saved. 
+                    Third parties see merely the measurement point on the map, which is based on anonymised (dissected) coordinates. Only the dissected coordinates of the optional 
+                    manually entered address are published as open data under <a href="/en/Opendata" target="_blank">https://www.nettest.cz/en/Opendata</a>.
+                </li>
+            </ul>
+            <p>IP address: Technical enabling of the CTU-NetTest and ensuring the full functionality, in particular display of the map and quality measurements; in order to be able to 
+                assign the tests to individual service providers (via routing information [AS] or host names); detection of improper use or malfunctions.</p>
+            <h3>3.2 Certified measurement option</h3>
+            <p>Within the certified measurement, the personal data mentioned in 3.1 are processed. In addition, the personal data entered by the user in the online form 
+                (first name and surname including title, address at which the certified measurement is carried out, and photos) are processed. 
+                These are used to create the PDF document of the certified measurement.</p>
+            <h2>4 Duration of storage</h2>
+            <p>The IP address is stored by CTU for a maximum period of six months. In any case, the Client UUID will be deleted with the final termination of the CTU-NetTest.</p>
+            <p>The personal data which the user provides in the online form (first and last name including title, address at which the certified measurement is carried out, 
+                and photos) are stored for a maximum of 48 hours.</p>
+            <p>Data gathered during the measurements carried out so far remain a part of records even after the withdrawal of consent. So, the user´s personal data are not the part of these data.</p>
+            <h2>5 Rights in connection with personal data</h2>
+            <p>By providing the randomly generated client ID (Client UUID) - which can be found under the Options bookmark - the user has amongst others the following rights concerning her or his personal data:</p>
+            <ul>
+                <li>access to personal data,</li>
+                <li>erasure, applied through the right to withdraw their acceptance to the processing of their personal data at any time,</li>
+                <li>submit a complaint with the Office for Personal Data Protection (<a href="https://www.uoou.cz/">https://www.uoou.cz/</a>),</li>
+                <li>rectification,</li>
+                <li>restriction of the processing,</li>
+                <li>data portability.</li>
+            </ul>
+            <h2>6 Contact</h2>
+            <p>Questions regarding the processing of personal data and data protection in connection with the CTU-NetTest can be sent to: <a href="mailto:osobniudaje@ctu.cz">osobniudaje@ctu.cz</a>.</p>
 
+            <h2>CTU-NetTest – Terms of Use
+            </h2>
+            <p> Users use the browser version and app of the CTU-NetTest on their own risk. Please, send any comments on correction of inaccurate content, graphics, etc. per e-mail to 
+                <a href="mailto:nettest@ctu.cz">nettest@ctu.cz</a>.
+            </p>
+            <p> The CTU-NetTest of the Czech Telecommunication Office (hereinafter “CTU”) informs users about the current QoS (including upload, download and ping) of their Internet connection. 
+                Additionally, CTU-NetTest offers also the option to repeat test automatically (loop mode). Furthermore, in case a provider provides the IAS on the area of the Czech Republic, 
+                the test offers the possibility to carry out a certified measurement. With this, conclusive findings about the quality of the IAS can be made. 
+                These findings enable the user to activate remedies available in compliance with national legislation in case of any significant and continuous or regularly recurring 
+                discrepancy of actual service performance in terms of upload and download speed, from the performance the IAS provider stated in the contract.
+            </p>
+            <p> CTU’s legal authorisation to offer the CTU-NetTest, including the possible processing of personal data within the CTU-NetTest, is enshrined in 
+                <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:32015R2120" target="_blank">Article 4 (4) and Article 5 (1) Regulation (EU) 2015/2120 </a> 
+                (hereinafter “EU Regulation”). To fulfil this duty and ensure users with the greatest possible transparency and information – while respecting their privacy - the CTU-NetTest is 
+                based on the open data and open source principles. In case there is a change in the processing or handling the data gathered through the CTU-NetTest, especially with 
+                regard to the new versions of the CTU-NetTest, the user shall explicitly give a consent to these conditions again. In order to enable the CTU-NetTest to function properly and 
+                to do what you expect, some of the operating and technical data that are obtained during its use or provided in connection with its use, are processed. 
+                Some of these data may also be personal data of the CTU-NetTest users. Typically, however, no personal data which could even conceivably identify a specific user or node 
+                within electronic communications networks are published.
+            </p>
+            <p> According to the open source principle, this means that the source code of the CTU-NetTest software is publicly accessible and that CTU has put the components it has developed under an 
+                open source licence, i.e. Apache licence version 2.0 (<a href="https://www.apache.org/licenses/LICENSE-2.0">https://www.apache.org/licenses/LICENSE-2.0</a>). 
+                Care should be taken, however, that when the CTU-NetTest source code is used, other licences may be needed. 
+                The CTU-NetTest logo and the CTU-NetTest font are not subject to the open source principle and therefore, copying, modifying, or processing them in changed or unchanged form 
+                is prohibited. The CTU-NetTest data listed under <a href="/en/Opendata">https://www.nettest.cz/en/Opendata</a> 
+                are retrievable as open data and shall be made freely available to the general public for information, use, dissemination and other applications under the 
+                Creative Commons Attribution 4.0 (CC BY 4.0) License  (<a href="https://creativecommons.org/licenses/by/4.0/deed.en">https://creativecommons.org/licenses/by/4.0/deed.en</a>).
+            </p>
+            <p> CTU also points out that at the time of linking to third-party content on the World Wide Web (Internet links), this content was free of any illegal elements and that CTU has no 
+                influence on the current and future form of the linked content. CTU explicitly renounces responsibility for any content of linked sites that were changed after the link was made. 
+                The accuracy of content is always the responsibility of the respective provider or operator of the website. CTU does not accept any liability and/or guarantee for it.
+            </p>
+            <p> There is no legal claim to permanent availability of the offer to use the CTU-NetTest tool. CTU explicitly reserves the right to change, add to or delete parts of the 
+                CTU-NetTest or the entire offer to use the CTU-NetTest tool without prior announcement, or to cease their publication temporarily or finally.
+            </p>
+            <p>CTU seeks to ensure the CTU-NetTest web-browser /website version and the CTU-NetTest app are constantly up-to-date, complete and accurate. 
+                To ensure the correctness of the results, implausible and/or obviously abusive measurements may be marked and/or removed by CTU. 
+                CTU reserves the right to initiate appropriate legal action in case of non-compliance. CTU accepts no liability for the up-to-dateness, correctness, completeness or 
+                quality of the information and offers provided. As a basic principle, no claims can be brought against CTU for material or immaterial disadvantages and/or losses 
+                resulting from the use or non-use of information provided, or from the use of incorrect and incomplete information. Where CTU cannot assert a full waiver of 
+                liability due to the statutory provisions applicable in the individual case, liability shall be limited to gross negligence and malicious intent.
+            </p>
 
-<h1>2. Terms of Use</h1>
-<p>Users use the browser version and app of the RTR-NetTest at their own risk. Please send any comments on correction of
-    inaccurate content, graphics etc. by e-mail to <a href="mailto:netztest@rtr.at">netztest@rtr.at</a>. Under 14
-    years can use the RTR-NetTest with the consent of their legal guardian(s).</p>
-<p>The RTR-NetTest informs users about the current service quality (including upload, download, ping, signal strength)
-    of their Internet connection. The Android app features two options for technically interested users: On the one
-    hand, RTR-NetTest offers a loop-modus, which enables automatically repeated RTR-NetTests (note: in pauses between
-    the tests signal measurements continue); on the other hand, with the signal-only loop-modus signal measurements are
-    also carried out repeatedly - without any speed- or quality tests. </p>
-<p>In the event of a great demand or very high number of tests in a specific area, the loop-modus can be rejected by the
-    test system in order to avoid overload. Please note that the loop-modus is (only)
-    intended for use within the EU and the EEA. The loop-modus consumes a large amount of data. With fast connections,
-    10 tests can consume 1 GB or more of data. It is therefore strongly recommended that the loop-modus is only used
-    with real flat rate tariffs, where additional data volume does not cause additional costs. The loop-modus drains the
-    battery quickly. In pauses between the tests, the GPS and the display remain active and signal measurements
-    continue, which means that the energy is used up much faster than during stand-by mode. The loop-modus should
-    therefore only be used if an external power supply is available. The same applies to the signal-only loop-modus: The
-    signal-only loop-modus is (only) intended for use within the EU and the EEA. The battery is quickly drained by the
-    signal-only measurements. In the pauses between tests, the GPS and the display remain active and signal measurements
-    continue, which means that the energy is used up much faster than in stand-by mode. The loop-modus should therefore
-    only be used if an external power supply is available.</p>
-<p>RTR’s legal authorisation to offer RTR-NetTest is enshrined in  <a href="https://www.rtr.at/en/tk/TKG2003"
-                                                          title="Link to TKG 2003" target="_blank"
-                                                          rel="noopener noreferrer">Art 17 Par 4 and Par 5 Telecommunications Act
-    2003</a> as well as <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:32015R2120"
-                           title="Link to TSM Regulation" target="_blank"
-                           class="external-link">Art 4 Par 4 5 Par 1 Regulation (EU) 2015/2120</a>.
-    To fulfil this duty and ensure users with the greatest possible transparency and information – while respecting
-    their privacy – RTR-NetTest is based on the open source and open data principle.</p>
-<p>According to the open source principle, this means that the source code of the RTR-NetTest software is publicly
-    accessible and that RTR has put the components it has developed under an open source licence, ie Apache licence
-    version 2.0 (<a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank" rel="noopener noreferrer">https://www.apache.org/licenses/LICENSE-2.0</a>).
-    Care should be taken, however, that when the RTR-NetTest source code is used, other licences may be needed. The
-    RTR-NetTest logo and the RTR-NetTest font are not subject to the open source and open data principle and copying,
-    modifying or processing them in changed or unchanged form is prohibited. The RTR-NetTest data listed under <a
-            href="https://www.netztest.at/en/Opendata" target="_blank" rel="noopener noreferrer">https://www.netztest.at/en/Opendata</a>
-    are retrievable as open data and are under the usage of the Creative
-    Commons Attribution 4.0 (CC BY 4.0) Lizenz (<a
-            href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank" rel="noopener noreferrer">https://creativecommons.org/licenses/by/4.0/deed.en</a>)
-    so made freely available to the general public for information, use, dissemination and other applications.</p>
-<p>RTR also points out that at the time of linking to third-party content on the World Wide Web (Internet links), this
-    content was free of any illegal elements, and that RTR has no influence on the current and future form of the linked
-    content. RTR explicitly renounces responsibility for any content of linked sites that were changed after the link
-    was made. The accuracy of content is always the responsibility of the respective provider or operator of the
-    website. RTR does not accept any liability and/or guarantee for it.</p>
-<p>There is no legal claim to permanent availability of the offer. RTR explicitly reserves the right to change, add to
-    or delete parts of the RTR-NetTest or the entire RTR-NetTest offer without prior announcement, or to cease
-    publication of it temporarily or finally.</p>
-<p>RTR makes every endeavour to ensure the RTR-NetTest browser version/website and RTR-NetTest app are constantly
-    up-to-date, complete and accurate. To ensure the correctness of the results, implausible and/or obvious abusive
-    measurements may be marked and/or removed by RTR. RTR reserves the right to initiate appropriate legal action in
-    case of non-compliance. RTR accepts no liability for the up-to-dateness, correctness, completeness or quality of the
-    information and offers provided. As a basic principle, no claims can be brought against RTR for material or
-    immaterial disadvantages and/or losses resulting from the use or non-use of information provided or from the use of
-    incorrect and incomplete information. Where RTR cannot assert a full waiver of liability due to the statutory
-    provisions applicable in the individual case, liability shall be limited to gross negligence and malicious
-    intent.</p>
-
-<p>Version 2020-07-01</p>
 </body>
 </html>
