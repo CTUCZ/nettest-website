@@ -216,7 +216,7 @@ Lang.setStrings({
     'TestsInTheLastXHours' : 'tests in the last % hours',
     'TestsInTheLastXMinutes' : 'tests in the last % minutes',
     'NoUUID' : 'Zatím nemáte přiděleno žádné UUID',
-    'SafariBroken' : 'Please use <a href="https://www.mozilla.org/de/firefox/new/">Mozilla Firefox</a> or <a href="https://www.google.de/chrome/browser/desktop/">Google Chrome</a> for performing the test. More infos are given <a href="https://www.rtr.at/de/tk/netztestfaq_web_100">in the FAQ</a>.',
+    'SafariBroken' : 'Omlouváme se, v současné době není možné použít pro měření prohlížeč Safari. Použijte prosím <a href="https://www.google.cz/chrome/browser/desktop/">Google Chrome</a> nebo jiný prohlížeč.',    
     'FirefoxBroken' : 'Currently, the RTR-NetTest cannot be used with Firefox 82.0. Please use a different browser for the time being.',
     'LoopMode' : 'Opakované měření',
     'LoopModeTestsFinished' : 'Všechny testy jsou dokončeny',
