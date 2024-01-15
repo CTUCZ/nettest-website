@@ -218,6 +218,7 @@ Lang.setStrings({
     'NoUUID' : 'Zatím nemáte přiděleno žádné UUID',
     'SafariBroken' : 'Omlouváme se, v současné době není možné použít pro měření prohlížeč Safari. Použijte prosím <a href="https://www.google.cz/chrome/browser/desktop/">Google Chrome</a> nebo jiný prohlížeč.',    
     'FirefoxBroken' : 'Currently, the RTR-NetTest cannot be used with Firefox 82.0. Please use a different browser for the time being.',
+    'iPhoneBroken' : "Omlouváme se, v současné době není možné provádět měření na telefonech iPhone (bez ohledu na použitý webový prohlížeč).",
     'LoopMode' : 'Opakované měření',
     'LoopModeTestsFinished' : 'Všechny testy jsou dokončeny',
     'LoopModeFinished' : 'Měření dokončena',

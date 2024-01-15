@@ -150,6 +150,14 @@ function requestBrowserData(callback, options) {
                             //    return;
                             //}
 
+                                                        //iPhone warning
+                            // -> inform the user
+                            if (browser_agent.match(/iPhone; CPU iPhone OS/)) {
+                                $("#popuperror").append(Lang.getString("iPhoneBroken"));
+                                show_errorPopup();
+                                return;
+                            }
+
                             //Safari 10.1 and 10.1.1 won't let user's execute tests
                             //due to a previous bug in the WebKit library
                             // -> inform the user
