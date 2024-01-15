@@ -26,198 +26,192 @@
         <table id="data-spec-table" class="dont-stack uk-table">
             <thead>
             <tr>
-                <th scope="col">Název</th>
-                <th scope="col">Popis</th>
-                <th scope="col">Typ</th>
-                <th scope="col">Příklad</th>
+                <th scope="col"> {{ Lang.ds_page.title }} </th>
+                <th scope="col"> {{ Lang.ds_page.desc }} </th>
+                <th scope="col"> {{ Lang.ds_page.type }} </th>
+                <th scope="col"> {{ Lang.ds_page.example }} </th>
             </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>asn</td>
-                    <td>Číslo autonomního systému.</td>
+                    <td>{{ Lang.ds_page.asn }}</td>
                     <td>Numeric</td>
                     <td>203208</td>
                 </tr>
                 <tr>
                     <td>cat_technology</td>
-                    <td>Kategorie použité technologie např. “4G”, “5G”, “LAN”.</td>
+                    <td>{{ Lang.ds_page.cat_technology }}</td>
                     <td>String</td>
                     <td>LAN</td>
                 </tr>
                 <tr>
                     <td>client_version</td>
-                    <td>Použitá verze klientské aplikace.</td>
+                    <td>{{ Lang.ds_page.client_version }}</td>
                     <td>String</td>
                     <td>0.9.0</td>
                 </tr>
                 <tr>
                     <td>download_kbit</td>
-                    <td>Rychlost stahování, kilobity za sekundu.</td>
+                    <td>{{ Lang.ds_page.download_kbit }}</td>
                     <td>Numeric</td>
                     <td>15500</td>
                 </tr>
                 <tr>
                     <td>implausible</td>
-                    <td>Identifikace závadných měření.</td>
+                    <td>{{ Lang.ds_page.implausible }}</td>
                     <td>Boolean</td>
                     <td>false</td>
                 </tr>
                 <tr>
                     <td>ip_anonym</td>
-                    <td>Anonymizovaná IP adresa klienta.</td>
+                    <td>{{ Lang.ds_page.ip_anonym }}</td>
                     <td>String</td>
                     <td>185.68.212</td>
                 </tr>
                 <tr>
                     <td>lat</td>
-                    <td>Zeměpisná šířka pozice klienta.</td>
+                    <td>{{ Lang.ds_page.lat }}</td>
                     <td>Numeric</td>
                     <td>50.2029024</td>
                 </tr>
                 <tr>
                     <td>loc_accuracy</td>
-                    <td>Odhad přesnosti polohy (rádius v metrech).</td>
+                    <td>{{ Lang.ds_page.loc_accuracy }}</td>
                     <td>Numeric</td>
                     <td>3766</td>
                 </tr>
                 <tr>
                     <td>loc_src</td>
-                    <td>Zdroj informací o poloze. Hodnoty: “gps”, “network”.</td>
+                    <td>{{ Lang.ds_page.loc_src }}</td>
                     <td>String</td>
                     <td>network</td>
                 </tr>
                 <tr>
                     <td>long</td>
-                    <td>Zeměpisná délka pozice klienta.</td>
+                    <td>{{ Lang.ds_page.long }}</td>
                     <td>Numeric</td>
                     <td>17.3967841</td>
                 </tr>
                 <tr>
                     <td>lte_rsrp</td>
-                    <td>Síla LTE signálu v dBm.</td>
+                    <td>{{ Lang.ds_page.lte_rsrp }}</td>
                     <td>Numeric</td>
                     <td>-75</td>
                 </tr>
                 <tr>
                     <td>lte_rsrq</td>
-                    <td>Kvalita LTE signálu v decibelech.</td>
+                    <td>{{ Lang.ds_page.lte_rsrq }}</td>
                     <td>Numeric</td>
                     <td>-8</td>
                 </tr>
                 <tr>
                     <td>model</td>
-                    <td>Název použitého zařízení.</td>
+                    <td>{{ Lang.ds_page.model }}</td>
                     <td>String</td>
                     <td>Chrome</td>
                 </tr>
                 <tr>
                     <td>nat_type</td>
-                    <td>Typ připojení z hlediska NAT a verze IP (Např. veřejná IP, privátní adresa za NATem).</td>
+                    <td>{{ Lang.ds_page.nat_type }}</td>
                     <td>String</td>
                     <td>nat_local_to_public_ipv4</td>
                 </tr>
                 <tr>
                     <td>ndt_download_kbit</td>
-                    <td>Rychlost stahování NDT-testu v kilobitech za sekundu.</td>
+                    <td>{{ Lang.ds_page.ndt_download_kbit }}</td>
                     <td>Numeric</td>
                     <td>51343</td>
                 </tr>
                 <tr>
                     <td>ndt_upload_kbit</td>
-                    <td>Rychlost vkládání NDT-testu v kilobitech za vteřinu.</td>
+                    <td>{{ Lang.ds_page.ndt_upload_kbit }}</td>
                     <td>Numeric</td>
                     <td>12335</td>
                 </tr>
                 <tr>
                     <td>network_mcc_mnc</td>
-                    <td>Identifikace sítě, přičemž první tři čísla reprezentují zemi a čísla za pomlčkou operátora v rámci země.</td>
+                    <td>{{ Lang.ds_page.network_mcc_mnc }}</td>
                     <td>String</td>
                     <td>111-11</td>
                 </tr>
                 <tr>
                     <td>network_name</td>
-                    <td>Zobrazované jméno sítě.</td>
+                    <td>{{ Lang.ds_page.network_name }}</td>
                     <td>String</td>
                     <td>CTU CZ</td>
                 </tr>
                 <tr>
                     <td>network_type</td>
-                    <td>Typ sítě např. MOBILE, LTE, LAN.</td>
+                    <td>{{ Lang.ds_page.network_type }}</td>
                     <td>String</td>
                     <td>LTE</td>
                 </tr>
                 <tr>
                     <td>num_threads</td>
-                    <td>Počet vláken testu stahování.</td>
+                    <td>{{ Lang.ds_page.num_threads }}</td>
                     <td>Numeric</td>
                     <td>3</td>
                 </tr>
                 <tr>
                     <td>open_test_uuid</td>
-                    <td>UUID konkrétního testu.</td>
+                    <td>{{ Lang.ds_page.open_test_uuid }}</td>
                     <td>String</td>
                     <td>O10b9e85c-d47a-3428-b3fe-82ef24e8c6fe</td>
                 </tr>
                 <tr>
                     <td>open_uuid</td>
-                    <td>Identifikace klienta, který spustil test.</td>
+                    <td>{{ Lang.ds_page.open_uuid }}</td>
                     <td>String</td>
                     <td>Pa18046c3-cfce-357a-a3d0-062467c8a32c</td>
                 </tr>
                 <tr>
                     <td>ping_ms</td>
-                    <td>Medián pingu (round-trip time) v milisekundách, měřeno na straně serveru.</td>
+                    <td>{{ Lang.ds_page.ping_ms }}</td>
                     <td>Numeric</td>
                     <td>15.189354</td>
                 </tr>
                  <tr>
                     <td>pinned</td>
-                    <td>Identifikace relevantních měření.</td>
+                    <td>{{ Lang.ds_page.pinned }}</td>
                     <td>Boolean</td>
                     <td>true</td>
                 </tr>
                 <tr>
                     <td>platform</td>
-                    <td>Platforma, na které byl test proveden. Např. “Android” (= Google Android App), “iOS” (= Apple iOs App).</td>
+                    <td>{{ Lang.ds_page.platform }}</td>
                     <td>String</td>
                     <td>Android</td>
                 </tr>
                 <tr>
                     <td>server_name</td>
-                    <td>Název měřicího serveru.</td>
+                    <td>{{ Lang.ds_page.server_name }}</td>
                     <td>String</td>
                     <td>ČTÚ</td>
                 </tr>
                 <tr>
                     <td>sim_mcc_mnc</td>
-                    <td>Identifikace sítě poskytovatele dle SIM karty. Význam čísel je stejný jako u network_mcc_mnc.</td>
+                    <td>{{ Lang.ds_page.sim_mcc_mnc }}</td>
                     <td>String</td>
                     <td>111-11</td>
                 </tr>
                 <tr>
                     <td>test_duration</td>
-                    <td>Doba trvání testu v sekundách.</td>
+                    <td>{{ Lang.ds_page.test_duration }}</td>
                     <td>Numeric</td>
                     <td>15.189354</td>
                 </tr>
                 <tr>
                     <td>time_utc</td>
-                    <td>Čas spuštění testu v časové zóně UTC.</td>
+                    <td>{{ Lang.ds_page.time_utc }}</td>
                     <td>String</td>
                     <td>2021-09-10 02:55</td>
                 </tr>
                 <tr>
                     <td>upload_kbit</td>
-                    <td>Rychlost vkládání, kilobity za sekundu.</td>
+                    <td>{{ Lang.ds_page.upload_kbit }}</td>
                     <td>Numeric</td>
                     <td>5500</td>
-                </tr>
-                <tr>
-                    <td>zip_code</td>
-                    <td>PSČ klienta, pokud je známé.</td>
-                    <td>Numeric</td>
-                    <td>62800</td>
                 </tr>
             </tbody>
         </table>

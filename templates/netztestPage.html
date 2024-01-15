@@ -237,7 +237,7 @@
                         </div>
                         <div class="uk-navbar-right">
                             <ul class="uk-navbar-nav">
-                                <li><a href="/">{{ Lang.home }}</a></li>
+                                <li><a href="/{{ Lang.lang }}">{{ Lang.home }}</a></li>
                                 <li class="">
                                     <a href="Result">{{ Lang.history }}</a>
                                 </li>
@@ -325,7 +325,7 @@
                     <p class="logo-footer">
                         {{ Lang.ctu }}
                         <br/>E-mail: <a target='_self' href="mailto:nettest@ctu.cz">nettest@ctu.cz</a>
-                        <br/><a target='_self' href="https://www.ctu.cz/">www.ctu.cz</a>
+                        <br/><a target='_self' href="{{ Lang.template.ctu_url }}">{{ Lang.template.ctu_url2 }}</a>
                         <br/><a target='_self' href="https://github.com/CTUCZ">GitHub</a>
                     </p>
                 </div>
@@ -336,7 +336,7 @@
                         <a href="/{{ Lang.lang}}/Help">{{ Lang.help }}</a>
                     </li>
                     <li>
-                        <a href="/{{ Lang.lang}}/news">{{ Lang.news }}</a>
+                        <a href="/{{ Lang.lang}}/News">{{ Lang.news }}</a>
                     </li>
                     <li>
                         <a href="{{ Lang.index_content.tos.url }}">{{ Lang.index_content.tos.text }}</a>
@@ -346,7 +346,6 @@
                                 Lang.accessibility }}</a>
                         </li> -->
                     <li>
-                        <br>
                         <!--© 2021–<script>document.write(/\d{4}/.exec(Date())[0])</script>-->
                         © <script>document.write(/\d{4}/.exec(Date())[0])</script>
                         {{Lang.copyright}}
