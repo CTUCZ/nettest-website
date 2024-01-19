@@ -1,12 +1,12 @@
-RTR NetTest Website
+CTU NetTest website
 ===================
 
-This repository hosts the web page sources for ```www.netztest.at```
+This project contains the source codes of the CTU NetTest website: https://nettest.cz.
 
 Requirements
 ------------
 
-For building the website, the following tools are needed
+For building the website, the following tools are needed:
 
   * NodeJS
   * NPM
@@ -23,7 +23,7 @@ Building and running the Website
 	node build nettest 
 	```
 	
-	It is possible to live-rebuild changed sources by running
+	It is possible to live-rebuild changed sources by running:
 	
 	```bash
 	node build nettest watch
@@ -33,16 +33,18 @@ Building and running the Website
 
     Use the `build`-directory as the root directory for your
 	webserver, e.g.	in conjunction with the `http-server` 
-	node module (`npm install http-server -g`)
+	node module (`npm install http-server -g`).
 	
 	```bash
 	http-server build -p 8081
 	```
 	
-	Now, the website is ready to use: <http://localhost:8081/en>
+    It is also possible to use prepared npm scripts: ```npm start``` or  ```npm run dev```.
 	
+	Now, the website is ready to use: <http://localhost:8081/en>.
 
 Get in Touch
 ------------
 
+* [CTU-NetTest](https://nettest.cz) on the web
 * [RTR-Netztest](https://www.netztest.at) on the web
