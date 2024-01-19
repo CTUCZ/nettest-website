@@ -4,7 +4,7 @@
  */
 
 Lang.setStrings({
-    'RTR-NetTest': 'RTR-NetTest',
+    'CTU-NetTest': 'CTU-NetTest',
     'Mbps' : 'Mbps',
     'ms' : 'ms',
     'dBm' : 'dBm',
@@ -14,8 +14,6 @@ Lang.setStrings({
     'North' : 'N',
     'South' : 'S',
     'showMoreDevices' : 'Further devices',
-    'AndroidAppAvailable' : 'If you would like to use the test to the full extent, please use our <a href="https://play.google.com/store/apps/details?id=at.alladin.rmbt.android&hl=en">Android-App</a>.',
-    'IOSAppAvailable' : 'If you would like to use the test to the full extent, please use our <a href="https://itunes.apple.com/at/app/rtr-nettest/id724321403">iOS-App</a>.',
     'NoJavaAvailable' : 'A simple JavaScript test is carried out.',
     'BrowserOutdated' : 'Your browser version is outdated and does not support all necessary features. Please use a newer browser version.',
     'YourPostalCode' : 'Your postal code',
@@ -27,7 +25,7 @@ Lang.setStrings({
     'City' : 'City',
     'AddressInput' : 'optional, manual address entry',
     'PrivacyStatement' : 'Privacy statement',
-    'PrivacyStatementLink' : 'https://www.rtr.at/en/tk/nettestprivacypolicy',
+    'PrivacyStatementLink' : 'https://nettest.cz/en/Privacy',
     'AustrianPostalCode' : 'Austrian postcode',
     'gkz': 'Austrian community ID',
     'community': 'Community',
@@ -216,7 +214,7 @@ Lang.setStrings({
      'TestsInTheLastXMinutes' : 'tests in the last % minutes',
      'NoUUID' : 'You do not have an UUID',
      'SafariBroken' : 'Please use <a href="https://www.google.com/chrome/browser/desktop/">Google Chrome</a> or another browser for performing the test.',
-     'FirefoxBroken' : 'Currently, the RTR-NetTest cannot be used with Firefox 82.0. Please use a different browser for the time being.',
+     'FirefoxBroken' : 'Currently, the CTU-NetTest cannot be used with Firefox 82.0. Please use a different browser for the time being.',
      'LoopMode' : 'Loop Mode',
      'LoopModeTestsFinished' : 'All tests are completed',
      'LoopModeFinished' : 'Measurements complete',

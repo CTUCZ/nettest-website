@@ -196,7 +196,7 @@ $(document).ready(function() {
             show_errorPopup();
         }));
 
-        var isWithinApp = (navigator.userAgent && navigator.userAgent.indexOf("RTR-NetTest") !== -1);
+        var isWithinApp = (navigator.userAgent && navigator.userAgent.indexOf("CTU-NetTest") !== -1);
 
 
         if (cookieEnabled && !((preferredTest === TestTypes.Java) && (!loadRMBTApplet || !rmbtApplet)) && !isWithinApp) {
@@ -228,25 +228,25 @@ $(document).ready(function() {
         	// Error-Messages bei Fehlern
                 $("#popuperror").empty();
                 if (!cookieEnabled) {
-                	var errormessage = (selectedLanguage=='de')?'<p>Die Cookie-Funktion in Ihrem Browser ist deaktiviert. Sie können den RTR-Netztest nicht ausführen.</p>':'<p>Your browser\'s cookie functionality is turned off. You can not run the RTR-NetTest.<p>';
+                	var errormessage = (selectedLanguage=='cs')?'<p>Ve vašem prohlížeči máte zakázané soubory cookie. Bohužel není možné spustit ČTÚ-NetTest.</p>':'<p>Your browser\'s cookie functionality is turned off. You can not run the CTU-NetTest.<p>';
                 	$("#popuperror").append(errormessage);
                 	show_errorPopup();
                 }
                 else if (isWithinApp){
                     //no tests possible from within the app
-                    var errormessage = (selectedLanguage=='de')?'<p>Bitte nutzen Sie die App zur Durchführung von Messungen.</p>':'<p>Please use the app to conduct measurements.<p>';
+                    var errormessage = (selectedLanguage=='cs')?'<p>Pro provedení měření prosím využijte aplikaci.</p>':'<p>Please use the app to conduct measurements.<p>';
                     $("#popuperror").empty();
                     $("#popuperror").append(errormessage);
                     show_errorPopup();
                 }
                 else if (!Modernizr.canvas || navigator.appVersion.indexOf("MSIE 10") !== -1) {
-                	var errormessage = (selectedLanguage=='de')?'<p>Ihr Browser ist zu alt und unterstützt nicht alle Funktionen, die zur Durchführung des Tests notwendig wären. Bitte verwenden Sie einen neueren oder anderen Browser.</p>':'<p>Your browser version is outdated and does not support all features necessary. Please use a newer browser version.<p>';
+                	var errormessage = (selectedLanguage=='cs')?'<p>Váš prohlížeč je zastaralý a nepodporuje všechny důležité funkce. Aktualizujte prosím svůj prohlížeč na nejnovější verzi.</p>':'<p>Your browser version is outdated and does not support all features necessary. Please use a newer browser version.<p>';
                     $("#popuperror").empty();
                     $("#popuperror").append(errormessage);
                     show_errorPopup();
                         }
                 else if (noJava) {
-                	var errormessage = (selectedLanguage=='de')?'<p>Um den RTR-Netztest nutzen zu können, muss die aktuelle Java Version installiert und aktiviert sein.</p><p>Sie können Java auf <a href="http://www.java.com/de/download/">dieser Seite</a> herunter laden.</p>':'<p>To use the RTR-NetTest you need to install and activate the latest java version.</p><p>Download the latest java version here:<br /><a href="http://www.java.com/de/download/">http://www.java.com/de/download/</a></p>';
+                	var errormessage = (selectedLanguage=='cs')?'<p>Java Applet could not be initialized.<br />Please check your Java installation: <a href="http://www.java.com/en/download/testjava.jsp">http://www.java.com/en/download/testjava.jsp</a>.</p>':'<p>To use the CTU-NetTest you need to install and activate the latest java version.</p><p>Download the latest java version here:<br /><a href="http://www.java.com/en/download/">http://www.java.com/en/download/</a></p>';
                 	$("#error_placeholder").hide();
                 	$("#dashboard_easy").detach();
                 	$("#dashboard").show();
@@ -256,7 +256,7 @@ $(document).ready(function() {
                 	show_errorPopup();
                 }
                 else if (oldjava){
-                	var errormessage = (selectedLanguage=='de')?'<p>Ihr Java-Plugin (Version '+versions[0]+') ist veraltet!</p><p>Bitte aktualisieren Sie das Plugin per Download unter <a href="http://java.com/inc/BrowserRedirect1.jsp">http://java.com/inc/BrowserRedirect1.jsp</a></p>':'<p>Your java plugin (version '+versions[0]+') is outdated!</p><p>Please update your java plugin using the following download:<br /><a href="http://java.com/inc/BrowserRedirect1.jsp">http://java.com/inc/BrowserRedirect1.jsp</a><p>';
+                	var errormessage = (selectedLanguage=='cs')?'<p>Your java plugin (version '+versions[0]+') is outdated!</p>':'<p>Please update your java plugin using the following download:<br /><a href="http://java.com/inc/BrowserRedirect1.jsp">http://java.com/inc/BrowserRedirect1.jsp</a><p>';
                 	$("#error_placeholder").hide();
                 	$("#dashboard").show();
                 	$("#dashboard_easy").detach();
@@ -267,7 +267,7 @@ $(document).ready(function() {
 		}
 
                 else if (rmbtApplet == null) {
-                	var errormessage = (selectedLanguage=='de')?'<p>Fehler beim Laden des Testmoduls.</p>':'<p>Error on loading the test module<p>';
+                	var errormessage = (selectedLanguage=='cs')?'<p>Při načítání testovacího modulu došlo k chybě.</p>':'<p>Error on loading the test module<p>';
                 	$("#error_placeholder").hide();
                 	$("#dashboard").show();
                 	$("#dashboard_easy").detach();
@@ -277,7 +277,7 @@ $(document).ready(function() {
                 	//setTimeout(function(){show_agbform(true, 'jstest');},2000);
                 }
                 else {
-			var errormessage = (selectedLanguage=='de')?'<p>>Unbekannter Fehler.</p>':'<p>unknown error<p>';
+			var errormessage = (selectedLanguage=='cs')?'<p>neznámá chyba.</p>':'<p>unknown error<p>';
 			$("#popuperror").append(errormessage);
 			show_errorPopup();
                 }

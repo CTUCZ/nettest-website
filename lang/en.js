@@ -34,13 +34,6 @@ exports.strings = {
                 "qostest": "/en/Privacy"
             }
         },
-        /*"apps_content": 'Download the measurement application for Android or iOS or carry out the test on web browser.',
-        "apps_url" : "",
-        "apps" : {
-            "nettest" : "Application and a web test",
-            "qostest" : "NetTest Apps"
-        },
-        "apps_alt" : "RTR-NetTest app",*/
         "select_version" : "Select version",
         "test_section" : {
             "heading" : "Start test",
@@ -49,14 +42,10 @@ exports.strings = {
                 "nettest" : "Start the test",
                 "qostest" : "qostest teaser"
             },
-            "source" : {
-                "nettest" : "../img/rtr-nettest/rtr-nettest.png",
-                "qostest" : "../img/qostest/qostest-start.png"
-            },
             "start" : "Start"
         },
         "statistics_alt" : "Statistics teaser",
-        "map": "Mapa",
+        "map": "Map",
         "map_content" : "Maps with test results",
         "help_content" : "Detailled background information",
         "statistics_content" : "Measurements carried out earlier",
@@ -69,8 +58,8 @@ exports.strings = {
 
     "map_content" : {
         "teaser" : {
-            "nettest" : 'This map shows the existing RTR-NetTest results,  it is not always possible to draw conclusions on the broadband coverage. Additional information can be found  <a href="https://www.rtr.at/TKP/service/rtr-nettest/help/map/nettestfaq_karte.en.html">here</a>.',
-            "qostest" : 'This map shows the existing qostest.eu results, it is not always possible to draw conclusions on the broadband coverage. Additional information can be found <a href="https://www.rtr.at/TKP/service/rtr-nettest/help/map/nettestfaq_karte.en.html">here</a>.'
+            "nettest" : 'This map shows the existing CTU-NetTest results,  it is not always possible to draw conclusions on the broadband coverage. Additional information can be found  <a href="">here</a>.',
+            "qostest" : 'This map shows the existing qostest.eu results, it is not always possible to draw conclusions on the broadband coverage. Additional information can be found <a href="">here</a>.'
         },
         "search_address" : "Search for an address or city",
         "large_view" : "Large view"
@@ -111,7 +100,7 @@ exports.strings = {
 
     "opentest_content" : {
         "measurement_result_from" : "Measurement results from",
-        "coverage_hint": "Please note that these data rates are not measurement results of the RTR-NetTest, but data rates published by the respective operators. The information refers to an area of 100m x 100m. For questions - such as the tariff with which bandwidths can be achieved or whether installation is possible at your specific location - please contact the respective network operator. <a href='https://www.rtr.at/TKP/service/rtr-nettest/help/test_result/nettestfaq_coverage.en.html' target='_blank'>Further information</a>",
+        "coverage_hint": "Please note that these data rates are not measurement results of the CTU-NetTest, but data rates published by the respective operators. The information refers to an area of 100m x 100m. For questions - such as the tariff with which bandwidths can be achieved or whether installation is possible at your specific location - please contact the respective network operator. <a href='' target='_blank'>Further information</a>",
         "coverage_unavailable": "For this location, no operator open data is available.",
         "coverage_intro": "For this location the following information has been published by operators:",
         "down_avg": "Downlink (normally available speed)",
@@ -147,7 +136,6 @@ exports.strings = {
 
     "options_content" : {
         "client_uuid" : "Client-UUID",
-        //"options_apps_text" : "<h5>Android-App</h5><p>The RTR-NetTest measures, in addition to the speed of your current internet connection (upload, download, ping, signal strength), also a number of quality parameters (VoIP, unchanged content, website, transparent connection, DNS, ports).<br /> <br /> When starting the app, several symbols will give you information about your internet connection: mobile data or WLAN connection, background data transmission, IP address and location. The start button initiates the RTR-NetTest. The speed tests are followed by QoS tests. QoS stands for Quality of Service. Horizontal bars show the progress of the QoS tests. Once all tests are completed, the results as well as other detailed information can be viewed in the summary. The menu is located on the left and contains buttons to access the pages home , history, map, statistics, help, information and settings.</p><p>The Android-App Version 2.2 can be downloaded using the&nbsp; <a href=\"https://play.google.com/store/apps/details?id=at.alladin.rmbt.android\" title=\"Download RTR-nettest\" target=\"_blank\">Google Play Store</a> or direcly <a href=\"https://www.nettest.at/RTR-nettest.apk\" title=\"Opens external link in new window\" target=\"_blank\">here</a>. It is available for devices with Android 4.0 and above. <a href=\"https://www.rtr.at/en/tk/nettestfaq_app\" title=\"Opens internal link in current window\">More information...</a></p><h5>iOS-App (iPhone, iPad)</h5><p>The iOS-App can be downloaded using the App <a href=\"https://itunes.apple.com/at/app/rtr-nettest/id724321403\" title=\"Download RTR-nettest iOS\" target=\"_blank\">Apple iTunes-Store</a>. It is available for devices with iOS 7.0 and above. <a href=\"https://www.rtr.at/en/tk/nettestfaq_app\" title=\"Opens internal link in current window\">More information...</a></p><h5>Web-Browser</h5><p>Measurements with the RTR-NetTest with other mobile operating systems and with the desktop&nbsp;can be conducted with a web browser&nbsp; - <a href=\"https://www.nettest.at/en/Test?websocket=t\" title=\"Start RTR-nettest using WebSockets\" target=\"_blank\">start test using Websockets</a></p><p><a href=\"https://www.rtr.at/en/tk/nettestfaq_web\" title=\"Opens internal link in current window\">More information on Web-Browsers.<br /></a></p>",
         "your_uuid" : "Your UUID is",
         "ip_version": "IP version",
         "ip_version_desc": "If your internet access supports both IPv4 and IPv6, you can choose which protocol version is used for conducting the test.",
@@ -217,21 +205,11 @@ exports.strings = {
         "title_appended": "Academic title",
         "location": "Location of the measurement",
         "location_desc": "Address of the location where the measurement is carried-out",
-        //"first_cycle_question": "Is it the first measurement cycle?",
-        //"yes_first_cycle": "Yes, first cycle",
-        //"no_subsequent_cycle": "No, follow-up cycle",
         "start_measurement": "Start the certified measurement",
         "additional_information": "Information on IAS at a fixed location",
         "provider_name": "Name of the IAS provider",
         "provider_service_name": "Name of the service",
         "provider_contract_number": "Contract number",
-        // "additional_information_desc": "Since this is the first measurement cycle, we ask you to answer the following questions in order to understand the circumstances of the measurement. For further measuring cycles, answering these questions is no longer necessary.",
-        // "location_access": "Please describe the location of your Internet access",
-        // "location_access_residential": "Apartment building",
-        // "location_access_single_family": "Single-family home",
-        // "location_access_urban": "Urban area",
-        // "location_access_rural": "Rural area",
-        // "location_access_other": "Other",
         "access_type": "Describe your Internet access",
         "access_type_desc": "What access technology does your service use (xDSL, fibre, Wi-Fi, DOCSIS, other)? What kind of terminal equipment device do you use for connecting to the Internet? Is your computer (laptop) connected with a cable to a socket (Ethernet, RH-45) or do you use modem or modem with router function (having LAN ports or allows also Wi-Fi connection) to connect to the Internet? If possible, state the exact name of the producer and type of the terminal equipment device (modem, router).",
         "test_device": "Describe your end device used for the measurement",

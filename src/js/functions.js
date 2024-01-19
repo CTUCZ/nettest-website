@@ -13,14 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
+var tc_short_cs = '<b>V důsledku zajištění co možná nejvyšší transparentnosti a informovanosti pro uživatele je možné webovou verzi nástroje ČTÚ-NetTest používat pouze po udělení výslovného souhlasu s Prohlášením o ochraně osobních údajů a podmínkami užití:';
+var tc_short_en = '<b>In order to ensure users with the greatest possible transparency and information, the CTU-NetTest browser version can be used only after explicit consent to CTU’s Privacy Policy and Terms of Use for the CTU-NetTest:';
+var tc_agree_cs = 'Souhlasím s Prohlášením o ochraně osobních údajů a podmínkami užití.';
+var tc_agree_en = 'I agree with CTU’s Privacy Policy and Terms of Use for the CTU-NetTest.';
 
-var tc_short_de = '<b>Im Sinne größtmöglicher Transparenz und Information für den Nutzer, ist die Verwendung der Browser-Version des RTR-nettests erst nach ausdrücklicher Zustimmung zur Datenschutzerklärung sowie zu den Nutzungsbedingungen der RTR-GmbH hinsichtlich des RTR-nettests möglich:';
-var tc_short_en = '<b>In order to ensure users with the greatest possible transparency and information, the RTR-NetTest browser version can be used only after explicit consent to RTR’s Privacy Policy and Terms of Use for the RTR-NetTest:';
-var tc_agree_de = 'Ich stimme der Datenschutzerklärung und den Nutzungsbedingungen der RTR-GmbH hinsichtlich des RTR-nettests zu.';
-var tc_agree_en = 'I agree with RTR’s Privacy Policy and Terms of Use for the RTR-NetTest.';
-
-var ndt_short_de = 'Der NDT-Test der Forschungsplattform M-Lab ist ein optionaler, vertiefender Test, der weitere technische Parameter misst – allerdings auch die Messdauer und das übertragene Datenvolumen deutlich erhöht. Im Rahmen dieses vertiefenden Tests werden Daten, ua. die IP-Adresse, auch ins Ausland au&szlig;erhalb der EU an die Forschungsplattform M-Lab übermittelt, dh. diese Daten werden durch M-Lab dauerhaft gespeichert, veröffentlicht und der Allgemeinheit zur Information, Nutzung, Weiterverbreitung und Weiterverwendung unter M-Lab-Open Data frei zug&auml;nglich gemacht. Aufgrund der Verarbeitung und der Übermittlung der IP-Adresse ins Ausland au&szlig;erhalb der EU könnte gegebenenfalls die Identität des Nutzers bestimmt werden oder bestimmbar sein und somit könnte ein Personenbezug hergestellt werden.<br /><br />Durch Anklicken des Zurück-Button wird der Datenschutztext wieder aufgerufen. Dort finden sich unter <b>1.3</b> die ausführlichen Informationen zum NDT-Test.';
-var ndt_short_en = 'The NDT-Test of the research platform M-Lab is an optional, but more comprehensive test, which measures additional technical parameters. Please note that this test increases the time duration of the measurement and the transmitted data volume considerably. As part of the more comprehensive test, data – such as IP-addresses – are transferred, which means that these data are permanently stored and published by M-Lab and are made freely accessable to the general public for information, use, dissemination and other applications under M-Lab Open Data. Given the processing and transfer of IP-addresses to non-EU countries, it is possible that a user’s identity may be determined or become determinable and that personal identification is possible.<br /><br />Click the return button to access RTR’s Privacy Policy for the RTR-NetTest.'
+var ndt_short_cs = 'The NDT-Test of the research platform M-Lab is an optional, but more comprehensive test, which measures additional technical parameters. Please note that this test increases the time duration of the measurement and the transmitted data volume considerably. As part of the more comprehensive test, data – such as IP-addresses – are transferred, which means that these data are permanently stored and published by M-Lab and are made freely accessable to the general public for information, use, dissemination and other applications under M-Lab Open Data. Given the processing and transfer of IP-addresses to non-EU countries, it is possible that a user’s identity may be determined or become determinable and that personal identification is possible.<br /><br />Click the return button to access CTU’s Privacy Policy for the CTU-NetTest.';
+var ndt_short_en = 'The NDT-Test of the research platform M-Lab is an optional, but more comprehensive test, which measures additional technical parameters. Please note that this test increases the time duration of the measurement and the transmitted data volume considerably. As part of the more comprehensive test, data – such as IP-addresses – are transferred, which means that these data are permanently stored and published by M-Lab and are made freely accessable to the general public for information, use, dissemination and other applications under M-Lab Open Data. Given the processing and transfer of IP-addresses to non-EU countries, it is possible that a user’s identity may be determined or become determinable and that personal identification is possible.<br /><br />Click the return button to access CTU’s Privacy Policy for the CTU-NetTest.'
 
 var min_accuracy_for_showing_map = 2000;
 var exdays = 365*24*60*60;
@@ -126,17 +125,17 @@ function requestBrowserData(callback, options) {
                                 $("#noJavaWarning").hide();
 
                                 //is it android?
-                                if (browser_agent.match(/Android|Opera M(obi|ini)|Dolfin|Dolphin/g)) {
-                                    $("#androidApp").show();
+                               // if (browser_agent.match(/Android|Opera M(obi|ini)|Dolfin|Dolphin/g)) {
+                                   // $("#androidApp").show();
                                     //also display links to phone stores (if available)
-                                    $("#androidApp").html('<p>' + Lang.getString('AndroidAppAvailable') + '</p>');
-                                }
+                                    //$("#androidApp").html('<p>' + Lang.getString('AndroidAppAvailable') + '</p>');
+                               // }
 
                                 //is it iOS?
-                                else if (browser_agent.match(/iP(hone|od|ad)/g)) {
-                                    $("#iOSApp").show();
-                                    $("#iOSApp").html('<p>' + Lang.getString('IOSAppAvailable') + '</p>');
-                                }
+                               // else if (browser_agent.match(/iP(hone|od|ad)/g)) {
+                                   // $("#iOSApp").show();
+                                   // $("#iOSApp").html('<p>' + Lang.getString('IOSAppAvailable') + '</p>');
+                               // }
                             }
 
                             
@@ -150,20 +149,23 @@ function requestBrowserData(callback, options) {
                             //    return;
                             //}
 
-                                                        //iPhone warning
+                            //iPhone warning
                             // -> inform the user
-                            /**if (browser_agent.match(/iPhone; CPU iPhone OS/)) {
+                            if (browser_agent.match(/iPhone; CPU iPhone OS/)) {
                                 $("#popuperror").append(Lang.getString("iPhoneBroken"));
                                 show_errorPopup();
                                 return;
-                            }*/
+                            }
 
                             //Safari 10.1 and 10.1.1 won't let user's execute tests
                             //due to a previous bug in the WebKit library
                             // -> inform the user
                             //https://bugs.webkit.org/show_bug.cgi?id=170463
                             if ((browser_agent.match(/Version\/10\.1.*Safari/) &&
-                                    !browser_agent.match(/Version\/10\.1\.2.*Safari/))) {
+                                    !browser_agent.match(/Version\/10\.1\.2.*Safari/)) ||
+                                ((browser_agent.match(/iPhone; CPU iPhone OS/) ||
+                                        (browser_agent.match(/Version\/15\..*Safari/))) &&
+                                    !browser_agent.match(/Version\/15\.4.*Safari/))) {
                                 $("#popuperror").append(Lang.getString("SafariBroken"));
                                 show_errorPopup();
                                 return;

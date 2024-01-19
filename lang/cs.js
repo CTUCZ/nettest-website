@@ -30,68 +30,23 @@ exports.strings = {
                 "nettest": "/cs/Privacy",
             }
         },
-       /*"apps_content": 'Stáhněte si měřicí aplikaci pro <a href="">Android</a> nebo <a href="">iOS</a> nebo proveďte test pomocí <a href="">webového prohlížeče</a>.',
-         "apps_url" : "",
-         "apps" : {
-            "netztest" : "Aplikace a webový test",
-            "qostest" : "NetTest Apps"
-       },
-        "apps_alt" : "RTR-NetTest app",*/
-        "select_version" : "Select version",
+        "select_version" : "Vyberte verzi",
         "test_section" : {
             "heading" : "Spustit test",
             "desc" : "Provede jedno měření nástrojem NetTest",
             "alt" : {
                 "nettest" : "Spustit test",
             },
-            "source" : {
-                "nettest" : "../img/rtr-nettest/rtr-nettest.png",
-            },
             "start" : "Start"
         },
-        "statistics_alt" : "Statistics teaser",
         "map": "Mapa",
         "map_content" : "Mapy s výsledky testů",
-        "help_content" : "Detailled background information",
         "statistics_content" : "Dříve provedená měření",
         "enlarge_map" : "Zvětšit mapu",
         "fullscreen" : "Na celou obrazovku",
         "loop_mode_content": "Provede opakované měření dle vlastního nastavení",
         "opendata_content": "Výsledky měření jsou dostupné jako otevřená data",
         "certified_content": "Provede proces certifikovaného měření pro účely reklamace služby"
-    },
-
-    "map_content" : {
-        "teaser" : {
-            "netztest" : 'This map shows the existing RTR-NetTest results,  it is not always possible to draw conclusions on the broadband coverage. Additional information can be found  <a href="https://www.rtr.at/TKP/service/rtr-nettest/help/map/netztestfaq_karte.en.html">here</a>.',
-            "qostest" : 'This map shows the existing qostest.eu results, it is not always possible to draw conclusions on the broadband coverage. Additional information can be found <a href="https://www.rtr.at/TKP/service/rtr-nettest/help/map/netztestfaq_karte.en.html">here</a>.'
-        },
-        "search_address" : "Search for an address or city",
-        "large_view" : "Large view"
-    },
-
-    "statistics_content" : {
-        "teaser" : {
-            "netztest" : 'Zde uvedené hodnoty jsou výsledky měření nástroje NetTest.     Další informace najdete <a href="https://www.rtr.at/TKP/service/rtr-nettest/help/test_result/netztestfaq_testergebnis.en.html">zde</a>.',
-            "qostest" : 'The values listed here represent the qostest.eu results.     Additional information can be found <a href="https://www.rtr.at/TKP/service/rtr-nettest/help/test_result/netztestfaq_testergebnis.en.html">here</a>.'
-        },
-        "operators_from" : "Operators from",
-        "disclaimer" : 'Opakované testy jsou filtrovány pro statistický přehled.',
-        "opendata_disclaimer" : 'Please note: <a href="Opendata.html">measurement data available</a> as open data',
-        "burgenland" : 'Burgenland',
-        "carinthia" : 'Carinthia',
-        "lower_austria" : 'Lower Austria',
-        "upper_austria" : 'Upper Austria',
-        "salzburg" : 'Salzburg',
-        "styria" : "Styria",
-        "tyrol" : "Tyrol",
-        "vorarlberg" : "Vorarlberg",
-        "vienna" : "Vienna",
-        "all_states" : "All provinces",
-        "enddate" : "End date",
-        "all_operators" : "All operators",
-        "no_operators": "No operators found for the current selection",
-        "failure": "Currently there are no statistics available."
     },
 
     "history_content" : {
@@ -105,35 +60,28 @@ exports.strings = {
 
     "opentest_content" : {
         "measurement_result_from" : "Výsledky měření z",
-        "coverage_hint": "Please note that these data rates are not measurement results of the RTR-NetTest, but data rates published by the respective operators. The information refers to an area of 100m x 100m. For questions - such as the tariff with which bandwidths can be achieved or whether installation is possible at your specific location - please contact the respective network operator. <a href='https://www.rtr.at/TKP/service/rtr-nettest/help/test_result/netztestfaq_coverage.en.html' target='_blank'>Further information</a>",
-        "coverage_unavailable": "For this location, no operator open data is available.",
-        "coverage_intro": "For this location the following information has been published by operators:",
-        "down_avg": "Downlink (normally available speed)",
-        "up_avg": "Uplink (normally available speed)",
-        "down_max": "Downlink (maximum speed available)",
-        "up_max": "Uplink (maximum speed available)"
     },
 
     "opentests_content" : {
-        "network_name" : "Mobile network (Display)",
+        "network_name" : "Mobilní síť (zobrazená)",
         "mobile_provider_name" : "Mobilní operátor",
-        "sim_home_country" : "SIM home country",
+        "sim_home_country" : "Domovská země SIM",
         "sim_mcc_mnc" : "SIM-MCC-MNC",
-        "country_geoip" : "Country (IP)",
-        "country_location" : "Country (Location)",
+        "country_geoip" : "Země (IP)",
+        "country_location" : "Země (Lokace)",
         "public_ip_as_name" : "Název sítě (AS)",
-        "software_version" : "Software version",
+        "software_version" : "Verze softwaru",
         "next_page" : "Další strana",
         "results" : "výsledků",
-        "network_country" : "Country",
+        "network_country" : "Země",
         "gkz" : "ID rakouské komunity",
-        "pinned_true" : "Included in statistics",
-        "pinned_false" : "Not included in statistics",
+        "pinned_true" : "Zahrnuto ve statistikách",
+        "pinned_false" : "Není zahrnuto ve statistikách",
         "show_open_test_uuid" : "Zobrazit ID testů",
-        'radio_band': 'Radio band',
+        'radio_band': 'Frekvenční pásmo',
         'cell_area_code': 'Cell area code',
         'cell_location_id': 'Cell location id',
-        'channel_number': 'Frequency channel',
+        'channel_number': 'Frekvenční kanál',
         "additional_filters" : "Další filtry",
         "intraday": "Posledních 24 hodin",
         "down_upload": "Rychlost stahování/vkládání (download/upload)"
@@ -141,18 +89,14 @@ exports.strings = {
 
     "options_content" : {
         "client_uuid" : "UUID klienta",
-        //"options_apps_text" : "<h5>Android-App</h5><p>The RTR-NetTest measures, in addition to the speed of your current internet connection (upload, download, ping, signal strength), also a number of quality parameters (VoIP, unchanged content, website, transparent connection, DNS, ports).<br /> <br /> When starting the app, several symbols will give you information about your internet connection: mobile data or WLAN connection, background data transmission, IP address and location. The start button initiates the RTR-NetTest. The speed tests are followed by QoS tests. QoS stands for Quality of Service. Horizontal bars show the progress of the QoS tests. Once all tests are completed, the results as well as other detailed information can be viewed in the summary. The menu is located on the left and contains buttons to access the pages home , history, map, statistics, help, information and settings.</p><p>The Android-App Version 2.2 can be downloaded using the&nbsp; <a href=\"https://play.google.com/store/apps/details?id=at.alladin.rmbt.android\" title=\"Download RTR-nettest\" target=\"_blank\">Google Play Store</a> or direcly <a href=\"https://www.nettest.at/RTR-nettest.apk\" title=\"Opens external link in new window\" target=\"_blank\">here</a>. It is available for devices with Android 4.0 and above. <a href=\"https://www.rtr.at/en/tk/nettestfaq_app\" title=\"Opens internal link in current window\">More information...</a></p><h5>iOS-App (iPhone, iPad)</h5><p>The iOS-App can be downloaded using the App <a href=\"https://itunes.apple.com/at/app/rtr-nettest/id724321403\" title=\"Download RTR-nettest iOS\" target=\"_blank\">Apple iTunes-Store</a>. It is available for devices with iOS 7.0 and above. <a href=\"https://www.rtr.at/en/tk/nettestfaq_app\" title=\"Opens internal link in current window\">More information...</a></p><h5>Web-Browser</h5><p>Measurements with the RTR-NetTest with other mobile operating systems and with the desktop&nbsp;can be conducted with a web browser&nbsp; - <a href=\"https://www.nettest.at/en/Test?websocket=t\" title=\"Start RTR-nettest using WebSockets\" target=\"_blank\">start test using Websockets</a></p><p><a href=\"https://www.rtr.at/en/tk/nettestfaq_web\" title=\"Opens internal link in current window\">More information on Web-Browsers.<br /></a></p>",
         "your_uuid" : "Vaše UUID je",
         "ip_version": "Verze IP",
         "ip_version_desc": "Pokud Váš přístup k internetu podporuje IPv4 i IPv6, můžete si vybrat, který protokol použijete pro test.",
         "ipvX_only": "Pouze IPv%X%",
-        "preferred_test_type" : "Preferred Test Type",
         "choose_server_desc" : "Prosím vyberte, který server bude použit pro měření prostřednictvím WebSocket protokolu.", 
         "config_saved" : "Nastavení bylo uloženo.",
-        "run_ndt" : "I wish to run the optional NDT-Test.",
         "email_subject" : "ČTÚ-NetTest%20žádost%20o%20podporu",
         "email_address": "nettest@ctu.cz",
-        "fix_threads": "lock parallel threads"
     },
 
     "opendata_content" : {
@@ -167,9 +111,7 @@ exports.strings = {
     },
 
     "loop_mode_content" : {
-        "tests" : "Number of tests",
         "tests_sum" : "Počet provedených testů",
-        "waiting_time" : "Waiting time",
         "waiting_time_desc" : "Časová prodleva mezi dvěma testy (minuty)",
         "start": "Spustit opakované měření",
         "measurements" : "Poslední měření",
@@ -211,21 +153,11 @@ exports.strings = {
         "title_appended": "Akademický titul",
         "location": "Místo měření",
         "location_desc": "Adresní místo, ve kterém je měření prováděno",
-        //"first_cycle_question": "Is it the first measurement cycle?",
-        //"yes_first_cycle": "Yes, first cycle",
-        //"no_subsequent_cycle": "No, follow-up cycle",
         "start_measurement": "Spustit certifikované měření",
         "additional_information": "Informace o službě přístupu k internetu v pevném místě",
         "provider_name": "Název poskytovatele služby",
         "provider_service_name": "Název služby",
         "provider_contract_number": "Číslo smlouvy",
-        // "additional_information_desc": "Since this is the first measurement cycle, we ask you to answer the following questions in order to understand the circumstances of the measurement. For further measuring cycles, answering these questions is no longer necessary.",
-        // "location_access": "Please describe the location of your Internet access",
-        // "location_access_residential": "Apartment building",
-        // "location_access_single_family": "Single-family home",
-        // "location_access_urban": "Urban area",
-        // "location_access_rural": "Rural area",
-        // "location_access_other": "Other",
         "access_type": "Popište Váš přístup k internetu",
         "access_type_desc": "Jakou přístupovou technologií je Vaše služba realizována (xDSL, optika, Wi-Fi, DOCSIS, jiná)? Jaké koncové zařízení pro připojení k internetu používáte? Je př ipojen Váš počítač (notebook) kabelem přímo do zásuvky (ethernet, RJ-45), nebo používáte k připojení k internetu modem, případně modem s funkcí routeru (disponuje LAN porty, případně umožňuje i připojení přes Wi-Fi)?  Pokud je to možné, vepište přesné výrobce a označení typu koncového zařízení (modem, router).",
         "test_device": "Popište Vaše uživatelské zařízení, které používáte pro měření",
@@ -253,7 +185,7 @@ exports.strings = {
     "statistics": "Historie měření",
     "history": "Moje měření",
     "map": "Mapa",
-    "options": "Options",
+    "options": "Nastavení",
     "opentest": "Otevřená data, výsledky měření",
     "opentests": "Otevřená data, výsledky měření",
     "opendata": "Otevřená data",
@@ -287,22 +219,11 @@ exports.strings = {
     'ms': 'ms',
     'dBm': 'dBm',
     'dB': 'dB',
-    'X_recent_tests': "%X% recent tests",
-    'recent_tests': "Recent tests",
-    'more' : "more",
-    'less' : "less",
     "average" : "Průměr",
 
     "automatic" : "Automaticky",
-    "heatmap" : "Heatmap",
-    "points" : "Points",
-    "shapes" : "Shapes",
-    "communities" : "Cadastral communities",
-    "sources" : "Sources",
 
     "please_select" : "Vyberte",
-    "address_not_distinct" : "Address not distinct",
-    "map_key" : "Map key",
     "search" : "Vyhledat",
 
     "further_tests" : "Další testy",
@@ -367,9 +288,8 @@ exports.strings = {
     "data_volume" : "Objem dat",
     "signal_strength" : "Síla signálu",
     "connection_technology" : "Technologie",
-    "share" : "Share",
-    "get_forum_banner" : "Get forum banner",
-    "send_email" : "Send email",
+    "share" : "Sdílet",
+    "send_email" : "Poslat email",
     "open_data_entry" : "Open data entry",
 
     "measurement_result" : "Výsledek měření",
@@ -380,7 +300,6 @@ exports.strings = {
 	"net": "Net",
 
     "websocket" : "WebSocket",
-    "java_applet" : "Java-Applet",
     "default_server" : "Výchozí server",
     "save" : "Uložit",
 
@@ -389,7 +308,7 @@ exports.strings = {
     "from" : "od",
     "up_to" : "do",
     "zip_code" : "PSČ",
-    "platform" : "Platforma",
+    "platform" : "Platform",
     "software_version" : "Verze softwaru",
     "asn" : "Číslo AS",
     "apply_filters" : "Filtrovat",
@@ -401,19 +320,16 @@ exports.strings = {
     "coordinates": "Souřadnice",
     "location": "Location",
     "provider" : "Provider",
-    "surrounding_tests": "Show surrounding measurements as open data",
-    "land_cover": "Land cover",
     "next": "Další",
-    "privacy": "Privacy",
+    "privacy": "Soukromí",
     "email_address": "nettest@ctu.cz",
     "email_subject": "Žádost%20o%20podporu%20ČTÚ-NetTest%20%28Web%29",
-    "accessibility": "Accessibility",
     "down_max": "DL (max)",
     "up_max": "UL (max)",
     "down_avg": "DL (normal)",
     "up_avg": "UL (normal)",
-    "last_updated": "Last updated",
-    "coverage": "Coverage",
+    "last_updated": "Naposledy aktualizováno",
+    "coverage": "Pokrytí",
     "service_overload": "Dočasné upozornění: Pokud se váš test nespustí do 2 minut, opakujte test později. V tuto chvíli je prováděno velké množství testů, které má za následek delší prodlevu před spuštěním samotného testu. Děkujeme za pochopení.",
 
     // Help
