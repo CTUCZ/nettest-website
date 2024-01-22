@@ -6,7 +6,7 @@ name: Build and Deploy
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -29,7 +29,7 @@ jobs:
       - name: Run a one-line script
         run: |
           npm install
-          node build netztest
+          node build nettest
         
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@3.7.1
