@@ -410,7 +410,9 @@ exports.strings = {
         "icon_meaning": "What individual colour interpretations relate to which threshold values?",
         "cert_tool": "What certified tool means?",
         "cert_measurement": "What certified measurement means?",
-        "dep": "What demarcation points mean?"
+        "dep": "What demarcation points mean?",
+        "help_apps_title": "Legend related to mobile app",
+        "android_cert_title": "How do I perform a certified measurement in the Android mobile app?"
     },
 
     "opendata_specification_title" : "Open data, format specification",
@@ -490,6 +492,13 @@ exports.strings = {
      // Apps
      "apps_page": {
         "title": "CTU-NetTest mobile application",
+        "desc": "The CTU-NetTest mobile application of the Czech Telecommunications Office enables users to obtain information about the current quality of the mobile Internet access service. A mobile application is currently available for the Android operating system.",
         "android_title": "Mobile application for Android",
+        "download_android": "Download mobile app for Android",
+        "cert_android": "Information about certified measurement for Android",
+        "tc_android": "Privacy Policy and Terms of Use for Android",
+        "tc_android_url": "https://nettest.cz/en/PrivacyAndroid",
+        "ios_title": "Mobile application for iOS",
+        "ios_tba": "To be announced.",  
     }
 }

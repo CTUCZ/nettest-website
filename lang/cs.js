@@ -310,7 +310,7 @@ exports.strings = {
     "from" : "od",
     "up_to" : "do",
     "zip_code" : "PSČ",
-    "platform" : "Platform",
+    "platform" : "Platforma",
     "software_version" : "Verze softwaru",
     "asn" : "Číslo AS",
     "apply_filters" : "Filtrovat",
@@ -344,7 +344,9 @@ exports.strings = {
         "icon_meaning": "Jakým prahovým hodnotám odpovídají jednotlivé barevné interpretace?",
         "cert_tool": "Co znamená certifikovaný nástroj?",
         "cert_measurement": "Co znamená certifikované měření?",
-        "dep": "Co znamenají demarkační body?"
+        "dep": "Co znamenají demarkační body?",
+        "help_apps_title": "Vysvětlivky pro mobilní aplikaci",
+        "android_cert_title": "Jak provedu certifikované měření v mobilní aplikaci pro Android?"
     },
 
     "opendata_specification_title" : "Otevřená data - specifikace formátu",
@@ -424,6 +426,13 @@ exports.strings = {
      // Apps
      "apps_page": {
         "title": "Mobilní aplikace ČTÚ-NetTest",
+        "desc": "Mobilní aplikace ČTÚ-NetTest Českého telekomunikačního úřadu umožňuje uživatelům získat informace o aktuální kvalitě mobilní služby přístupu k síti internet. V současné době je dostupná mobilní aplikace pro operační systém Android.",
         "android_title": "Mobilní aplikace pro Android",
+        "download_android": "Stažení mobilní aplikace pro Android",
+        "cert_android": "Návod k provedení certifikovaného měření v mobilní aplikaci pro Android",
+        "tc_android": "Prohlášení o ochraně osobních údajů a podmínky užití pro Android",
+        "tc_android_url": "https://nettest.cz/cs/PrivacyAndroid",
+        "ios_title": "Mobilní aplikace pro iOS",
+        "ios_tba": "Vydání bude oznámeno.",        
     }
 }

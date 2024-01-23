@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+<head>
+    <title>Guide to certified measurement in Android mobile application</title>
+    <meta charset="UTF-8">
+</head>
+<body style="color:black; font-size:100%; background-color:white;">
+<h2>Guide to certified measurement in Android mobile application</h2>
+
+<h3>1 Purpose of the certified measurement by CTU-NetTest tool:</h3>
+
+<p>The measurement can be used by the end-users to:</p>
+<ol>
+    <li>
+        Determine the coverage level (covered/not covered) at a particular location according to the conditions defined in a decision on granting of rights to use radio 
+        frequencies for the provision of electronic communications networks, issued by CTU. If the result of the certified measurement is in contradiction with the coverage 
+        map (published by the operator at its website), the user can submit a claim to the operator and support it by the protocol which is the certified measurement 
+        outcome;
+    </li>
+    <li>
+        Determine the download/upload speed and to compare it with the speed stated in the contract on the service provision. If the result of the certified measurement is 
+        in contradiction with the contract, the user can submit a claim to the operator and support it by the protocol which is the certified measurement outcome.
+    </li>
+</ol>
+
+<h3>2 Conditions for carrying out the certified measurement</h3>
+
+<ul class="uk-list uk-list-bullet">
+    <li>
+        <strong>Outdoors in open spaces (outside buildings, cars etc.).</strong>
+    </li>
+    <li>
+        <strong>Without movement during the whole measurement (60 minutes).</strong>
+    </li>
+    <li>
+        <strong>At the hight of about 1,5 m (values of the signal levels have been defined for such hight).</strong>
+    </li>
+    <li>
+        <strong>All data-consuming apps switched off (those which require data connection).</strong>
+    </li>
+    <li>
+        <strong>Connected solely via mobile data network (LTE, 5G) and Wi-Fi switched off.</strong>
+    </li>
+    <li>
+        <strong>GPS turned on (location identification function).</strong>
+    </li>
+    <li>
+        <strong>Sufficient amount of data available (the measurement will consume about 200 MB – depending on speed).</strong>
+    </li>
+</ul>
+
+<h3>3 Interpretation of the certified measurement results</h3>
+
+<p>
+    The summary of the measurement results can be found in the protocol in chapter “Carried-out measurements”. It contains summary of the results gained in individual 
+    measurements. These are a basis to decide whether the location is covered or not covered by mobile network signal and whether the download/upload values are compliant to 
+    those stated in the contract between user and operator.
+</p>
+<p>
+    Should any error occur during the measurement, it will be stated in the chapter “Validation“. In such case, it is necessary to repeat the measurement.
+</p>
+<p>
+    The last chapter of the protocol is “Results of individual measurements“. It includes detailed technical information for operators who will deal with potential 
+    claims regarding the coverage.
+</p>
+
+<h3>4 Detailed description of the certified measurement</h3>
+
+<p>
+    Conditions for carrying out the certified measurement in Android mobile application are based merely on the following documents:
+</p>
+<ul class="uk-list uk-list-bullet">
+    <li>
+        <a href="https://www.ctu.cz/sites/default/files/obsah/stranky/vyhlaseni-vyberoveho-rizeni-2013/soubory/vyhlasenivyberovehorizeni15082013priloha3.pdf" target="_blank">
+            Annex 3 of the Invitation to tender for granting of the rights to use radio frequencies to provide electronic communications networks in the 800 MHz, 1800 MHz 
+            and 2600 MHz frequency bands (Czech only).
+        </a> 
+    </li>
+    <li>
+        <a href="https://www.ctu.cz/sites/default/files/obsah/ctu/oznameni-ceskeho-telekomunikacniho-uradu-o-vyhlaseni-vyberoveho-rizeni-za-ucelem-udeleni-prav-k/obrazky/20200811-annex5.pdf" target="_blank">
+            Annex 5 of the Invitation to tender for granting of the rights to use radio frequencies to provide electronic communications networks in the 700 MHz and 3400–3600 MHz.
+        </a>
+    </li>
+    <li>
+        <a href="https://www.ctu.eu/sites/default/files/obsah/stranky/74784/soubory/vo-s-10820209en.pdf" target="_blank">
+            Another important parameter for evaluating the service performance, in case of mobile Internet service, is the contractually defined value of normally available 
+            speed or minimum guaranteed speed. It is decisive to determine whether there are discrepancies, if any.
+        </a>
+    </li>
+</ul>
+
+<p>
+    <strong>The certified measurement is a cycle composed of 6 time-diversified tests within 1 hour.</strong>
+</p>
+<p>
+    <strong>Each of the 6 tests takes approximately 1 minute and time spacing between individual tests is 10 minutes.</strong>
+</p>
+<p>
+    <strong>
+        Each test is composed of initialization, measurement of remote server response/round-trip delay (ping) and data transmission test having duration of 10 seconds for 
+        each direction of data communication (download and upload).
+    </strong>
+</p>
+<p>
+    <strong>
+        Certified measurement regime may cause high data consumption. When combined with high-speed Internet access service, 6 tests may consume 200 MB or more. We highly 
+        recommend using the regime of repeated measurements only with tariffs without FUP limit where you do not risk additional financial costs by exceeding your 
+        FUP limit.  
+    </strong>
+</p>
+<p>
+    First important parameter for evaluating the quality of service is the coverage level of the operator´s mobile network signal. Minimum signal level for availability 
+    of the services (“covered”) is defined by “Annex 5 of the Invitation to tender for granting of the rights to use radio frequencies to provide electronic communications 
+    networks in the 700 MHz and 3400–3600 MHz” and “Annex 3 of the Invitation to tender for granting of the rights to use radio frequencies to provide electronic 
+    communications networks in the 800 MHz, 1800 MHz and 2600 MHz frequency bands”.
+</p>
+<p>
+    These documents contain the following table, used also for this certified measurement, which includes limit values for inspection measurements of the outdoor coverage, 
+    and which shows what signal level is decisive for determination of whether a location is covered or not covered by mobile network signal:  
+</p>
+
+<table class="uk-table" style="text-align:center; width:60%; margin-left:auto; margin-right:auto">
+    <thread>
+        <tr>
+            <th style="text-align:center">Frequency band</th>
+            <th style="text-align:center">Outdoor RSRP limit for inhabited areas [dBm]</th>
+        </tr>
+    </thread>
+    <tbody>
+        <tr>
+            <td>700 MHz</td>
+            <td>– 109</td>
+        </tr>
+        <tr>
+            <td>800 MHz</td>
+            <td>– 109</td>
+        </tr>
+        <tr>
+            <td>900 MHz</td>
+            <td>– 109</td>
+        </tr>
+        <tr>
+            <td>1800 MHz</td>
+            <td>– 107</td>
+        </tr>
+        <tr>
+            <td>2100 MHz</td>
+            <td>– 106</td>
+        </tr>
+        <tr>
+            <td>2600 MHz</td>
+            <td>– 105</td>
+        </tr>
+        <tr>
+            <td>3440–3800 MHz</td>
+            <td>– 100</td>
+        </tr>
+    </tbody>
+</table>
+
+<p>
+    If an operator states in its coverage map that the location is covered, it must reach these minimum levels. CZ coverage maps of the particular operators:
+</p>
+
+<ul class="uk-list uk-list-bullet">
+    <li>
+        <strong>O2:</strong> &nbsp;<a href="https://www.o2.cz/osobni/mapa-pokryti" target="_blank">https://www.o2.cz/osobni/mapa-pokryti</a>
+    </li>
+    <li>
+        <strong>T-Mobile:</strong> &nbsp;<a href="https://www.t-mobile.cz/podpora/mapa-pokryti-internetem/mobilni" target="_blank">https://www.t-mobile.cz/podpora/mapa-pokryti-internetem/mobilni</a>
+    </li>
+    <li>
+        <strong>Vodafone:</strong> &nbsp;<a href="https://www.vodafone.cz/en/coverage-map/" target="_blank">https://www.vodafone.cz/en/coverage-map/</a>
+    </li>
+</ul>
+
+<p>
+    Second important parameter for evaluating the service performance is, in case of mobile Internet service, the contractually defined value of normally available speed 
+    or the minimum guaranteed speed. It is decisive to determine whether there are discrepancies, if any.
+</p>
+<p>
+    If the actually achieved download or upload speed decreases below the contractual minimum speed for the respective direction of data communication, the service is 
+    having an outage, i.e., it is not being provided. In such case, you can submit a claim against the provision of service.
+</p>
+<p>
+    <strong>Any questions regarding the certified measurement should be send to  <a href="mailto:nettest@ctu.cz">nettest@ctu.cz</a>.</strong>
+</p>
+</body>
+</html>

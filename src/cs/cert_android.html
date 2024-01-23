@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+<head>
+    <title>Návod k provedení certifikovaného měření v mobilní aplikaci pro Android</title>
+    <meta charset="UTF-8">
+</head>
+<body style="color:black; font-size:100%; background-color:white;">
+<h2>Návod k provedení certifikovaného měření v mobilní aplikaci pro Android</h2>
+
+<h3>1 Účel certifikovaného měření nástrojem ČTÚ-NetTest:</h3>
+
+<p>Měření slouží koncovým uživatelům k:</p>
+<ol>
+    <li>
+        zjištění úrovně pokrytí (pokryto/nepokryto) konkrétního místa podle podmínek v udělení práv k využívání rádiových kmitočtů pro zajištění sítí elektronických komunikací, 
+        vydaných ČTÚ. Pokud je výsledek certifikovaného měření v rozporu s mapou pokrytí (uváděnou operátorem na jejich stránkách), může uživatel podat stížnost operátorovi
+        a doložit ji protokolem, který je výstupem certifikovaného měření.
+    </li>
+    <li>
+        Zjištění rychlosti downloadu / uploadu a porovnání s rychlostí uvedenou ve smlouvě o poskytování služby. Pokud je výsledek certifikovaného měření v rozporu se smlouvou, 
+        může uživatel podat reklamaci operátorovi a doložit ji protokolem, který je výstupem certifikovaného měření.
+    </li>
+</ol>
+
+<h3>2 Podmínky certifikovaného měření</h3>
+
+<ul class="uk-list uk-list-bullet">
+    <li>
+        <strong>Ve venkovním volném prostředí (mimo budovy, automobily atd.).</strong> 
+    </li>
+    <li>
+        <strong>Bez pohybu po celou dobu měření (60 minut).</strong>
+    </li>
+    <li>
+        <strong>Ve výšce přibližně 1,5 m (pro tuto výšku jsou stanoveny hodnoty úrovní signálu).</strong>
+    </li>
+    <li>
+        <strong>Vypnuté aplikace, které využívají datové připojení (datové přenosy).</strong>
+    </li>
+    <li>
+        <strong>Připojení pouze k mobilním datům (LTE, 5G) a vypnutá Wi-Fi.</strong>
+    </li>
+    <li>
+        <strong>Zapnutá GPS (funkce zjišťování polohy).</strong>
+    </li>
+    <li>
+        <strong>Dostatečné množství dat (měření spotřebuje cca 200 MB – dle rychlosti mobilní sítě).</strong>
+    </li>
+</ul>
+
+<h3>3 Interpretace výsledků certifikovaného měření</h3>
+<p>
+    Shrnutí naměřených hodnot je v protokolu v kapitole „Provedená měření“. Zde jsou shrnuty naměřené výsledky pro jednotlivá měření, na jejichž základě lze rozhodnout, 
+    zda dané místo je či není pokryté mobilním signálem a zda hodnoty downloadu / uploadu odpovídají hodnotám ve smlouvě mezi uživatelem a operátorem.
+</p>
+<p>
+    Pokud v průběhu měření došlo k chybě, je to uvedeno v kapitole „Validace“. V takovém případě je měření nutné opakovat.
+</p>
+<p>
+    Poslední kapitolou protokolu je „Výsledky jednotlivých měření“, kde jsou podrobné technické údaje určené pro operátory, kteří budou řešit případnou stížnost na pokrytí.
+</p>
+
+<h3>4 Detailní popis certifikovaného měření</h3>
+<p>
+    Certifikované měření se skládá ze 6 časově oddělených testů během jedné hodiny.
+</p>
+<p>
+    Každý z 6 testů probíhá přibližně 1 minutu a mezi testy je přestávka vždy 10 minut.
+</p>
+<p>
+    Test se skládá z inicializace, měření odezvy vzdáleného serveru (ping) a testu datových přenosů v délce 10 sekund pro každý směr datové komunikace (download a upload).
+</p>
+<p>
+    Režim certifikovaného měření může způsobovat vysokou spotřebu dat. V kombinaci s rychlou službou přístupu k internetu může 6 provedených testů spotřebovat 200 MB i více dat.
+    Důrazně proto doporučujeme, abyste režim opakovaného měření používali pouze s tarify bez FUP limitu, kde nebude pro Vás vyčerpání vašeho FUP limitu znamenat další 
+    finanční náklady. 
+</p>
+<p>
+    Prvním důležitým parametrem pro posouzení kvality služby je úroveň pokrytí mobilním signálem operátora. Minimální úroveň signálů pro dostupnost služeb („pokryt“) 
+    je dána „Přílohou 5 k Vyhlášení výběrového řízení za účelem udělení práv k využívání rádiových kmitočtů pro zajištění sítí elektronických komunikací v kmitočtových pásmech
+    700 MHz a 3400–3600 MHz“ a „Přílohou 3 k Vyhlášení výběrového řízení za účelem udělení práv k využívání rádiových kmitočtů k zajištění veřejné komunikační sítě 
+    v pásmech 800 MHz, 1800 MHz a 2600 MHz“.
+</p>
+<p>
+    Z těchto dokumentů je pro certifikované měření využita tabulka limitních hodnot pro kontrolní měření pokrytí ve venkovním prostředí, která udává, jaká úroveň signálu je 
+    rozhodující pro určení, zda je dané místo pokryté nebo nepokryté mobilním signálem:
+</p>
+
+<table class="uk-table" style="text-align:center; width:60%; margin-left:auto; margin-right:auto">
+    <thread>
+        <tr>
+            <th style="text-align:center">Kmitočtové pásmo</th>
+            <th style="text-align:center">Limitní RSRP pro obydlená území ve venkovním prostředí [dBm]</th>
+        </tr>
+    </thread>
+    <tbody>
+        <tr>
+            <td>700 MHz</td>
+            <td>– 109</td>
+        </tr>
+        <tr>
+            <td>800 MHz</td>
+            <td>– 109</td>
+        </tr>
+        <tr>
+            <td>900 MHz</td>
+            <td>– 109</td>
+        </tr>
+        <tr>
+            <td>1800 MHz</td>
+            <td>– 107</td>
+        </tr>
+        <tr>
+            <td>2100 MHz</td>
+            <td>– 106</td>
+        </tr>
+        <tr>
+            <td>2600 MHz</td>
+            <td>– 105</td>
+        </tr>
+        <tr>
+            <td>3440–3800 MHz</td>
+            <td>– 100</td>
+        </tr>
+    </tbody>
+</table>
+
+<p>
+    Pokud operátor na své mapě pokrytí uvádí, že dané místo je pokryto, musí splňovat tyto minimální úrovně. Mapy pokrytí území ČR od jednotlivých operátorů:
+</p>
+
+<ul class="uk-list uk-list-bullet">
+    <li>
+        O2: &nbsp;<a href="https://www.o2.cz/osobni/mapa-pokryti" target="_blank">https://www.o2.cz/osobni/mapa-pokryti</a>
+    </li>
+    <li>
+        T-Mobile: &nbsp;<a href="https://www.t-mobile.cz/podpora/mapa-pokryti-internetem/mobilni" target="_blank">https://www.t-mobile.cz/podpora/mapa-pokryti-internetem/mobilni</a>
+    </li>
+    <li>
+        Vodafone: &nbsp;<a href="https://www.vodafone.cz/mapa-pokryti" target="_blank">https://www.vodafone.cz/mapa-pokryti</a>
+    </li>
+</ul>
+
+<p>
+    Druhým důležitým parametrem pro posouzení výkonu služby je v případě služby mobilního internetu smluvně udávaná hodnota běžně dostupné rychlosti nebo minimální zaručené 
+    rychlosti. Ta je rozhodující pro určení, zda dochází k případným odchylkám.
+</p>
+<p>
+    Pokud skutečně dosahovaná rychlost stahování (download) nebo vkládání (upload) klesne pod smluvně udávanou minimální rychlost pro daný směr datové komunikace, 
+    dochází k výpadku služby, tedy k jejímu neposkytování. V tomto případě máte právo na reklamaci služby.
+</p>
+<p>
+    <strong>Dotazy ohledně certifikovaného měření směřujte, prosím, na adresu <a href="mailto:nettest@ctu.cz">nettest@ctu.cz</a>.</strong>
+</p>
+</body>
+</html>
