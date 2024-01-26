@@ -54,7 +54,7 @@ exports.strings = {
         "loop_mode_content": "Carry out repeated measurement by customized settings",
         "opendata_content": "Measurement results are available as open data",
         "certified_content": "Carry out certified measurement process to submit a claim",
-        "mobile_apps": "Download application for Android"
+        "mobile_apps": "Download application for Android and iOS"
     },
 
     "map_content" : {
@@ -492,14 +492,18 @@ exports.strings = {
      // Apps
      "apps_page": {
         "title": "CTU-NetTest mobile application",
-        "desc": "The CTU-NetTest mobile application of the Czech Telecommunications Office enables users to obtain information about the current quality of the mobile Internet access service. A mobile application is currently available for the Android operating system.",
+        "desc": "The CTU-NetTest mobile application of the Czech Telecommunication Office enables users to obtain information about the current quality of the mobile Internet access service. A mobile application is available for the Android and iOS operating systems.",
         "android_title": "Mobile application for Android",
         "download_android": "Download mobile app for Android",
         "cert_android": "Information about certified measurement for Android",
         "tc_android": "Privacy Policy and Terms of Use for Android",
         "tc_android_url": "https://nettest.cz/en/PrivacyAndroid",
         "ios_title": "Mobile application for iOS",
+        "download_ios": "Download mobile app for iOS",
+        "download_ios_url": "https://apps.apple.com/us/app/%C4%8Dt%C3%BA-nettest/id6449427820",
         "ios_tba": "To be announced.",
-        "tc_ios": "Privacy Policy and Terms of Use for iOS"
+        "tc_ios": "Privacy Policy and Terms of Use for iOS",
+        "tc_ios_url": "https://nettest.cz/en/PrivacyApple",
+        "ios_desc": "The main difference between the apps is the absence of a certified measurement mode within the iOS app. Established conditions for mobile certified measurement cannot be fulfilled on mobile phones and tablets with the iOS operating system – iOS applications are not allowed access to mobile network parameters within the operating system.",
     }
 }

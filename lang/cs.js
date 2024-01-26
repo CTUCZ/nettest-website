@@ -47,7 +47,7 @@ exports.strings = {
         "loop_mode_content": "Provede opakované měření dle vlastního nastavení",
         "opendata_content": "Výsledky měření jsou dostupné jako otevřená data",
         "certified_content": "Provede proces certifikovaného měření pro účely reklamace služby",
-        "mobile_apps": "Stažení aplikace pro Andorid"
+        "mobile_apps": "Stažení aplikace pro Android a iOS"
     },
 
     "history_content" : {
@@ -85,7 +85,7 @@ exports.strings = {
         'channel_number': 'Frekvenční kanál',
         "additional_filters" : "Další filtry",
         "intraday": "Posledních 24 hodin",
-        "down_upload": "Rychlost stahování/vkládání (download/upload)"
+        "down_upload": "Download/Upload"
     },
 
     "options_content" : {
@@ -213,9 +213,9 @@ exports.strings = {
     "time": "Čas",
     "operator": "Poskytovatel",
     "device": "Zařízení",
-    "up": "Rychlost vkládání (Upload)",
-    "down": "Rychlost stahování (Download)",
-    "ping": "Zpoždění (Ping)",
+    "up": "Upload",
+    "down": "Download",
+    "ping": "Ping",
     "signal": "Signál",
     'mbps': 'Mb/s',
     'ms': 'ms',
@@ -284,8 +284,8 @@ exports.strings = {
     "detailed_results" : "Podrobné výsledky",
     "position" : "Oblast",
     "speed_curve" : "Grafy",
-    "download" : "Rychlost stahování (download)",
-    "upload" : "Rychlost vkládání (upload)",
+    "download" : "Download",
+    "upload" : "Upload",
     "speed" : "Rychlost",
     "data_volume" : "Objem dat",
     "signal_strength" : "Síla signálu",
@@ -426,14 +426,18 @@ exports.strings = {
      // Apps
      "apps_page": {
         "title": "Mobilní aplikace ČTÚ-NetTest",
-        "desc": "Mobilní aplikace ČTÚ-NetTest Českého telekomunikačního úřadu umožňuje uživatelům získat informace o aktuální kvalitě mobilní služby přístupu k síti internet. V současné době je dostupná mobilní aplikace pro operační systém Android.",
+        "desc": "Mobilní aplikace ČTÚ-NetTest Českého telekomunikačního úřadu umožňuje uživatelům získat informace o aktuální kvalitě mobilní služby přístupu k síti internet. Mobilní aplikace je dostupná pro operační systémy Android a iOS.",
         "android_title": "Mobilní aplikace pro Android",
         "download_android": "Stažení mobilní aplikace pro Android",
         "cert_android": "Návod k provedení certifikovaného měření v mobilní aplikaci pro Android",
         "tc_android": "Prohlášení o ochraně osobních údajů a podmínky užití pro Android",
         "tc_android_url": "https://nettest.cz/cs/PrivacyAndroid",
         "ios_title": "Mobilní aplikace pro iOS",
+        "download_ios": "Stažení mobilní aplikace pro iOS", 
+        "download_ios_url": "https://apps.apple.com/cz/app/%C4%8Dt%C3%BA-nettest/id6449427820?l=cs",
         "ios_tba": "Vydání bude oznámeno.",
-        "tc_ios": "Prohlášení o ochraně osobních údajů a podmínky užití pro iOS"        
+        "tc_ios": "Prohlášení o ochraně osobních údajů a podmínky užití pro iOS",
+        "tc_ios_url": "https://nettest.cz/cs/PrivacyApple",
+        "ios_desc": "Hlavním rozdílem mezi aplikacemi je absence režimu certifikovaného měření v rámci aplikace pro iOS. Stanovené podmínky pro mobilní certifikované měření není možné na mobilních telefonech a tabletech s operačním systémem iOS naplnit – aplikacím pro iOS není v rámci operačního systému umožněn přístup k parametrům mobilní sítě."
     }
 }
