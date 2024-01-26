@@ -15,6 +15,7 @@ Lang.setStrings({
     'South' : 'S',
     'showMoreDevices' : 'Further devices',
     'AndroidAppAvailable' : 'If you would like to use the test to the full extent, please use our <a href="https://play.google.com/store/apps/details?id=cz.ctu.rmbt.android.prod">Android Application</a>.',
+    'iOSdAppAvailable' : 'If you would like to use the test to the full extent, please use our <a href="https://apps.apple.com/us/app/%C4%8Dt%C3%BA-nettest/id6449427820">iOS Application</a>.',
     'NoJavaAvailable' : 'A simple JavaScript test is carried out.',
     'BrowserOutdated' : 'Your browser version is outdated and does not support all necessary features. Please use a newer browser version.',
     'YourPostalCode' : 'Your postal code',
