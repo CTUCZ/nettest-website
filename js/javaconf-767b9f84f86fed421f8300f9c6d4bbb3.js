@@ -1,4 +1,4 @@
-// Configuration www.nettest.cz
+// Configuration nettest.cz
 
 var controlProxy = "https://nettest.cz";
 var statisticProxy = "https://nettest.cz";

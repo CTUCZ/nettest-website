@@ -132,10 +132,10 @@ function requestBrowserData(callback, options) {
                                }
 
                                 //is it iOS?
-                               // else if (browser_agent.match(/iP(hone|od|ad)/g)) {
-                                   // $("#iOSApp").show();
-                                   // $("#iOSApp").html('<p>' + Lang.getString('IOSAppAvailable') + '</p>');
-                               // }
+                                else if (browser_agent.match(/iP(hone|od|ad)/g)) {
+                                    $("#iOSApp").show();
+                                    $("#iOSApp").html('<p>' + Lang.getString('IOSAppAvailable') + '</p>');
+                                }
                             }
 
                             
@@ -360,7 +360,7 @@ function RMBTsettings(options) {
                                 uuid = cookie_uuid;
                         }
                         else {
-                                alert("Keine UUID!");
+                                alert("Missing UUID! Please check cookies settings in your web browser.");
                                 return;
                         }
 

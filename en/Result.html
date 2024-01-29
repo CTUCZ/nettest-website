@@ -10,7 +10,7 @@
 
     <!-- CSS includes -->
     <link rel="stylesheet" href="../css/jquery-ui.min-f8f1a615f0d7a466e1c84fafadc3f523.css">
-    <link rel="stylesheet" href="../scss/app-d32d4c9eeef8c9471ccf5eb4fc8ce5dc.css">
+    <link rel="stylesheet" href="../scss/app-ccc1a60b87e38ee4a3c63af292b1a7fd.css">
     <!-- Meta information -->
     <meta name="description" content="The <b>CTU-NetTest</b> tool, operated by Czech Telecommunication Office, provides information to users on the current quality of their IAS in the form of <b>actually achieved speed</b> of download, upload and roundtrip delay (ping). It offers the possibility of <b>certified measurement</b> that will carry out fully automated process of measurement with result provided in PDF document that the user can use for possible claim against the quality of IAS at a fixed location. If you want to submit a claim against IAS at a fixed location (so called ‘fixed internet’), you must always use the certified measurement mode, while the only appropriate means of measurement is connecting your end device (PC, laptop) directly to the terminal equipment device (router or modem) or to the network termination point (if it allows a direct connection of end device without the necessity of conversion) through a cable (not through Wi-Fi) under further defined conditions."/>
     <meta name="robots" content="index, follow">
@@ -26,8 +26,8 @@
     <script type="text/javascript" src="../js/menu-cf5caea848aefa6afcc67b45ea2f1dd3.js"></script>
     <script type="text/javascript" src="../lib/jquery_ui/jquery-ui.min-1043f80cd6a5a8b2e82e1bde0f31b3a9.js"></script>
     <script type="text/javascript" src="../js/jquery.history-cc1c80297e02d927f9b07e82f7cfcaf8.js"></script>
-    <script type="text/javascript" src="../js/javaconf-ca23a74bac6f5c3cf64829b75e08853f.js"></script>
-    <script type="text/javascript" src="../js/functions-d9dbd784fbbf3a77d9d677d968a38770.js"></script>
+    <script type="text/javascript" src="../js/javaconf-767b9f84f86fed421f8300f9c6d4bbb3.js"></script>
+    <script type="text/javascript" src="../js/functions-5283303c4550099241da8afcb33c914e.js"></script>
     <script src="../lib/handlebars.min-fdc5dfd7ea2aca849de7ef99eaf9f807.js" type="text/javascript"></script>
 
     <script type="text/javascript" src="Lang.js"></script>
@@ -72,7 +72,7 @@
                                     <ul class="uk-subnav uk-list-divider">
                                         <li><a href="https://www.ctu.eu/pay-actually-achived-speed" class="area-switch" target="_blank">How to claim</a></li>
                                         <li><a href="https://www.ctu.eu/" class="area-switch" target="_blank">Czech Telecommunication Office</a></li>
-                                        <li><a href="https://qos.ctu.cz/" class="area-switch" target="_blank">Visualization portal</a></li>
+                                        <li><a href="https://vportal.ctu.cz/" class="area-switch" target="_blank">Visualization portal</a></li>
                                         <li><a href="https://srovnavac.ctu.cz/" class="area-switch" target="_blank">Comparison Tool</a></li>
                                     </ul>
                                 </div>
@@ -243,9 +243,9 @@
                 <th scope="col">Device</th>
                 <th scope="col">Access</th>
                 <th scope="col">Date</th>
-                <th scope="col" class="uk-text-right">Down Mbps</th>
-                <th scope="col" class="uk-text-right">Up Mbps</th>
-                <th scope="col" class="uk-text-right">Ping ms</th>
+                <th scope="col" class="uk-text-right">Down (Mbps)</th>
+                <th scope="col" class="uk-text-right">Up (Mbps)</th>
+                <th scope="col" class="uk-text-right">Ping (ms)</th>
             </tr>
             </thead>
             <tbody id="result_tbody">

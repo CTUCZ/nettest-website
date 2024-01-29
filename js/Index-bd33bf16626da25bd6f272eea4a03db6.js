@@ -37,14 +37,14 @@ $(document).ready(function() {
         var url = 'https://play.google.com/store/apps/details?id=cz.ctu.rmbt.android.prod';
         $("a#teaserlink").attr("href",url);
     }
-/*
+
     //is it iOS?
     else if (mobile_client.match(/iP(hone|od|ad)/g)) {
         $("#iOSApp").show();
-        var url = '';
+        var url = 'https://apps.apple.com/cz/app/%C4%8Dt%C3%BA-nettest/id6449427820?l=cs';
         $("a#teaserlink").attr("href",url);
     }
-*/
+
     if (userServerSelection > 0) {
         getLastOpenDataResults();
     }
