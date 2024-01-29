@@ -93,6 +93,9 @@ $(document).ready(function() {
             else if (state.data.step==="step4") {
                 step4();
             }
+            else if (state.data.step==="step5") {
+                step5();
+            }
             else {
 
             }
@@ -139,6 +142,7 @@ function step1() {
     $('#intro-container').show();
     $('#intermediate-container').hide();
     $('#additional-information-container').hide();
+    $('#summary-container').hide();
     $('#loop-mode').hide();
 
     $("#intro-container button[type='submit']").click(function() {
@@ -154,6 +158,7 @@ function step2() {
     $('#intro-container').hide();
     $('#intermediate-container').show();
     $('#additional-information-container').hide();
+    $('#summary-container').hide();
     $('#loop-mode').hide();
 
     $("#intermediate-form").submit(function() {
@@ -164,7 +169,7 @@ function step2() {
         if ($('input[name=\'first\']:checked').val() == 'y') {
             step3();
         } else {
-            step4();
+            step5();
         }
         return false;
     })
@@ -187,11 +192,12 @@ function step3() {
     $('#intro-container').hide();
     $('#intermediate-container').hide();
     $('#additional-information-container').show();
+    $('#summary-container').hide();
     $('#loop-mode').hide();
 
     //activate "other" textfield only if checkbox is set
-    $('input[name=\'location_type_4\']').change(function() {
-        if ($('input[name=\'location_type_4\']:checked').val() == 's4') {
+    $('input[name=\'location_type_3\']').change(function() {
+        if ($('input[name=\'location_type_3\']:checked').val() == 's3') {
             $('input[name=\'location_type_other\']').removeAttr("disabled");
         }
         else {
@@ -249,12 +255,29 @@ function step3() {
 
 function step4() {
     if (History) {
-        History.pushState({step:"step4", session: currentSession},pageTitle,"CertMeasurement?step4");
+        History.replaceState({step:"step4", session: currentSession},pageTitle,"CertMeasurement?step4");
+    }
+    setBreadCrumb("summary");
+    $('#intro-container').hide();
+    $('#intermediate-container').hide();
+    $('#additional-information-container').hide();
+    $('#summary-container').show();
+    $('#loop-mode').hide();
+
+    $("#summary-container button[type='submit']").click(function() {
+        step5();
+    })
+}
+
+function step5() {
+    if (History) {
+        History.pushState({step:"step5", session: currentSession},pageTitle,"CertMeasurement?step5");
     }
     setBreadCrumb("measurement");
     $('#intro-container').hide();
     $('#intermediate-container').hide();
     $('#additional-information-container').hide();
+    $('#summary-container').hide();
     $('#loop-mode').show();
 
     if (!testsRunning) {

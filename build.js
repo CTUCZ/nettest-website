@@ -262,7 +262,7 @@
     
             var count = 0;
             fileList.forEach(function(path) {
-                var language = (path.indexOf("_de")>0)?"de":"en";
+                var language = (path.indexOf("_cs")>0)?"cs":"en";
                 fs.readFile(path, function(err, data) {
                     var $ = cheerio.load(data);
     

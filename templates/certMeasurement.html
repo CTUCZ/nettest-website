@@ -67,8 +67,9 @@
             <li class="breadCrumb-intro"><a>1. {{ Lang.certified_measurement_content.info }}</a></li>
             <li class="breadCrumb-intermediate"><a>2. {{ Lang.certified_measurement_content.data }}</a></li>
             <li class="breadCrumb-additional"><a>3. {{ Lang.certified_measurement_content.environment }}</a></li>
-            <li class="breadCrumb-measurement"><a>4. {{ Lang.certified_measurement_content.measurement }}</a></li>
-            <li class="breadCrumb-report"><a>5. {{ Lang.certified_measurement_content.result }}</a></li>
+            <li class="breadCrumb-summary"><a>4. {{ Lang.certified_measurement_content.summary }}</a></li>
+            <li class="breadCrumb-measurement"><a>5. {{ Lang.certified_measurement_content.measurement }}</a></li>
+            <li class="breadCrumb-report"><a>6. {{ Lang.certified_measurement_content.result }}</a></li>
         </ul>
     </div>
 
@@ -223,13 +224,44 @@
                     </div>
 
                     <div class="uk-margin-top">
-                        <button name="submit" type="submit" class="uk-button uk-button-primary">{{ Lang.certified_measurement_content.start_measurement }}</button>
+                        <button name="submit" type="submit" class="uk-button uk-button-primary">{{ Lang.next }}</button>
                     </div>
 
                 </form>
             </div>
         </div>
     </div>
+
+    <div id="summary-container" style="display:none">
+
+        <div id="summary">
+            <h3>{{ Lang.certified_measurement_content.summary }}</h3>
+            <div class="conditions">
+                <h4>{{ Lang.certified_measurement_content.summary_note }}</h4>
+                <p class="preface">
+                    <ul style="color: #ed6c05">
+                        <li>
+                            <h4><span style='color: #ed6c05;'>{{ Lang.certified_measurement_content.summary_1 }}</span></h4>
+                        </li>
+                        <li>
+                            <h4><span style='color: #ed6c05;'>{{ Lang.certified_measurement_content.summary_2 }}</span></h4>
+                        </li>
+                        <li>
+                            <h4><span style='color: #ed6c05;'>{{ Lang.certified_measurement_content.summary_3 }}</span></h4>
+                        </li>
+                        <li>
+                            <h4><span style='color: #ed6c05;'>{{ Lang.certified_measurement_content.summary_4 }}</span></h4>
+                        </li>
+                    </ul>
+                </p>
+            </div>
+
+        <div class="uk-margin-top">
+            <h4>{{ Lang.certified_measurement_content.summary_end }}</h4>
+            <button name="submit" type="submit" class="uk-button uk-button-primary">{{ Lang.certified_measurement_content.start_measurement }}</button>
+        </div>
+    </div>
+
     <div id="loop-mode" style="display: none">
 
         <h3>{{ Lang.certified_measurement_content.conducting_measurements }}</h3>
