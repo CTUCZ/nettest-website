@@ -93,7 +93,7 @@ exports.strings = {
         "client_uuid" : "UUID klienta",
         "your_uuid" : "Vaše UUID je",
         "ip_version": "Verze IP",
-        "ip_version_desc": "Pokud Váš přístup k internetu podporuje IPv4 i IPv6, můžete si vybrat, který protokol použijete pro test.",
+        "ip_version_desc": "Pokud Vaše služba přístupu k síti internet podporuje protokoly IPv4 a IPv6, můžete si vybrat, kterou verzi protokolu použijete pro měření:",
         "ipvX_only": "Pouze IPv%X%",
         "choose_server_desc" : "Prosím vyberte, který server bude použit pro měření prostřednictvím WebSocket protokolu.", 
         "config_saved" : "Nastavení bylo uloženo.",
