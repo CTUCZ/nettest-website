@@ -15,7 +15,7 @@
     <meta name="description" content="{{ Lang.index_content.service_description }}"/>
     <meta name="robots" content="index, follow">
     <!-- Social media (frontend only) -->
-    <meta property="og:site_name" content="ČTÚ – NetTest"/>
+    <meta property="og:site_name" content="{{ Lang.title }}"/>
 
     <meta property="og:title" content="{{ title }} - {{ Lang.headline }}"/>
 
@@ -62,7 +62,7 @@
                                         <li><a href="{{ Lang.template.complaint_url }}" class="area-switch" target="_blank">{{
                                           Lang.template.complaint }}</a></li>
                                         <li><a href="{{ Lang.template.ctu_url }}" class="area-switch" target="_blank">{{
-                                            Lang.template.ctu }}</a></li>
+                                            Lang.template.ctu_long }}</a></li>
                                         <li><a href="{{ Lang.template.qos_url }}" class="area-switch" target="_blank">{{
                                             Lang.template.qos_ctu }}</a></li>
                                         <li><a href="{{ Lang.template.comparison_tool_url }}" class="area-switch" target="_blank">{{
@@ -108,15 +108,14 @@
                             <div class="uk-first-column">
                                 <a href="/{{ Lang.lang }}">
                                     <picture>
-                                        <img src='/images/logo.svg' alt="Logo {{ Lang.title }}" title="ČTÚ"
-                                             style="height:30px;">
+                                        <img src='/images/logo.svg' alt="NetTest logo" class="logo" style="height:30px;">
                                     </picture>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="uk-navbar-right">
-                        <a id="mobmenu" class="uk-navbar-toggle" href="#tm-mobile" uk-toggle="animation: true;">
+                        <a id="mobmenu" class="uk-navbar-toggle" href="#tm-mobile" uk-toggle="animation: true;" title="Menu">
                             <div class="toggleopen uk-icon uk-navbar-toggle-icon" uk-navbar-toggle-icon="">
                                 <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
                                      data-svg="navbar-toggle-icon">
@@ -171,8 +170,7 @@
                                 <div class="uk-first-column">
                                     <a href="/{{ Lang.lang }}">
                                         <picture>
-
-                                            <img src='/images/logo.svg' alt="Logo ČTÚ" class="logo">
+                                            <img src='/images/logo.svg' alt="NetTest logo" class="logo">
                                         </picture>
                                     </a>
                                 </div>
@@ -223,8 +221,8 @@
         <div class="uk-grid-margin uk-grid" uk-grid="" uk-height-match="target: .uk-card; row: false">
             <div class="uk-flex-auto uk-width-1-2@s uk-first-column m1">
                 <div class="uk-margin">
-                    <p class="logo-footer">
-                        {{ Lang.ctu }}
+                    <p class="logo-footer" alt="CTU logo">
+                        {{ Lang.ctu_long }}
                         <br/>E-mail: <a target='_self' href="mailto:nettest@ctu.cz">nettest@ctu.cz</a>
                         <br/><a target='_self' href="{{ Lang.template.ctu_url }}">{{ Lang.template.ctu_url2 }}</a>
                         <br/><a target='_self' href="https://github.com/CTUCZ">GitHub</a>

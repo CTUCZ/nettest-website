@@ -6,14 +6,15 @@ exports.strings = {
         "nettest": "ČTÚ – NetTest",
     },
     "headline" : {
-        "nettest" : "ČTÚ – NetTest",
+        "nettest" : "ČTÚ-NetTest",
     },
     "template": {
+        "ctu": "ČTÚ",
         "qos_ctu": "Vizualizační portál",
         "qos_url" : "https://vportal.ctu.cz/",
         "complaint" : "Jak reklamovat",
         "complaint_url" : "https://www.ctu.cz/plattezaskutecnourychlost",
-        "ctu": "Český telekomunikační úřad",
+        "ctu_long": "Český telekomunikační úřad",
         "ctu_url" : "https://www.ctu.cz/",
         "ctu_url2" : "www.ctu.cz",
         "comparison_tool": "Srovnávací nástroj",
@@ -181,7 +182,7 @@ exports.strings = {
         "finished_note_4": "V obou případech velkých odchylek, stejně jako v případě výpadku služby, můžete využít svého práva reklamovat vadné poskytnutí služby u svého poskytovatele služby přístupu k internetu."
     },
     //Page titles and link descriptions
-    "ctu": "Český telekomunikační úřad",
+    "ctu_long": "Český telekomunikační úřad",
     "copyright": "ČTÚ, Všechna práva vyhrazena", 
     "index": "Úvod",
     "statistics": "Historie měření",

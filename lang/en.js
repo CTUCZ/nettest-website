@@ -3,7 +3,7 @@ exports.strings = {
     "lang": "en",
     "LANG": "EN",
     "title": {
-        "nettest": "CTU - NetTest",
+        "nettest": "CTU – NetTest",
         "qostest": "QosTest"
     },
     "headline" : {
@@ -11,11 +11,12 @@ exports.strings = {
         "qostest" : "www.qostest.eu"
     },
     "template": {
+        "ctu": "CTU",
         "qos_ctu": "Visualization portal",
         "qos_url" : "https://vportal.ctu.cz/",
         "complaint" : "How to claim",
         "complaint_url" : "https://www.ctu.eu/pay-actually-achived-speed",
-        "ctu": "Czech Telecommunication Office",
+        "ctu_long": "Czech Telecommunication Office",
         "ctu_url" : "https://www.ctu.eu/",
         "ctu_url2" : "www.ctu.cz",
         "comparison_tool": "Comparison Tool",
@@ -233,7 +234,7 @@ exports.strings = {
         "finished_note_4": "In case of both significant discrepancies, as well as in case of service outage, you can apply your right to submit a claim against defective service provision to your IAS provider."
     },
     //Page titles and link descriptions
-    "ctu": "Czech Telecommunication Office",
+    "ctu_long": "Czech Telecommunication Office",
     "copyright": "CTU, All rights reserved", 
     "index": "Introduction",
     "statistics": "History of measurements",
