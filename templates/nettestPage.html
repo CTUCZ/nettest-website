@@ -108,7 +108,7 @@
                             <div class="uk-first-column">
                                 <a href="/{{ Lang.lang }}">
                                     <picture>
-                                        <img src='/images/logo.svg' alt="NetTest logo" class="logo" style="height:30px;">
+                                        <img src='/images/logo.svg' alt="{{ Lang.home }} nettest.cz" class="logo" style="height:30px;">
                                     </picture>
                                 </a>
                             </div>
@@ -170,7 +170,7 @@
                                 <div class="uk-first-column">
                                     <a href="/{{ Lang.lang }}">
                                         <picture>
-                                            <img src='/images/logo.svg' alt="NetTest logo" class="logo">
+                                            <img src='/images/logo.svg' alt="{{ Lang.home }} nettest.cz" class="logo">
                                         </picture>
                                     </a>
                                 </div>
@@ -256,7 +256,7 @@
 <script id="modalTemplate" type="text/x-handlebars-template">
     <div id="{{ container-id }}" class="{{ container-modifier }}" uk-modal>
         <div class="uk-modal-dialog">
-            <button class="uk-modal-close-default" type="button" uk-close></button>
+            <!--<button class="uk-modal-close-default" type="button" uk-close></button>-->
             {{#if title}}
             <div class="uk-modal-header">
                 <h2 class="uk-modal-title">{{ title }}</h2>
