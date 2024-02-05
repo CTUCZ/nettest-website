@@ -103,11 +103,10 @@ exports.strings = {
     },
 
     "opendata_content" : {
-       "open_data_specification" : "Otevřená data",
-        "content_block" : 'V souladu se zásadami ochrany osobních údajů jsou výsledky měření nástrojem ČTÚ-NetTest zveřejněna jako otevřená data. Specifikace formátu dat je k dispozici <a href="/cs/DataSpecification">zde</a>. Tato specifikace popisuje informace, které jsou dostupné jako otevřená data ve formátu CSV (viz níže).',
-        "csv_interface" : 'Stažení dat',
-        "recent_tests_hours" : 'Výsledky měření za posledních 48 hodin:<br /><br /> <a href="/RMBTStatisticServer/export/nettest-opendata_hours-048.zip" title="ČTÚ-NetTest Open Data 48h" target="_blank" class="external-link-new-window">nettest-opendata_hours-048.zip</a><br /> <a href="/RMBTStatisticServer/export/nettest-opendata_hours-048.xlsx" title="ČTÚ-NetTest Open Data 48h" target="_blank" class="external-link-new-window">nettest-opendata_hours-048.xlsx</a>.',
-        "recent_tests" : 'Výsledky měření za posledních 31 dní:<br /><br /> <a href="/RMBTStatisticServer/export/nettest-opendata.zip" title="ČTÚ-NetTest Open Data" target="_blank" class="external-link-new-window">nettest-opendata.zip</a><br /> <a href="/RMBTStatisticServer/export/nettest-opendata.xlsx" title="ČTÚ-NetTest Open Data" target="_blank" class="external-link-new-window">nettest-opendata.xlsx</a>.',
+        "open_data_specification" : "Otevřená data",
+        "content_block" : 'V souladu se zásadami ochrany osobních údajů jsou výsledky měření nástrojem ČTÚ-NetTest zveřejněna jako otevřená data. <a href="/cs/DataSpecification">Specifikace formátu dat</a> popisuje informace, které jsou dostupné jako otevřená data ve formátu CSV (viz níže).',        "csv_interface" : 'Stažení dat',
+        "recent_tests_hours" : 'Výsledky měření za posledních 48 hodin:<br /><br /> <a href="/RMBTStatisticServer/export/nettest-opendata_hours-048.zip" title="ČTÚ-NetTest OpenData, posledních 48 hodin (ZIP archiv s csv souborem)" target="_blank" class="external-link-new-window">NetTest OpenData - posledních 48 hodin.zip</a><br /> <a href="/RMBTStatisticServer/export/nettest-opendata_hours-048.xlsx" title="ČTÚ-NetTest OpenData, posledních 48 hodin (Excel sešit)" target="_blank" class="external-link-new-window">NetTest OpenData - posledních 48 hodin.xlsx</a>',
+        "recent_tests" : 'Výsledky měření za posledních 31 dní:<br /><br /> <a href="/RMBTStatisticServer/export/nettest-opendata.zip" title="ČTÚ-NetTest OpenData, posledních 31 dní (ZIP archiv s csv souborem)" target="_blank" class="external-link-new-window">NetTest OpenData.zip</a><br /> <a href="/RMBTStatisticServer/export/nettest-opendata.xlsx" title="ČTÚ-NetTest OpenData, posledních 31 dní (Excel sešit)" target="_blank" class="external-link-new-window">NetTest OpenData.xlsx</a>',
         "further_results" : "Další výsledky jsou k dispozici měsíčně:",
         "note_timestamp" : "Upozorňujeme, že časová razítka jsou v UTC (ne v místním čase).",
         "license_text" : 'Data jsou publikována v licenci <a href="https://creativecommons.org/licenses/by/4.0/deed.cs" target="_blank" class="external-link-new-window">Creative Commons Attribution 4.0 (CC BY 4.0)</a>.'
@@ -352,7 +351,7 @@ exports.strings = {
         "android_cert_title": "Jak provedu certifikované měření v mobilní aplikaci pro Android?"
     },
 
-    "opendata_specification_title" : "Otevřená data - specifikace formátu",
+    "opendata_specification_title" : "Otevřená data, specifikace formátu",
 
     // Help text
     "help_content" : {
