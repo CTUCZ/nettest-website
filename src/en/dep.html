@@ -1,14 +1,24 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
     <title>What demarcation points mean?</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .dep {
+            height: 100%;
+            width: 100%;         
+        }
+      </style>
 </head>
 <body>
-    <picture>
-        <img src='/images/DeP6_en.png' alt="DeP6">
-        <p><br></p>
-        <img src='/images/DeP7_en.png' alt="DeP7">
-    </picture>
+    <object type="image/svg+xml" data="/images/DeP6_en.svg" class="dep" alt="Demarcation point 6, graphical representation">
+        <!-- Fallback to png -->
+        <img src="/images/DeP6_en.png" class="dep" alt="Demarcation point 6, graphical representation">
+    </object>
+    <object type="image/svg+xml" data="/images/DeP7_en.svg" class="dep" alt="Demarcation point 7, graphical representation">
+        <!-- Fallback to png -->
+        <img src="/images/DeP7_en.png" class="dep" alt="Demarcation point 7, graphical representation">
+    </object>
 </body>
 </html>
