@@ -5,8 +5,10 @@
 {% block content %}
 <div class="uk-section-default uk-section content">
     <div class="uk-container uk-text-center">
-        <h2>{{ Lang.not_found_page.main }}</h2>
+        <p><img src="/images/sprites/card-404.svg" width="10%" height="10%" alt="404 error"></p>
+        <p><h2>{{ Lang.not_found_page.main }}</h2></p>
         <p>{{ Lang.not_found_page.note}}</p>
+        <p><a href="/{{ Lang.lang }}" class="uk-button uk-button-primary">{{ Lang.not_found_page.home }}</a></p>
     </div>
 </div>
 {% endblock %}

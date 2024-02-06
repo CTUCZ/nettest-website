@@ -445,8 +445,9 @@ exports.strings = {
     //404
     "not_found_page": {
         "title": "Page not found",
-        "main": "Oops! Seems like <span style='font-size: 45px; font-weight: 600; padding: 0 10px; color: #2362a2'>ERROR 404</span> ... we are sorry.",
-        "note": "We are sorry, the page you were searching was not found. Try to check for mistakes in URL and click on Refresh in your browser."
+        "main": "Oops! Seems like <span style='font-size: 45px; font-weight: 600; padding: 0 10px; color: #2362a2'>ERROR 404</span> we are sorry.",
+        "note": "We are sorry, the page you were searching was not found. <br/> Try to check for mistakes in URL and click on refresh button in your browser.",
+        "home": "Go to homepage"
     },
 
     // Info

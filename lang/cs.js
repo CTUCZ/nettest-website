@@ -380,8 +380,9 @@ exports.strings = {
     //404
     "not_found_page": {
         "title": "Stránka nenalezena",
-        "main": "Ou! Vypadá to jako <span style='font-size: 45px; font-weight: 600; padding: 0 10px; color: #2362a2'>CHYBA 404</span> ... je nám líto.",
-        "note": "Omlouváme se, ale stránka, kterou hledáte, nebyla nalezena.<br/>Zkuste zkontrolovat chyby v URL, a klikněte na tlačítko aktualizovat ve vašem prohlížeči."
+        "main": "Ou! Vypadá to jako <span style='font-size: 45px; font-weight: 600; padding: 0 10px; color: #2362a2'>CHYBA 404</span> je nám líto.",
+        "note": "Omlouváme se, ale stránka, kterou hledáte, nebyla nalezena. <br/> Zkuste zkontrolovat chyby v URL a klikněte na tlačítko aktualizovat ve vašem prohlížeči.",
+        "home": "Přejít na úvod"
     },
 
     // Info
