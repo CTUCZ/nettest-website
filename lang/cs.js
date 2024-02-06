@@ -13,10 +13,10 @@ exports.strings = {
         "qos_ctu": "Vizualizační portál",
         "qos_url" : "https://vportal.ctu.cz/",
         "complaint" : "Jak reklamovat",
-        "complaint_url" : "https://www.ctu.cz/plattezaskutecnourychlost",
+        "complaint_url" : "https://www.ctu.gov.cz/plattezaskutecnourychlost",
         "ctu_long": "Český telekomunikační úřad",
-        "ctu_url" : "https://www.ctu.cz/",
-        "ctu_url2" : "www.ctu.cz",
+        "ctu_url" : "https://www.ctu.gov.cz/",
+        "ctu_url2" : "www.ctu.gov.cz",
         "comparison_tool": "Srovnávací nástroj",
         "comparison_tool_url": "https://srovnavac.ctu.cz/"
     },
@@ -448,6 +448,6 @@ exports.strings = {
         "tc_android": "Prohlášení o ochraně osobních údajů a podmínky užití pro Android",
         "tc_ios": "Prohlášení o ochraně osobních údajů a podmínky užití pro iOS",
         "tc_ctu": "Informace o zpracování osobních údajů v podmínkách Českého telekomunikačního úřadu",
-        "tc_ctu_url": "https://www.ctu.cz/zpracovani-osobnich-udaju-v-ctu"
+        "tc_ctu_url": "https://www.ctu.gov.cz/zpracovani-osobnich-udaju-v-ctu"
     }
 }

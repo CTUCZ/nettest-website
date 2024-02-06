@@ -17,8 +17,8 @@ exports.strings = {
         "complaint" : "How to claim",
         "complaint_url" : "https://www.ctu.eu/pay-actually-achived-speed",
         "ctu_long": "Czech Telecommunication Office",
-        "ctu_url" : "https://www.ctu.eu/",
-        "ctu_url2" : "www.ctu.cz",
+        "ctu_url" : "https://www.ctu.gov.cz/en",
+        "ctu_url2" : "www.ctu.gov.cz",
         "comparison_tool": "Comparison Tool",
         "comparison_tool_url": "https://srovnavac.ctu.cz/"
     },
@@ -514,6 +514,6 @@ exports.strings = {
         "tc_android": "Privacy Policy and Terms of Use for Android",
         "tc_ios": "Privacy Policy and Terms of Use for iOS",
         "tc_ctu": "Information on the processing of personal data in the conditions of the Czech Telecommunication Office",
-        "tc_ctu_url": "https://www.ctu.cz/en/information-processing-personal-data-conditions"
+        "tc_ctu_url": "https://www.ctu.gov.cz/en/information-processing-personal-data-conditions"
     }
 }

@@ -5,7 +5,7 @@
  */
 
     //https://github.com/segmentio/metalsmith/blob/master/examples/project-scaffolder/build.js
-    var CTU_LINKS_BASEURL = "https://www.ctu.cz";
+    var CTU_LINKS_BASEURL = "https://www.ctu.gov.cz";
 
 
 
