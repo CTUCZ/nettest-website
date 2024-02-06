@@ -225,12 +225,22 @@
                         {{ Lang.ctu_long }}
                         <br/>E-mail: <a target='_self' href="mailto:nettest@ctu.cz">nettest@ctu.cz</a>
                         <br/><a target='_self' href="{{ Lang.template.ctu_url }}">{{ Lang.template.ctu_url2 }}</a>
-                        <br/><a target='_self' href="https://github.com/CTUCZ">GitHub</a>
-                    </p>
+                        <br/><!--© 2021–<script>document.write(/\d{4}/.exec(Date())[0])</script>-->
+                            © <script>document.write(/\d{4}/.exec(Date())[0])</script>
+                            {{Lang.copyright}}
+                        </p>
                 </div>
             </div>
-            <div class="uk-flex-auto uk-width-1-2 uk-width-1-4@s footer-large">
+            <div class="uk-flex-auto uk-width-1-2 uk-width-1-4@s m2 footer-large">
                 <ul class="uk-list">
+                    <li>
+                        <a href="{{ Lang.index_content.tos.url }}">{{ Lang.index_content.tos.text }}</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="uk-flex-auto uk-width-1-2 uk-width-1-4@s m3 footer-large">
+                <ul class="uk-list">
+                    
                     <li>
                         <a href="/{{ Lang.lang}}/Help">{{ Lang.help }}</a>
                     </li>
@@ -238,12 +248,7 @@
                         <a href="/{{ Lang.lang}}/News">{{ Lang.news }}</a>
                     </li>
                     <li>
-                        <a href="{{ Lang.index_content.tos.url }}">{{ Lang.index_content.tos.text }}</a>
-                    </li>
-                    <li>
-                        <!--© 2021–<script>document.write(/\d{4}/.exec(Date())[0])</script>-->
-                        © <script>document.write(/\d{4}/.exec(Date())[0])</script>
-                        {{Lang.copyright}}
+                        <a target='_self' href="https://github.com/CTUCZ">GitHub</a>
                     </li>
                 </ul>
             </div>

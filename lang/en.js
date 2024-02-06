@@ -29,7 +29,7 @@ exports.strings = {
         },
         "detailed_dsc": "<p><strong>Please, have on mind that the performance of your end device as well as the operation system have significant impact on the measured values of the actual speed.</strong></p>",
         "tos": {
-            "text": "Privacy Policy and Terms of Use",
+            "text": "Personal Data Processing",
             "url": {
                 "nettest": "/en/Privacy",
                 "qostest": "/en/Privacy"

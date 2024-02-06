@@ -26,7 +26,7 @@ exports.strings = {
         },
         "detailed_dsc": "<p><strong>Mějte prosím na paměti, že nejen výkon vašeho uživatelského zařízení, ale i operační systém má zásadní vliv na naměřené hodnoty skutečné rychlosti.</strong></p>",
         "tos": {
-            "text": "Prohlášení o ochraně osobních údajů a podmínky užití",
+            "text": "Zpracování osobních údajů",
             "url": {
                 "nettest": "/cs/Privacy",
             }
