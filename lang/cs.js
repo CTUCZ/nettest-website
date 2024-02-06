@@ -194,6 +194,7 @@ exports.strings = {
     "help": "Nápověda",
     "help_url": "https://nettest.cz/cs/Help",
     "news" : "Aktuální informace",
+    "accessibility": "Prohlášení o přístupnosti",
     "menu" : "Menu",
     "loop_mode" : "Opakované měření",
     "loop_mode_loading" : "Opakované měření se načítá...",
