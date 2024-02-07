@@ -38,7 +38,7 @@ $card-header-padding-horizontal-l:              $global-medium-gutter !default;
 $card-header-padding-vertical-l:                round($global-medium-gutter / 2) !default;
 
 $card-footer-padding-horizontal:                $global-gutter !default;
-$card-footer-padding-vertical:                  ($global-gutter / 2) !default;
+$card-footer-padding-vertical:                  ($global-gutter * 0.5) !default;
 
 $card-footer-padding-horizontal-l:              $global-medium-gutter !default;
 $card-footer-padding-vertical-l:                round($global-medium-gutter / 2) !default;
