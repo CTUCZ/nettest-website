@@ -1,23 +1,23 @@
 <!doctype html>
-<html lang="cs">
+<html lang="en">
 <head>
     <!-- Basic page info -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Stránka nenalezena | ČTÚ-NetTest</title>
+    <title>Options | CTU-NetTest</title>
 
     <!-- CSS includes -->
     <link rel="stylesheet" href="../css/jquery-ui.min-f8f1a615f0d7a466e1c84fafadc3f523.css">
     <link rel="stylesheet" href="../scss/app-81683592ee73a87586075cd67243eba2.css">
     <!-- Meta information -->
-    <meta name="description" content="Nástroj <b>ČTÚ-NetTest</b>, provozovaný Českým telekomunikačním úřadem, informuje uživatele o aktuální kvalitě jejich služby přístupu k internetu v podobě <b>skutečně dosahované rychlosti</b> stahování (download), vkládání (upload) a doby odezvy (ping). Nabízí možnost <b>certifikovaného měření</b>, které plně automaticky provede celý proces měření s výsledkem v podobě PDF dokumentu, který může uživatel použít pro případnou reklamaci služby přístupu k internetu v pevném místě. Pokud chcete provést reklamaci služby přístupu k internetu v pevném místě (tzv. pevného internetu), je nutné vždy využít režimu certifikovaného měření, přičemž jediným přípustným způsobem měření je připojení vašeho uživatelského zařízení (PC, notebook) přímo ke koncovému zařízení (routeru, resp. modemu) nebo do koncového bodu sítě (pokud umožňuje přímé připojení uživatelského zařízení bez nutnosti konverze), a to kabelem (nikoli pomocí Wi-Fi), za dále definovaných podmínek."/>
+    <meta name="description" content="The <b>CTU-NetTest</b> tool, operated by Czech Telecommunication Office, provides information to users on the current quality of their IAS in the form of <b>actually achieved speed</b> of download, upload and roundtrip delay (ping). It offers the possibility of <b>certified measurement</b> that will carry out fully automated process of measurement with result provided in PDF document that the user can use for possible claim against the quality of IAS at a fixed location. If you want to submit a claim against IAS at a fixed location (so called ‘fixed internet’), you must always use the certified measurement mode, while the only appropriate means of measurement is connecting your end device (PC, laptop) directly to the terminal equipment device (router or modem) or to the network termination point (if it allows a direct connection of end device without the necessity of conversion) through a cable (not through Wi-Fi) under further defined conditions."/>
     <meta name="robots" content="index, follow">
     <!-- Social media (frontend only) -->
-    <meta property="og:site_name" content="ČTÚ – NetTest"/>
+    <meta property="og:site_name" content="CTU – NetTest"/>
 
-    <meta property="og:title" content="Stránka nenalezena - ČTÚ-NetTest"/>
+    <meta property="og:title" content="Options - CTU-NetTest"/>
 
     <meta property="og:type" content="website"/>
 
@@ -36,7 +36,13 @@
 
     
     
-    
+<script type="text/javascript" src="../js/Options-3c2f7584f04cc64318c6f4306946f66d.js"></script>
+<style>
+    input.form-control {
+        background-color: white;
+    }
+</style>
+
 
 </head>
 
@@ -59,17 +65,17 @@
                                  uk-drop="mode:click;offset:0;duration:100;delay-show:0;boundary: !.uk-container; boundary-align: true; pos: bottom-justify;">
                                 <div class="uk-container uk-container-large">
                                     <ul class="uk-subnav uk-list-divider">
-                                        <li><a href="https://www.ctu.gov.cz/plattezaskutecnourychlost" class="area-switch" target="_blank">Jak reklamovat</a></li>
-                                        <li><a href="https://www.ctu.gov.cz/" class="area-switch" target="_blank">Český telekomunikační úřad</a></li>
-                                        <li><a href="https://vportal.ctu.cz/" class="area-switch" target="_blank">Vizualizační portál</a></li>
-                                        <li><a href="https://srovnavac.ctu.cz/" class="area-switch" target="_blank">Srovnávací nástroj</a></li>
+                                        <li><a href="https://www.ctu.eu/pay-actually-achived-speed" class="area-switch" target="_blank">How to claim</a></li>
+                                        <li><a href="https://www.ctu.gov.cz/en" class="area-switch" target="_blank">Czech Telecommunication Office</a></li>
+                                        <li><a href="https://vportal.ctu.cz/" class="area-switch" target="_blank">Visualization portal</a></li>
+                                        <li><a href="https://srovnavac.ctu.cz/" class="area-switch" target="_blank">Comparison Tool</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         
                                           <div class="uk-inline">
-                                              <button class="uk-button uk-button-top" type="button">CS<span
+                                              <button class="uk-button uk-button-top" type="button">EN<span
                                                       class="uk-margin-small-right chevdown" uk-icon="chevron-down"></span><span
                                                       class="uk-margin-small-right  chevup" uk-icon="chevron-up"></span></button>
                                               <div class="uk-navbar-dropdown"
@@ -102,9 +108,9 @@
                     <div class="uk-navbar-left">
                         <div class="uk-grid-small uk-text-center logos-mobile uk-grid uk-grid-stack" uk-grid="">
                             <div class="uk-first-column">
-                                <a href="/cs">
+                                <a href="/en">
                                     <picture>
-                                        <img src='/images/logo.svg' alt="Domů nettest.cz" class="logo" style="height:30px;">
+                                        <img src='/images/logo.svg' alt="Home nettest.cz" class="logo" style="height:30px;">
                                     </picture>
                                 </a>
                             </div>
@@ -141,10 +147,10 @@
                         <div>
                             <div class="uk-panel" id="module-menu-mobile">
                                 <ul class="uk-nav uk-nav-default uk-list uk-list-divider">
-                                    <li><a href="/">Domů</a></li>
-                                    <li><a href="Result">Moje měření</a></li>
-                                    <li><a href="Options">Nastavení</a></li>
-                                    <li><a href="Test">Spustit test</a></li>
+                                    <li><a href="/">Home</a></li>
+                                    <li><a href="Result">History</a></li>
+                                    <li><a href="Options">Options</a></li>
+                                    <li><a href="Test">Start test</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -164,9 +170,9 @@
                         <div class="uk-navbar-left">
                             <div class="uk-child-width-expand@s uk-text-center logos uk-grid-small uk-grid" uk-grid="">
                                 <div class="uk-first-column">
-                                    <a href="/cs">
+                                    <a href="/en">
                                         <picture>
-                                            <img src='/images/logo.svg' alt="Domů nettest.cz" class="logo">
+                                            <img src='/images/logo.svg' alt="Home nettest.cz" class="logo">
                                         </picture>
                                     </a>
                                 </div>
@@ -175,10 +181,10 @@
                         </div>
                         <div class="uk-navbar-right">
                             <ul class="uk-navbar-nav">
-                                <li><a href="/cs">Domů</a></li>
-                                <li><a href="Result">Moje měření</a></li>
-                                <li><a href="Options">Nastavení</a></li>
-                                <li class="nav-button"><a href="Test" class="uk-button uk-button-default">Spustit test</a></li>
+                                <li><a href="/en">Home</a></li>
+                                <li><a href="Result">History</a></li>
+                                <li><a href="Options">Options</a></li>
+                                <li class="nav-button"><a href="Test" class="uk-button uk-button-default">Start test</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -191,9 +197,9 @@
     <div class="uk-section-default uk-section uk-section-xsmall" id="breadcrumbs">
         <div class="uk-container uk-container-large">
             <ul class="uk-breadcrumb">
-                <li><a href="/cs">ČTÚ-NetTest</a></li>
+                <li><a href="/en">CTU-NetTest</a></li>
                 <li class="uk-disabled">
-                    <a>Stránka nenalezena</a>
+                    <a>Options</a>
                 </li>
             </ul>
         </div>
@@ -203,14 +209,69 @@
     <div class="uk-section-default uk-section">
         <div id="popuperror"></div>
         
-<div class="uk-section-default uk-section content">
-    <div class="uk-container uk-text-center">
-        <p><img src="/images/sprites/card-404.svg" width="10%" height="10%" alt="404 error"></p>
-        <p><h2>Ou! Vypadá to jako <span style='font-size: 45px; font-weight: 600; padding: 0 10px; color: #2362a2'>CHYBA 404</span> je nám líto.</h2></p>
-        <p>Omlouváme se, ale stránka, kterou hledáte, nebyla nalezena. <br/> Zkuste zkontrolovat chyby v URL a klikněte na tlačítko aktualizovat ve vašem prohlížeči.</p>
-        <p><a href="/cs" class="uk-button uk-button-primary">Přejít na úvod</a></p>
+<div class="uk-container">
+<h2 id="h2">Client-UUID</h2>
+<div id="youruuid">Your UUID is: </div>
+    <div>E-Mail: <a href="mailto:nettest@ctu.cz?subject=CTU-NetTest%20support%20request">nettest@ctu.cz</a></div>
+
+<h2 class="uk-margin-top"> Options </h2>
+
+<form id="optionsForm" onsubmit="return saveFormValues()" class="uk-form uk-margin-remove uk-padding-remove">
+    <div id="ipversionForm">
+        <h3>IP version</h3>
+        <p>
+            If your internet access service supports both IPv4 and IPv6 protocols, you can choose which protocol version is used for conducting the measurement:
+        </p>
+
+        <div class="radio">
+            <label><input type="radio" name="ipversion" value="default" checked="checked" class="uk-radio"/> Automatic </label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" name="ipversion" value="ipv4" disabled class="uk-radio"/> IPv4 only</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" name="ipversion" value="ipv6" disabled class="uk-radio"/> IPv6 only</label>
+        </div>
     </div>
+
+    <div id="testserverForm" style="display:none">
+        <h3>Testserver</h3>
+        Please choose which server should be used for conducting the WebSocket-based test.
+
+        <div id="serverList">
+            <div class="radio">
+                <label><input type="radio" name="testserver" value="default" class="uk-radio"
+                              checked="checked"/> Default Server</label>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div id="threadsForm" class="form-horizontal" style="display: none">
+        <h3>lock parallel threads</h3>
+        <div class="form-group">
+            <label class="col-sm-4 control-label" for="threads_dl">Download</label>
+            <div class="col-md-7 col-sm-8">
+                <input class="uk-input" type="number" id="threads_dl" placeholder="default"  />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-4 control-label" for="threads_ul">Upload</label>
+            <div class="col-md-7 col-sm-8">
+                <input class="uk-input" type="number" id="threads_ul" placeholder="default" />
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <input type="submit" class="uk-button uk-button-primary uk-button-small" value="Save"/>
+        <p id="saveNotification" style="display:none">The configuration has been saved.</p>
+    </div>
+</form>
+
 </div>
+
 
     </div>
 
@@ -224,32 +285,32 @@
             <div class="uk-flex-auto uk-width-1-2@s uk-first-column m1">
                 <div class="uk-margin">
                     <p class="logo-footer" alt="CTU logo">
-                        Český telekomunikační úřad
+                        Czech Telecommunication Office
                         <br/>E-mail: <a target='_self' href="mailto:nettest@ctu.cz">nettest@ctu.cz</a>
-                        <br/><a target='_self' href="https://www.ctu.gov.cz/">www.ctu.gov.cz</a>
+                        <br/><a target='_self' href="https://www.ctu.gov.cz/en">www.ctu.gov.cz</a>
                         <br/><!--© 2021–<script>document.write(/\d{4}/.exec(Date())[0])</script>-->
                             © <script>document.write(/\d{4}/.exec(Date())[0])</script>
-                            ČTÚ, Všechna práva vyhrazena
+                            CTU, All rights reserved
                         </p>
                 </div>
             </div>
             <div class="uk-flex-auto uk-width-1-2 uk-width-1-4@s m2">
                 <ul class="uk-list">
                     <li>
-                        <a href="/cs/Privacy">Zpracování osobních údajů</a>
+                        <a href="/en/Privacy">Personal Data Processing</a>
                     </li>
                     <li>
-                        <a href="/cs/Accessibility">Prohlášení o přístupnosti</a>
+                        <a href="/en/Accessibility">Accessibility Statement</a>
                     </li>
                 </ul>
             </div>
             <div class="uk-flex-auto uk-width-1-2 uk-width-1-4@s m3 footer-large">
                 <ul class="uk-list">
                     <li>
-                        <a href="/cs/Help">Nápověda</a>
+                        <a href="/en/Help">Help</a>
                     </li>
                     <li>
-                        <a href="/cs/News">Aktuální informace</a>
+                        <a href="/en/News">News</a>
                     </li>
                     <li>
                         <a target='_self' href="https://github.com/CTUCZ">GitHub</a>

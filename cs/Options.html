@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Stránka nenalezena | ČTÚ-NetTest</title>
+    <title>Nastavení | ČTÚ-NetTest</title>
 
     <!-- CSS includes -->
     <link rel="stylesheet" href="../css/jquery-ui.min-f8f1a615f0d7a466e1c84fafadc3f523.css">
@@ -17,7 +17,7 @@
     <!-- Social media (frontend only) -->
     <meta property="og:site_name" content="ČTÚ – NetTest"/>
 
-    <meta property="og:title" content="Stránka nenalezena - ČTÚ-NetTest"/>
+    <meta property="og:title" content="Nastavení - ČTÚ-NetTest"/>
 
     <meta property="og:type" content="website"/>
 
@@ -36,7 +36,13 @@
 
     
     
-    
+<script type="text/javascript" src="../js/Options-3c2f7584f04cc64318c6f4306946f66d.js"></script>
+<style>
+    input.form-control {
+        background-color: white;
+    }
+</style>
+
 
 </head>
 
@@ -193,7 +199,7 @@
             <ul class="uk-breadcrumb">
                 <li><a href="/cs">ČTÚ-NetTest</a></li>
                 <li class="uk-disabled">
-                    <a>Stránka nenalezena</a>
+                    <a>Nastavení</a>
                 </li>
             </ul>
         </div>
@@ -203,14 +209,69 @@
     <div class="uk-section-default uk-section">
         <div id="popuperror"></div>
         
-<div class="uk-section-default uk-section content">
-    <div class="uk-container uk-text-center">
-        <p><img src="/images/sprites/card-404.svg" width="10%" height="10%" alt="404 error"></p>
-        <p><h2>Ou! Vypadá to jako <span style='font-size: 45px; font-weight: 600; padding: 0 10px; color: #2362a2'>CHYBA 404</span> je nám líto.</h2></p>
-        <p>Omlouváme se, ale stránka, kterou hledáte, nebyla nalezena. <br/> Zkuste zkontrolovat chyby v URL a klikněte na tlačítko aktualizovat ve vašem prohlížeči.</p>
-        <p><a href="/cs" class="uk-button uk-button-primary">Přejít na úvod</a></p>
+<div class="uk-container">
+<h2 id="h2">UUID klienta</h2>
+<div id="youruuid">Vaše UUID je: </div>
+    <div>E-Mail: <a href="mailto:nettest@ctu.cz?subject=ČTÚ-NetTest%20žádost%20o%20podporu">nettest@ctu.cz</a></div>
+
+<h2 class="uk-margin-top"> Nastavení </h2>
+
+<form id="optionsForm" onsubmit="return saveFormValues()" class="uk-form uk-margin-remove uk-padding-remove">
+    <div id="ipversionForm">
+        <h3>Verze IP</h3>
+        <p>
+            Pokud Vaše služba přístupu k síti internet podporuje protokoly IPv4 a IPv6, můžete si vybrat, kterou verzi protokolu použijete pro měření:
+        </p>
+
+        <div class="radio">
+            <label><input type="radio" name="ipversion" value="default" checked="checked" class="uk-radio"/> Automaticky </label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" name="ipversion" value="ipv4" disabled class="uk-radio"/> Pouze IPv4</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" name="ipversion" value="ipv6" disabled class="uk-radio"/> Pouze IPv6</label>
+        </div>
     </div>
+
+    <div id="testserverForm" style="display:none">
+        <h3>Měřicí server</h3>
+        Prosím vyberte, který server bude použit pro měření prostřednictvím WebSocket protokolu.
+
+        <div id="serverList">
+            <div class="radio">
+                <label><input type="radio" name="testserver" value="default" class="uk-radio"
+                              checked="checked"/> Výchozí server</label>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div id="threadsForm" class="form-horizontal" style="display: none">
+        <h3></h3>
+        <div class="form-group">
+            <label class="col-sm-4 control-label" for="threads_dl">Download</label>
+            <div class="col-md-7 col-sm-8">
+                <input class="uk-input" type="number" id="threads_dl" placeholder="default"  />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-4 control-label" for="threads_ul">Upload</label>
+            <div class="col-md-7 col-sm-8">
+                <input class="uk-input" type="number" id="threads_ul" placeholder="default" />
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <input type="submit" class="uk-button uk-button-primary uk-button-small" value="Uložit"/>
+        <p id="saveNotification" style="display:none">Nastavení bylo uloženo.</p>
+    </div>
+</form>
+
 </div>
+
 
     </div>
 

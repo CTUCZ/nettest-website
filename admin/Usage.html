@@ -10,12 +10,12 @@
 
     <!-- CSS includes -->
     <link rel="stylesheet" href="../css/jquery-ui.min-f8f1a615f0d7a466e1c84fafadc3f523.css">
-    <link rel="stylesheet" href="../scss/app-ccc1a60b87e38ee4a3c63af292b1a7fd.css">
+    <link rel="stylesheet" href="../scss/app-81683592ee73a87586075cd67243eba2.css">
     <!-- Meta information -->
     <meta name="description" content=""/>
     <meta name="robots" content="index, follow">
     <!-- Social media (frontend only) -->
-    <meta property="og:site_name" content="ČTÚ – NetTest"/>
+    <meta property="og:site_name" content=""/>
 
     <meta property="og:title" content="Usage report - "/>
 
@@ -139,15 +139,14 @@
                             <div class="uk-first-column">
                                 <a href="/">
                                     <picture>
-                                        <img src='/images/logo.svg' alt="Logo " title="ČTÚ"
-                                             style="height:30px;">
+                                        <img src='/images/logo.svg' alt=" nettest.cz" class="logo" style="height:30px;">
                                     </picture>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="uk-navbar-right">
-                        <a id="mobmenu" class="uk-navbar-toggle" href="#tm-mobile" uk-toggle="animation: true;">
+                        <a id="mobmenu" class="uk-navbar-toggle" href="#tm-mobile" uk-toggle="animation: true;" title="Menu">
                             <div class="toggleopen uk-icon uk-navbar-toggle-icon" uk-navbar-toggle-icon="">
                                 <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
                                      data-svg="navbar-toggle-icon">
@@ -178,9 +177,8 @@
                             <div class="uk-panel" id="module-menu-mobile">
                                 <ul class="uk-nav uk-nav-default uk-list uk-list-divider">
                                     <li><a href="/"></a></li>
-                                    <li class="">
-                                        <a href="Result"></a>
-                                    </li>
+                                    <li><a href="Result"></a></li>
+                                    <li><a href="Options"></a></li>
                                     <li><a href="Test"></a></li>
                                 </ul>
                             </div>
@@ -203,8 +201,7 @@
                                 <div class="uk-first-column">
                                     <a href="/">
                                         <picture>
-
-                                            <img src='/images/logo.svg' alt="Logo ČTÚ" class="logo">
+                                            <img src='/images/logo.svg' alt=" nettest.cz" class="logo">
                                         </picture>
                                     </a>
                                 </div>
@@ -214,9 +211,8 @@
                         <div class="uk-navbar-right">
                             <ul class="uk-navbar-nav">
                                 <li><a href="/"></a></li>
-                                <li class="">
-                                    <a href="Result"></a>
-                                </li>
+                                <li><a href="Result"></a></li>
+                                <li><a href="Options"></a></li>
                                 <li class="nav-button"><a href="Test" class="uk-button uk-button-default"></a></li>
                             </ul>
                         </div>
@@ -338,15 +334,27 @@
         <div class="uk-grid-margin uk-grid" uk-grid="" uk-height-match="target: .uk-card; row: false">
             <div class="uk-flex-auto uk-width-1-2@s uk-first-column m1">
                 <div class="uk-margin">
-                    <p class="logo-footer">
+                    <p class="logo-footer" alt="CTU logo">
                         
                         <br/>E-mail: <a target='_self' href="mailto:nettest@ctu.cz">nettest@ctu.cz</a>
                         <br/><a target='_self' href=""></a>
-                        <br/><a target='_self' href="https://github.com/CTUCZ">GitHub</a>
-                    </p>
+                        <br/><!--© 2021–<script>document.write(/\d{4}/.exec(Date())[0])</script>-->
+                            © <script>document.write(/\d{4}/.exec(Date())[0])</script>
+                            
+                        </p>
                 </div>
             </div>
-            <div class="uk-flex-auto uk-width-1-2 uk-width-1-4@s footer-large">
+            <div class="uk-flex-auto uk-width-1-2 uk-width-1-4@s m2">
+                <ul class="uk-list">
+                    <li>
+                        <a href=""></a>
+                    </li>
+                    <li>
+                        <a href="//Accessibility"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="uk-flex-auto uk-width-1-2 uk-width-1-4@s m3 footer-large">
                 <ul class="uk-list">
                     <li>
                         <a href="//Help"></a>
@@ -355,12 +363,7 @@
                         <a href="//News"></a>
                     </li>
                     <li>
-                        <a href=""></a>
-                    </li>
-                    <li>
-                        <!--© 2021–<script>document.write(/\d{4}/.exec(Date())[0])</script>-->
-                        © <script>document.write(/\d{4}/.exec(Date())[0])</script>
-                        
+                        <a target='_self' href="https://github.com/CTUCZ">GitHub</a>
                     </li>
                 </ul>
             </div>
@@ -373,7 +376,7 @@
 <script id="modalTemplate" type="text/x-handlebars-template">
     <div id="{{ container-id }}" class="{{ container-modifier }}" uk-modal>
         <div class="uk-modal-dialog">
-            <button class="uk-modal-close-default" type="button" uk-close></button>
+            <!--<button class="uk-modal-close-default" type="button" uk-close></button>-->
             {{#if title}}
             <div class="uk-modal-header">
                 <h2 class="uk-modal-title">{{ title }}</h2>

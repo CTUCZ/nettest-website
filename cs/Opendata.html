@@ -6,18 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Otevřená data | ČTÚ – NetTest</title>
+    <title>Otevřená data | ČTÚ-NetTest</title>
 
     <!-- CSS includes -->
     <link rel="stylesheet" href="../css/jquery-ui.min-f8f1a615f0d7a466e1c84fafadc3f523.css">
-    <link rel="stylesheet" href="../scss/app-ccc1a60b87e38ee4a3c63af292b1a7fd.css">
+    <link rel="stylesheet" href="../scss/app-81683592ee73a87586075cd67243eba2.css">
     <!-- Meta information -->
     <meta name="description" content="Nástroj <b>ČTÚ-NetTest</b>, provozovaný Českým telekomunikačním úřadem, informuje uživatele o aktuální kvalitě jejich služby přístupu k internetu v podobě <b>skutečně dosahované rychlosti</b> stahování (download), vkládání (upload) a doby odezvy (ping). Nabízí možnost <b>certifikovaného měření</b>, které plně automaticky provede celý proces měření s výsledkem v podobě PDF dokumentu, který může uživatel použít pro případnou reklamaci služby přístupu k internetu v pevném místě. Pokud chcete provést reklamaci služby přístupu k internetu v pevném místě (tzv. pevného internetu), je nutné vždy využít režimu certifikovaného měření, přičemž jediným přípustným způsobem měření je připojení vašeho uživatelského zařízení (PC, notebook) přímo ke koncovému zařízení (routeru, resp. modemu) nebo do koncového bodu sítě (pokud umožňuje přímé připojení uživatelského zařízení bez nutnosti konverze), a to kabelem (nikoli pomocí Wi-Fi), za dále definovaných podmínek."/>
     <meta name="robots" content="index, follow">
     <!-- Social media (frontend only) -->
     <meta property="og:site_name" content="ČTÚ – NetTest"/>
 
-    <meta property="og:title" content="Otevřená data - ČTÚ – NetTest"/>
+    <meta property="og:title" content="Otevřená data - ČTÚ-NetTest"/>
 
     <meta property="og:type" content="website"/>
 
@@ -103,8 +103,8 @@
                                  uk-drop="mode:click;offset:0;duration:100;delay-show:0;boundary: !.uk-container; boundary-align: true; pos: bottom-justify;">
                                 <div class="uk-container uk-container-large">
                                     <ul class="uk-subnav uk-list-divider">
-                                        <li><a href="https://www.ctu.cz/plattezaskutecnourychlost" class="area-switch" target="_blank">Jak reklamovat</a></li>
-                                        <li><a href="https://www.ctu.cz/" class="area-switch" target="_blank">Český telekomunikační úřad</a></li>
+                                        <li><a href="https://www.ctu.gov.cz/plattezaskutecnourychlost" class="area-switch" target="_blank">Jak reklamovat</a></li>
+                                        <li><a href="https://www.ctu.gov.cz/" class="area-switch" target="_blank">Český telekomunikační úřad</a></li>
                                         <li><a href="https://vportal.ctu.cz/" class="area-switch" target="_blank">Vizualizační portál</a></li>
                                         <li><a href="https://srovnavac.ctu.cz/" class="area-switch" target="_blank">Srovnávací nástroj</a></li>
                                     </ul>
@@ -148,15 +148,14 @@
                             <div class="uk-first-column">
                                 <a href="/cs">
                                     <picture>
-                                        <img src='/images/logo.svg' alt="Logo ČTÚ – NetTest" title="ČTÚ"
-                                             style="height:30px;">
+                                        <img src='/images/logo.svg' alt="Domů nettest.cz" class="logo" style="height:30px;">
                                     </picture>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="uk-navbar-right">
-                        <a id="mobmenu" class="uk-navbar-toggle" href="#tm-mobile" uk-toggle="animation: true;">
+                        <a id="mobmenu" class="uk-navbar-toggle" href="#tm-mobile" uk-toggle="animation: true;" title="Menu">
                             <div class="toggleopen uk-icon uk-navbar-toggle-icon" uk-navbar-toggle-icon="">
                                 <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
                                      data-svg="navbar-toggle-icon">
@@ -187,9 +186,8 @@
                             <div class="uk-panel" id="module-menu-mobile">
                                 <ul class="uk-nav uk-nav-default uk-list uk-list-divider">
                                     <li><a href="/">Domů</a></li>
-                                    <li class="">
-                                        <a href="Result">Moje měření</a>
-                                    </li>
+                                    <li><a href="Result">Moje měření</a></li>
+                                    <li><a href="Options">Nastavení</a></li>
                                     <li><a href="Test">Spustit test</a></li>
                                 </ul>
                             </div>
@@ -212,8 +210,7 @@
                                 <div class="uk-first-column">
                                     <a href="/cs">
                                         <picture>
-
-                                            <img src='/images/logo.svg' alt="Logo ČTÚ" class="logo">
+                                            <img src='/images/logo.svg' alt="Domů nettest.cz" class="logo">
                                         </picture>
                                     </a>
                                 </div>
@@ -223,9 +220,8 @@
                         <div class="uk-navbar-right">
                             <ul class="uk-navbar-nav">
                                 <li><a href="/cs">Domů</a></li>
-                                <li class="">
-                                    <a href="Result">Moje měření</a>
-                                </li>
+                                <li><a href="Result">Moje měření</a></li>
+                                <li><a href="Options">Nastavení</a></li>
                                 <li class="nav-button"><a href="Test" class="uk-button uk-button-default">Spustit test</a></li>
                             </ul>
                         </div>
@@ -239,7 +235,7 @@
     <div class="uk-section-default uk-section uk-section-xsmall" id="breadcrumbs">
         <div class="uk-container uk-container-large">
             <ul class="uk-breadcrumb">
-                <li><a href="/cs">ČTÚ – NetTest</a></li>
+                <li><a href="/cs">ČTÚ-NetTest</a></li>
                 <li class="uk-disabled">
                     <a>Otevřená data</a>
                 </li>
@@ -255,13 +251,13 @@
     <div class="uk-container-small">
         <h2>Otevřená data</h2>
         <p>
-            V souladu se zásadami ochrany osobních údajů jsou výsledky měření nástrojem ČTÚ-NetTest zveřejněna jako otevřená data. Specifikace formátu dat je k dispozici <a href="/cs/DataSpecification">zde</a>. Tato specifikace popisuje informace, které jsou dostupné jako otevřená data ve formátu CSV (viz níže).
+            V souladu se zásadami ochrany osobních údajů jsou výsledky měření nástrojem ČTÚ-NetTest zveřejněna jako otevřená data. Specifikace formátu dat (dostupná <a href="/cs/DataSpecification">ve formátu HTML</a> a <a href="https://github.com/CTUCZ/open-rmbt/blob/master/RMBTStatisticServer/doc/swagger.json">Swagger</a>) popisuje informace, které jsou dostupné jako otevřená data ve formátu CSV (viz níže).
         </p>
         <h2>Stažení dat</h2>
         <p>
-            Výsledky měření za posledních 48 hodin:<br /><br /> <a href="/RMBTStatisticServer/export/nettest-opendata_hours-048.zip" title="ČTÚ-NetTest Open Data 48h" target="_blank" class="external-link-new-window">nettest-opendata_hours-048.zip</a><br /> <a href="/RMBTStatisticServer/export/nettest-opendata_hours-048.xlsx" title="ČTÚ-NetTest Open Data 48h" target="_blank" class="external-link-new-window">nettest-opendata_hours-048.xlsx</a>.
+            Výsledky měření za posledních 48 hodin:<br /><br /> <a href="/RMBTStatisticServer/export/nettest-opendata_hours-048.zip" title="ČTÚ-NetTest OpenData, posledních 48 hodin (ZIP archiv s csv souborem)" target="_blank" class="external-link-new-window">NetTest OpenData - posledních 48 hodin.zip</a><br /> <a href="/RMBTStatisticServer/export/nettest-opendata_hours-048.xlsx" title="ČTÚ-NetTest OpenData, posledních 48 hodin (Excel sešit)" target="_blank" class="external-link-new-window">NetTest OpenData - posledních 48 hodin.xlsx</a>
         <p>
-            Výsledky měření za posledních 31 dní:<br /><br /> <a href="/RMBTStatisticServer/export/nettest-opendata.zip" title="ČTÚ-NetTest Open Data" target="_blank" class="external-link-new-window">nettest-opendata.zip</a><br /> <a href="/RMBTStatisticServer/export/nettest-opendata.xlsx" title="ČTÚ-NetTest Open Data" target="_blank" class="external-link-new-window">nettest-opendata.xlsx</a>.
+            Výsledky měření za posledních 31 dní:<br /><br /> <a href="/RMBTStatisticServer/export/nettest-opendata.zip" title="ČTÚ-NetTest OpenData, posledních 31 dní (ZIP archiv s csv souborem)" target="_blank" class="external-link-new-window">NetTest OpenData.zip</a><br /> <a href="/RMBTStatisticServer/export/nettest-opendata.xlsx" title="ČTÚ-NetTest OpenData, posledních 31 dní (Excel sešit)" target="_blank" class="external-link-new-window">NetTest OpenData.xlsx</a>
         <p>
             Další výsledky jsou k dispozici měsíčně:
         <form class="form-horizontal">
@@ -288,7 +284,7 @@
         <p>
             Data jsou publikována v licenci <a href="https://creativecommons.org/licenses/by/4.0/deed.cs" target="_blank" class="external-link-new-window">Creative Commons Attribution 4.0 (CC BY 4.0)</a>.
         </p>
-        <p><img src="/images/C_lic_cc_01.png" height="31" width="88"/></p>
+        <p><img src="/images/C_lic_cc_01.png" height="31" width="88" alt="Creative Commons icon"/></p>
         <p>&nbsp;</p>
     </div>
 </div>
@@ -304,15 +300,27 @@
         <div class="uk-grid-margin uk-grid" uk-grid="" uk-height-match="target: .uk-card; row: false">
             <div class="uk-flex-auto uk-width-1-2@s uk-first-column m1">
                 <div class="uk-margin">
-                    <p class="logo-footer">
+                    <p class="logo-footer" alt="CTU logo">
                         Český telekomunikační úřad
                         <br/>E-mail: <a target='_self' href="mailto:nettest@ctu.cz">nettest@ctu.cz</a>
-                        <br/><a target='_self' href="https://www.ctu.cz/">www.ctu.cz</a>
-                        <br/><a target='_self' href="https://github.com/CTUCZ">GitHub</a>
-                    </p>
+                        <br/><a target='_self' href="https://www.ctu.gov.cz/">www.ctu.gov.cz</a>
+                        <br/><!--© 2021–<script>document.write(/\d{4}/.exec(Date())[0])</script>-->
+                            © <script>document.write(/\d{4}/.exec(Date())[0])</script>
+                            ČTÚ, Všechna práva vyhrazena
+                        </p>
                 </div>
             </div>
-            <div class="uk-flex-auto uk-width-1-2 uk-width-1-4@s footer-large">
+            <div class="uk-flex-auto uk-width-1-2 uk-width-1-4@s m2">
+                <ul class="uk-list">
+                    <li>
+                        <a href="/cs/Privacy">Zpracování osobních údajů</a>
+                    </li>
+                    <li>
+                        <a href="/cs/Accessibility">Prohlášení o přístupnosti</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="uk-flex-auto uk-width-1-2 uk-width-1-4@s m3 footer-large">
                 <ul class="uk-list">
                     <li>
                         <a href="/cs/Help">Nápověda</a>
@@ -321,12 +329,7 @@
                         <a href="/cs/News">Aktuální informace</a>
                     </li>
                     <li>
-                        <a href="/cs/Privacy">Prohlášení o ochraně osobních údajů a podmínky užití</a>
-                    </li>
-                    <li>
-                        <!--© 2021–<script>document.write(/\d{4}/.exec(Date())[0])</script>-->
-                        © <script>document.write(/\d{4}/.exec(Date())[0])</script>
-                        ČTÚ, Všechna práva vyhrazena
+                        <a target='_self' href="https://github.com/CTUCZ">GitHub</a>
                     </li>
                 </ul>
             </div>
@@ -339,7 +342,7 @@
 <script id="modalTemplate" type="text/x-handlebars-template">
     <div id="{{ container-id }}" class="{{ container-modifier }}" uk-modal>
         <div class="uk-modal-dialog">
-            <button class="uk-modal-close-default" type="button" uk-close></button>
+            <!--<button class="uk-modal-close-default" type="button" uk-close></button>-->
             {{#if title}}
             <div class="uk-modal-header">
                 <h2 class="uk-modal-title">{{ title }}</h2>
