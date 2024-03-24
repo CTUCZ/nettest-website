@@ -100,6 +100,38 @@ $(document).ready(function() {
             console.log(state)
         });
     };
+
+    $("#address").autocomplete({
+           minLength: 2,
+           source: function (request, response) {
+               $.ajax({
+                          url: "https://adresy.ctu.cz/hledatadresy/hledat",
+                          dataType: "json",
+                          data: {
+                              adresa: request.term
+                          },
+                          success: function (data) {
+                              if (!data.length) {
+                                  response([{label: "Adresa nenalezena", value: response.term}]);
+                              } else {
+                                  response(data.map(a => ({label: a.adresa, value: a.adresa, gps: a.souradnice})));
+                              }
+                          }
+                      });
+           },
+           select: function (event, ui) {
+               if (ui.item.label === "Adresa nenalezena") {
+                   // this prevents "no results" from being selected
+                   event.preventDefault();
+               } else {
+                   $("#addressGpsX").val(ui.item.gps.x);
+                   $("#addressGpsY").val(ui.item.gps.y);
+
+                   console.log("gpsX: ", $("#addressGpsX").val())
+                   console.log("gpsY: ", $("#addressGpsY").val())
+               }
+           }
+    });
 });
 
 function step1() {
