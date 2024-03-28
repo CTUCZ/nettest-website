@@ -126,9 +126,6 @@ $(document).ready(function() {
                } else {
                    $("#addressGpsX").val(ui.item.gps.x);
                    $("#addressGpsY").val(ui.item.gps.y);
-
-                   console.log("gpsX: ", $("#addressGpsX").val())
-                   console.log("gpsY: ", $("#addressGpsY").val())
                }
            }
     });
