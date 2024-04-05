@@ -1077,3 +1077,22 @@ b, strong {
     white-space: nowrap;
     min-width: 215px;
 }
+
+.ui-autocomplete-loading {
+    background: white url("/images/loader.gif") right center no-repeat;
+}
+
+.ui-autocomplete {
+    max-height: 200px;
+    overflow-y: auto;
+    /* prevent horizontal scrollbar */
+    overflow-x: hidden;
+
+    li.ui-menu-item{
+        padding-left: 0.5em;
+        line-height: 2em;
+        &.ui-state-focus{
+            background: #F7F7F7;
+        }
+    }
+}
