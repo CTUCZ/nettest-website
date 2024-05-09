@@ -26,7 +26,7 @@ Lang.setStrings({
    'City' : 'Město',
    'AddressInput' : 'nepovinné, manualní zadání adresy',
    'PrivacyStatement' : 'Prohlášení o ochraně osobních údajů',
-   'PrivacyStatementLink' : 'https://nettest.cz/cs/Privacy',
+   'PrivacyStatementLink' : 'https://nettest.ctu.gov.cz/cs/Privacy',
    'community': 'Komunita',
    'locality': 'Cadastral community',
    'district': 'District',

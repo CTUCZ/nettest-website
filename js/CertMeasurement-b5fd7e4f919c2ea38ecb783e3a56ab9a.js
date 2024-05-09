@@ -105,7 +105,7 @@ $(document).ready(function() {
            minLength: 2,
            source: function (request, response) {
                $.ajax({
-                          url: "https://adresy.ctu.cz/hledatadresy/hledat",
+                          url: "https://adresy.ctu.gov.cz/hledatadresy/hledat",
                           dataType: "json",
                           data: {
                               adresa: request.term
