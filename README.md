@@ -1,7 +1,7 @@
 CTU NetTest website
 ===================
 
-This project contains the source codes of the CTU NetTest website: https://nettest.cz.
+This project contains the source codes of the CTU NetTest website: https://nettest.ctu.gov.cz.
 
 Requirements
 ------------
@@ -46,5 +46,5 @@ Building and running the Website
 Get in Touch
 ------------
 
-* [CTU-NetTest](https://nettest.cz) on the web
+* [CTU-NetTest](https://nettest.ctu.gov.cz) on the web
 * [RTR-Netztest](https://www.netztest.at) on the web

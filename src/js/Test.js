@@ -20,7 +20,7 @@ var oldjava = true;
 var cookieEnabled = true;
 
 
-var APPLET_HOST = 'https://nettest.cz';
+var APPLET_HOST = 'https://nettest.ctu.gov.cz';
 var APPLET_PATH = '';
 
 var javaTurnOff = getParam('nojava');

@@ -27,7 +27,7 @@ Lang.setStrings({
     'City' : 'City',
     'AddressInput' : 'optional, manual address entry',
     'PrivacyStatement' : 'Privacy statement',
-    'PrivacyStatementLink' : 'https://nettest.cz/en/Privacy',
+    'PrivacyStatementLink' : 'https://nettest.ctu.gov.cz/en/Privacy',
     'AustrianPostalCode' : 'Austrian postcode',
     'gkz': 'Austrian community ID',
     'community': 'Community',
