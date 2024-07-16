@@ -511,7 +511,7 @@ exports.strings = {
     // Privacy
     "privacy_page" :{
         "title": "Privacy Policy and Terms of Use",
-        "desc": "On the links below, you can find the Privacy Policy and Terms of Use for individual components of the CTU-NetTest tool (website and mobile epplications), as well as general information on the processing of personal data in the conditions of the Czech Telecommunication Office.",
+        "desc": "On the links below, you can find the Privacy Policy and Terms of Use for individual components of the CTU-NetTest tool (website and mobile applications), as well as general information on the processing of personal data in the conditions of the Czech Telecommunication Office.",
         "tc_web": "Privacy Policy and Terms of Use for the web version of CTU-NetTest",
         "tc_android": "Privacy Policy and Terms of Use for Android",
         "tc_ios": "Privacy Policy and Terms of Use for iOS",
