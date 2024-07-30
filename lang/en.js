@@ -213,6 +213,7 @@ exports.strings = {
         "provider_name": "Name of the IAS provider",
         "provider_service_name": "Name of the service",
         "provider_contract_number": "Contract number",
+        "provider_speed": "Normally available speed",
         "access_type": "Describe your Internet access",
         "access_type_desc": "What access technology does your service use (xDSL, fibre, Wi-Fi, DOCSIS, other)? What kind of terminal equipment device do you use for connecting to the Internet? Is your computer (laptop) connected with a cable to a socket (Ethernet, RH-45) or do you use modem or modem with router function (having LAN ports or allows also Wi-Fi connection) to connect to the Internet? If possible, state the exact name of the producer and type of the terminal equipment device (modem, router).",
         "test_device": "Describe your end device used for the measurement",
