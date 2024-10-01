@@ -159,7 +159,7 @@ exports.strings = {
         "recent_tests_hours" : 'The results of the last 48 hours are available as zip-archive under:<br /><br /> <a href="/RMBTStatisticServer/export/nettest-opendata_hours-048.zip" title="CTU-NetTest OpenData, last 48 hours (ZIP archive with csv file)" target="_blank" class="external-link-new-window">NetTest OpenData - last 48 hours.zip</a><br /> <a href="/RMBTStatisticServer/export/nettest-opendata_hours-048.xlsx" title="CTU-NetTest OpenData, last 48 hours (Excel file)" target="_blank" class="external-link-new-window">NetTest OpenData - last 48 hours.xlsx</a>',
         "recent_tests" : 'The results of the last 31 days are available as zip-archive under:<br /><br /> <a href="/RMBTStatisticServer/export/nettest-opendata.zip" title="CTU-NetTest OpenData, last 31 days (ZIP archive with csv file)" target="_blank" class="external-link-new-window">NetTest OpenData.zip</a><br /> <a href="/RMBTStatisticServer/export/nettest-opendata.xlsx" title="CTU-NetTest OpenData, last 31 days (Excel file)" target="_blank" class="external-link-new-window">NetTest OpenData.xlsx</a>',
         "further_results" : "Further results are available on a monthly basis:",
-        "note_timestamp" : "lease note that time stamps are in UTC (not in local time).",
+        "note_timestamp" : "Please note that timestamps are in UTC (not in local time).",
         "license_text" : 'The data is published under the <a href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank" class="external-link-new-window">Creative Commons Attribution 4.0 (CC BY 4.0)</a> license.'
     },
 
