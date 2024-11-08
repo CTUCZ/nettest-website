@@ -142,14 +142,15 @@
                 <input id="title_append" name="title_append" type="text" class="uk-input">
             </div>
             <div class="uk-margin-bottom">
-                <label class="uk-form-label" for="address">{{ Lang.certified_measurement_content.location }}</label>
+                <label class="uk-form-label" for="address">{{ Lang.certified_measurement_content.location }} {{ Lang.certified_measurement_content.required_field }}</label>
                 <textarea id="address" name="address" cols="40" rows="2" class="uk-textarea" placeholder="{{ Lang.certified_measurement_content.location_desc }}"
-                          aria-describedby="addressHelpBlock"></textarea>
+                          aria-describedby="addressHelpBlock" required="required" data-rule-addressautocomplete="true"></textarea>
                 <span id="addressHelpBlock" class="form-text text-muted help-block"></span>
             </div>
 
-            <input id="addressGpsX" name="address-gps-x" type="hidden" />
+            <input id="addressGpsX" name="address-gps-x" type="hidden"/>
             <input id="addressGpsY" name="address-gps-y" type="hidden" />
+            <input id="addressAM" name="address-am" type="hidden" />
 
             <div class="uk-margin-bottom">
                 <div style="display: none">
@@ -256,9 +257,10 @@
                 </p>
             </div>
 
-        <div class="uk-margin-top">
-            <h4>{{ Lang.certified_measurement_content.summary_end }}</h4>
-            <button name="submit" type="submit" class="uk-button uk-button-primary">{{ Lang.certified_measurement_content.start_measurement }}</button>
+            <div class="uk-margin-top">
+                <h4>{{ Lang.certified_measurement_content.summary_end }}</h4>
+                <button name="submit" type="submit" class="uk-button uk-button-primary">{{ Lang.certified_measurement_content.start_measurement }}</button>
+            </div>
         </div>
     </div>
 

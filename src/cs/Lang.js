@@ -224,7 +224,7 @@ Lang.setStrings({
     'enter_provider_name': 'Zadejte název poskytovatele služby',
     'enter_provider_service_name': 'Zadejte název služby',
     'enter_provider_contract_number': 'Zadejte číslo smlouvy',
-    'enter_address': 'Zadejte adresu.',
+    'enter_address': 'Zadejte adresu z našeptávače.',
     'download_results_as_pdf': 'Stáhnout výsledky ve formátu PDF',
     'alert_close_tab': 'Opravdu chcete zrušit právě probíhající měření?',
     'help': 'Nápověda',

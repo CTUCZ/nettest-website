@@ -28,6 +28,11 @@ $(document).ready(function() {
         return $("#location_form_group :checked").length>0
     };
 
+    $.validator.addMethod("addressautocomplete", function (value, element) {
+        let am = $("#addressAM").val();
+        return am != null && am.length > 0;
+    }, "Address must be selected from autocomplete");
+
     $.validator.setDefaults({
         debug:true,
         onfocusout: function (e) {
@@ -117,7 +122,7 @@ $(document).ready(function() {
                               if (!data.length) {
                                   response([{label: "Adresa nenalezena", value: response.term}]);
                               } else {
-                                  response(data.map(a => ({label: a.adresa, value: a.adresa, gps: a.souradnice})));
+                                  response(data.map(a => ({label: a.adresa, value: a.adresa, gps: a.souradnice, am: a.kody.am})));
                               }
                           }
                       });
@@ -129,6 +134,7 @@ $(document).ready(function() {
                } else {
                    $("#addressGpsX").val(ui.item.gps.x);
                    $("#addressGpsY").val(ui.item.gps.y);
+                   $("#addressAM").val(ui.item.am);
                }
            }
     });

@@ -230,7 +230,7 @@ Lang.setStrings({
      'enter_provider_name': 'Enter service provider’s name',
      'enter_provider_service_name': 'Enter service name',
      'enter_provider_contract_number': 'Enter provider contract number',
-     'enter_address': 'Enter address.',
+     'enter_address': 'Enter address from autocomplete.',
      'download_results_as_pdf': 'Download results in PDF format',
      'alert_close_tab': 'Do you want to cancel the measurement?',
      'help': 'Help',
