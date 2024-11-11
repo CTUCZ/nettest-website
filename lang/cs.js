@@ -162,7 +162,7 @@ exports.strings = {
         "provider_name": "Název poskytovatele služby",
         "provider_service_name": "Název služby",
         "provider_contract_number": "Číslo smlouvy",
-        "provider_speed": "Běžně dostupná rychlost",
+        "provider_speed": "Inzerovaná rychlost",
         "access_type": "Popište Váš přístup k internetu",
         "access_type_desc": "Jakou přístupovou technologií je Vaše služba realizována (xDSL, optika, Wi-Fi, DOCSIS, jiná)? Jaké koncové zařízení pro připojení k internetu používáte? Je př ipojen Váš počítač (notebook) kabelem přímo do zásuvky (ethernet, RJ-45), nebo používáte k připojení k internetu modem, případně modem s funkcí routeru (disponuje LAN porty, případně umožňuje i připojení přes Wi-Fi)?  Pokud je to možné, vepište přesné výrobce a označení typu koncového zařízení (modem, router).",
         "test_device": "Popište Vaše uživatelské zařízení, které používáte pro měření",
