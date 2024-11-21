@@ -55,7 +55,7 @@ var test_token, testUUID;
 var bing_api_key = "";
 var osm_server = "";
 var fallbackOnJS = false;
-var terms_version = 6;
+var terms_version = 7;
 var ping_interval_milliseconds = 1000;
 
 test_timezone = "Europe/Prague";

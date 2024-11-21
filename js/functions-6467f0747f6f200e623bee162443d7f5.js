@@ -197,7 +197,7 @@ function requestBrowserData(callback, options) {
 
 function RMBTmapfilter(options) {
         cookie_uuid = getCookie("RMBTuuid");
-        var terms_accepted = getCookie("RMBTTermsV6");
+        var terms_accepted = getCookie("RMBTTermsV7");
 
         var json_data = {
                 version_name: test_version_name,
@@ -323,7 +323,7 @@ function RMBTsettings(options) {
         }
 
         cookie_uuid = getCookie("RMBTuuid");
-        var terms_accepted = getCookie("RMBTTermsV6");
+        var terms_accepted = getCookie("RMBTTermsV7");
         var terms_and_conditions_accepted_version = (terms_accepted)?terms_version:null;
 
         var json_data = {
