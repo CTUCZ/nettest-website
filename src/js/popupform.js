@@ -90,7 +90,7 @@ function show_agbform(run_Test, callback, options) {
 
 
     show_agb_popup(successFunc, closeFunc, {
-        cookieIdentifier: "RMBTTermsV6",
+        cookieIdentifier: "RMBTTermsV7",
         title: popuptitle,
         tocFile: "tc.html",
         // toc: (selectedLanguage === 'de') ? tc_short_de : tc_short_en,
@@ -315,7 +315,7 @@ function show_ndtform(run_Test, callback, options, terms_accepted) {
 	        bValid = true;
 	        //console.log(terms_accepted);
                 if(terms_accepted != null && terms_accepted == true) {
-                        setCookie("RMBTTermsV6", true, 90 * 24 * 3600);
+                        setCookie("RMBTTermsV7", true, 90 * 24 * 3600);
                         //console.log("cookie set!");
                 }
 
@@ -421,7 +421,7 @@ function show_zipform(run_Test, callback, options) {
 	var allFields = $([]);
 	var bValid = false;
 	form_tips = $(".validateTips");
-	var terms_accepted = getCookie("RMBTTermsV6");
+	var terms_accepted = getCookie("RMBTTermsV7");
 	var popup_title = (selectedLanguage=='de')?'Postleitzahl':'Post code';
 	allFields.add(zip);
 
