@@ -531,7 +531,7 @@ function show_addressPopup(testID) {
 	var allFields = $([]);
 	var bValid = false;
 	form_tips = $(".validateTips");
-	var terms_accepted = getCookie("RMBTTermsV6");
+	var terms_accepted = getCookie("RMBTTermsV7");
 	popup_title = Lang.getString('AddressInput');
 	allFields.add(zip);
 

@@ -31,27 +31,27 @@
     <h4>2.1 CTU-NetTest and selection of loop mode and certified measurement</h4>
         <p>The following data are processed as part of the CTU-NetTest:</p>
         <ul>
-            <li>actually achieved speed of data connection in both directions (download/upload)*</li>
-            <li>roundtrip delay of data connection (ping)*</li>
-            <li>test parameters (test method, test status, test server, test configuration)*</li>
-            <li>randomly generated client ID (Client UUID)</li>
-            <li>evidence of acceptance of the Privacy Policy and Terms of Use</li>
-            <li>public client ID*</li>
-            <li>client sync code and group</li>
-            <li>randomly generated ID of the measurement series (Loop UUID)</li>
-            <li>test start time</li>
-            <li>automatically determined client location (if known) / time zone*</li>
-            <li>exact client location (determined by the optional manually entered address of the measurement)</li>
-            <li>anonymised (dissected) location (determined by the optional manually entered address of the measurement)*</li>
-            <li>meta information for the client location (e.g. location accuracy, method of determining the location, distance)*</li>
-            <li>device type/model, operating system/software version of browser*</li>
-            <li>NAT Yes/No (direct Internet access or private address used)*</li>
-            <li>IP version*</li>
-            <li>IP address</li>
-            <li>AS name and number (autonomous system) or anonymised IP address*</li>
-            <li>WLAN network ID (SSID) and numeric WLAN ID (BSSID)</li>
-            <li>Wireless network (e.g., home network, mobile network, connection type [GSM, UMTS, LTE, 5G etc.], mobile network name, frequency used, base station‘s 
-                identification) *</li>
+            <li>actually achieved speed of data connection in both directions (download/upload)*,</li>
+            <li>roundtrip delay of data connection (ping)*,</li>
+            <li>test parameters (test method, test status, test server, test configuration)*,</li>
+            <li>randomly generated client ID (Client UUID),</li>
+            <li>evidence of acceptance of the Privacy Policy and Terms of Use,</li>
+            <li>public client ID*,</li>
+            <li>client sync code and group,</li>
+            <li>randomly generated ID of the measurement series (Loop UUID),</li>
+            <li>test start time,</li>
+            <li>automatically determined client location (if known) / time zone*,</li>
+            <li>exact client location (determined by the optional manually entered address of the measurement),</li>
+            <li>anonymised (dissected) location (determined by the optional manually entered address of the measurement)*,</li>
+            <li>meta information for the client location (e.g. location accuracy, method of determining the location, distance)*,</li>
+            <li>device type/model, operating system/software version of browser*,</li>
+            <li>NAT Yes/No (direct Internet access or private address used)*,</li>
+            <li>IP version*,</li>
+            <li>IP address,</li>
+            <li>AS name and number (autonomous system) or anonymised IP address*,</li>
+            <li>WLAN network ID (SSID) and numeric WLAN ID (BSSID),</li>
+            <li>Wireless network, e.g., home network, mobile network, connection type (GSM, UMTS, LTE, 5G etc.), mobile network name, frequency used, base station‘s 
+                identification*.</li>
         </ul>
     <p>
         The data marked with asterisk * are published on the CTU-NetTest website and are publicly available as 
@@ -114,25 +114,20 @@
             (2) WLAN network ID (SSID) and numeric WLAN ID (BSSID), and (3) the IP address.
         </p>
         <p>
-            Purposes for processing these personal data:
+            <strong>Purposes for processing these personal data:</strong>
+            <ul>
+                <li>client UUID: possibility of compiling a test result history for the user; identifying associated tests to identify improper use or malfunctions; exercising of 
+                    the user´s rights according to item 5. 
+                </li>
+                <li>
+                    WLAN network ID (SSID) and numerical WLAN ID (BSSID): presentation in the user’s history; identifying associated tests to identify improper use or malfunctions. 
+                </li>
+                <li>
+                    IP address: Technical enabling of the CTU-NetTest and ensuring the full functionality, in particular display of the map and quality measurements; 
+                    in order to be able to assign the tests to individual service providers (via routing information – autonomous system number or host names); detection of improper use or malfunctions.
+                </li>
+            </ul>
         </p>
-        <ul>
-            <li>client UUID: possibility of compiling a test result history for the user; identifying associated tests to identify improper use or malfunctions; exercising of 
-                the user´s rights according to item 5. 
-            </li>
-            <li>
-                Optional manually entered address of the measurement: If the location cannot be determined automatically more precisely than to 2 km, the user has the option 
-                to enter the address of the measurement manually. This data, marked with * (= exact location determined by the optional manually entered address of the 
-                measurement), is converted into coordinates and is visible as a measurement point on the CTU-NetTest map only for the user who carried out the respective test. 
-                The entered address of the measurement is not kept saved. Third parties see merely the measurement point on the map, which is based on anonymised (dissected) 
-                coordinates. Only the dissected coordinates of the optional manually entered address are published as open data under 
-                <a href="/en/Opendata" target="_blank">https://nettest.ctu.gov.cz/en/Opendata</a>.
-            </li>
-            <li>
-                IP address: Technical enabling of the CTU-NetTest and ensuring the full functionality, in particular display of the map and quality measurements; in 
-                order to be able to assign the tests to individual service providers (via routing information [AS] or host names); detection of improper use or malfunctions.
-            </li>
-        </ul>
 
     <h4>3.2 Certified measurement option</h4>
         <p>
@@ -184,8 +179,26 @@
        CTU-NetTest is based on the open data and open source principles. In case there is a change in the processing or handling the data gathered through the CTU-NetTest, 
        especially with regard to the new versions of the CTU-NetTest, the user shall explicitly give a consent to these conditions again. In order to enable the CTU-NetTest 
        to function properly and to do what you expect, some of the operating and technical data that are obtained during its use or provided in connection with its use, 
-       are processed. Some of these data may also be personal data of the CTU-NetTest users. Typically, however, no personal data which could even conceivably identify a 
+       are processed (functional cookies). Some of these data may also be personal data of the CTU-NetTest users. Typically, however, no personal data which could even conceivably identify a 
        specific user or node within electronic communications networks are published.
+    </p>
+    <p>
+        <strong>Functional cookies used on the website:</strong>
+        <ul>
+            <li>
+                <strong>loopMode:</strong> Functional cookies loopMode1 and loopMode2 are used to store the user's consent to the conditions of the loop mode measurement.
+            </li>
+            <li>
+                <strong>RMBTOptions:</strong> Used to save user settings (selecting only IPv4 or IPv6 for measurement).
+            </li>
+            <li>
+                <strong>RMBTTerms:</strong> It is used to store the user's consent to a specific version of the Privacy Policy and Terms of Use of the CTU-NetTest tool.
+            </li>
+            <li>
+                <strong>RMBTuuid:</strong> This functional cookie is used to store the user's private UUID and identify all measurements that this user has taken.
+                It allows user measurements to be loaded and displayed on the History page, and it is also possible to synchronize results between multiple devices based on the private UUID.
+            </li>            
+        </ul>
     </p>
     <p>
        According to the open source principle, this means that the source code of the CTU-NetTest software is publicly accessible and that CTU has put the components it has developed under an 
@@ -207,12 +220,18 @@
        CTU-NetTest or the entire offer to use the CTU-NetTest tool without prior announcement, or to cease their publication temporarily or finally.
     </p>
     <p>
-       CTU seeks to ensure the CTU-NetTest web-browser /website version and the CTU-NetTest app are constantly up-to-date, complete and accurate. 
+       CTU seeks to ensure the CTU-NetTest web-browser/website version and the CTU-NetTest app are constantly up-to-date, complete and accurate. 
        To ensure the correctness of the results, implausible and/or obviously abusive measurements may be marked and/or removed by CTU. 
        CTU reserves the right to initiate appropriate legal action in case of non-compliance. CTU accepts no liability for the up-to-dateness, correctness, completeness or 
        quality of the information and offers provided. As a basic principle, no claims can be brought against CTU for material or immaterial disadvantages and/or losses 
        resulting from the use or non-use of information provided, or from the use of incorrect and incomplete information. Where CTU cannot assert a full waiver of 
        liability due to the statutory provisions applicable in the individual case, liability shall be limited to gross negligence and malicious intent.
+    </p>
+    <p>
+        <strong>
+            More information can be found on the CTU website in the section
+            <a href="https://ctu.gov.cz/en/information-processing-personal-data-conditions" target="_blank">Information on the processing of personal data in the conditions of the Czech Telecommunication Office</a>.
+        </strong>
     </p>
 </body>
 </html>

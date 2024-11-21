@@ -67,8 +67,9 @@
             <li class="breadCrumb-intro"><a>1. {{ Lang.certified_measurement_content.info }}</a></li>
             <li class="breadCrumb-intermediate"><a>2. {{ Lang.certified_measurement_content.data }}</a></li>
             <li class="breadCrumb-additional"><a>3. {{ Lang.certified_measurement_content.environment }}</a></li>
-            <li class="breadCrumb-measurement"><a>4. {{ Lang.certified_measurement_content.measurement }}</a></li>
-            <li class="breadCrumb-report"><a>5. {{ Lang.certified_measurement_content.result }}</a></li>
+            <li class="breadCrumb-summary"><a>4. {{ Lang.certified_measurement_content.summary }}</a></li>
+            <li class="breadCrumb-measurement"><a>5. {{ Lang.certified_measurement_content.measurement }}</a></li>
+            <li class="breadCrumb-report"><a>6. {{ Lang.certified_measurement_content.result }}</a></li>
         </ul>
     </div>
 
@@ -129,13 +130,12 @@
                 <input id="title_prepend" name="title_prepend" type="text" class="uk-input">
             </div>
             <div class="uk-margin-bottom">
-                <label class="uk-form-label" for="first_name">{{ Lang.certified_measurement_content.first_name }} {{ Lang.certified_measurement_content.required_field }}</label>
-                <input id="first_name" name="first_name" type="text" class="uk-input"
-                       required="required">
+                <label class="uk-form-label" for="first_name">{{ Lang.certified_measurement_content.first_name }}</label>
+                <input id="first_name" name="first_name" type="text" class="uk-input">
             </div>
             <div class="uk-margin-bottom">
-                <label class="uk-form-label" for="last_name">{{ Lang.certified_measurement_content.last_name }} {{ Lang.certified_measurement_content.required_field }}</label>
-                <input id="last_name" name="last_name" type="text" class="uk-input" required="required">
+                <label class="uk-form-label" for="last_name">{{ Lang.certified_measurement_content.last_name }}</label>
+                <input id="last_name" name="last_name" type="text" class="uk-input">
             </div>
             <div class="uk-margin-bottom">
                 <label class="uk-form-label" for="title_append">{{ Lang.certified_measurement_content.title_appended }}</label>
@@ -144,12 +144,16 @@
             <div class="uk-margin-bottom">
                 <label class="uk-form-label" for="address">{{ Lang.certified_measurement_content.location }} {{ Lang.certified_measurement_content.required_field }}</label>
                 <textarea id="address" name="address" cols="40" rows="2" class="uk-textarea" placeholder="{{ Lang.certified_measurement_content.location_desc }}"
-                          aria-describedby="addressHelpBlock" required="required"></textarea>
+                          aria-describedby="addressHelpBlock" required="required" data-rule-addressautocomplete="true"></textarea>
                 <span id="addressHelpBlock" class="form-text text-muted help-block"></span>
+                <p>
+                    {{ Lang.certified_measurement_content.location_info }} (<a href="{{ Lang.template.qos_url }}">{{ Lang.template.qos_url }}</a>).
+                </p>
             </div>
 
-            <input id="addressGpsX" name="address-gps-x" type="hidden" />
+            <input id="addressGpsX" name="address-gps-x" type="hidden"/>
             <input id="addressGpsY" name="address-gps-y" type="hidden" />
+            <input id="addressAM" name="address-am" type="hidden" />
 
             <div class="uk-margin-bottom">
                 <div style="display: none">
@@ -185,20 +189,24 @@
             <div class="certified-form">
                 <form id="additional-information-form" class="uk-form uk-padding-remove">
                     <div class="uk-margin-top" style="display: none">
-                        <label for="isp_name2"  class="uk-form-label">{{ Lang.certified_measurement_content.provider_name }} {{ Lang.certified_measurement_content.required_field }}</label>
-                        <input id="isp_name2" name="isp_name2" type="text" class="uk-input" required="required">
+                        <label for="isp_name2"  class="uk-form-label">{{ Lang.certified_measurement_content.provider_name }}</label>
+                        <input id="isp_name2" name="isp_name2" type="text" class="uk-input">
                     </div>
                     <div class="uk-margin-top">
-                        <label for="isp_name"  class="uk-form-label">{{ Lang.certified_measurement_content.provider_name }} {{ Lang.certified_measurement_content.required_field }}</label>
-                        <input id="isp_name" name="isp_name" type="text" class="uk-input" required="required">
+                        <label for="isp_name"  class="uk-form-label">{{ Lang.certified_measurement_content.provider_name }}</label>
+                        <input id="isp_name" name="isp_name" type="text" class="uk-input">
                     </div>
                     <div class="uk-margin-top">
-                        <label for="isp_service_name"  class="uk-form-label">{{ Lang.certified_measurement_content.provider_service_name }} {{ Lang.certified_measurement_content.required_field }}</label>
-                        <input id="isp_service_name" name="isp_service_name" type="text" class="uk-input" required="required">
+                        <label for="isp_service_name"  class="uk-form-label">{{ Lang.certified_measurement_content.provider_service_name }}</label>
+                        <input id="isp_service_name" name="isp_service_name" type="text" class="uk-input">
                     </div>
                     <div class="uk-margin-top">
-                        <label for="isp_contract_number"  class="uk-form-label">{{ Lang.certified_measurement_content.provider_contract_number }} {{ Lang.certified_measurement_content.required_field }}</label>
-                        <input id="isp_contract_number" name="isp_contract_number" type="text" class="uk-input" required="required">
+                        <label for="isp_contract_number"  class="uk-form-label">{{ Lang.certified_measurement_content.provider_contract_number }}</label>
+                        <input id="isp_contract_number" name="isp_contract_number" type="text" class="uk-input">
+                    </div>
+                    <div class="uk-margin-top">
+                        <label for="isp_speed"  class="uk-form-label">{{ Lang.certified_measurement_content.provider_speed }}</label>
+                        <input id="isp_speed" name="isp_speed" type="text" class="uk-input">
                     </div>
                     <div class="uk-margin-top">
                         <label for="type_text"  class="uk-form-label">{{ Lang.certified_measurement_content.access_type }}</label>
@@ -220,13 +228,45 @@
                     </div>
 
                     <div class="uk-margin-top">
-                        <button name="submit" type="submit" class="uk-button uk-button-primary">{{ Lang.certified_measurement_content.start_measurement }}</button>
+                        <button name="submit" type="submit" class="uk-button uk-button-primary">{{ Lang.next }}</button>
                     </div>
 
                 </form>
             </div>
         </div>
     </div>
+
+    <div id="summary-container" style="display:none">
+
+        <div id="summary">
+            <h3>{{ Lang.certified_measurement_content.summary }}</h3>
+            <div class="conditions">
+                <h4>{{ Lang.certified_measurement_content.summary_note }}</h4>
+                <p class="preface">
+                    <ul style="color: #ed6c05">
+                        <li>
+                            <h4><span style='color: #ed6c05;'>{{ Lang.certified_measurement_content.summary_1 }}</span></h4>
+                        </li>
+                        <li>
+                            <h4><span style='color: #ed6c05;'>{{ Lang.certified_measurement_content.summary_2 }}</span></h4>
+                        </li>
+                        <li>
+                            <h4><span style='color: #ed6c05;'>{{ Lang.certified_measurement_content.summary_3 }}</span></h4>
+                        </li>
+                        <li>
+                            <h4><span style='color: #ed6c05;'>{{ Lang.certified_measurement_content.summary_4 }}</span></h4>
+                        </li>
+                    </ul>
+                </p>
+            </div>
+
+            <div class="uk-margin-top">
+                <h4>{{ Lang.certified_measurement_content.summary_end }}</h4>
+                <button name="submit" type="submit" class="uk-button uk-button-primary">{{ Lang.certified_measurement_content.start_measurement }}</button>
+            </div>
+        </div>
+    </div>
+
     <div id="loop-mode" style="display: none">
 
         <h3>{{ Lang.certified_measurement_content.conducting_measurements }}</h3>

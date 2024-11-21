@@ -304,7 +304,11 @@ function RMBTTest(e, t) {
             version_code: "1",
             speed_detail: N.speedItems,
             user_server_selection: S.userServerSelection,
-            user_cert_mode: window.location.pathname.includes("CertMeasurement")
+            user_cert_mode: window.location.pathname.includes("CertMeasurement"),
+            user_address: $("#address").val(),
+            user_address_am_code: parseInt($("#addressAM").val(), 10),
+            user_address_x_wgs: parseFloat($("#addressGpsX").val()),
+            user_address_y_wgs: parseFloat($("#addressGpsY").val())
         }
     }
 
