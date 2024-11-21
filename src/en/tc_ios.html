@@ -31,27 +31,27 @@
     <h4>2.1 CTU-NetTest and selection of loop mode and certified measurement</h4>
         <p>The following data are processed as part of the CTU-NetTest:</p>
         <ul>
-            <li>actually achieved speed of data connection in both directions (download/upload)*</li>
-            <li>roundtrip delay of data connection (ping)*</li>
-            <li>test parameters (test method, test status, test server, test configuration)*</li>
-            <li>randomly generated client ID (Client UUID)</li>
-            <li>evidence of acceptance of the Privacy Policy and Terms of Use</li>
-            <li>public client ID*</li>
-            <li>client sync code and group</li>
-            <li>randomly generated ID of the measurement series (Loop UUID)</li>
-            <li>test start time</li>
-            <li>automatically determined client location (if known) / time zone*</li>
-            <li>exact client location (determined by the optional manually entered address of the measurement)</li>
-            <li>anonymised (dissected) location (determined by the optional manually entered address of the measurement)*</li>
-            <li>meta information for the client location (e.g. location accuracy, method of determining the location, distance)*</li>
-            <li>device type/model, operating system/software version of browser*</li>
-            <li>NAT Yes/No (direct Internet access or private address used)*</li>
-            <li>IP version*</li>
-            <li>IP address</li>
-            <li>AS name and number (autonomous system) or anonymised IP address*</li>
-            <li>WLAN network ID (SSID) and numeric WLAN ID (BSSID)</li>
-            <li>Wireless network (e.g., home network, mobile network, connection type [GSM, UMTS, LTE, 5G etc.], mobile network name, frequency used, base station‘s 
-                identification) *</li>
+            <li>actually achieved speed of data connection in both directions (download/upload)*,</li>
+            <li>roundtrip delay of data connection (ping)*,</li>
+            <li>test parameters (test method, test status, test server, test configuration)*,</li>
+            <li>randomly generated client ID (Client UUID),</li>
+            <li>evidence of acceptance of the Privacy Policy and Terms of Use,</li>
+            <li>public client ID*,</li>
+            <li>client sync code and group,</li>
+            <li>randomly generated ID of the measurement series (Loop UUID),</li>
+            <li>test start time,</li>
+            <li>automatically determined client location (if known) / time zone*,</li>
+            <li>exact client location (determined by the optional manually entered address of the measurement),</li>
+            <li>anonymised (dissected) location (determined by the optional manually entered address of the measurement)*,</li>
+            <li>meta information for the client location (e.g. location accuracy, method of determining the location, distance)*,</li>
+            <li>device type/model, operating system/software version of browser*,</li>
+            <li>NAT Yes/No (direct Internet access or private address used)*,</li>
+            <li>IP version*,</li>
+            <li>IP address,</li>
+            <li>AS name and number (autonomous system) or anonymised IP address*,</li>
+            <li>WLAN network ID (SSID) and numeric WLAN ID (BSSID),</li>
+            <li>Wireless network, e.g., home network, mobile network, connection type (GSM, UMTS, LTE, 5G etc.), mobile network name, frequency used, base station‘s 
+                identification*.</li>
         </ul>
     <p>
         The data marked with asterisk * are published on the CTU-NetTest website and are publicly available as 
@@ -92,25 +92,20 @@
             (2) WLAN network ID (SSID) and numeric WLAN ID (BSSID), and (3) the IP address.
         </p>
         <p>
-            Purposes for processing these personal data:
+            <strong>Purposes for processing these personal data:</strong>
+            <ul>
+                <li>client UUID: possibility of compiling a test result history for the user; identifying associated tests to identify improper use or malfunctions; exercising of 
+                    the user´s rights according to item 5. 
+                </li>
+                <li>
+                    WLAN network ID (SSID) and numerical WLAN ID (BSSID): presentation in the user’s history; identifying associated tests to identify improper use or malfunctions. 
+                </li>
+                <li>
+                    IP address: Technical enabling of the CTU-NetTest and ensuring the full functionality, in particular display of the map and quality measurements; 
+                    in order to be able to assign the tests to individual service providers (via routing information – autonomous system number or host names); detection of improper use or malfunctions..
+                </li>
+            </ul>
         </p>
-        <ul>
-            <li>client UUID: possibility of compiling a test result history for the user; identifying associated tests to identify improper use or malfunctions; exercising of 
-                the user´s rights according to item 5. 
-            </li>
-            <li>
-                Optional manually entered address of the measurement: If the location cannot be determined automatically more precisely than to 2 km, the user has the option 
-                to enter the address of the measurement manually. This data, marked with * (= exact location determined by the optional manually entered address of the 
-                measurement), is converted into coordinates and is visible as a measurement point on the CTU-NetTest map only for the user who carried out the respective test. 
-                The entered address of the measurement is not kept saved. Third parties see merely the measurement point on the map, which is based on anonymised (dissected) 
-                coordinates. Only the dissected coordinates of the optional manually entered address are published as open data under 
-                <a href="/en/Opendata" target="_blank">https://nettest.ctu.gov.cz/en/Opendata</a>.
-            </li>
-            <li>
-                IP address: Technical enabling of the CTU-NetTest and ensuring the full functionality, in particular display of the map and quality measurements; in 
-                order to be able to assign the tests to individual service providers (via routing information [AS] or host names); detection of improper use or malfunctions.
-            </li>
-        </ul>
 
 <h3>4 Duration of storage</h3>
     <p>
