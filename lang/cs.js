@@ -157,6 +157,7 @@ exports.strings = {
         "title_appended": "Akademický titul",
         "location": "Místo měření",
         "location_desc": "Adresní místo, ve kterém je měření prováděno",
+        "location_info": "V případě úspěšné validace místa měření mohou být výsledky zobrazeny v mapě v rámci Vizualizačního portálu ČTÚ",
         "start_measurement": "Spustit certifikované měření",
         "additional_information": "Informace o službě přístupu k internetu v pevném místě",
         "provider_name": "Název poskytovatele služby",

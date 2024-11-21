@@ -146,6 +146,9 @@
                 <textarea id="address" name="address" cols="40" rows="2" class="uk-textarea" placeholder="{{ Lang.certified_measurement_content.location_desc }}"
                           aria-describedby="addressHelpBlock" required="required" data-rule-addressautocomplete="true"></textarea>
                 <span id="addressHelpBlock" class="form-text text-muted help-block"></span>
+                <p>
+                    {{ Lang.certified_measurement_content.location_info }} (<a href="{{ Lang.template.qos_url }}">{{ Lang.template.qos_url }}</a>).
+                </p>
             </div>
 
             <input id="addressGpsX" name="address-gps-x" type="hidden"/>

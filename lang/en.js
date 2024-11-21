@@ -209,6 +209,7 @@ exports.strings = {
         "title_appended": "Academic title",
         "location": "Location of the measurement",
         "location_desc": "Address of the location where the measurement is carried-out",
+        "location_info": "In case of successful validation, the results can be displayed on a map within the CTU Visualization Portal",
         "start_measurement": "Start the certified measurement",
         "additional_information": "Information on IAS at a fixed location",
         "provider_name": "Name of the IAS provider",
