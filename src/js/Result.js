@@ -824,6 +824,11 @@ function loadOpenTestData(openTestUUID, testUUIDForZipPopup) {
                     $("#result-detailcontainer .test-map").hide();
                 }
             }
+
+            //wire up share links
+            var url = "https://" + document.domain + "/" + selectedLanguage + "/Opentest?" + openTestUUID;
+            
+            $("#result-detailcontainer .shareLink").attr("href",url);
         }
     });
 

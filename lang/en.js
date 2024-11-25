@@ -274,7 +274,7 @@ exports.strings = {
 
     //common words
     "top" : "Top",
-    "print" : "Print",
+    "print" : "Print page",
     "time": "Time",
     "operator": "Operator",
     "device": "Device",
