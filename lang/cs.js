@@ -306,6 +306,7 @@ exports.strings = {
     "share" : "Sdílet",
     "send_email" : "Poslat email",
     "open_data_entry" : "Veřejný výsledek",
+    "download_pdf": "Uložit jako PDF",
 
     "measurement_result" : "Výsledek měření",
     "detailed_measurements" : "Podrobné výsledky",

@@ -772,6 +772,7 @@ function loadOpenTestData(openTestUUID, testUUIDForZipPopup) {
             $("#result-detailcontainer .signal-curve-table").find("tr:gt(0)").remove();
             $("#result-detailcontainer .test-map-container").find("*").not("#lightboxbutton").remove();
             $("#result-detailcontainer .social").empty();
+            $("#result-detailcontainer .pdfButton").off("click");
 
 
             //ping curve
@@ -829,6 +830,11 @@ function loadOpenTestData(openTestUUID, testUUIDForZipPopup) {
             var url = "https://" + document.domain + "/" + selectedLanguage + "/Opentest?" + openTestUUID;
             
             $("#result-detailcontainer .shareLink").attr("href",url);
+
+            $(".pdfButton").click(function(e) {
+                triggerPdfDownload(openTestUUID, ".pdfButton")
+                e.preventDefault();
+            })
         }
     });
 
