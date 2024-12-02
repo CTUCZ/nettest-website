@@ -222,7 +222,7 @@ exports.strings = {
 
     //common words
     "top" : "Top",
-    "print" : "Tisk",
+    "print" : "Vytisknout stránku",
     "time": "Čas",
     "operator": "Poskytovatel",
     "device": "Zařízení",
@@ -305,7 +305,8 @@ exports.strings = {
     "connection_technology" : "Technologie",
     "share" : "Sdílet",
     "send_email" : "Poslat email",
-    "open_data_entry" : "Položka otevřených dat",
+    "open_data_entry" : "Veřejný výsledek",
+    "download_pdf": "Uložit jako PDF",
 
     "measurement_result" : "Výsledek měření",
     "detailed_measurements" : "Podrobné výsledky",

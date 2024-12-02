@@ -274,7 +274,7 @@ exports.strings = {
 
     //common words
     "top" : "Top",
-    "print" : "Print",
+    "print" : "Print page",
     "time": "Time",
     "operator": "Operator",
     "device": "Device",
@@ -368,6 +368,7 @@ exports.strings = {
     "get_forum_banner" : "Get forum banner",
     "send_email" : "Send email",
     "open_data_entry" : "Open data entry",
+    "download_pdf": "Download PDF",
 
     "measurement_result" : "Measurement result",
     "detailed_measurements" : "Detailed measurements",
