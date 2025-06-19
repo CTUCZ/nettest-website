@@ -108,6 +108,9 @@
             <li>
                 {{ Lang.certified_measurement_content.note_os }}
             </li>
+            <li>
+                {{ Lang.certified_measurement_content.note_vpn }}
+            </li>
         </ul>
         </p>
         <h3>{{ Lang.certified_measurement_content.process }}</h3>
@@ -147,7 +150,8 @@
                           aria-describedby="addressHelpBlock" required="required" data-rule-addressautocomplete="true"></textarea>
                 <span id="addressHelpBlock" class="form-text text-muted help-block"></span>
                 <p>
-                    {{ Lang.certified_measurement_content.location_info }} (<a href="{{ Lang.template.qos_url }}">{{ Lang.template.qos_url }}</a>).
+                    {{ Lang.certified_measurement_content.location_info }} (<a href="{{ Lang.template.vportal_url }}">{{ Lang.template.vportal_url }}</a>).
+                    {{ Lang.certified_measurement_content.location_accuracy }}
                 </p>
             </div>
 
@@ -259,6 +263,9 @@
                         </li>
                         <li>
                             <h4><span style='color: #ed6c05;'>{{ Lang.certified_measurement_content.summary_4 }}</span></h4>
+                        </li>
+                        <li>
+                            <h4><span style='color: #ed6c05;'>{{ Lang.certified_measurement_content.summary_5 }}</span></h4>
                         </li>
                     </ul>
                 </p>
