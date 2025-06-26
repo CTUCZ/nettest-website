@@ -69,9 +69,9 @@
             <div class="form_line">
                 <label for="country">{{ Lang.statistics_content.operators_from }} </label>
                 <select class="uk-select uk-width-auto" id="country" onchange="requestBrowserData('RMBTstatistics');">
-                    <option value="null">{{ Lang.austria }}</option>
+<!--                    <option value="null">{{ Lang.austria }}</option>-->
                 </select>
-                <select class="uk-select uk-width-auto" id="province" onchange="requestBrowserData('RMBTstatistics');">
+                <select class="uk-select uk-width-auto uk-hidden" id="province" onchange="requestBrowserData('RMBTstatistics');">
                     <option value="null">{{ Lang.statistics_content.all_states }}</option>
                     <option value="1">{{ Lang.statistics_content.burgenland }}</option>
                     <option value="2">{{ Lang.statistics_content.carinthia }}</option>
