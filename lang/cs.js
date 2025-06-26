@@ -57,7 +57,7 @@ exports.strings = {
             "nettest" : 'Zde uvedené hodnoty jsou výsledky měření nástrojem NetTest. Další informace naleznete v <a href="Help.html">nápovědě</a>.',
             "qostest" : ''
         },
-        "operators_from" : "Operátoři",
+        "operators_from" : "Operátoři ze země",
         "disclaimer" : 'Opakované testy jsou pro účely statistického přehledu filtrovány.',
         "opendata_disclaimer" : '<a href="Opendata.html">Výsledky měření</a> jsou dostupné jako otevřená data',
         "burgenland" : 'Burgenland',
@@ -273,7 +273,7 @@ exports.strings = {
 
     "further_tests" : "Další testy",
     "austria" : "Austria",
-    "czechia" : "Czechia",
+    "czechia" : "Czech Republic",
 
     "24_hours" : "24 hodin",
     "1_day" : "1 den",

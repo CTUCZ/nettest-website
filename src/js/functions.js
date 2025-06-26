@@ -912,11 +912,11 @@ function RMBTstatistics() {
                                 }
                             });
                             $.each(data.countries, function(index, value) {
-                                if (value === 'AT') return;
+                                if (value === 'CZ') return;
                                 $("#country").append('<option value="' + value + '">' + Lang.getString("countries")[value.toLowerCase()] + "</option>");
                             });
 
-                            if (browser_country_geoip.toUpperCase() !== 'AT' &&     data.countries.indexOf(browser_country_geoip.toUpperCase()) >= 0) {
+                            if (browser_country_geoip.toUpperCase() !== 'CZ' &&     data.countries.indexOf(browser_country_geoip.toUpperCase()) >= 0) {
                                 $("#country").val(browser_country_geoip.toUpperCase());
                                 RMBTstatistics();
                             }
@@ -939,7 +939,7 @@ function RMBTstatistics() {
                         }
 
                         //set country geoip if not Austria
-                        if (country && country !== 'null' && country !== 'AT' && country !== 'at') {
+                        if (country && country !== 'null' && country !== 'CZ' && country !== 'cz') {
                             opendataParams['country_geoip'] = country.toLowerCase();
                             delete opendataParams["mobile_provider_name"]; //as there is no mapping on t.mobile_provider_id
                         }
@@ -1032,7 +1032,7 @@ function RMBTstatistics() {
                                 if ($("#statistik_type").val() === 'mobile') {
                                     opentestsProviderParams['mobile_provider_name']='*';
                                 }
-                                if (country && country !== 'null' && country !== 'AT' && country !== 'at') {
+                                if (country && country !== 'null' && country !== 'CZ' && country !== 'cz') {
                                     delete opentestsProviderParams["mobile_provider_name"]; //as there is no mapping on t.mobile_provider_id
                                     delete opentestsProviderParams["provider_name"];
 

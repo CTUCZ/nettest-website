@@ -309,7 +309,7 @@ exports.strings = {
 
     "further_tests" : "Further tests",
     "austria" : "Austria",
-    "czechia" : "Czechia",
+    "czechia" : "Czech Republic",
 
     "24_hours" : "24 hours",
     "1_day" : "1 day",
