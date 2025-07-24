@@ -42,14 +42,38 @@ exports.strings = {
         },
         "map": "Mapa",
         "map_content" : "Zobrazení výsledků v mapě (VPortal)",
-        "vportal_link" :"https://vportal.ctu.gov.cz/fix/mapa?bp=0_90&ba=0_80&tp=1_100&ta=1_80&l=cs",
-        "statistics_content" : "Dříve provedená měření",
+        "vportal_link" :"https://vportal.ctu.cz/fix/mapa?bp=0_90&ba=0_80&tp=1_100&ta=1_80&l=cs",
+        "statistics_content" : "Statistický přehled výsledků měření",
         "enlarge_map" : "Zvětšit mapu",
         "fullscreen" : "Na celou obrazovku",
         "loop_mode_content": "Provede opakované měření dle vlastního nastavení",
         "opendata_content": "Výsledky měření jsou dostupné jako otevřená data",
         "certified_content": "Provede proces certifikovaného měření pro účely reklamace služby",
         "apps_content": "Stažení aplikace pro Android a iOS"
+    },
+
+    "statistics_content" : {
+        "teaser" : {
+            "nettest" : 'Zde uvedené hodnoty jsou výsledky měření nástrojem NetTest. Další informace naleznete v <a href="Help.html">nápovědě</a>.',
+            "qostest" : ''
+        },
+        "operators_from" : "Operátoři ze země",
+        "disclaimer" : 'Opakované testy jsou pro účely statistického přehledu filtrovány.',
+        "opendata_disclaimer" : '<a href="Opendata.html">Výsledky měření</a> jsou dostupné jako otevřená data',
+        "burgenland" : 'Burgenland',
+        "carinthia" : 'Korutany',
+        "lower_austria" : 'Dolní Rakousko',
+        "upper_austria" : 'Horní Rakousko',
+        "salzburg" : 'Salzburg',
+        "styria" : "Štýrsko",
+        "tyrol" : "Tyrolsko",
+        "vorarlberg" : "Vorarlbersko",
+        "vienna" : "Vídeň",
+        "all_states" : "Všechny provincie",
+        "enddate" : "Konec časového rozpětí",
+        "all_operators" : "Všichni operátoři",
+        "no_operators": "Pro aktuální výběr nebyli nalezeni žádní operátoři.", 
+        "failure": "V současné době nejsou k dispozici žádné statistiky." 
     },
 
     "history_content" : {
@@ -124,6 +148,7 @@ exports.strings = {
         "download_results": "Stáhnout:",
         "available_history": "Výsledky měření jsou k dispozici v záložce <a href='/cs/Result'><strong style='font-weight: bold'>MOJE MĚŘENÍ</strong></a>."
     },
+
     "certified_measurement_content": {
         "info": "Informace",
         "data": "Údaje",
@@ -194,11 +219,12 @@ exports.strings = {
         "finished_note_3": "V případě kteréhokoliv výsledku testu, který vykazuje výslednou rychlost stahování (download) nebo vkládání (upload) menší, než je minimální rychlost pro daný směr, uvedená ve smluvních podmínkách, jedná se o výpadek služby.",
         "finished_note_4": "V obou případech velkých odchylek, stejně jako v případě výpadku služby, můžete využít svého práva reklamovat vadné poskytnutí služby u svého poskytovatele služby přístupu k internetu."
     },
+
     //Page titles and link descriptions
     "ctu_long": "Český telekomunikační úřad",
     "copyright": "ČTÚ, Všechna práva vyhrazena", 
     "index": "Úvod",
-    "statistics": "Historie měření",
+    "statistics": "Statistika",
     "history": "Moje měření",
     "map": "Mapa",
     "options": "Nastavení",
@@ -238,6 +264,9 @@ exports.strings = {
     'ms': 'ms',
     'dBm': 'dBm',
     'dB': 'dB',
+    'recent_tests': "Nedávná měření",
+    'more' : "více",
+    'less' : "méně",
     "average" : "Průměr",
 
     "automatic" : "Automaticky",
@@ -247,14 +276,18 @@ exports.strings = {
 
     "further_tests" : "Další testy",
     "austria" : "Austria",
-    "czechia" : "Czechia",
+    "czechia" : "Czech Republic",
 
     "24_hours" : "24 hodin",
     "1_day" : "1 den",
     "1_week" : "1 týden",
     "1_month" : "1 měsíc",
+    "3_months" : "3 měsíce",
     "X_months" : "%X% měsíců",
     "1_year" : "1 rok",
+    "2_years" : "2 roky",
+    "3_years" : "3 roky",
+    "4_years" : "4 roky",
     "X_years" : "%X% let",
     "days" : "Den",
     "months" : "Měsíc",
@@ -263,17 +296,17 @@ exports.strings = {
     "mobile" : "Mobil",
     "wifi_test" : "WLAN (App)",
     "browser" : "Prohlížeč",
-    "time_span" : "Time span",
+    "time_span" : "Časové rozpětí",
     "technology" : "Technologie",
-    "mixed" : "Mixed",
-    "quantile" : "Quantile",
+    "mixed" : "Smíšená",
+    "quantile" : "Kvantil",
     "X_m" : "%X% m",
     "X_km" : "%X% km",
-    "quantity" : "Množství",
+    "quantity" : "Počet",
     "location_accuracy" : "Přesnost umístění",
     "accuracy" : "Accuracy",
-    "any" : "any",
-    "name" : "Name",
+    "any" : "jakákoliv",
+    "name" : "Název",
     "all" : "Vše",
     "devices" : "Zařízení",
     'open_uuid': 'Open-User-UUID',
