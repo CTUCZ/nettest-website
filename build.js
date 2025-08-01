@@ -15,7 +15,7 @@
     var path = require('path');
     var cheerio = require('cheerio');
     var randomstring = require('randomstring');
-    var gitDescribe = require('git-describe');
+    var gitDescribe = require('git-describe').gitDescribe;
     var mkdirp = require('mkdirp');
     var sass = require('@metalsmith/sass');
     var ignore = require('metalsmith-ignore');
@@ -301,17 +301,18 @@
     }
     
     function setConfig() {
-        return function (files, metalsmith, done) {
+        return async function (files, metalsmith, done) {
             //nettest or qostest?
             var metadata = metalsmith.metadata();
             metadata['target'] = target;
-            metadata['basetemplate'] = (target === "qostest")?"templates/qosPage.html":"templates/nettestPage.html";
+            metadata['basetemplate'] = (target === "qostest") ? "templates/qosPage.html" : "templates/nettestPage.html";
             try {
-                metadata['gitDescribe'] = gitDescribe({
-                    match: false
-                });
+                const desc = await gitDescribe(process.cwd(), { match: false });
+                metadata['gitDescribe'] = desc && (desc.raw || desc.tag || desc.hash) || 'N/A';
+                console.log("GIT VERSION:", metadata['gitDescribe']);
             } catch(e) {
-                console.log("not a valid git directory, cannot include build info in /admin page, message: " + e.message);
+                console.log("GIT-DESCRIBE ERROR:", e && e.stack ? e.stack : e);
+                metadata['gitDescribe'] = 'N/A';
             }
     
             //delete duplicate files from build
@@ -324,7 +325,6 @@
                             var newFilename = file.replace("." + cTarget,"")
                             files[newFilename] = files[file];
                         }
-    
                         delete files[file];
                     }
                 });
@@ -333,12 +333,11 @@
             done();
         }
     }
-    
+
     function duplicateFile() {
         return function (files, metalsmith, done) {
             //refine language files based on target build
             langs.forEach(function(lang) {
-    
                 var flattenTargetTree = function(array, key) {
                     var data = array[key];
                     if (data instanceof Object) {
@@ -377,7 +376,7 @@
                         var newFilename = lang.language + path.sep + file;
                         var clone = JSON.parse(JSON.stringify(data));
                         files[newFilename] = clone;
-                        files[newFilename].Lang = lang.strings
+                        files[newFilename].Lang = lang.strings;
     
                     });
                     delete files[file];
@@ -397,4 +396,4 @@
         var isRoot = (file.indexOf(path.sep) <0);
     
         return isHTML && isRoot;
-    }    
+    }
