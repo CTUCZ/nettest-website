@@ -184,12 +184,12 @@
                 <thead>
                 <tr>
 
-                    {{#unless onlyCaptions }}<th scope="col">{% endraw %}{{ Lang.name }}{% raw %}</th>{{/unless }}{% endraw %}
-                    <th scope="col" class="uk-text-right">{{ Lang.down }}</th>
-                    <th scope="col" class="uk-text-right">{{ Lang.up }}</th>
-                    <th scope="col" class="uk-text-right">{{ Lang.ping }}</th>
-                    <th scope="col" class="uk-text-right test-network-signal">{{ Lang.signal }}</th>
-                    <th scope="col" class="uk-text-right">{{ Lang.quantity }}</th>
+                    {{#unless onlyCaptions }}<th scope="col" class="uk-text-nowrap">{% endraw %}{{ Lang.name }}{% raw %}</th>{{/unless }}{% endraw %}
+                    <th scope="col" class="uk-text-right uk-text-nowrap">{{ Lang.down }}</th>
+                    <th scope="col" class="uk-text-right uk-text-nowrap">{{ Lang.up }}</th>
+                    <th scope="col" class="uk-text-right uk-text-nowrap">{{ Lang.ping }}</th>
+                    <th scope="col" class="uk-text-right uk-text-nowrap test-network-signal">{{ Lang.signal }}</th>
+                    <th scope="col" class="uk-text-right uk-text-nowrap">{{ Lang.quantity }}</th>
                     {%  raw %}
                 </tr>
                 </thead>
