@@ -132,11 +132,11 @@ Lang.setStrings({
 
    //values not in the controlserver resource file
    'cat_technology': 'Typ připojení',
-   'country_sim': 'Domovská země SIM',
+   'country_sim': 'Domácí země SIM',
    'platform': 'Platforma',
    'ip_anonym': 'IP (anonymizována)',
    'open_uuid': 'Open-User-UUID',
-   'network_country': 'Domovská země sítě',
+   'network_country': 'Domácí země sítě',
    'distance': 'Pohyb',
    'lte_rsrp' : 'Síla signálu (RSRP)',
    'lte_rsrq' : 'Kvalita signálu (RSRQ)',
