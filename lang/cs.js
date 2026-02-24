@@ -384,6 +384,7 @@ exports.strings = {
     "last_updated": "Naposledy aktualizováno",
     "coverage": "Pokrytí",
     "service_overload": "Dočasné upozornění: Pokud se váš test nespustí do 2 minut, opakujte test později. V tuto chvíli je prováděno velké množství testů, které má za následek delší prodlevu před spuštěním samotného testu. Děkujeme za pochopení.",
+    "service_outage": "<strong>Vážení uživatelé, dne 27. 2. 2026 od 20:00 dojde k plánované odstávce služby ČTÚ-NetTest, předpokládaná doba odstávky je 6 hodin. Děkujeme za pochopení.</strong>",
 
     // Help
     "help_page" : {

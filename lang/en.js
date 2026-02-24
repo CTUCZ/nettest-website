@@ -422,6 +422,7 @@ exports.strings = {
     "last_updated": "Last updated",
     "coverage": "Coverage",
     "service_overload": "Temporary notification: If your test is not started in 2 minutes, repeat the test later. There are many tests being coursed at this moment which causes delay before starting the test itself.",
+    "service_outage": "<strong>Dear users, on February 27, 2026, from 8:00 PM, there will be a planned outage of the ČTÚ-NetTest service, the expected downtime is 6 hours. Thank you for your understanding.</strong>",
 
     // Help
     "help_page" : {
