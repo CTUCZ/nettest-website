@@ -1146,3 +1146,7 @@ $text-meta-link-hover-color: $global-color !default;
 $thumbnav-item-background: rgba($global-background, 0.4) !default;
 $thumbnav-item-hover-background: transparent !default;
 $thumbnav-item-active-background: transparent !default;
+
+// UIkit 3.15 upgrade: pull in stock defaults for any variables added upstream
+// since this file was forked (all `!default`, so the project overrides above win).
+@import '../../node_modules/uikit/src/scss/variables-theme.scss';

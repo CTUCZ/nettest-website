@@ -73,7 +73,10 @@
         .use(sass({
             "outputStyle": "compressed",
             sourceMap: true,
-            sourceMapContents: true
+            sourceMapContents: true,
+            // UIkit's SCSS still uses legacy @import and color functions; silence
+            // the vendor deprecation noise so real errors stay visible in the log.
+            quietDeps: true
         }))
         .use(fingerprint({
             pattern: ['css/*.css', 'js/**/*.js', 'scss/*.css',
